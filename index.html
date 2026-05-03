@@ -524,6 +524,59 @@
   .discord-btn:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
   a.discord-btn { text-decoration: none; }
 
+  .what-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 0.5px solid var(--border);
+    background: var(--surface);
+    font-size: 12px;
+    color: var(--muted);
+    cursor: pointer;
+    font-family: var(--font);
+    transition: border-color 0.2s, color 0.2s;
+    margin-top: 2px;
+  }
+  .what-btn:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
+
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .modal-overlay.open { display: flex; }
+
+  .modal {
+    background: #181818;
+    border: 0.5px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 28px;
+    max-width: 480px;
+    width: 100%;
+    position: relative;
+    animation: fadeUp 0.25s ease both;
+  }
+
+  .modal-title { font-size: 17px; font-weight: 600; margin-bottom: 14px; }
+  .modal p { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 12px; }
+  .modal p:last-of-type { margin-bottom: 0; }
+
+  .modal-close {
+    position: absolute; top: 16px; right: 16px;
+    width: 28px; height: 28px; border-radius: 50%;
+    background: rgba(255,255,255,0.08); border: none;
+    color: var(--muted); font-size: 16px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font);
+  }
+  .modal-close:hover { background: rgba(255,255,255,0.14); color: var(--text); }
+
   .copied-toast {
     position: fixed;
     bottom: 28px;
@@ -598,6 +651,7 @@
           <button class="discord-btn" onclick="copyDiscord()">Discord</button>
           <div class="discord-dropdown">yusvf</div>
         </div>
+        <button class="what-btn" onclick="document.getElementById('what-modal').classList.add('open')">What is this?</button>
       </div>
     </div>
     <div class="profile-right">
@@ -882,6 +936,17 @@
       <span class="link-chevron">›</span>
     </a>
 
+  </div>
+
+  <div class="modal-overlay" id="what-modal" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="modal">
+      <button class="modal-close" onclick="document.getElementById('what-modal').classList.remove('open')">✕</button>
+      <p class="modal-title">What is this?</p>
+      <p>My curated collection of Ye and others' edits, put together in playlists by me — featuring noteworthy compilations from the community.</p>
+      <p>Most of what you see here comes from the Yedits community, a group of fans who take unreleased, unfinished, or poorly mixed Kanye music and finish it themselves.</p>
+      <p>Everything is playable directly via Samply, a free music app available on iOS, Mac, and as a web app on Windows. All editors are fully credited.</p>
+      <p>Join the Yedits Discord or check out the trackers linked below for more.</p>
+    </div>
   </div>
 
   <div class="copied-toast" id="toast">Copied!</div>
