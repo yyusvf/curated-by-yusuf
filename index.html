@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curated by Yusuf</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --surface2: #1c1c1c;
+    --border: rgba(255,255,255,0.07);
+    --text: #f0f0f0;
+    --muted: rgba(255,255,255,0.45);
+    --accent: #c8f542;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    padding: 0 0 80px;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    background-size: 200px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .page { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; padding: 0 20px; }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0 40px;
+    gap: 14px;
+  }
+
+  .avatar {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    background: var(--surface2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: -0.5px;
+    overflow: hidden;
+  }
+
+  .avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+  .profile-name {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+  }
+
+  .profile-bio {
+    font-size: 14px;
+    color: var(--muted);
+    text-align: center;
+    max-width: 320px;
+    line-height: 1.6;
+  }
+
+  .profile-socials { display: flex; gap: 10px; margin-top: 4px; flex-wrap: wrap; justify-content: center; }
+
+  .social-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 0.5px solid var(--border);
+    background: var(--surface);
+    font-size: 12px;
+    color: var(--muted);
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .social-pill:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
+
+  .section-label {
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 32px 0 16px;
+  }
+
+  .grid {
+    display: grid;
+    gap: 20px 16px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    position: relative;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    display: block;
+    transition: opacity 0.2s;
+  }
+
+  .card:hover { opacity: 0.82; transform: none; border-color: transparent; }
+  .card:active { opacity: 0.6; transform: scale(0.98); }
+
+  .card-thumb {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    background: var(--surface2);
+    border-radius: 10px;
+  }
+
+  .card-body { padding: 10px 2px 0; }
+
+  .card-label {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--muted);
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .card-title {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .card-arrow { display: none; }
+
+  .samply-cta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.04);
+    border: 0.5px solid rgba(255,255,255,0.08);
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+
+  .samply-cta img { width: 32px; height: 32px; border-radius: 7px; flex-shrink: 0; }
+
+  .samply-cta-text { flex: 1; }
+  .samply-cta-text strong { display: block; font-size: 13px; font-weight: 500; color: var(--text); }
+  .samply-cta-text span { font-size: 11px; color: var(--muted); }
+
+  .samply-cta-btn {
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    background: rgba(255,255,255,0.12);
+    border: none;
+    padding: 6px 14px;
+    border-radius: 999px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .comp-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 12px;
+  }
+
+  @media (max-width: 480px) {
+    .comp-list { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .comp-card {
+    display: block;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .comp-card:hover { opacity: 0.82; }
+  .comp-card:active { opacity: 0.6; transform: scale(0.98); }
+
+  .comp-thumb {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    min-width: unset;
+    min-height: unset;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+    flex-shrink: unset;
+    background: var(--surface2);
+  }
+
+  .comp-text { padding: 8px 2px 0; }
+  .comp-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .comp-artist {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .comp-editor {
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    margin-top: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .comp-chevron { display: none; }
+
+  .app-card {
+    border-radius: 14px;
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    overflow: hidden;
+    margin-top: 4px;
+  }
+
+  .app-card-header {
+    padding: 20px 20px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .app-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .app-icon img { width: 100%; height: 100%; object-fit: cover; }
+
+  .app-info { flex: 1; }
+  .app-name { font-size: 16px; font-weight: 600; color: var(--text); }
+  .app-tagline { font-size: 12px; color: var(--muted); margin-top: 3px; line-height: 1.5; }
+
+  .app-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 16px 20px;
+  }
+
+  .app-feature {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.05);
+    border-radius: 999px;
+    padding: 4px 10px;
+  }
+
+  .app-actions {
+    display: flex;
+    gap: 8px;
+    padding: 0 20px 20px;
+  }
+
+  .app-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+  }
+
+  .app-btn:hover { opacity: 0.8; }
+
+  .app-btn-primary {
+    background: var(--text);
+    color: #0a0a0a;
+  }
+
+  .app-btn-primary.disabled {
+    background: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.3);
+    cursor: not-allowed;
+  }
+  .app-btn-primary.disabled:hover { opacity: 1; }
+
+  .app-btn-secondary {
+    background: rgba(255,255,255,0.07);
+    color: var(--text);
+    border: 0.5px solid var(--border);
+  }
+
+  .link-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .link-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    text-decoration: none;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .link-row:hover { transform: translateY(-1px); border-color: rgba(255,255,255,0.15); }
+  .link-row:active { transform: scale(0.99); }
+
+  .link-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface2);
+    overflow: hidden;
+  }
+
+  .link-icon img { width: 22px; height: 22px; object-fit: contain; }
+
+  .link-text { flex: 1; }
+  .link-text strong { display: block; font-size: 14px; font-weight: 500; color: var(--text); }
+  .link-text span { font-size: 12px; color: var(--muted); }
+  .link-chevron { color: var(--muted); font-size: 16px; }
+
+  .discord-wrap { position: relative; display: inline-flex; }
+
+  .discord-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--surface2);
+    border: 0.5px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 13px;
+    color: var(--text);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s;
+    z-index: 10;
+  }
+
+  .discord-dropdown::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-bottom-color: rgba(255,255,255,0.15);
+  }
+
+  .discord-dropdown::after {
+    content: '';
+    position: absolute;
+    bottom: calc(100% - 1px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-bottom-color: var(--surface2);
+  }
+
+  .discord-wrap:hover .discord-dropdown { opacity: 1; }
+
+  .discord-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 0.5px solid var(--border);
+    background: var(--surface);
+    font-size: 12px;
+    color: var(--muted);
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Helvetica Neue', sans-serif;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .discord-btn:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
+  a.discord-btn { text-decoration: none; }
+
+  .copied-toast {
+    position: fixed;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: var(--accent);
+    color: #0a0a0a;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 999px;
+    opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
+    pointer-events: none;
+    z-index: 999;
+  }
+  .copied-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  .footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 11px;
+    color: rgba(255,255,255,0.15);
+    letter-spacing: 0.05em;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="profile">
+    <div class="avatar"><img src="yusuf.jpg" alt="Yusuf"></div>
+    <p class="profile-name">Curated by Yusuf</p>
+    <p class="profile-bio">Yedits Enjoyer · Architecture student · Designer</p>
+    <div class="profile-socials">
+      <div class="discord-wrap">
+        <a href="https://instagram.com/yusufmcu" class="discord-btn" target="_blank">Instagram</a>
+        <div class="discord-dropdown">yusufmcu</div>
+      </div>
+      <div class="discord-wrap">
+        <button class="discord-btn" onclick="copyDiscord()">Discord</button>
+        <div class="discord-dropdown">yusvf</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-label">Playlists</p>
+
+  <a href="https://samply.app/install" class="samply-cta" target="_blank">
+    <img src="https://www.google.com/s2/favicons?domain=samply.app&sz=64" alt="Samply">
+    <div class="samply-cta-text">
+      <strong>Best experienced on Samply</strong>
+      <span>Free app for iPhone, iPad & Mac</span>
+    </div>
+    <span class="samply-cta-btn">Get App</span>
+  </a>
+
+  <div class="grid">
+
+    <a href="https://samply.app/p/L4WckCChOvu3YY64NZ1t?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="card" target="_blank">
+      <img class="card-thumb" src="BULLY.jpg" alt="BULLY">
+      <div class="card-body">
+        <p class="card-title">BULLY</p>
+        <p class="card-label">Kanye West</p>
+      </div>
+    </a>
+
+    <a href="https://samply.app/p/CuPDiSkBKyfYBUl2NfzA?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="card" target="_blank">
+      <img class="card-thumb" src="VULTURES_MEGA_MIX.jpg" alt="VULTURES MEGA MIX">
+      <div class="card-body">
+        <p class="card-title">VULTURES MEGA MIX</p>
+        <p class="card-label">¥$, Kanye West, Ty Dolla $ign</p>
+      </div>
+    </a>
+
+    <a href="https://samply.app/p/XMI4plI5puFH1oJN1m9D?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="card" target="_blank">
+      <img class="card-thumb" src="DONDA_2.png" alt="Donda 2">
+      <div class="card-body">
+        <p class="card-title">Donda 2</p>
+        <p class="card-label">Kanye West</p>
+      </div>
+    </a>
+
+    <a href="https://samply.app/p/uUmagBlXgVlmfYxINdIy?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="card" target="_blank">
+      <img class="card-thumb" src="Donda.png" alt="Donda">
+      <div class="card-body">
+        <p class="card-title">Donda</p>
+        <p class="card-label">Kanye West</p>
+      </div>
+    </a>
+
+  </div>
+
+  <p class="section-label">Featured Comps</p>
+  <div class="comp-list">
+
+    <a href="https://samply.app/p/rCSIm1fhgxjZkoP5Zx3k?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="comp-card" target="_blank">
+      <img class="comp-thumb" src="WAR.jpg" alt="WAR">
+      <div class="comp-text">
+        <p class="comp-title">WAR</p>
+        <p class="comp-artist">Kanye West, James Blake</p>
+        <p class="comp-editor">Akimbo</p>
+      </div>
+      <span class="comp-chevron">›</span>
+    </a>
+
+    <a href="https://samply.app/p/VHbtqjtdjsWwza5oYq5Y?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="comp-card" target="_blank">
+      <img class="comp-thumb" src="YANDHI_V2.jpg" alt="Yandhi V2">
+      <div class="comp-text">
+        <p class="comp-title">Yandhi (V2)</p>
+        <p class="comp-artist">Kanye West</p>
+        <p class="comp-editor">Yedits Presents</p>
+      </div>
+      <span class="comp-chevron">›</span>
+    </a>
+
+    <a href="https://samply.app/p/i0fS2i62y56mwu9lpmBd?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="comp-card" target="_blank">
+      <img class="comp-thumb" src="YANDHI.jpg" alt="Yandhi">
+      <div class="comp-text">
+        <p class="comp-title">Yandhi</p>
+        <p class="comp-artist">Kanye West</p>
+        <p class="comp-editor">The NARCISSIST Team</p>
+      </div>
+      <span class="comp-chevron">›</span>
+    </a>
+
+    <a href="https://samply.app/p/lQylmqXnKwrbKsyupm6d?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="comp-card" target="_blank">
+      <img class="comp-thumb" src="TURBOGRAFX16.jpg" alt="TURBOGRAFX 16">
+      <div class="comp-text">
+        <p class="comp-title">TURBOGRAFX 16 - MITUS</p>
+        <p class="comp-artist">Kanye West</p>
+        <p class="comp-editor">somesoup & jozzuh</p>
+      </div>
+      <span class="comp-chevron">›</span>
+    </a>
+
+    <a href="https://samply.app/p/9Y3Q9uXaUBVihIVy1eo4?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="comp-card" target="_blank">
+      <img class="comp-thumb" src="LOVE_EVERYONE.jpg" alt="Love Everyone">
+      <div class="comp-text">
+        <p class="comp-title">Love Everyone</p>
+        <p class="comp-artist">Kanye West</p>
+        <p class="comp-editor">ben</p>
+      </div>
+      <span class="comp-chevron">›</span>
+    </a>
+
+    <a href="https://samply.app/p/wsa0DBe1Yvpol91bHRsI?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="comp-card" target="_blank">
+      <img class="comp-thumb" src="GOOD_ASS_JOB.jpg" alt="Good Ass Job">
+      <div class="comp-text">
+        <p class="comp-title">Good Ass Job</p>
+        <p class="comp-artist">Kanye West</p>
+        <p class="comp-editor">The Pastelle Collective</p>
+      </div>
+      <span class="comp-chevron">›</span>
+    </a>
+
+  </div>
+
+  <p class="section-label">Playboi Carti Playlists</p>
+  <div class="comp-list">
+
+    <a href="https://samply.app/p/1VvD2hh0nil6fyADk9jG?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="comp-card" target="_blank">
+      <img class="comp-thumb" src="BABYBOI.jpg" alt="BABYBOI">
+      <div class="comp-text">
+        <p class="comp-title">BABYBOI</p>
+        <p class="comp-artist">Playboi Carti</p>
+      </div>
+      <span class="comp-chevron">›</span>
+    </a>
+
+    <a href="https://samply.app/p/aNaaCcfktJFsIdUGopu8?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="comp-card" target="_blank">
+      <img class="comp-thumb" src="MUSIC.jpg" alt="MUSIC">
+      <div class="comp-text">
+        <p class="comp-title">MUSIC</p>
+        <p class="comp-artist">Playboi Carti</p>
+      </div>
+      <span class="comp-chevron">›</span>
+    </a>
+
+    <a href="https://samply.app/p/TAho0nRmBi6ssDmC6nOs?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="comp-card" target="_blank">
+      <img class="comp-thumb" src="NARCISSIST.jpg" alt="NARCISSIST">
+      <div class="comp-text">
+        <p class="comp-title">NARCISSIST</p>
+        <p class="comp-artist">Playboi Carti</p>
+      </div>
+      <span class="comp-chevron">›</span>
+    </a>
+
+  </div>
+
+  <p class="section-label">App</p>
+  <div class="app-card">
+    <div class="app-card-header">
+      <div class="app-icon"><img src="icon.ico" alt="LocalPrep"></div>
+      <div class="app-info">
+        <p class="app-name">LocalPrep</p>
+        <p class="app-tagline">Desktop tool for preparing local audio files — built for Spotify, Apple Music & Tidal.</p>
+      </div>
+    </div>
+    <div class="app-features">
+      <span class="app-feature">Sample Rate Conversion</span>
+      <span class="app-feature">Format Conversion</span>
+      <span class="app-feature">Metadata Editor</span>
+      <span class="app-feature">Tracklist Sequencer</span>
+    </div>
+    <div class="app-actions">
+      <a href="https://github.com/yyusvf/LocalPrep/releases/latest/download/LocalPrep-Setup.exe" class="app-btn app-btn-primary" download>
+        ↓ Download for Windows
+      </a>
+      <a href="https://github.com/yyusvf/LocalPrep" class="app-btn app-btn-secondary" target="_blank">
+        GitHub
+      </a>
+    </div>
+  </div>
+
+  <p class="section-label">Links</p>
+  <div class="link-list">
+
+    <a href="https://discord.gg/yedits" class="link-row" target="_blank">
+      <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=discord.com&sz=64" alt=""></div>
+      <div class="link-text">
+        <strong>Yedits Discord</strong>
+        <span>discord.gg/yedits</span>
+      </div>
+      <span class="link-chevron">›</span>
+    </a>
+
+    <a href="https://www.last.fm/user/Synox" class="link-row" target="_blank">
+      <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=last.fm&sz=64" alt=""></div>
+      <div class="link-text">
+        <strong>Last.fm Profile</strong>
+        <span>last.fm/user/Synox</span>
+      </div>
+      <span class="link-chevron">›</span>
+    </a>
+
+    <a href="https://open.spotify.com/user/31pc42z2w6s3b763qv2fdhqxrc6u" class="link-row" target="_blank">
+      <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=spotify.com&sz=64" alt=""></div>
+      <div class="link-text">
+        <strong>Spotify</strong>
+        <span>open.spotify.com</span>
+      </div>
+      <span class="link-chevron">›</span>
+    </a>
+
+    <a href="https://steamcommunity.com/id/Yusvf/" class="link-row" target="_blank">
+      <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=steamcommunity.com&sz=64" alt=""></div>
+      <div class="link-text">
+        <strong>Steam</strong>
+        <span>steamcommunity.com/id/Yusvf</span>
+      </div>
+      <span class="link-chevron">›</span>
+    </a>
+
+    <a href="https://tiktok.com/@yyusvf" class="link-row" target="_blank">
+      <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=tiktok.com&sz=64" alt=""></div>
+      <div class="link-text">
+        <strong>TikTok</strong>
+        <span>tiktok.com/@yyusvf</span>
+      </div>
+      <span class="link-chevron">›</span>
+    </a>
+
+    <a href="https://x.com/yyusvf" class="link-row" target="_blank">
+      <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=x.com&sz=64" alt=""></div>
+      <div class="link-text">
+        <strong>X</strong>
+        <span>x.com/yyusvf</span>
+      </div>
+      <span class="link-chevron">›</span>
+    </a>
+
+    <a href="https://samply.app/install" class="link-row" target="_blank">
+      <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=samply.app&sz=64" alt=""></div>
+      <div class="link-text">
+        <strong>All Playlists on Samply</strong>
+        <span>samply.app/install</span>
+      </div>
+      <span class="link-chevron">›</span>
+    </a>
+
+  </div>
+
+  <div class="copied-toast" id="toast">Copied!</div>
+
+  <p class="footer">made with claude</p>
+
+</div>
+<script>
+function copyDiscord() {
+  navigator.clipboard.writeText('yusvf');
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 1800);
+}
+
+</script>
