@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Curated by Yusuf</title>
+<meta property="og:title" content="Curated by Yusuf">
+<meta property="og:description" content="The best Ye & community comps — ready to play on Samply.">
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Curated by Yusuf">
+<meta name="twitter:description" content="The best Ye & community comps — ready to play on Samply.">
+<meta name="twitter:image" content="og-image.jpg">
 <link rel="icon" type="image/png" href="favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -41,46 +49,132 @@
 
   .profile {
     display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 52px 0 40px;
+    gap: 20px;
+  }
+
+  .profile-left {
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 60px 0 40px;
-    gap: 14px;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
   }
 
   .avatar {
-    width: 76px;
-    height: 76px;
+    width: 72px;
+    height: 72px;
     border-radius: 50%;
     border: 2px solid var(--border);
     background: var(--surface2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Helvetica Neue', sans-serif;
-    font-size: 28px;
-    font-weight: 600;
-    color: var(--accent);
-    letter-spacing: -0.5px;
     overflow: hidden;
+    flex-shrink: 0;
   }
 
   .avatar img { width: 100%; height: 100%; object-fit: cover; }
 
   .profile-name {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     letter-spacing: -0.3px;
+    margin: 0;
   }
 
   .profile-bio {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--muted);
-    text-align: center;
-    max-width: 320px;
-    line-height: 1.6;
+    line-height: 1.5;
+    margin: 0;
   }
 
-  .profile-socials { display: flex; gap: 10px; margin-top: 4px; flex-wrap: wrap; justify-content: center; }
+  .profile-socials { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  .social-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 0.5px solid var(--border);
+    background: var(--surface);
+    font-size: 12px;
+    color: var(--muted);
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .social-pill:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
+
+  .profile-right {
+    width: 160px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 4px;
+  }
+
+  .lastfm-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+  }
+
+  .lastfm-track {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .lastfm-art {
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    object-fit: cover;
+    background: var(--surface2);
+    flex-shrink: 0;
+  }
+
+  .lastfm-info { min-width: 0; }
+  .lastfm-title {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .lastfm-artist {
+    font-size: 10px;
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 1px;
+  }
+
+  .lastfm-now {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #d02323;
+    flex-shrink: 0;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  @media (max-width: 480px) {
+    .comp-list { grid-template-columns: repeat(2, 1fr); }
+    .profile-right { width: 140px; }
+  }
 
   .social-pill {
     display: inline-flex;
@@ -460,18 +554,24 @@
 <div class="page">
 
   <div class="profile">
-    <div class="avatar"><img src="yusuf.jpg" alt="Yusuf"></div>
-    <p class="profile-name">Curated by Yusuf</p>
-    <p class="profile-bio">Yedits Enjoyer · Architecture student · Designer</p>
-    <div class="profile-socials">
-      <div class="discord-wrap">
-        <a href="https://instagram.com/yusufmcu" class="discord-btn" target="_blank">Instagram</a>
-        <div class="discord-dropdown">yusufmcu</div>
+    <div class="profile-left">
+      <div class="avatar"><img src="yusuf.jpg" alt="Yusuf"></div>
+      <p class="profile-name">Curated by Yusuf</p>
+      <p class="profile-bio">Yedits Enjoyer · Architecture student · Designer</p>
+      <div class="profile-socials">
+        <div class="discord-wrap">
+          <a href="https://instagram.com/yusufmcu" class="discord-btn" target="_blank">Instagram</a>
+          <div class="discord-dropdown">yusufmcu</div>
+        </div>
+        <div class="discord-wrap">
+          <button class="discord-btn" onclick="copyDiscord()">Discord</button>
+          <div class="discord-dropdown">yusvf</div>
+        </div>
       </div>
-      <div class="discord-wrap">
-        <button class="discord-btn" onclick="copyDiscord()">Discord</button>
-        <div class="discord-dropdown">yusvf</div>
-      </div>
+    </div>
+    <div class="profile-right">
+      <p class="lastfm-label">Last played</p>
+      <div id="lastfm-tracks"></div>
     </div>
   </div>
 
@@ -644,8 +744,17 @@
     </div>
   </div>
 
-  <p class="section-label">Links</p>
+  <p class="section-label">Yedits</p>
   <div class="link-list">
+
+    <a href="https://yedits.xyz/#/login" class="link-row" target="_blank">
+      <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=yedits.xyz&sz=64" alt=""></div>
+      <div class="link-text">
+        <strong>Yedits Website</strong>
+        <span>yedits.xyz · WIP, coming soon</span>
+      </div>
+      <span class="link-chevron">›</span>
+    </a>
 
     <a href="https://discord.gg/yedits" class="link-row" target="_blank">
       <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=discord.com&sz=64" alt=""></div>
@@ -655,6 +764,38 @@
       </div>
       <span class="link-chevron">›</span>
     </a>
+
+    <a href="https://docs.google.com/document/d/14MtpVxlB7ITRbjO2r43zOp8gWaO4jBWZt6qBSbc9KGM/edit?tab=t.0#heading=h.tg77o4eov0tm" class="link-row" target="_blank">
+      <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=docs.google.com&sz=64" alt=""></div>
+      <div class="link-text">
+        <strong>Sophie's Curated Comps on Samply</strong>
+        <span>docs.google.com</span>
+      </div>
+      <span class="link-chevron">›</span>
+    </a>
+
+    <a href="https://rentry.co/CET" class="link-row" target="_blank">
+      <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=rentry.co&sz=64" alt=""></div>
+      <div class="link-text">
+        <strong>Sophie's Curated Comps & Edits Tracker</strong>
+        <span>rentry.co/CET · no links, informational only</span>
+      </div>
+      <span class="link-chevron">›</span>
+    </a>
+
+    <a href="https://discord.gg/Xv9HG8QkM9" class="link-row" target="_blank">
+      <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=discord.com&sz=64" alt=""></div>
+      <div class="link-text">
+        <strong>cet.net · Request any comp!</strong>
+        <span>discord.gg/Xv9HG8QkM9</span>
+      </div>
+      <span class="link-chevron">›</span>
+    </a>
+
+  </div>
+
+  <p class="section-label">Links</p>
+  <div class="link-list">
 
     <a href="https://www.last.fm/user/Synox" class="link-row" target="_blank">
       <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=last.fm&sz=64" alt=""></div>
@@ -724,5 +865,25 @@ function copyDiscord() {
   t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 1800);
 }
+
+(async function() {
+  try {
+    const r = await fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=Synox&api_key=0e500743d88e3e05c4e57a8e40f2a6c3&format=json&limit=4');
+    const d = await r.json();
+    const tracks = d.recenttracks.track.slice(0, 4);
+    const container = document.getElementById('lastfm-tracks');
+    container.innerHTML = tracks.map((t, i) => {
+      const nowPlaying = t['@attr'] && t['@attr'].nowplaying;
+      const art = t.image?.[1]?.['#text'] || '';
+      return `<div class="lastfm-track">
+        ${art ? `<img class="lastfm-art" src="${art}" alt="">` : '<div class="lastfm-art"></div>'}
+        <div class="lastfm-info">
+          <div class="lastfm-title">${nowPlaying ? '<span class="lastfm-now"></span> ' : ''}${t.name}</div>
+          <div class="lastfm-artist">${t.artist['#text']}</div>
+        </div>
+      </div>`;
+    }).join('');
+  } catch(e) {}
+})();
 
 </script>
