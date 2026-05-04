@@ -125,13 +125,30 @@ body::before {
 .discord-btn:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
 
 .what-btn {
-  display: inline-flex; align-items: center; padding: 6px 14px;
-  border-radius: 999px; border: 0.5px solid var(--border);
-  background: var(--surface); font-size: 12px; color: var(--muted);
+  display: inline-flex; align-items: center; gap: 6px; padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--surface), var(--surface)) padding-box,
+    linear-gradient(90deg, #a78bfa, #60a5fa, #34d399, #a78bfa) border-box;
+  background-size: 100%, 300% 100%;
+  font-size: 12px; color: rgba(255,255,255,0.75);
   cursor: pointer; font-family: var(--font);
-  transition: border-color 0.2s, color 0.2s; margin-top: 2px;
+  transition: color 0.2s, box-shadow 0.2s;
+  margin-top: 2px;
+  animation: borderShift 4s linear infinite;
+  box-shadow: 0 0 10px rgba(139,92,246,0.2);
 }
-.what-btn:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
+
+@keyframes borderShift {
+  0%   { background-position: 100%, 0% 50%; }
+  100% { background-position: 100%, 300% 50%; }
+}
+
+.what-btn:hover {
+  color: #fff;
+  box-shadow: 0 0 16px rgba(139,92,246,0.45), 0 0 32px rgba(96,165,250,0.2);
+}
 
 .modal-overlay {
   display: none; position: fixed; inset: 0;
@@ -337,6 +354,12 @@ body::before {
 .page > *:nth-child(12) { animation: fadeUp 0.5s 0.60s ease both; }
 .page > *:nth-child(13) { animation: fadeUp 0.5s 0.65s ease both; }
 .page > *:nth-child(14) { animation: fadeUp 0.5s 0.70s ease both; }
+.page > *:nth-child(15) { animation: fadeUp 0.5s 0.72s ease both; }
+.page > *:nth-child(16) { animation: fadeUp 0.5s 0.74s ease both; }
+.page > *:nth-child(17) { animation: fadeUp 0.5s 0.76s ease both; }
+.page > *:nth-child(18) { animation: fadeUp 0.5s 0.78s ease both; }
+.page > *:nth-child(19) { animation: fadeUp 0.5s 0.80s ease both; }
+.page > *:nth-child(20) { animation: fadeUp 0.5s 0.82s ease both; }
 
 @media (max-width: 768px) {
   .page { padding: 0 16px; }
@@ -510,16 +533,22 @@ body::before {
       <div class="link-text"><strong>Yedits Discord</strong><span>discord.gg/yedits</span></div>
       <span class="link-chevron">›</span>
     </a>
-    <a href="https://docs.google.com/document/d/14MtpVxlB7ITRbjO2r43zOp8gWaO4jBWZt6qBSbc9KGM/edit?tab=t.0#heading=h.tg77o4eov0tm" class="link-row" target="_blank">
-      <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=docs.google.com&sz=64" alt=""></div>
-      <div class="link-text"><strong>Sophie's Curated Comps on Samply</strong><span>docs.google.com</span></div>
-      <span class="link-chevron">›</span>
-    </a>
-    <a href="https://rentry.co/CET" class="link-row" target="_blank">
-      <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=rentry.co&sz=64" alt=""></div>
-      <div class="link-text"><strong>Sophie's Curated Comps & Edits Tracker</strong><span>rentry.co/CET · no links, informational only</span></div>
-      <span class="link-chevron">›</span>
-    </a>
+  </div>
+
+  <div class="section-header"><p class="section-title">Sophie's Curated Comps & Edits</p></div>
+  <div class="link-list">
+    <div class="link-grid" style="margin-top:0">
+      <a href="https://rentry.co/CET" class="link-row" target="_blank">
+        <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=rentry.co&sz=64" alt=""></div>
+        <div class="link-text"><strong>Tracker</strong><span>rentry.co/CET · no links, informational only</span></div>
+        <span class="link-chevron">›</span>
+      </a>
+      <a href="https://docs.google.com/document/d/14MtpVxlB7ITRbjO2r43zOp8gWaO4jBWZt6qBSbc9KGM/edit?tab=t.0#heading=h.tg77o4eov0tm" class="link-row" target="_blank">
+        <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=docs.google.com&sz=64" alt=""></div>
+        <div class="link-text"><strong>Samply Archive</strong><span>docs.google.com</span></div>
+        <span class="link-chevron">›</span>
+      </a>
+    </div>
     <a href="https://discord.gg/Xv9HG8QkM9" class="link-row" target="_blank">
       <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=discord.com&sz=64" alt=""></div>
       <div class="link-text"><strong>cet.net · Request any comp!</strong><span>discord.gg/Xv9HG8QkM9</span></div>
