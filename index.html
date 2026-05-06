@@ -549,7 +549,17 @@ function buildPanel() {
           <div class="ep-field"><label>Title</label><input type="text" value="${esc(p.title)}" oninput="DATA.categories[${ci}].projects[${pi}].title=this.value;render()"></div>
           <div class="ep-field"><label>Artist</label><input type="text" value="${esc(p.artist)}" oninput="DATA.categories[${ci}].projects[${pi}].artist=this.value;render()"></div>
           <div class="ep-field"><label>Editor (optional)</label><input type="text" value="${esc(p.editor)}" oninput="DATA.categories[${ci}].projects[${pi}].editor=this.value;render()"></div>
-          <div class="ep-field"><label>Cover filename or URL</label><input type="text" value="${esc(p.cover)}" oninput="DATA.categories[${ci}].projects[${pi}].cover=this.value;render()"></div>
+          <div class="ep-field">
+            <label>Cover</label>
+            <div style="display:flex;gap:8px;align-items:center;margin-bottom:6px">
+              <img src="${esc(p.cover)}" style="width:48px;height:48px;border-radius:6px;object-fit:cover;background:var(--surface2)" onerror="this.style.opacity=0.2" id="cover-preview-${ci}-${pi}">
+              <label style="flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:8px;background:rgba(255,255,255,0.04);border:0.5px dashed rgba(255,255,255,0.15);border-radius:6px;cursor:pointer;font-size:12px;color:var(--muted);text-transform:none;letter-spacing:0">
+                <span id="cover-upload-label-${ci}-${pi}">Upload image</span>
+                <input type="file" accept="image/*" style="display:none" onchange="handleCoverUpload(event,${ci},${pi})">
+              </label>
+            </div>
+            <input type="text" placeholder="or paste URL / filename" value="${esc(p.cover)}" oninput="DATA.categories[${ci}].projects[${pi}].cover=this.value;render();document.getElementById('cover-preview-${ci}-${pi}').src=this.value" id="cover-input-${ci}-${pi}">
+          </div>
           <div class="ep-field"><label>Samply Link</label><input type="text" value="${esc(p.link)}" oninput="DATA.categories[${ci}].projects[${pi}].link=this.value;render()"></div>
           <label class="ep-checkbox"><input type="checkbox" ${p.curatorsCut?'checked':''} onchange="DATA.categories[${ci}].projects[${pi}].curatorsCut=this.checked;render()"> Curator's Cut</label>
           <button class="ep-del" onclick="DATA.categories[${ci}].projects.splice(${pi},1);renderAndBuild()">Remove project</button>
@@ -674,6 +684,65 @@ function renderAndBuild() {
   render();
   buildPanel();
   syncToSupabase();
+}
+
+// ─── IMAGE UPLOAD ─────────────────────────────────────────────────────────────
+async function handleCoverUpload(event, ci, pi) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const label = document.getElementById(`cover-upload-label-${ci}-${pi}`);
+  const preview = document.getElementById(`cover-preview-${ci}-${pi}`);
+  const input = document.getElementById(`cover-input-${ci}-${pi}`);
+  if (label) label.textContent = 'Compressing…';
+
+  try {
+    const blob = await compressImage(file, 600, 0.82);
+    const filename = `${Date.now()}.jpg`;
+    if (label) label.textContent = 'Uploading…';
+    const url = await uploadCover(blob, filename);
+    DATA.categories[ci].projects[pi].cover = url;
+    if (preview) preview.src = url;
+    if (input) input.value = url;
+    render();
+    syncToSupabase();
+    if (label) label.textContent = '✓ Uploaded';
+    setTimeout(() => { if (label) label.textContent = 'Upload image'; }, 2000);
+  } catch(e) {
+    console.error('Upload error:', e);
+    if (label) label.textContent = '✗ Failed – retry';
+    setTimeout(() => { if (label) label.textContent = 'Upload image'; }, 2500);
+  }
+}
+
+function compressImage(file, maxSize, quality) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    const url = URL.createObjectURL(file);
+    img.onload = () => {
+      let { width: w, height: h } = img;
+      if (w > maxSize || h > maxSize) {
+        if (w > h) { h = Math.round(h * maxSize / w); w = maxSize; }
+        else { w = Math.round(w * maxSize / h); h = maxSize; }
+      }
+      const canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+      URL.revokeObjectURL(url);
+      canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error('Canvas error')), 'image/jpeg', quality);
+    };
+    img.onerror = reject;
+    img.src = url;
+  });
+}
+
+async function uploadCover(blob, filename) {
+  const res = await fetch(`${SB_URL}/storage/v1/object/covers/${filename}`, {
+    method: 'POST',
+    headers: { 'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}`, 'Content-Type': 'image/jpeg', 'x-upsert': 'true' },
+    body: blob
+  });
+  if (!res.ok) throw new Error(await res.text());
+  return `${SB_URL}/storage/v1/object/public/covers/${filename}`;
 }
 
 // ─── SUPABASE ─────────────────────────────────────────────────────────────────
