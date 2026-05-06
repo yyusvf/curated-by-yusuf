@@ -16,379 +16,247 @@
 <meta name="twitter:image" content="og-image.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root {
-  --bg: #0a0a0a;
-  --surface: #141414;
-  --surface2: #1e1e1e;
-  --border: rgba(255,255,255,0.07);
-  --text: #f0f0f0;
-  --muted: rgba(255,255,255,0.45);
-  --accent: #c8f542;
-  --font: -apple-system, BlinkMacSystemFont, 'Inter', 'Helvetica Neue', sans-serif;
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0a0a;--surface:#141414;--surface2:#1e1e1e;
+  --border:rgba(255,255,255,0.07);--text:#f0f0f0;
+  --muted:rgba(255,255,255,0.45);--accent:#c8f542;
+  --font:-apple-system,BlinkMacSystemFont,'Inter','Helvetica Neue',sans-serif;
 }
+body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh;padding-bottom:80px}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");background-size:200px;pointer-events:none;z-index:0}
+.page{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:0 24px}
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--font);
-  min-height: 100vh;
-  padding-bottom: 80px;
-}
+/* PROFILE */
+.profile{display:flex;align-items:flex-start;gap:20px;padding:52px 0 44px}
+.profile-left{display:flex;flex-direction:column;gap:10px;flex:1;min-width:0}
+.avatar{width:72px;height:72px;border-radius:50%;overflow:hidden;border:2px solid var(--border);flex-shrink:0}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.profile-name{font-size:18px;font-weight:600;letter-spacing:-0.3px}
+.profile-bio{font-size:13px;color:var(--muted);line-height:1.5}
+.profile-socials{display:flex;gap:8px;flex-wrap:wrap;margin-top:2px}
+.profile-right{width:160px;flex-shrink:0;display:flex;flex-direction:column;gap:8px;padding-top:4px}
 
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-  background-size: 200px;
-  pointer-events: none;
-  z-index: 0;
-}
+/* DISCORD/INSTAGRAM PILLS */
+.discord-wrap{position:relative;display:inline-flex}
+.discord-dropdown{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--surface2);border:0.5px solid rgba(255,255,255,0.15);border-radius:8px;padding:8px 14px;font-size:13px;color:var(--text);white-space:nowrap;opacity:0;pointer-events:none;transition:opacity 0.15s;z-index:10}
+.discord-dropdown::before{content:'';position:absolute;bottom:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-bottom-color:rgba(255,255,255,0.15)}
+.discord-dropdown::after{content:'';position:absolute;bottom:calc(100% - 1px);left:50%;transform:translateX(-50%);border:5px solid transparent;border-bottom-color:var(--surface2)}
+.discord-wrap:hover .discord-dropdown{opacity:1}
+.discord-btn{display:inline-flex;align-items:center;padding:6px 14px;border-radius:999px;border:0.5px solid var(--border);background:var(--surface);font-size:12px;color:var(--muted);cursor:pointer;font-family:var(--font);text-decoration:none;transition:border-color 0.2s,color 0.2s}
+.discord-btn:hover{border-color:rgba(255,255,255,0.2);color:var(--text)}
+a.discord-btn{text-decoration:none}
 
-.page {
-  position: relative;
-  z-index: 1;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
+/* WHAT IS THIS */
+.what-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 16px;border-radius:999px;border:1px solid transparent;background:linear-gradient(var(--surface),var(--surface)) padding-box,linear-gradient(90deg,#a78bfa,#60a5fa,#34d399,#a78bfa) border-box;background-size:100%,300% 100%;font-size:12px;color:rgba(255,255,255,0.75);cursor:pointer;font-family:var(--font);transition:color 0.2s,box-shadow 0.2s;margin-top:2px;animation:borderShift 4s linear infinite;box-shadow:0 0 10px rgba(139,92,246,0.2)}
+@keyframes borderShift{0%{background-position:100%,0% 50%}100%{background-position:100%,300% 50%}}
+.what-btn:hover{color:#fff;box-shadow:0 0 16px rgba(139,92,246,0.45),0 0 32px rgba(96,165,250,0.2)}
 
-/* ── PROFILE ── */
-.profile {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 52px 0 44px;
-}
+/* LASTFM */
+.lastfm-label{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.25)}
+.lastfm-track{display:flex;align-items:center;gap:8px}
+.lastfm-art{width:36px;height:36px;border-radius:4px;object-fit:cover;background:var(--surface2);flex-shrink:0}
+.lastfm-info{min-width:0}
+.lastfm-title{font-size:11px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lastfm-artist{font-size:10px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:1px}
+.lastfm-now{display:inline-block;width:6px;height:6px;border-radius:50%;background:#d02323;flex-shrink:0;animation:pulse 1.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
 
-.profile-left { display: flex; flex-direction: column; gap: 10px; flex: 1; min-width: 0; }
+/* SAMPLY CTA */
+.samply-cta{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;background:rgba(255,255,255,0.04);border:0.5px solid rgba(255,255,255,0.08);text-decoration:none;margin-bottom:24px}
+.samply-cta img{width:32px;height:32px;border-radius:7px;flex-shrink:0}
+.samply-cta-text{flex:1}
+.samply-cta-text strong{display:block;font-size:13px;font-weight:500;color:var(--text)}
+.samply-cta-text span{font-size:11px;color:var(--muted)}
+.samply-cta-btn{font-size:12px;font-weight:500;color:#fff;background:rgba(255,255,255,0.12);border:none;padding:6px 14px;border-radius:999px;white-space:nowrap;flex-shrink:0}
 
-.avatar { width: 72px; height: 72px; border-radius: 50%; overflow: hidden; border: 2px solid var(--border); flex-shrink: 0; }
-.avatar img { width: 100%; height: 100%; object-fit: cover; }
+/* SECTION HEADER */
+.section-header{display:flex;align-items:baseline;justify-content:space-between;margin:36px 0 16px}
+.section-title{font-size:18px;font-weight:600;letter-spacing:-0.3px}
 
-.profile-name { font-size: 18px; font-weight: 600; letter-spacing: -0.3px; }
-.profile-bio { font-size: 13px; color: var(--muted); line-height: 1.5; }
-.profile-socials { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 2px; }
+/* SCROLL ROW */
+.scroll-row{display:flex;gap:16px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none;-ms-overflow-style:none}
+.scroll-row::-webkit-scrollbar{display:none}
 
-.discord-wrap { position: relative; display: inline-flex; }
-.discord-dropdown {
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--surface2);
-  border: 0.5px solid rgba(255,255,255,0.15);
-  border-radius: 8px;
-  padding: 8px 14px;
-  font-size: 13px;
-  color: var(--text);
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.15s;
-  z-index: 10;
-}
-.discord-dropdown::before {
-  content: '';
-  position: absolute;
-  bottom: 100%; left: 50%;
-  transform: translateX(-50%);
-  border: 5px solid transparent;
-  border-bottom-color: rgba(255,255,255,0.15);
-}
-.discord-dropdown::after {
-  content: '';
-  position: absolute;
-  bottom: calc(100% - 1px); left: 50%;
-  transform: translateX(-50%);
-  border: 5px solid transparent;
-  border-bottom-color: var(--surface2);
-}
-.discord-wrap:hover .discord-dropdown { opacity: 1; }
+/* PROJECT CARDS (large = playlists) */
+.pl-card{flex-shrink:0;width:180px;text-decoration:none;transition:opacity 0.2s}
+.pl-card:hover{opacity:0.78}
+.pl-card:active{transform:scale(0.97)}
+.pl-thumb{width:180px;height:180px;border-radius:10px;object-fit:cover;display:block;background:var(--surface2)}
+.pl-body{padding:9px 2px 0}
+.pl-title{font-size:14px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pl-artist{font-size:12px;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
-.discord-btn {
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 14px;
-  border-radius: 999px;
-  border: 0.5px solid var(--border);
-  background: var(--surface);
-  font-size: 12px;
-  color: var(--muted);
-  cursor: pointer;
-  font-family: var(--font);
-  text-decoration: none;
-  transition: border-color 0.2s, color 0.2s;
-}
-.discord-btn:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
+/* PROJECT CARDS (small = comps) */
+.comp-card-wrap{flex-shrink:0;width:140px}
+.comp-card{display:block;text-decoration:none;transition:opacity 0.2s}
+.comp-card:hover{opacity:0.78}
+.comp-thumb-wrap{position:relative;display:block}
+.comp-thumb{width:140px;height:140px;border-radius:8px;object-fit:cover;display:block;background:var(--surface2)}
+.comp-body{padding:8px 2px 0}
+.comp-title{font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.comp-artist{font-size:11px;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.comp-editor{font-size:10px;color:rgba(255,255,255,0.28);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
-.what-btn {
-  display: inline-flex; align-items: center; gap: 6px; padding: 6px 16px;
-  border-radius: 999px;
-  border: 1px solid transparent;
-  background:
-    linear-gradient(var(--surface), var(--surface)) padding-box,
-    linear-gradient(90deg, #a78bfa, #60a5fa, #34d399, #a78bfa) border-box;
-  background-size: 100%, 300% 100%;
-  font-size: 12px; color: rgba(255,255,255,0.75);
-  cursor: pointer; font-family: var(--font);
-  transition: color 0.2s, box-shadow 0.2s;
-  margin-top: 2px;
-  animation: borderShift 4s linear infinite;
-  box-shadow: 0 0 10px rgba(139,92,246,0.2);
-}
+/* CURATOR'S CUT */
+.curators-cut{position:absolute;bottom:8px;left:8px;font-size:9px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:rgba(255,255,255,0.85);background:rgba(0,0,0,0.55);backdrop-filter:blur(4px);padding:3px 8px;border-radius:999px;pointer-events:none;white-space:nowrap}
 
-@keyframes borderShift {
-  0%   { background-position: 100%, 0% 50%; }
-  100% { background-position: 100%, 300% 50%; }
-}
+/* LINK SECTIONS */
+.link-list{display:flex;flex-direction:column;gap:10px;margin-top:4px}
+.link-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:4px}
+.link-row{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:12px;background:var(--surface);border:0.5px solid var(--border);text-decoration:none;transition:transform 0.2s,border-color 0.2s}
+.link-row:hover{transform:translateY(-1px);border-color:rgba(255,255,255,0.15)}
+.link-row:active{transform:scale(0.99)}
+.link-icon{width:40px;height:40px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:var(--surface2);overflow:hidden}
+.link-icon img{width:22px;height:22px;object-fit:contain}
+.link-text{flex:1}
+.link-text strong{display:block;font-size:14px;font-weight:500;color:var(--text)}
+.link-text span{font-size:12px;color:var(--muted)}
+.link-chevron{color:var(--muted);font-size:16px}
 
-.what-btn:hover {
-  color: #fff;
-  box-shadow: 0 0 16px rgba(139,92,246,0.45), 0 0 32px rgba(96,165,250,0.2);
-}
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:100;align-items:center;justify-content:center;padding:24px}
+.modal-overlay{animation:none!important;opacity:1!important}
+.modal-overlay.open{display:flex}
+.modal{background:#181818;border:0.5px solid rgba(255,255,255,0.1);border-radius:16px;padding:28px;max-width:480px;width:100%;position:relative;animation:fadeUp 0.25s ease both}
+.modal-title{font-size:17px;font-weight:600;margin-bottom:14px}
+.modal p{font-size:14px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:12px}
+.modal p:last-of-type{margin-bottom:0}
+.modal-close{position:absolute;top:16px;right:16px;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.08);border:none;color:var(--muted);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:var(--font)}
+.modal-close:hover{background:rgba(255,255,255,0.14);color:var(--text)}
 
-.modal-overlay {
-  display: none; position: fixed; inset: 0;
-  background: rgba(0,0,0,0.75); z-index: 100;
-  align-items: center; justify-content: center; padding: 24px;
-}
-.modal-overlay { animation: none !important; opacity: 1 !important; }
-.modal-overlay.open { display: flex; }
-.modal {
-  background: #181818; border: 0.5px solid rgba(255,255,255,0.1);
-  border-radius: 16px; padding: 28px; max-width: 480px; width: 100%;
-  position: relative; animation: fadeUp 0.25s ease both;
-}
-.modal-title { font-size: 17px; font-weight: 600; margin-bottom: 14px; }
-.modal p { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 12px; }
-.modal p:last-of-type { margin-bottom: 0; }
-.modal-close {
-  position: absolute; top: 16px; right: 16px; width: 28px; height: 28px;
-  border-radius: 50%; background: rgba(255,255,255,0.08); border: none;
-  color: var(--muted); font-size: 16px; cursor: pointer;
-  display: flex; align-items: center; justify-content: center; font-family: var(--font);
-}
-.modal-close:hover { background: rgba(255,255,255,0.14); color: var(--text); }
+/* TOAST */
+.copied-toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(10px);background:var(--accent);color:#0a0a0a;font-size:12px;font-weight:600;padding:8px 18px;border-radius:999px;opacity:0;transition:opacity 0.2s,transform 0.2s;pointer-events:none;z-index:999;animation:none!important}
+.copied-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
-.profile-right { width: 160px; flex-shrink: 0; display: flex; flex-direction: column; gap: 8px; padding-top: 4px; }
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.page>*{opacity:0}
+.page>*:nth-child(1){animation:fadeUp 0.5s 0.05s ease both}
+.page>*:nth-child(2){animation:fadeUp 0.5s 0.10s ease both}
+.page>*:nth-child(3){animation:fadeUp 0.5s 0.15s ease both}
+.page>*:nth-child(4){animation:fadeUp 0.5s 0.20s ease both}
+.page>*:nth-child(5){animation:fadeUp 0.5s 0.25s ease both}
+.page>*:nth-child(6){animation:fadeUp 0.5s 0.30s ease both}
+.page>*:nth-child(7){animation:fadeUp 0.5s 0.35s ease both}
+.page>*:nth-child(8){animation:fadeUp 0.5s 0.40s ease both}
+.page>*:nth-child(9){animation:fadeUp 0.5s 0.45s ease both}
+.page>*:nth-child(10){animation:fadeUp 0.5s 0.50s ease both}
+.page>*:nth-child(11){animation:fadeUp 0.5s 0.55s ease both}
+.page>*:nth-child(12){animation:fadeUp 0.5s 0.60s ease both}
+.page>*:nth-child(13){animation:fadeUp 0.5s 0.65s ease both}
+.page>*:nth-child(14){animation:fadeUp 0.5s 0.70s ease both}
+.page>*:nth-child(15){animation:fadeUp 0.5s 0.72s ease both}
+.page>*:nth-child(16){animation:fadeUp 0.5s 0.74s ease both}
+.page>*:nth-child(17){animation:fadeUp 0.5s 0.76s ease both}
+.page>*:nth-child(18){animation:fadeUp 0.5s 0.78s ease both}
+.page>*:nth-child(19){animation:fadeUp 0.5s 0.80s ease both}
+.page>*:nth-child(20){animation:fadeUp 0.5s 0.82s ease both}
 
-.lastfm-label { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.25); }
-.lastfm-track { display: flex; align-items: center; gap: 8px; }
-.lastfm-art { width: 36px; height: 36px; border-radius: 4px; object-fit: cover; background: var(--surface2); flex-shrink: 0; }
-.lastfm-info { min-width: 0; }
-.lastfm-title { font-size: 11px; font-weight: 500; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.lastfm-artist { font-size: 10px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 1px; }
-.lastfm-now { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #d02323; flex-shrink: 0; animation: pulse 1.5s ease-in-out infinite; }
-@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+/* EDIT MODE BUTTON */
+.edit-trigger{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--surface2);border:0.5px solid var(--border);color:var(--muted);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:400;transition:background 0.2s,color 0.2s,right 0.3s;font-family:var(--font)}
+.edit-trigger:hover{background:var(--surface);color:var(--text)}
+.edit-trigger.active{background:var(--accent);color:#0a0a0a;border-color:transparent;right:404px}
 
-/* ── SAMPLY CTA ── */
-.samply-cta {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 14px;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.04);
-  border: 0.5px solid rgba(255,255,255,0.08);
-  text-decoration: none;
-  margin-bottom: 24px;
-}
-.samply-cta img { width: 32px; height: 32px; border-radius: 7px; flex-shrink: 0; }
-.samply-cta-text { flex: 1; }
-.samply-cta-text strong { display: block; font-size: 13px; font-weight: 500; color: var(--text); }
-.samply-cta-text span { font-size: 11px; color: var(--muted); }
-.samply-cta-btn { font-size: 12px; font-weight: 500; color: #fff; background: rgba(255,255,255,0.12); border: none; padding: 6px 14px; border-radius: 999px; white-space: nowrap; flex-shrink: 0; }
+/* EDIT PANEL */
+.edit-panel{position:fixed;top:0;right:0;width:380px;height:100vh;background:#111;border-left:0.5px solid rgba(255,255,255,0.1);z-index:300;display:flex;flex-direction:column;transform:translateX(100%);transition:transform 0.3s cubic-bezier(.16,1,.3,1)}
+.edit-panel.open{transform:translateX(0)}
+.ep-head{padding:20px;border-bottom:0.5px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.ep-head h2{font-size:15px;font-weight:600}
+.ep-save{background:var(--accent);color:#0a0a0a;border:none;border-radius:8px;padding:8px 16px;font-size:13px;font-weight:600;cursor:pointer;font-family:var(--font)}
+.ep-save:hover{opacity:0.85}
+.ep-body{flex:1;overflow-y:auto;padding:16px}
+.ep-body::-webkit-scrollbar{width:4px}
+.ep-body::-webkit-scrollbar-track{background:transparent}
+.ep-body::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.1);border-radius:2px}
 
-/* ── SECTION HEADER ── */
-.section-header {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin: 36px 0 16px;
-}
-.section-title {
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: -0.3px;
-}
-.section-sub {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
+/* EDIT SECTIONS */
+.ep-section{margin-bottom:8px;border:0.5px solid rgba(255,255,255,0.08);border-radius:10px;overflow:hidden}
+.ep-section-head{display:flex;align-items:center;gap:8px;padding:12px 14px;cursor:pointer;user-select:none}
+.ep-section-head:hover{background:rgba(255,255,255,0.03)}
+.ep-section-title{flex:1;font-size:13px;font-weight:500}
+.ep-section-type{font-size:10px;color:var(--muted);background:rgba(255,255,255,0.06);padding:2px 8px;border-radius:999px}
+.ep-arrow{font-size:12px;color:var(--muted);transition:transform 0.2s}
+.ep-section.expanded .ep-arrow{transform:rotate(90deg)}
+.ep-section-body{display:none;padding:12px 14px;border-top:0.5px solid rgba(255,255,255,0.06)}
+.ep-section.expanded .ep-section-body{display:block}
 
-/* ── HORIZONTAL SCROLL ROW ── */
-.scroll-row {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  padding-bottom: 8px;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-.scroll-row::-webkit-scrollbar { display: none; }
+/* ORDER BUTTONS */
+.ep-order{display:flex;gap:4px;margin-left:auto}
+.ep-order button{background:rgba(255,255,255,0.06);border:none;color:var(--muted);width:24px;height:24px;border-radius:4px;cursor:pointer;font-size:11px;display:flex;align-items:center;justify-content:center}
+.ep-order button:hover{background:rgba(255,255,255,0.12);color:var(--text)}
 
-/* ── PLAYLIST CARD (large) ── */
-.pl-card {
-  flex-shrink: 0;
-  width: 180px;
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
-.pl-card:hover { opacity: 0.78; }
-.pl-card:active { transform: scale(0.97); }
+/* FORM ELEMENTS */
+.ep-field{margin-bottom:10px}
+.ep-field label{display:block;font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.ep-field input,.ep-field select{width:100%;background:rgba(255,255,255,0.05);border:0.5px solid rgba(255,255,255,0.1);border-radius:6px;padding:8px 10px;font-size:13px;color:var(--text);font-family:var(--font);outline:none}
+.ep-field input:focus,.ep-field select:focus{border-color:rgba(255,255,255,0.25)}
+.ep-checkbox{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);cursor:pointer}
+.ep-checkbox input{width:auto;accent-color:var(--accent)}
 
-.pl-thumb {
-  width: 180px;
-  height: 180px;
-  border-radius: 10px;
-  object-fit: cover;
-  display: block;
-  background: var(--surface2);
-}
-.pl-body { padding: 9px 2px 0; }
-.pl-title { font-size: 14px; font-weight: 600; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.pl-artist { font-size: 12px; color: var(--muted); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* PROJECT ITEMS */
+.ep-project{background:rgba(255,255,255,0.03);border:0.5px solid rgba(255,255,255,0.06);border-radius:8px;margin-bottom:8px;overflow:hidden}
+.ep-project-head{display:flex;align-items:center;gap:8px;padding:10px 12px;cursor:pointer}
+.ep-project-head:hover{background:rgba(255,255,255,0.03)}
+.ep-project-thumb{width:32px;height:32px;border-radius:4px;object-fit:cover;background:var(--surface2);flex-shrink:0}
+.ep-project-name{flex:1;font-size:12px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ep-project-body{display:none;padding:12px;border-top:0.5px solid rgba(255,255,255,0.06)}
+.ep-project.expanded .ep-project-body{display:block}
+.ep-del{background:rgba(255,80,80,0.12);border:0.5px solid rgba(255,80,80,0.2);color:#ff6b6b;border-radius:6px;padding:6px 12px;font-size:12px;cursor:pointer;font-family:var(--font);width:100%;margin-top:8px}
+.ep-del:hover{background:rgba(255,80,80,0.2)}
 
-/* ── COMP CARD (medium) ── */
-.comp-card {
-  flex-shrink: 0;
-  width: 140px;
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
-.comp-card:hover { opacity: 0.78; }
-.comp-card:active { transform: scale(0.97); }
+/* ADD BUTTONS */
+.ep-add{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;padding:8px;background:rgba(255,255,255,0.04);border:0.5px dashed rgba(255,255,255,0.12);border-radius:8px;color:var(--muted);font-size:12px;cursor:pointer;font-family:var(--font);margin-top:8px}
+.ep-add:hover{background:rgba(255,255,255,0.07);color:var(--text)}
+.ep-add-section{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;padding:10px;background:rgba(255,255,255,0.03);border:0.5px dashed rgba(255,255,255,0.1);border-radius:8px;color:var(--muted);font-size:12px;cursor:pointer;font-family:var(--font);margin-top:12px}
+.ep-add-section:hover{background:rgba(255,255,255,0.06);color:var(--text)}
 
-.comp-thumb {
-  width: 140px;
-  height: 140px;
-  border-radius: 8px;
-  object-fit: cover;
-  display: block;
-  background: var(--surface2);
-}
-.comp-body { padding: 8px 2px 0; }
-.comp-title { font-size: 13px; font-weight: 600; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.comp-artist { font-size: 11px; color: var(--muted); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.comp-editor { font-size: 10px; color: rgba(255,255,255,0.28); margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* LINK ITEMS */
+.ep-link{background:rgba(255,255,255,0.03);border:0.5px solid rgba(255,255,255,0.06);border-radius:8px;padding:10px 12px;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.ep-link-info{flex:1;min-width:0}
+.ep-link-title{font-size:12px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ep-link-sub{font-size:10px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ep-link-edit{background:rgba(255,255,255,0.06);border:none;color:var(--muted);border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;font-family:var(--font)}
+.ep-link-edit:hover{color:var(--text)}
 
-/* ── APP CARD ── */
-.app-card {
-  border-radius: 14px;
-  background: var(--surface);
-  border: 0.5px solid var(--border);
-  overflow: hidden;
-  margin-top: 4px;
-}
-.app-card-header { padding: 20px 20px 0; display: flex; align-items: flex-start; gap: 14px; }
-.app-icon { width: 52px; height: 52px; border-radius: 50%; flex-shrink: 0; overflow: hidden; }
-.app-icon img { width: 100%; height: 100%; object-fit: cover; }
-.app-info { flex: 1; }
-.app-name { font-size: 16px; font-weight: 600; color: var(--text); }
-.app-tagline { font-size: 12px; color: var(--muted); margin-top: 3px; line-height: 1.5; }
-.app-features { display: flex; flex-wrap: wrap; gap: 6px; padding: 16px 20px; }
-.app-feature { font-size: 11px; color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); border-radius: 999px; padding: 4px 10px; }
-.app-actions { display: flex; gap: 8px; padding: 0 20px 20px; }
-.app-btn { flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 10px 16px; border-radius: 8px; font-size: 13px; font-weight: 500; text-decoration: none; transition: opacity 0.2s; cursor: pointer; border: none; font-family: var(--font); }
-.app-btn:hover { opacity: 0.8; }
-.app-btn-primary { background: var(--text); color: #0a0a0a; }
-.app-btn-secondary { background: rgba(255,255,255,0.07); color: var(--text); border: 0.5px solid var(--border); }
+/* COLUMNS TOGGLE */
+.ep-toggle{display:flex;gap:6px;margin-bottom:10px}
+.ep-toggle-btn{flex:1;padding:7px;border-radius:6px;border:0.5px solid rgba(255,255,255,0.1);background:transparent;color:var(--muted);font-size:12px;cursor:pointer;font-family:var(--font);transition:background 0.15s,color 0.15s}
+.ep-toggle-btn.active{background:rgba(255,255,255,0.1);color:var(--text);border-color:rgba(255,255,255,0.2)}
 
-/* ── LINK LIST ── */
-.link-list { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
-.link-row {
-  display: flex; align-items: center; gap: 14px;
-  padding: 14px 18px; border-radius: 12px;
-  background: var(--surface); border: 0.5px solid var(--border);
-  text-decoration: none; transition: transform 0.2s, border-color 0.2s;
-}
-.link-row:hover { transform: translateY(-1px); border-color: rgba(255,255,255,0.15); }
-.link-row:active { transform: scale(0.99); }
-.link-icon { width: 40px; height: 40px; border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: var(--surface2); overflow: hidden; }
-.link-icon img { width: 22px; height: 22px; object-fit: contain; }
-.link-text { flex: 1; }
-.link-text strong { display: block; font-size: 14px; font-weight: 500; color: var(--text); }
-.link-text span { font-size: 12px; color: var(--muted); }
-.link-chevron { color: var(--muted); font-size: 16px; }
+/* PASSWORD MODAL */
+.pw-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:400;align-items:center;justify-content:center}
+.pw-modal.open{display:flex}
+.pw-box{background:#181818;border:0.5px solid rgba(255,255,255,0.1);border-radius:14px;padding:28px;width:320px}
+.pw-box h3{font-size:15px;font-weight:600;margin-bottom:4px}
+.pw-box p{font-size:12px;color:var(--muted);margin-bottom:16px}
+.pw-input{width:100%;background:rgba(255,255,255,0.06);border:0.5px solid rgba(255,255,255,0.12);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--text);font-family:var(--font);outline:none;margin-bottom:10px}
+.pw-input:focus{border-color:rgba(255,255,255,0.3)}
+.pw-submit{width:100%;background:var(--accent);color:#0a0a0a;border:none;border-radius:8px;padding:10px;font-size:14px;font-weight:600;cursor:pointer;font-family:var(--font)}
+.pw-err{font-size:12px;color:#ff6b6b;margin-top:8px;display:none}
 
-/* ── TWO-COL LINKS on desktop ── */
-.link-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 4px; }
-@media (max-width: 560px) { .link-grid { grid-template-columns: 1fr; } }
+/* LINK EDIT MODAL */
+.link-edit-modal{max-width:400px}
 
-/* ── TOAST ── */
-.copied-toast {
-  position: fixed; bottom: 28px; left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  background: var(--accent); color: #0a0a0a;
-  font-size: 12px; font-weight: 600;
-  padding: 8px 18px; border-radius: 999px;
-  opacity: 0; transition: opacity 0.2s, transform 0.2s;
-  pointer-events: none; z-index: 999;
-  animation: none !important;
-}
-.copied-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-
-/* ── FOOTER ── */
-.footer { margin-top: 60px; text-align: center; font-size: 11px; color: rgba(255,255,255,0.15); letter-spacing: 0.05em; }
-
-/* ── ANIMATIONS ── */
-@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-.page > * { opacity: 0; }
-.page > *:nth-child(1)  { animation: fadeUp 0.5s 0.05s ease both; }
-.page > *:nth-child(2)  { animation: fadeUp 0.5s 0.10s ease both; }
-.page > *:nth-child(3)  { animation: fadeUp 0.5s 0.15s ease both; }
-.page > *:nth-child(4)  { animation: fadeUp 0.5s 0.20s ease both; }
-.page > *:nth-child(5)  { animation: fadeUp 0.5s 0.25s ease both; }
-.page > *:nth-child(6)  { animation: fadeUp 0.5s 0.30s ease both; }
-.page > *:nth-child(7)  { animation: fadeUp 0.5s 0.35s ease both; }
-.page > *:nth-child(8)  { animation: fadeUp 0.5s 0.40s ease both; }
-.page > *:nth-child(9)  { animation: fadeUp 0.5s 0.45s ease both; }
-.page > *:nth-child(10) { animation: fadeUp 0.5s 0.50s ease both; }
-.page > *:nth-child(11) { animation: fadeUp 0.5s 0.55s ease both; }
-.page > *:nth-child(12) { animation: fadeUp 0.5s 0.60s ease both; }
-.page > *:nth-child(13) { animation: fadeUp 0.5s 0.65s ease both; }
-.page > *:nth-child(14) { animation: fadeUp 0.5s 0.70s ease both; }
-.page > *:nth-child(15) { animation: fadeUp 0.5s 0.72s ease both; }
-.page > *:nth-child(16) { animation: fadeUp 0.5s 0.74s ease both; }
-.page > *:nth-child(17) { animation: fadeUp 0.5s 0.76s ease both; }
-.page > *:nth-child(18) { animation: fadeUp 0.5s 0.78s ease both; }
-.page > *:nth-child(19) { animation: fadeUp 0.5s 0.80s ease both; }
-.page > *:nth-child(20) { animation: fadeUp 0.5s 0.82s ease both; }
-
-@media (max-width: 768px) {
-  .page { padding: 0 16px; }
-
-  .profile { flex-direction: row; align-items: flex-start; padding: 40px 0 32px; }
-  .profile-right { width: 130px; flex-shrink: 0; }
-
-  .scroll-row {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-    overflow-x: visible;
-    padding-bottom: 0;
-  }
-
-  .pl-card { width: 100%; flex-shrink: unset; }
-  .pl-thumb { width: 100%; height: auto; aspect-ratio: 1/1; }
-
-  .comp-card { width: 100%; flex-shrink: unset; }
-  .comp-thumb { width: 100%; height: auto; aspect-ratio: 1/1; }
-
-  .link-grid { grid-template-columns: 1fr; }
+/* MOBILE */
+@media(max-width:768px){
+  .page{padding:0 16px}
+  .profile{flex-direction:row;align-items:flex-start;padding:40px 0 32px}
+  .profile-right{width:130px;flex-shrink:0}
+  .scroll-row{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;overflow-x:visible;padding-bottom:0}
+  .pl-card{width:100%;flex-shrink:unset}
+  .pl-thumb{width:100%;height:auto;aspect-ratio:1/1}
+  .comp-card-wrap{width:100%;flex-shrink:unset}
+  .comp-thumb{width:100%;height:auto;aspect-ratio:1/1}
+  .edit-panel{width:100%}
 }
 </style>
 </head>
 <body>
-<div class="page">
 
-  <!-- PROFILE -->
+<div class="page" id="page-root">
+
+  <!-- PROFILE (static) -->
   <div class="profile">
     <div class="profile-left">
       <div class="avatar"><img src="yusuf.jpg" alt="Yusuf"></div>
@@ -408,6 +276,7 @@ body::before {
     </div>
   </div>
 
+  <!-- SAMPLY CTA -->
   <a href="https://samply.app/install" class="samply-cta" target="_blank">
     <img src="https://www.google.com/s2/favicons?domain=samply.app&sz=64" alt="Samply">
     <div class="samply-cta-text">
@@ -417,157 +286,531 @@ body::before {
     <span class="samply-cta-btn">Get App</span>
   </a>
 
-  <!-- PLAYLISTS -->
-  <div class="section-header">
-    <p class="section-title">Playlists</p>
-    <p class="section-sub">Kanye West</p>
-  </div>
+  <!-- DYNAMIC CONTENT -->
+  <div id="dynamic-root"></div>
 
-  <div class="scroll-row">
-    <a href="https://samply.app/p/L4WckCChOvu3YY64NZ1t?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="pl-card" target="_blank">
-      <img class="pl-thumb" src="bully.jpg" alt="BULLY">
-      <div class="pl-body"><p class="pl-title">BULLY</p><p class="pl-artist">Kanye West</p></div>
-    </a>
-    <a href="https://samply.app/p/CuPDiSkBKyfYBUl2NfzA?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="pl-card" target="_blank">
-      <img class="pl-thumb" src="vultures_mega_mix.jpg" alt="VULTURES MEGA MIX">
-      <div class="pl-body"><p class="pl-title">VULTURES MEGA MIX</p><p class="pl-artist">¥$, Kanye West, Ty Dolla $ign</p></div>
-    </a>
-    <a href="https://samply.app/p/XMI4plI5puFH1oJN1m9D?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="pl-card" target="_blank">
-      <img class="pl-thumb" src="donda_2.jpg" alt="Donda 2">
-      <div class="pl-body"><p class="pl-title">Donda 2</p><p class="pl-artist">Kanye West</p></div>
-    </a>
-    <a href="https://samply.app/p/uUmagBlXgVlmfYxINdIy?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="pl-card" target="_blank">
-      <img class="pl-thumb" src="donda.jpg" alt="Donda">
-      <div class="pl-body"><p class="pl-title">Donda</p><p class="pl-artist">Kanye West</p></div>
-    </a>
-  </div>
+</div><!-- end .page -->
 
-  <!-- FEATURED COMPS -->
-  <div class="section-header">
-    <p class="section-title">Featured Comps</p>
-    <p class="section-sub">Kanye West</p>
+<!-- WHAT IS THIS MODAL -->
+<div class="modal-overlay" id="what-modal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('what-modal').classList.remove('open')">✕</button>
+    <p class="modal-title">What is this?</p>
+    <p>My curated collection of Ye and others' edits, put together in playlists by me — featuring noteworthy compilations from the community.</p>
+    <p>Most of what you see here comes from the Yedits community, a group of fans who take unreleased, unfinished, or poorly mixed Kanye music and finish it themselves.</p>
+    <p>Everything is playable directly via Samply, a free music app available on iOS, Mac, and as a web app on Windows. All editors are fully credited.</p>
+    <p>Join the Yedits Discord or check out the trackers linked below for more.</p>
   </div>
-  <div class="scroll-row">
-    <a href="https://samply.app/p/rCSIm1fhgxjZkoP5Zx3k?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="comp-card" target="_blank">
-      <img class="comp-thumb" src="war.jpg" alt="WAR">
-      <div class="comp-body"><p class="comp-title">WAR</p><p class="comp-artist">Kanye West, James Blake</p><p class="comp-editor">Akimbo</p></div>
-    </a>
-    <a href="https://samply.app/p/VHbtqjtdjsWwza5oYq5Y?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="comp-card" target="_blank">
-      <img class="comp-thumb" src="yandhi_v2.jpg" alt="Yandhi V2">
-      <div class="comp-body"><p class="comp-title">Yandhi (V2)</p><p class="comp-artist">Kanye West</p><p class="comp-editor">Yedits Presents</p></div>
-    </a>
-    <a href="https://samply.app/p/i0fS2i62y56mwu9lpmBd?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="comp-card" target="_blank">
-      <img class="comp-thumb" src="yandhi.jpg" alt="Yandhi">
-      <div class="comp-body"><p class="comp-title">Yandhi</p><p class="comp-artist">Kanye West</p><p class="comp-editor">The NARCISSIST Team</p></div>
-    </a>
-    <a href="https://samply.app/p/lQylmqXnKwrbKsyupm6d?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="comp-card" target="_blank">
-      <img class="comp-thumb" src="turbografx16.jpg" alt="TURBOGRAFX 16">
-      <div class="comp-body"><p class="comp-title">TURBOGRAFX 16 - MITUS</p><p class="comp-artist">Kanye West</p><p class="comp-editor">somesoup & jozzuh</p></div>
-    </a>
-    <a href="https://samply.app/p/9Y3Q9uXaUBVihIVy1eo4?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="comp-card" target="_blank">
-      <img class="comp-thumb" src="love_everyone.jpg" alt="Love Everyone">
-      <div class="comp-body"><p class="comp-title">Love Everyone</p><p class="comp-artist">Kanye West</p><p class="comp-editor">ben</p></div>
-    </a>
-    <a href="https://samply.app/p/wsa0DBe1Yvpol91bHRsI?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="comp-card" target="_blank">
-      <img class="comp-thumb" src="good_ass_job.jpg" alt="Good Ass Job">
-      <div class="comp-body"><p class="comp-title">Good Ass Job</p><p class="comp-artist">Kanye West</p><p class="comp-editor">The Pastelle Collective</p></div>
-    </a>
-  </div>
-
-  <!-- PLAYBOI CARTI -->
-  <div class="section-header">
-    <p class="section-title">Playboi Carti</p>
-    <p class="section-sub">Playlists</p>
-  </div>
-  <div class="scroll-row">
-    <a href="https://samply.app/p/1VvD2hh0nil6fyADk9jG?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="pl-card" target="_blank">
-      <img class="pl-thumb" src="babyboi.jpg" alt="BABYBOI">
-      <div class="pl-body"><p class="pl-title">BABYBOI</p><p class="pl-artist">Playboi Carti</p></div>
-    </a>
-    <a href="https://samply.app/p/aNaaCcfktJFsIdUGopu8?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="pl-card" target="_blank">
-      <img class="pl-thumb" src="music.jpg" alt="MUSIC">
-      <div class="pl-body"><p class="pl-title">MUSIC</p><p class="pl-artist">Playboi Carti</p></div>
-    </a>
-    <a href="https://samply.app/p/TAho0nRmBi6ssDmC6nOs?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2" class="pl-card" target="_blank">
-      <img class="pl-thumb" src="narcissist.jpg" alt="NARCISSIST">
-      <div class="pl-body"><p class="pl-title">NARCISSIST</p><p class="pl-artist">Playboi Carti</p></div>
-    </a>
-  </div>
-
-  <!-- APP -->
-  <div class="section-header"><p class="section-title">App</p></div>
-  <div class="app-card">
-    <div class="app-card-header">
-      <div class="app-icon"><img src="icon.ico" alt="LocalPrep"></div>
-      <div class="app-info">
-        <p class="app-name">LocalPrep</p>
-        <p class="app-tagline">Desktop tool for preparing local audio files — built for Spotify, Apple Music & Tidal.</p>
-      </div>
-    </div>
-    <div class="app-features">
-      <span class="app-feature">Sample Rate Conversion</span>
-      <span class="app-feature">Format Conversion</span>
-      <span class="app-feature">Metadata Editor</span>
-      <span class="app-feature">Tracklist Sequencer</span>
-    </div>
-    <div class="app-actions">
-      <a href="https://github.com/yyusvf/LocalPrep/releases/latest/download/LocalPrep-Setup.exe" class="app-btn app-btn-primary" download>↓ Download for Windows</a>
-      <a href="https://github.com/yyusvf/LocalPrep" class="app-btn app-btn-secondary" target="_blank">GitHub</a>
-    </div>
-  </div>
-
-  <!-- YEDITS -->
-  <div class="section-header"><p class="section-title">Yedits</p></div>
-  <div class="link-list">
-    <a href="https://yedits.xyz/#/login" class="link-row" target="_blank">
-      <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=yedits.xyz&sz=64" alt=""></div>
-      <div class="link-text"><strong>Yedits Website</strong><span>yedits.xyz · WIP, coming soon</span></div>
-      <span class="link-chevron">›</span>
-    </a>
-    <a href="https://discord.gg/yedits" class="link-row" target="_blank">
-      <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=discord.com&sz=64" alt=""></div>
-      <div class="link-text"><strong>Yedits Discord</strong><span>discord.gg/yedits</span></div>
-      <span class="link-chevron">›</span>
-    </a>
-  </div>
-
-  <div class="section-header"><p class="section-title">Sophie's Curated Comps & Edits</p></div>
-  <div class="link-list">
-    <div class="link-grid" style="margin-top:0">
-      <a href="https://rentry.co/CET" class="link-row" target="_blank">
-        <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=rentry.co&sz=64" alt=""></div>
-        <div class="link-text"><strong>Tracker</strong><span>rentry.co/CET · no links, informational only</span></div>
-        <span class="link-chevron">›</span>
-      </a>
-      <a href="https://docs.google.com/document/d/14MtpVxlB7ITRbjO2r43zOp8gWaO4jBWZt6qBSbc9KGM/edit?tab=t.0#heading=h.tg77o4eov0tm" class="link-row" target="_blank">
-        <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=docs.google.com&sz=64" alt=""></div>
-        <div class="link-text"><strong>Samply Archive</strong><span>docs.google.com</span></div>
-        <span class="link-chevron">›</span>
-      </a>
-    </div>
-    <a href="https://discord.gg/Xv9HG8QkM9" class="link-row" target="_blank">
-      <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=discord.com&sz=64" alt=""></div>
-      <div class="link-text"><strong>cet.net · Request any comp!</strong><span>discord.gg/Xv9HG8QkM9</span></div>
-      <span class="link-chevron">›</span>
-    </a>
-  </div>
-
-  <div class="modal-overlay" id="what-modal" onclick="if(event.target===this)this.classList.remove('open')">
-    <div class="modal">
-      <button class="modal-close" onclick="document.getElementById('what-modal').classList.remove('open')">✕</button>
-      <p class="modal-title">What is this?</p>
-      <p>My curated collection of Ye and others' edits, put together in playlists by me — featuring noteworthy compilations from the community.</p>
-      <p>Most of what you see here comes from the Yedits community, a group of fans who take unreleased, unfinished, or poorly mixed Kanye music and finish it themselves.</p>
-      <p>Everything is playable directly via Samply, a free music app available on iOS, Mac, and as a web app on Windows. All editors are fully credited.</p>
-      <p>Join the Yedits Discord or check out the trackers linked below for more.</p>
-    </div>
-  </div>
-
-  <div class="copied-toast" id="toast">Copied!</div>
-  
-
 </div>
+
+<!-- PASSWORD MODAL -->
+<div class="pw-modal" id="pw-modal">
+  <div class="pw-box">
+    <h3>Edit Mode</h3>
+    <p>Enter password to continue</p>
+    <input class="pw-input" id="pw-input" type="password" placeholder="Password" onkeydown="if(event.key==='Enter')checkPw()">
+    <button class="pw-submit" onclick="checkPw()">Unlock</button>
+    <p class="pw-err" id="pw-err">Wrong password</p>
+  </div>
+</div>
+
+<!-- LINK EDIT MODAL -->
+<div class="modal-overlay" id="link-edit-modal" onclick="if(event.target===this)closeLinkEdit()">
+  <div class="modal link-edit-modal">
+    <button class="modal-close" onclick="closeLinkEdit()">✕</button>
+    <p class="modal-title" id="link-edit-title">Edit Link</p>
+    <div class="ep-field"><label>Title</label><input id="le-title" type="text"></div>
+    <div class="ep-field"><label>Subtitle / description</label><input id="le-sub" type="text"></div>
+    <div class="ep-field"><label>URL</label><input id="le-url" type="text"></div>
+    <div class="ep-field"><label>Favicon domain (e.g. discord.com)</label><input id="le-favicon" type="text"></div>
+    <button class="ep-save" style="width:100%;margin-top:8px" onclick="saveLinkEdit()">Save</button>
+  </div>
+</div>
+
+<!-- EDIT TRIGGER -->
+<button class="edit-trigger" id="edit-trigger" onclick="onEditTrigger()" title="Edit Mode">✏️</button>
+
+<!-- EDIT PANEL -->
+<div class="edit-panel" id="edit-panel">
+  <div class="ep-head">
+    <h2>Edit Mode</h2>
+    <button class="ep-save" onclick="syncToSupabase().then(()=>buildPanel())">Sync ↑</button>
+  </div>
+  <div class="ep-body" id="ep-body"></div>
+</div>
+
+<div class="copied-toast" id="toast">Copied!</div>
+
 <script>
+// ─── SITE DATA ───────────────────────────────────────────────────────────────
+const DEFAULT_DATA = {
+  categories: [
+    {
+      id: 'kanye-playlists', title: 'Playlists', size: 'large',
+      projects: [
+        { id: 'bully', title: 'BULLY', artist: 'Kanye West', editor: '', cover: 'bully.jpg', link: 'https://samply.app/p/L4WckCChOvu3YY64NZ1t?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: false },
+        { id: 'vultures', title: 'VULTURES MEGA MIX', artist: '¥$, Kanye West, Ty Dolla $ign', editor: '', cover: 'vultures_mega_mix.jpg', link: 'https://samply.app/p/CuPDiSkBKyfYBUl2NfzA?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: false },
+        { id: 'donda2', title: 'Donda 2', artist: 'Kanye West', editor: '', cover: 'donda_2.jpg', link: 'https://samply.app/p/XMI4plI5puFH1oJN1m9D?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: false },
+        { id: 'donda', title: 'Donda', artist: 'Kanye West', editor: '', cover: 'donda.jpg', link: 'https://samply.app/p/uUmagBlXgVlmfYxINdIy?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: false },
+      ]
+    },
+    {
+      id: 'featured-comps', title: 'Featured Comps', size: 'small',
+      projects: [
+        { id: 'war', title: 'WAR', artist: 'Kanye West, James Blake', editor: 'Akimbo', cover: 'war.jpg', link: 'https://samply.app/p/rCSIm1fhgxjZkoP5Zx3k?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: true },
+        { id: 'yandhi-v2', title: 'Yandhi (V2)', artist: 'Kanye West', editor: 'Yedits Presents', cover: 'yandhi_v2.jpg', link: 'https://samply.app/p/VHbtqjtdjsWwza5oYq5Y?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: false },
+        { id: 'yandhi', title: 'Yandhi', artist: 'Kanye West', editor: 'The NARCISSIST Team', cover: 'yandhi.jpg', link: 'https://samply.app/p/i0fS2i62y56mwu9lpmBd?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: true },
+        { id: 'turbo', title: 'TURBOGRAFX 16 - MITUS', artist: 'Kanye West', editor: 'somesoup & jozzuh', cover: 'turbografx16.jpg', link: 'https://samply.app/p/lQylmqXnKwrbKsyupm6d?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: false },
+        { id: 'love', title: 'Love Everyone', artist: 'Kanye West', editor: 'ben', cover: 'love_everyone.jpg', link: 'https://samply.app/p/9Y3Q9uXaUBVihIVy1eo4?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: false },
+        { id: 'gaj', title: 'Good Ass Job', artist: 'Kanye West', editor: 'The Pastelle Collective', cover: 'good_ass_job.jpg', link: 'https://samply.app/p/wsa0DBe1Yvpol91bHRsI?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: false },
+      ]
+    },
+    {
+      id: 'carti', title: 'Playboi Carti', size: 'large',
+      projects: [
+        { id: 'babyboi', title: 'BABYBOI', artist: 'Playboi Carti', editor: '', cover: 'babyboi.jpg', link: 'https://samply.app/p/1VvD2hh0nil6fyADk9jG?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: false },
+        { id: 'music', title: 'MUSIC', artist: 'Playboi Carti', editor: '', cover: 'music.jpg', link: 'https://samply.app/p/aNaaCcfktJFsIdUGopu8?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: false },
+        { id: 'narcissist', title: 'NARCISSIST', artist: 'Playboi Carti', editor: '', cover: 'narcissist.jpg', link: 'https://samply.app/p/TAho0nRmBi6ssDmC6nOs?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: false },
+      ]
+    }
+  ],
+  linkSections: [
+    {
+      id: 'yedits', title: 'Yedits', columns: 1,
+      links: [
+        { id: 'yw', title: 'Yedits Website', sub: 'yedits.xyz · WIP, coming soon', url: 'https://yedits.xyz/#/login', favicon: 'yedits.xyz' },
+        { id: 'yd', title: 'Yedits Discord', sub: 'discord.gg/yedits', url: 'https://discord.gg/yedits', favicon: 'discord.com' },
+      ]
+    },
+    {
+      id: 'sophies', title: "Sophie's Curated Comps & Edits", columns: 2,
+      links: [
+        { id: 'tracker', title: 'Tracker', sub: 'rentry.co/CET · no links, informational only', url: 'https://rentry.co/CET', favicon: 'rentry.co' },
+        { id: 'archive', title: 'Samply Archive', sub: 'docs.google.com', url: 'https://docs.google.com/document/d/14MtpVxlB7ITRbjO2r43zOp8gWaO4jBWZt6qBSbc9KGM/edit?tab=t.0#heading=h.tg77o4eov0tm', favicon: 'docs.google.com' },
+        { id: 'cet', title: 'cet.net · Request any comp!', sub: 'discord.gg/Xv9HG8QkM9', url: 'https://discord.gg/Xv9HG8QkM9', favicon: 'discord.com' },
+      ]
+    }
+  ]
+};
+
+// In-memory data, loaded from Supabase on startup
+let DATA = JSON.parse(JSON.stringify(DEFAULT_DATA));
+
+// ─── RENDERER ────────────────────────────────────────────────────────────────
+function render() {
+  const root = document.getElementById('dynamic-root');
+  let html = '';
+
+  // Categories
+  for (const cat of DATA.categories) {
+    html += `<div class="section-header"><p class="section-title">${esc(cat.title)}</p></div>`;
+    html += `<div class="scroll-row">`;
+    for (const p of cat.projects) {
+      if (cat.size === 'large') {
+        html += `<a href="${esc(p.link)}" class="pl-card" target="_blank">
+          <img class="pl-thumb" src="${esc(p.cover)}" alt="${esc(p.title)}">
+          <div class="pl-body"><p class="pl-title">${esc(p.title)}</p><p class="pl-artist">${esc(p.artist)}</p></div>
+        </a>`;
+      } else {
+        html += `<div class="comp-card-wrap">
+          <a href="${esc(p.link)}" class="comp-card" target="_blank">
+            <div class="comp-thumb-wrap">
+              <img class="comp-thumb" src="${esc(p.cover)}" alt="${esc(p.title)}">
+              ${p.curatorsCut ? '<span class="curators-cut">Curator\'s Cut</span>' : ''}
+            </div>
+            <div class="comp-body">
+              <p class="comp-title">${esc(p.title)}</p>
+              <p class="comp-artist">${esc(p.artist)}</p>
+              ${p.editor ? `<p class="comp-editor">${esc(p.editor)}</p>` : ''}
+            </div>
+          </a>
+        </div>`;
+      }
+    }
+    html += `</div>`;
+  }
+
+  // Link sections
+  for (const sec of DATA.linkSections) {
+    html += `<div class="section-header"><p class="section-title">${esc(sec.title)}</p></div>`;
+    const isGrid = sec.columns === 2;
+    // Separate last link if odd and grid
+    const links = sec.links;
+    if (isGrid) {
+      // Pair links, last one full width if odd
+      html += `<div class="link-grid">`;
+      for (let i = 0; i < links.length - (links.length % 2 === 1 ? 1 : 0); i++) {
+        html += renderLinkRow(links[i]);
+      }
+      html += `</div>`;
+      if (links.length % 2 === 1) {
+        html += `<div class="link-list">` + renderLinkRow(links[links.length-1]) + `</div>`;
+      }
+    } else {
+      html += `<div class="link-list">`;
+      for (const l of links) html += renderLinkRow(l);
+      html += `</div>`;
+    }
+  }
+
+  root.innerHTML = html;
+}
+
+function renderLinkRow(l) {
+  return `<a href="${esc(l.url)}" class="link-row" target="_blank">
+    <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=${esc(l.favicon)}&sz=64" alt=""></div>
+    <div class="link-text"><strong>${esc(l.title)}</strong><span>${esc(l.sub)}</span></div>
+    <span class="link-chevron">›</span>
+  </a>`;
+}
+
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ─── EDIT PANEL ──────────────────────────────────────────────────────────────
+let editUnlocked = false;
+const PW_HASH = 'e60c1ed65c716aa0c3bd3a3bb5e63e3e'; // md5 of 'yusvf' — change as needed
+
+function onEditTrigger() {
+  if (!editUnlocked) {
+    document.getElementById('pw-modal').classList.add('open');
+    setTimeout(() => document.getElementById('pw-input').focus(), 100);
+  } else {
+    togglePanel();
+  }
+}
+
+function checkPw() {
+  const val = document.getElementById('pw-input').value;
+  // Simple check — change this string to your password
+  if (val === 'yusvf2024') {
+    editUnlocked = true;
+    document.getElementById('pw-modal').classList.remove('open');
+    document.getElementById('pw-input').value = '';
+    togglePanel();
+  } else {
+    document.getElementById('pw-err').style.display = 'block';
+  }
+}
+
+function togglePanel() {
+  const panel = document.getElementById('edit-panel');
+  const trigger = document.getElementById('edit-trigger');
+  const isOpen = panel.classList.contains('open');
+  if (isOpen) {
+    panel.classList.remove('open');
+    trigger.classList.remove('active');
+  } else {
+    panel.classList.add('open');
+    trigger.classList.add('active');
+    buildPanel();
+  }
+}
+
+function buildPanel() {
+  const body = document.getElementById('ep-body');
+  let html = '';
+
+  // CATEGORIES
+  html += `<p style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Project Categories</p>`;
+  DATA.categories.forEach((cat, ci) => {
+    html += `<div class="ep-section" id="cat-${ci}">
+      <div class="ep-section-head" onclick="toggleSection('cat-${ci}')">
+        <span class="ep-section-title">${esc(cat.title)}</span>
+        <span class="ep-section-type">${cat.size}</span>
+        <div class="ep-order">
+          <button onclick="event.stopPropagation();moveItem(DATA.categories,${ci},-1)" title="Up">↑</button>
+          <button onclick="event.stopPropagation();moveItem(DATA.categories,${ci},1)" title="Down">↓</button>
+        </div>
+        <span class="ep-arrow">›</span>
+      </div>
+      <div class="ep-section-body">
+        <div class="ep-field"><label>Category Name</label><input type="text" value="${esc(cat.title)}" oninput="DATA.categories[${ci}].title=this.value;renderAndBuild()"></div>
+        <div class="ep-field"><label>Card Size</label>
+          <select onchange="DATA.categories[${ci}].size=this.value;renderAndBuild()">
+            <option value="large" ${cat.size==='large'?'selected':''}>Large (Playlists)</option>
+            <option value="small" ${cat.size==='small'?'selected':''}>Small (Comps)</option>
+          </select>
+        </div>
+        <p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px">Projects</p>`;
+
+    cat.projects.forEach((p, pi) => {
+      html += `<div class="ep-project" id="proj-${ci}-${pi}">
+        <div class="ep-project-head" onclick="toggleSection('proj-${ci}-${pi}')">
+          <img class="ep-project-thumb" src="${esc(p.cover)}" onerror="this.style.opacity=0.3">
+          <span class="ep-project-name">${esc(p.title)}</span>
+          <div class="ep-order">
+            <button onclick="event.stopPropagation();moveItem(DATA.categories[${ci}].projects,${pi},-1)" title="Up">↑</button>
+            <button onclick="event.stopPropagation();moveItem(DATA.categories[${ci}].projects,${pi},1)" title="Down">↓</button>
+          </div>
+        </div>
+        <div class="ep-project-body">
+          <div class="ep-field"><label>Title</label><input type="text" value="${esc(p.title)}" oninput="DATA.categories[${ci}].projects[${pi}].title=this.value;render()"></div>
+          <div class="ep-field"><label>Artist</label><input type="text" value="${esc(p.artist)}" oninput="DATA.categories[${ci}].projects[${pi}].artist=this.value;render()"></div>
+          <div class="ep-field"><label>Editor (optional)</label><input type="text" value="${esc(p.editor)}" oninput="DATA.categories[${ci}].projects[${pi}].editor=this.value;render()"></div>
+          <div class="ep-field"><label>Cover filename or URL</label><input type="text" value="${esc(p.cover)}" oninput="DATA.categories[${ci}].projects[${pi}].cover=this.value;render()"></div>
+          <div class="ep-field"><label>Samply Link</label><input type="text" value="${esc(p.link)}" oninput="DATA.categories[${ci}].projects[${pi}].link=this.value;render()"></div>
+          <label class="ep-checkbox"><input type="checkbox" ${p.curatorsCut?'checked':''} onchange="DATA.categories[${ci}].projects[${pi}].curatorsCut=this.checked;render()"> Curator's Cut</label>
+          <button class="ep-del" onclick="DATA.categories[${ci}].projects.splice(${pi},1);renderAndBuild()">Remove project</button>
+        </div>
+      </div>`;
+    });
+
+    html += `<button class="ep-add" onclick="addProject(${ci})">+ Add project</button>
+        <button class="ep-del" style="margin-top:8px" onclick="DATA.categories.splice(${ci},1);renderAndBuild()">Remove category</button>
+      </div>
+    </div>`;
+  });
+
+  html += `<button class="ep-add-section" onclick="addCategory()">+ Add project category</button>`;
+
+  // LINK SECTIONS
+  html += `<p style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin:20px 0 10px">Link Sections</p>`;
+  DATA.linkSections.forEach((sec, si) => {
+    html += `<div class="ep-section" id="sec-${si}">
+      <div class="ep-section-head" onclick="toggleSection('sec-${si}')">
+        <span class="ep-section-title">${esc(sec.title)}</span>
+        <div class="ep-order">
+          <button onclick="event.stopPropagation();moveItem(DATA.linkSections,${si},-1)" title="Up">↑</button>
+          <button onclick="event.stopPropagation();moveItem(DATA.linkSections,${si},1)" title="Down">↓</button>
+        </div>
+        <span class="ep-arrow">›</span>
+      </div>
+      <div class="ep-section-body">
+        <div class="ep-field"><label>Section Name</label><input type="text" value="${esc(sec.title)}" oninput="DATA.linkSections[${si}].title=this.value;renderAndBuild()"></div>
+        <label style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px">Columns per row</label>
+        <div class="ep-toggle">
+          <button class="ep-toggle-btn ${sec.columns===1?'active':''}" onclick="DATA.linkSections[${si}].columns=1;renderAndBuild()">1 column</button>
+          <button class="ep-toggle-btn ${sec.columns===2?'active':''}" onclick="DATA.linkSections[${si}].columns=2;renderAndBuild()">2 columns</button>
+        </div>
+        <p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px">Links</p>`;
+
+    sec.links.forEach((l, li) => {
+      html += `<div class="ep-link">
+        <div class="ep-link-info">
+          <div class="ep-link-title">${esc(l.title)}</div>
+          <div class="ep-link-sub">${esc(l.sub)}</div>
+        </div>
+        <div class="ep-order">
+          <button onclick="moveItem(DATA.linkSections[${si}].links,${li},-1)" title="Up">↑</button>
+          <button onclick="moveItem(DATA.linkSections[${si}].links,${li},1)" title="Down">↓</button>
+        </div>
+        <button class="ep-link-edit" onclick="openLinkEdit(${si},${li})">Edit</button>
+        <button class="ep-link-edit" style="color:#ff6b6b" onclick="DATA.linkSections[${si}].links.splice(${li},1);renderAndBuild()">✕</button>
+      </div>`;
+    });
+
+    html += `<button class="ep-add" onclick="addLink(${si})">+ Add link</button>
+        <button class="ep-del" style="margin-top:8px" onclick="DATA.linkSections.splice(${si},1);renderAndBuild()">Remove section</button>
+      </div>
+    </div>`;
+  });
+
+  html += `<button class="ep-add-section" onclick="addLinkSection()">+ Add link section</button>`;
+
+  body.innerHTML = html;
+}
+
+function toggleSection(id) {
+  document.getElementById(id)?.classList.toggle('expanded');
+}
+
+function moveItem(arr, i, dir) {
+  const j = i + dir;
+  if (j < 0 || j >= arr.length) return;
+  [arr[i], arr[j]] = [arr[j], arr[i]];
+  renderAndBuild();
+}
+
+function addProject(ci) {
+  DATA.categories[ci].projects.push({ id: 'proj-' + Date.now(), title: 'New Project', artist: '', editor: '', cover: '', link: '', curatorsCut: false });
+  renderAndBuild();
+}
+
+function addCategory() {
+  DATA.categories.push({ id: 'cat-' + Date.now(), title: 'New Category', size: 'large', projects: [] });
+  renderAndBuild();
+}
+
+function addLink(si) {
+  DATA.linkSections[si].links.push({ id: 'link-' + Date.now(), title: 'New Link', sub: '', url: '', favicon: '' });
+  renderAndBuild();
+  openLinkEdit(si, DATA.linkSections[si].links.length - 1);
+}
+
+function addLinkSection() {
+  DATA.linkSections.push({ id: 'sec-' + Date.now(), title: 'New Section', columns: 1, links: [] });
+  renderAndBuild();
+}
+
+// Link edit modal
+let _linkEditSi = null, _linkEditLi = null;
+function openLinkEdit(si, li) {
+  _linkEditSi = si; _linkEditLi = li;
+  const l = DATA.linkSections[si].links[li];
+  document.getElementById('link-edit-title').textContent = 'Edit Link';
+  document.getElementById('le-title').value = l.title || '';
+  document.getElementById('le-sub').value = l.sub || '';
+  document.getElementById('le-url').value = l.url || '';
+  document.getElementById('le-favicon').value = l.favicon || '';
+  document.getElementById('link-edit-modal').classList.add('open');
+}
+function closeLinkEdit() {
+  document.getElementById('link-edit-modal').classList.remove('open');
+}
+function saveLinkEdit() {
+  if (_linkEditSi === null) return;
+  const l = DATA.linkSections[_linkEditSi].links[_linkEditLi];
+  l.title = document.getElementById('le-title').value;
+  l.sub = document.getElementById('le-sub').value;
+  l.url = document.getElementById('le-url').value;
+  l.favicon = document.getElementById('le-favicon').value;
+  closeLinkEdit();
+  renderAndBuild();
+}
+
+function renderAndBuild() {
+  render();
+  buildPanel();
+  syncToSupabase();
+}
+
+// ─── SUPABASE ─────────────────────────────────────────────────────────────────
+const SB_URL = 'https://mrqbtjbtidjuxsuolgue.supabase.co';
+const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1ycWJ0amJ0aWRqdXhzdW9sZ3VlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwODgwOTAsImV4cCI6MjA5MzY2NDA5MH0.S6OWEYRY9y51l-DjqiU2h4IXbzfaPPQxb0hoaqfx2XE';
+const SB_HEADERS = { 'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}`, 'Content-Type': 'application/json', 'Prefer': 'resolution=merge-duplicates' };
+
+async function sbGet(table) {
+  const r = await fetch(`${SB_URL}/rest/v1/${table}?select=*&order=order_index`, { headers: SB_HEADERS });
+  return r.json();
+}
+
+async function sbUpsert(table, rows) {
+  if (!rows.length) return;
+  await fetch(`${SB_URL}/rest/v1/${table}`, { method: 'POST', headers: SB_HEADERS, body: JSON.stringify(rows) });
+}
+
+async function sbDelete(table, ids) {
+  if (!ids.length) return;
+  await fetch(`${SB_URL}/rest/v1/${table}?id=in.(${ids.join(',')})`, { method: 'DELETE', headers: SB_HEADERS });
+}
+
+async function loadFromSupabase() {
+  showLoading(true);
+  try {
+    const [cats, projs, secs, links] = await Promise.all([
+      sbGet('categories'), sbGet('projects'), sbGet('link_sections'), sbGet('links')
+    ]);
+
+    if (!cats.length && !secs.length) {
+      // Empty DB — seed with defaults
+      await syncToSupabase();
+    } else {
+      DATA.categories = cats.map(c => ({
+        id: c.id, title: c.title, size: c.size,
+        projects: projs.filter(p => p.category_id === c.id).map(p => ({
+          id: p.id, title: p.title, artist: p.artist, editor: p.editor,
+          cover: p.cover, link: p.link, curatorsCut: p.curators_cut
+        }))
+      }));
+      DATA.linkSections = secs.map(s => ({
+        id: s.id, title: s.title, columns: s.columns,
+        links: links.filter(l => l.section_id === s.id).map(l => ({
+          id: l.id, title: l.title, sub: l.sub, url: l.url, favicon: l.favicon
+        }))
+      }));
+    }
+  } catch(e) {
+    console.error('Supabase load error:', e);
+  }
+  showLoading(false);
+  render();
+}
+
+async function syncToSupabase() {
+  try {
+    // Upsert categories
+    const catRows = DATA.categories.map((c, i) => ({ id: c.id, title: c.title, size: c.size, order_index: i }));
+    await sbUpsert('categories', catRows);
+
+    // Upsert projects
+    const projRows = DATA.categories.flatMap((c, ci) =>
+      c.projects.map((p, pi) => ({
+        id: p.id, category_id: c.id, title: p.title, artist: p.artist,
+        editor: p.editor, cover: p.cover, link: p.link,
+        curators_cut: p.curatorsCut, order_index: pi
+      }))
+    );
+    await sbUpsert('projects', projRows);
+
+    // Upsert link sections
+    const secRows = DATA.linkSections.map((s, i) => ({ id: s.id, title: s.title, columns: s.columns, order_index: i }));
+    await sbUpsert('link_sections', secRows);
+
+    // Upsert links
+    const linkRows = DATA.linkSections.flatMap((s, si) =>
+      s.links.map((l, li) => ({
+        id: l.id, section_id: s.id, title: l.title, sub: l.sub,
+        url: l.url, favicon: l.favicon, order_index: li
+      }))
+    );
+    await sbUpsert('links', linkRows);
+
+    // Clean up deleted records
+    const liveProjectIds = projRows.map(p => p.id);
+    const liveLinkIds = linkRows.map(l => l.id);
+    const liveCatIds = catRows.map(c => c.id);
+    const liveSecIds = secRows.map(s => s.id);
+
+    const [dbProjs, dbLinks, dbCats, dbSecs] = await Promise.all([
+      sbGet('projects'), sbGet('links'), sbGet('categories'), sbGet('link_sections')
+    ]);
+
+    const deadProjs = dbProjs.filter(p => !liveProjectIds.includes(p.id)).map(p => p.id);
+    const deadLinks = dbLinks.filter(l => !liveLinkIds.includes(l.id)).map(l => l.id);
+    const deadCats = dbCats.filter(c => !liveCatIds.includes(c.id)).map(c => c.id);
+    const deadSecs = dbSecs.filter(s => !liveSecIds.includes(s.id)).map(s => s.id);
+
+    await Promise.all([
+      sbDelete('projects', deadProjs),
+      sbDelete('links', deadLinks),
+      sbDelete('categories', deadCats),
+      sbDelete('link_sections', deadSecs),
+    ]);
+
+    showSaveIndicator();
+  } catch(e) {
+    console.error('Supabase sync error:', e);
+  }
+}
+
+function showLoading(on) {
+  let el = document.getElementById('loading-indicator');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'loading-indicator';
+    el.style.cssText = 'position:fixed;top:20px;left:50%;transform:translateX(-50%);background:#1e1e1e;border:0.5px solid rgba(255,255,255,0.1);border-radius:999px;padding:8px 18px;font-size:12px;color:rgba(255,255,255,0.5);z-index:500;transition:opacity 0.2s';
+    el.textContent = 'Loading…';
+    document.body.appendChild(el);
+  }
+  el.style.opacity = on ? '1' : '0';
+}
+
+function showSaveIndicator() {
+  let el = document.getElementById('save-indicator');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'save-indicator';
+    el.style.cssText = 'position:fixed;top:20px;left:50%;transform:translateX(-50%);background:var(--accent);border-radius:999px;padding:8px 18px;font-size:12px;color:#0a0a0a;font-weight:600;z-index:500;transition:opacity 0.3s';
+    document.body.appendChild(el);
+  }
+  el.textContent = 'Saved ✓';
+  el.style.opacity = '1';
+  setTimeout(() => el.style.opacity = '0', 1500);
+}
+
+// ─── MISC ────────────────────────────────────────────────────────────────────
 function copyDiscord() {
   navigator.clipboard.writeText('yusvf');
   const t = document.getElementById('toast');
@@ -575,25 +818,28 @@ function copyDiscord() {
   setTimeout(() => t.classList.remove('show'), 1800);
 }
 
+// Last.fm
 (async function() {
   try {
     const r = await fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=Synox&api_key=0e500743d88e3e05c4e57a8e40f2a6c3&format=json&limit=4');
     const d = await r.json();
     const tracks = d.recenttracks.track.slice(0, 4);
-    const container = document.getElementById('lastfm-tracks');
-    container.innerHTML = tracks.map(t => {
-      const nowPlaying = t['@attr'] && t['@attr'].nowplaying;
+    document.getElementById('lastfm-tracks').innerHTML = tracks.map(t => {
+      const np = t['@attr']?.nowplaying;
       const art = t.image?.[1]?.['#text'] || '';
       return `<div class="lastfm-track">
         ${art ? `<img class="lastfm-art" src="${art}" alt="">` : '<div class="lastfm-art"></div>'}
         <div class="lastfm-info">
-          <div class="lastfm-title">${nowPlaying ? '<span class="lastfm-now"></span> ' : ''}${t.name}</div>
+          <div class="lastfm-title">${np ? '<span class="lastfm-now"></span> ' : ''}${t.name}</div>
           <div class="lastfm-artist">${t.artist['#text']}</div>
         </div>
       </div>`;
     }).join('');
   } catch(e) {}
 })();
+
+// Load from Supabase on startup
+loadFromSupabase();
 </script>
 </body>
 </html>
