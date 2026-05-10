@@ -76,6 +76,29 @@ a.discord-btn{text-decoration:none}
 
 /* SCROLL ROW */
 .scroll-wrap{position:relative}
+.scroll-wrap::before,.scroll-wrap::after{
+  content:'';
+  position:absolute;
+  top:0;bottom:0;
+  width:120px;
+  pointer-events:none;
+  z-index:1;
+  opacity:0;
+  transition:opacity 0.2s;
+}
+.scroll-wrap::before{
+  left:0;
+  background:linear-gradient(to right, #0e0d0d 0%, rgba(14,13,13,0.95) 20%, transparent 100%);
+}
+.scroll-wrap::after{
+  right:0;
+  background:linear-gradient(to left, #0e0d0d 0%, rgba(14,13,13,0.95) 20%, transparent 100%);
+}
+.scroll-wrap.fade-left::before{opacity:1}
+.scroll-wrap.fade-right::after{opacity:1}
+@media(max-width:768px){
+  .scroll-wrap::before,.scroll-wrap::after{display:none}
+}
 .scroll-row{display:flex;gap:16px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none;-ms-overflow-style:none}
 .scroll-row::-webkit-scrollbar{display:none}
 .scroll-btn{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;opacity:0;transition:opacity 0.2s,background 0.2s;pointer-events:none}
@@ -84,7 +107,26 @@ a.discord-btn{text-decoration:none}
 .scroll-btn.left{left:-14px}
 .scroll-btn.right{right:-14px}
 .scroll-wrap:hover .scroll-btn{opacity:1;pointer-events:auto}
+.mobile-fade{display:none}
+.mobile-show-more{display:none}
+
+/* APP CARD */
+.app-card{border-radius:14px;background:var(--surface);border:0.5px solid var(--border);overflow:hidden}
+.app-card-header{padding:20px 20px 0;display:flex;align-items:flex-start;gap:14px}
+.app-icon{width:52px;height:52px;border-radius:50%;flex-shrink:0;overflow:hidden}
+.app-icon img{width:100%;height:100%;object-fit:cover}
+.app-info{flex:1}
+.app-name{font-size:16px;font-weight:600;color:var(--text)}
+.app-tagline{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.5}
+.app-features{display:flex;flex-wrap:wrap;gap:6px;padding:16px 20px}
+.app-feature{font-size:11px;color:rgba(255,255,255,0.5);background:rgba(255,255,255,0.05);border-radius:999px;padding:4px 10px}
+.app-actions{display:flex;gap:8px;padding:0 20px 20px;flex-wrap:wrap}
+.app-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:10px 16px;border-radius:8px;font-size:13px;font-weight:500;text-decoration:none;transition:opacity 0.2s;cursor:pointer;border:none;font-family:var(--font)}
+.app-btn:hover{opacity:0.8}
+.app-btn-primary{background:var(--text);color:#0a0a0a}
+.app-btn-secondary{background:rgba(255,255,255,0.07);color:var(--text);border:0.5px solid var(--border)}
 .scroll-btn.hidden{opacity:0!important;pointer-events:none!important}
+@media(max-width:768px){.edit-trigger{display:none!important}}
 @media(max-width:768px){.scroll-btn{display:none}}
 
 /* PROJECT CARDS (large = playlists) */
@@ -270,8 +312,8 @@ a.discord-btn{text-decoration:none}
     display:none;
     position:absolute;
     bottom:0;left:0;right:0;
-    height:220px;
-    background:linear-gradient(to bottom,transparent,var(--bg));
+    height:280px;
+    background:linear-gradient(to bottom, transparent 0%, rgba(10,10,10,0.85) 55%, #0e0d0d 100%);
     pointer-events:none;
     z-index:2;
   }
@@ -337,6 +379,31 @@ a.discord-btn{text-decoration:none}
 
   <!-- DYNAMIC CONTENT -->
   <div id="dynamic-root"></div>
+
+  <!-- LOCALPREP STATIC CARD -->
+  <div style="margin-top:36px">
+    <div class="section-header"><p class="section-title">App</p></div>
+    <div class="app-card">
+      <div class="app-card-header">
+        <div class="app-icon"><img src="icon.ico" alt="LocalPrep"></div>
+        <div class="app-info">
+          <p class="app-name">LocalPrep</p>
+          <p class="app-tagline">Desktop tool for preparing local audio files — built for Spotify, Apple Music & Tidal.</p>
+        </div>
+      </div>
+      <div class="app-features">
+        <span class="app-feature">Sample Rate Conversion</span>
+        <span class="app-feature">Format Conversion</span>
+        <span class="app-feature">Metadata Editor</span>
+        <span class="app-feature">Tracklist Sequencer</span>
+      </div>
+      <div class="app-actions">
+        <a href="https://github.com/yyusvf/LocalPrep/releases/latest/download/LocalPrep-Setup.exe" class="app-btn app-btn-primary" download>↓ Download for Windows</a>
+        <a href="localprep.html" class="app-btn app-btn-secondary">Learn more →</a>
+        <a href="https://github.com/yyusvf/LocalPrep" target="_blank" class="app-btn app-btn-secondary">GitHub</a>
+      </div>
+    </div>
+  </div>
 
 </div><!-- end .page -->
 
@@ -534,10 +601,17 @@ function scrollRow(id, dir) {
 function updateScrollBtns(id) {
   const row = document.getElementById(id);
   if (!row) return;
+  const wrap = row.closest('.scroll-wrap');
   const left = document.getElementById(`${id}-left`);
   const right = document.getElementById(`${id}-right`);
-  if (left) left.classList.toggle('hidden', row.scrollLeft <= 0);
-  if (right) right.classList.toggle('hidden', row.scrollLeft + row.clientWidth >= row.scrollWidth - 4);
+  const atStart = row.scrollLeft <= 0;
+  const atEnd = row.scrollLeft + row.clientWidth >= row.scrollWidth - 4;
+  if (left) left.classList.toggle('hidden', atStart);
+  if (right) right.classList.toggle('hidden', atEnd);
+  if (wrap) {
+    wrap.classList.toggle('fade-left', !atStart);
+    wrap.classList.toggle('fade-right', !atEnd);
+  }
 }
 
 function initScrollBtns() {
