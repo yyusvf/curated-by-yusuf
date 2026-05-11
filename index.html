@@ -64,7 +64,7 @@ a.discord-btn{text-decoration:none}
 
 /* SAMPLY CTA */
 .samply-cta{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;background:rgba(255,255,255,0.04);border:0.5px solid rgba(255,255,255,0.08);text-decoration:none;margin-bottom:24px}
-.samply-cta img{width:32px;height:32px;border-radius:7px;flex-shrink:0}
+.samply-cta img{width:26px;height:26px;border-radius:6px;flex-shrink:0}
 .samply-cta-text{flex:1}
 .samply-cta-text strong{display:block;font-size:13px;font-weight:500;color:var(--text)}
 .samply-cta-text span{font-size:11px;color:var(--muted)}
@@ -188,8 +188,8 @@ a.discord-btn{text-decoration:none}
 .link-row{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:12px;background:var(--surface);border:0.5px solid var(--border);text-decoration:none;transition:transform 0.2s,border-color 0.2s}
 .link-row:hover{transform:translateY(-1px);border-color:rgba(255,255,255,0.15)}
 .link-row:active{transform:scale(0.99)}
-.link-icon{width:40px;height:40px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:var(--surface2);overflow:hidden}
-.link-icon img{width:22px;height:22px;object-fit:contain}
+.link-icon{width:26px;height:26px;border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:var(--surface2);overflow:hidden}
+.link-icon img{width:100%;height:100%;object-fit:cover}
 .link-text{flex:1}
 .link-text strong{display:block;font-size:14px;font-weight:500;color:var(--text)}
 .link-text span{font-size:12px;color:var(--muted)}
@@ -424,7 +424,18 @@ a.discord-btn{text-decoration:none}
     <div class="ep-field"><label>Title</label><input id="le-title" type="text"></div>
     <div class="ep-field"><label>Subtitle / description</label><input id="le-sub" type="text"></div>
     <div class="ep-field"><label>URL</label><input id="le-url" type="text"></div>
-    <div class="ep-field"><label>Favicon domain (e.g. discord.com)</label><input id="le-favicon" type="text"></div>
+    <div class="ep-field"><label>Favicon domain (e.g. discord.com)</label><input id="le-favicon" type="text" placeholder="leave empty if using image"></div>
+    <div class="ep-field">
+      <label>Custom image (overrides favicon)</label>
+      <div style="display:flex;gap:8px;align-items:center;margin-bottom:6px">
+        <img id="le-img-preview" src="" style="width:36px;height:36px;border-radius:6px;object-fit:cover;background:var(--surface2);display:none">
+        <label style="flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:8px;background:rgba(255,255,255,0.04);border:0.5px dashed rgba(255,255,255,0.15);border-radius:6px;cursor:pointer;font-size:12px;color:var(--muted);text-transform:none;letter-spacing:0">
+          <span id="le-img-label">Upload image</span>
+          <input type="file" accept="image/*" style="display:none" onchange="handleLinkImageUpload(event)">
+        </label>
+      </div>
+      <input id="le-image" type="text" placeholder="or paste URL / filename" oninput="updateLinkImgPreview()">
+    </div>
     <button class="ep-save" style="width:100%;margin-top:8px" onclick="saveLinkEdit()">Save</button>
   </div>
 </div>
@@ -670,8 +681,11 @@ function openLargeModal(id) {
 }
 
 function renderLinkRow(l) {
+  const iconSrc = l.image
+    ? esc(l.image)
+    : `https://www.google.com/s2/favicons?domain=${esc(l.favicon)}&sz=64`;
   return `<a href="${esc(l.url)}" class="link-row" target="_blank">
-    <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=${esc(l.favicon)}&sz=64" alt=""></div>
+    <div class="link-icon"><img src="${iconSrc}" alt="" style="${l.image ? 'border-radius:6px' : ''}"></div>
     <div class="link-text"><strong>${esc(l.title)}</strong><span>${esc(l.sub)}</span></div>
     <span class="link-chevron">›</span>
   </a>`;
@@ -944,6 +958,8 @@ function openLinkEdit(si, li) {
   document.getElementById('le-sub').value = l.sub || '';
   document.getElementById('le-url').value = l.url || '';
   document.getElementById('le-favicon').value = l.favicon || '';
+  document.getElementById('le-image').value = l.image || '';
+  updateLinkImgPreview();
   document.getElementById('link-edit-modal').classList.add('open');
 }
 function closeLinkEdit() {
@@ -956,8 +972,36 @@ function saveLinkEdit() {
   l.sub = document.getElementById('le-sub').value;
   l.url = document.getElementById('le-url').value;
   l.favicon = document.getElementById('le-favicon').value;
+  l.image = document.getElementById('le-image').value || null;
   closeLinkEdit();
   renderAndBuild();
+}
+
+function updateLinkImgPreview() {
+  const val = document.getElementById('le-image').value;
+  const preview = document.getElementById('le-img-preview');
+  if (val) { preview.src = val; preview.style.display = 'block'; }
+  else { preview.style.display = 'none'; }
+}
+
+async function handleLinkImageUpload(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const label = document.getElementById('le-img-label');
+  label.textContent = 'Compressing…';
+  try {
+    const blob = await compressImage(file, 200, 0.85);
+    const filename = `link-${Date.now()}.jpg`;
+    label.textContent = 'Uploading…';
+    const url = await uploadCover(blob, filename);
+    document.getElementById('le-image').value = url;
+    updateLinkImgPreview();
+    label.textContent = '✓ Uploaded';
+    setTimeout(() => { label.textContent = 'Upload image'; }, 2000);
+  } catch(e) {
+    label.textContent = '✗ Failed';
+    setTimeout(() => { label.textContent = 'Upload image'; }, 2000);
+  }
 }
 
 function renderAndBuild() {
@@ -1069,7 +1113,7 @@ async function loadFromSupabase() {
           if (l.type === 'large' && l.meta) {
             try { const m = JSON.parse(l.meta); return { id:l.id, type:'large', title:l.title, ...m }; } catch(e) {}
           }
-          return { id: l.id, type: l.type||'small', title: l.title, sub: l.sub, url: l.url, favicon: l.favicon };
+          return { id: l.id, type: l.type||'small', title: l.title, sub: l.sub, url: l.url, favicon: l.favicon, image: l.image||null };
         })
       }));
       // Remove duplicate link sections (keep the one with more links)
@@ -1142,7 +1186,7 @@ async function syncToSupabase() {
     // Upsert links
     const linkRows = DATA.linkSections.flatMap((s, si) =>
       s.links.map((l, li) => {
-        const row = { id: l.id, section_id: s.id, title: l.title, sub: l.sub||'', url: l.url||'', favicon: l.favicon||'', order_index: li, type: l.type||'small' };
+        const row = { id: l.id, section_id: s.id, title: l.title, sub: l.sub||'', url: l.url||'', favicon: l.favicon||'', image: l.image||null, order_index: li, type: l.type||'small' };
         if (l.type === 'large') row.meta = JSON.stringify({ tagline:l.tagline, version:l.version, icon:l.icon, downloadUrl:l.downloadUrl, githubUrl:l.githubUrl, badges:l.badges, features:l.features, extras:l.extras, formats:l.formats });
         return row;
       })
