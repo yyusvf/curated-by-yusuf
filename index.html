@@ -110,7 +110,37 @@ a.discord-btn{text-decoration:none}
 .mobile-fade{display:none}
 .mobile-show-more{display:none}
 
-/* APP CARD */
+/* LOCALPREP MODAL */
+.lp-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:500;backdrop-filter:blur(4px);animation:none!important;opacity:1!important}
+.lp-overlay.open{display:flex;align-items:center;justify-content:center;padding:20px}
+.lp-modal{background:#161515;border:0.5px solid rgba(255,255,255,0.1);border-radius:18px;width:100%;max-width:620px;max-height:88vh;overflow-y:auto;position:relative;animation:fadeUp 0.25s ease both}
+.lp-modal::-webkit-scrollbar{width:4px}
+.lp-modal::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.1);border-radius:2px}
+.lp-modal::-webkit-scrollbar-track{background:transparent}
+.lp-close{position:absolute;top:16px;right:16px;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,0.08);border:none;color:var(--muted);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:var(--font);z-index:1;transition:background 0.15s,color 0.15s}
+.lp-close:hover{background:rgba(255,255,255,0.14);color:var(--text)}
+.lp-header{padding:28px 28px 0;display:flex;align-items:flex-start;gap:18px}
+.lp-icon{width:72px;height:72px;border-radius:16px;overflow:hidden;flex-shrink:0;background:var(--surface2)}
+.lp-icon img{width:100%;height:100%;object-fit:cover}
+.lp-title{font-size:22px;font-weight:700;letter-spacing:-0.3px}
+.lp-version{font-size:11px;color:var(--muted);margin-top:3px;font-weight:500}
+.lp-desc{font-size:13px;color:rgba(255,255,255,0.65);margin-top:8px;line-height:1.65;max-width:400px}
+.lp-actions{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.lp-body{padding:24px 28px 28px}
+.lp-section-label{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;margin-top:20px}
+.lp-section-label:first-child{margin-top:0}
+.lp-features{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:480px){.lp-features{grid-template-columns:1fr}}
+.lp-feature{background:rgba(255,255,255,0.04);border:0.5px solid rgba(255,255,255,0.07);border-radius:10px;padding:12px 14px}
+.lp-feature-title{font-size:13px;font-weight:600;margin-bottom:3px}
+.lp-feature-desc{font-size:11px;color:var(--muted);line-height:1.5}
+.lp-extras{display:flex;flex-direction:column;gap:6px}
+.lp-extra{display:flex;align-items:center;gap:10px;font-size:12px;color:rgba(255,255,255,0.6)}
+.lp-extra::before{content:'✓';color:var(--accent);font-weight:700;font-size:11px;flex-shrink:0}
+.lp-formats{display:flex;flex-wrap:wrap;gap:6px}
+.lp-format{padding:4px 10px;background:var(--surface2);border-radius:5px;font-size:11px;font-family:monospace;color:var(--muted)}
+.lp-badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.lp-badge{font-size:11px;color:rgba(120,220,120,0.9);background:rgba(100,220,100,0.08);border:0.5px solid rgba(100,220,100,0.2);border-radius:999px;padding:3px 10px}
 .app-card{border-radius:14px;background:var(--surface);border:0.5px solid var(--border);overflow:hidden}
 .app-card-header{padding:20px 20px 0;display:flex;align-items:flex-start;gap:14px}
 .app-icon{width:52px;height:52px;border-radius:50%;flex-shrink:0;overflow:hidden}
@@ -183,26 +213,6 @@ a.discord-btn{text-decoration:none}
 /* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 .page>*{opacity:0}
-.page>*:nth-child(1){animation:fadeUp 0.5s 0.05s ease both}
-.page>*:nth-child(2){animation:fadeUp 0.5s 0.10s ease both}
-.page>*:nth-child(3){animation:fadeUp 0.5s 0.15s ease both}
-.page>*:nth-child(4){animation:fadeUp 0.5s 0.20s ease both}
-.page>*:nth-child(5){animation:fadeUp 0.5s 0.25s ease both}
-.page>*:nth-child(6){animation:fadeUp 0.5s 0.30s ease both}
-.page>*:nth-child(7){animation:fadeUp 0.5s 0.35s ease both}
-.page>*:nth-child(8){animation:fadeUp 0.5s 0.40s ease both}
-.page>*:nth-child(9){animation:fadeUp 0.5s 0.45s ease both}
-.page>*:nth-child(10){animation:fadeUp 0.5s 0.50s ease both}
-.page>*:nth-child(11){animation:fadeUp 0.5s 0.55s ease both}
-.page>*:nth-child(12){animation:fadeUp 0.5s 0.60s ease both}
-.page>*:nth-child(13){animation:fadeUp 0.5s 0.65s ease both}
-.page>*:nth-child(14){animation:fadeUp 0.5s 0.70s ease both}
-.page>*:nth-child(15){animation:fadeUp 0.5s 0.72s ease both}
-.page>*:nth-child(16){animation:fadeUp 0.5s 0.74s ease both}
-.page>*:nth-child(17){animation:fadeUp 0.5s 0.76s ease both}
-.page>*:nth-child(18){animation:fadeUp 0.5s 0.78s ease both}
-.page>*:nth-child(19){animation:fadeUp 0.5s 0.80s ease both}
-.page>*:nth-child(20){animation:fadeUp 0.5s 0.82s ease both}
 
 /* EDIT MODE BUTTON */
 .edit-trigger{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--surface2);border:0.5px solid var(--border);color:var(--muted);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:400;transition:background 0.2s,color 0.2s,right 0.3s;font-family:var(--font)}
@@ -380,31 +390,6 @@ a.discord-btn{text-decoration:none}
   <!-- DYNAMIC CONTENT -->
   <div id="dynamic-root"></div>
 
-  <!-- LOCALPREP STATIC CARD -->
-  <div style="margin-top:36px">
-    <div class="section-header"><p class="section-title">App</p></div>
-    <div class="app-card">
-      <div class="app-card-header">
-        <div class="app-icon"><img src="icon.ico" alt="LocalPrep"></div>
-        <div class="app-info">
-          <p class="app-name">LocalPrep</p>
-          <p class="app-tagline">Desktop tool for preparing local audio files — built for Spotify, Apple Music & Tidal.</p>
-        </div>
-      </div>
-      <div class="app-features">
-        <span class="app-feature">Sample Rate Conversion</span>
-        <span class="app-feature">Format Conversion</span>
-        <span class="app-feature">Metadata Editor</span>
-        <span class="app-feature">Tracklist Sequencer</span>
-      </div>
-      <div class="app-actions">
-        <a href="https://github.com/yyusvf/LocalPrep/releases/latest/download/LocalPrep-Setup.exe" class="app-btn app-btn-primary" download>↓ Download for Windows</a>
-        <a href="localprep.html" class="app-btn app-btn-secondary">Learn more →</a>
-        <a href="https://github.com/yyusvf/LocalPrep" target="_blank" class="app-btn app-btn-secondary">GitHub</a>
-      </div>
-    </div>
-  </div>
-
 </div><!-- end .page -->
 
 <!-- WHAT IS THIS MODAL -->
@@ -420,8 +405,9 @@ a.discord-btn{text-decoration:none}
 </div>
 
 <!-- PASSWORD MODAL -->
-<div class="pw-modal" id="pw-modal">
-  <div class="pw-box">
+<div class="pw-modal" id="pw-modal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="pw-box" style="position:relative">
+    <button class="modal-close" onclick="document.getElementById('pw-modal').classList.remove('open')" style="top:12px;right:12px">✕</button>
     <h3>Edit Mode</h3>
     <p>Enter password to continue</p>
     <input class="pw-input" id="pw-input" type="password" placeholder="Password" onkeydown="if(event.key==='Enter')checkPw()">
@@ -456,6 +442,34 @@ a.discord-btn{text-decoration:none}
 </div>
 
 <div class="copied-toast" id="toast">Copied!</div>
+
+<!-- LOCALPREP MODAL (dynamic) -->
+<div class="lp-overlay" id="lp-modal-overlay" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="lp-modal">
+    <button class="lp-close" onclick="document.getElementById('lp-modal-overlay').classList.remove('open')">✕</button>
+    <div class="lp-header">
+      <div class="lp-icon"><img id="lp-m-icon" src="" alt=""></div>
+      <div>
+        <p class="lp-title" id="lp-m-title"></p>
+        <p class="lp-version" id="lp-m-version"></p>
+        <p class="lp-desc" id="lp-m-desc"></p>
+        <div class="lp-badges" id="lp-m-badges"></div>
+        <div class="lp-actions">
+          <a id="lp-m-download" href="#" class="app-btn app-btn-primary" download style="font-size:13px;padding:9px 18px">↓ Download</a>
+          <a id="lp-m-github" href="#" target="_blank" class="app-btn app-btn-secondary" style="font-size:13px;padding:9px 18px">GitHub</a>
+        </div>
+      </div>
+    </div>
+    <div class="lp-body">
+      <p class="lp-section-label">Features</p>
+      <div class="lp-features" id="lp-m-features"></div>
+      <p class="lp-section-label" style="margin-top:20px">Also included</p>
+      <div class="lp-extras" id="lp-m-extras"></div>
+      <p class="lp-section-label" style="margin-top:20px">Supported formats</p>
+      <div class="lp-formats" id="lp-m-formats"></div>
+    </div>
+  </div>
+</div>
 
 <script>
 // ─── SITE DATA ───────────────────────────────────────────────────────────────
@@ -496,16 +510,40 @@ const DEFAULT_DATA = {
     {
       id: 'yedits', title: 'Yedits', columns: 1,
       links: [
-        { id: 'yw', title: 'Yedits Website', sub: 'yedits.xyz · WIP, coming soon', url: 'https://yedits.xyz/#/login', favicon: 'yedits.xyz' },
-        { id: 'yd', title: 'Yedits Discord', sub: 'discord.gg/yedits', url: 'https://discord.gg/yedits', favicon: 'discord.com' },
+        { id: 'yw', type:'small', title: 'Yedits Website', sub: 'yedits.xyz · WIP, coming soon', url: 'https://yedits.xyz/#/login', favicon: 'yedits.xyz' },
+        { id: 'yd', type:'small', title: 'Yedits Discord', sub: 'discord.gg/yedits', url: 'https://discord.gg/yedits', favicon: 'discord.com' },
       ]
     },
     {
       id: 'sophies', title: "Sophie's Curated Comps & Edits", columns: 2,
       links: [
-        { id: 'tracker', title: 'Tracker', sub: 'rentry.co/CET · no links, informational only', url: 'https://rentry.co/CET', favicon: 'rentry.co' },
-        { id: 'archive', title: 'Samply Archive', sub: 'docs.google.com', url: 'https://docs.google.com/document/d/14MtpVxlB7ITRbjO2r43zOp8gWaO4jBWZt6qBSbc9KGM/edit?tab=t.0#heading=h.tg77o4eov0tm', favicon: 'docs.google.com' },
-        { id: 'cet', title: 'cet.net · Request any comp!', sub: 'discord.gg/Xv9HG8QkM9', url: 'https://discord.gg/Xv9HG8QkM9', favicon: 'discord.com' },
+        { id: 'tracker', type:'small', title: 'Tracker', sub: 'rentry.co/CET · no links, informational only', url: 'https://rentry.co/CET', favicon: 'rentry.co' },
+        { id: 'archive', type:'small', title: 'Samply Archive', sub: 'docs.google.com', url: 'https://docs.google.com/document/d/14MtpVxlB7ITRbjO2r43zOp8gWaO4jBWZt6qBSbc9KGM/edit?tab=t.0#heading=h.tg77o4eov0tm', favicon: 'docs.google.com' },
+        { id: 'cet', type:'small', title: 'cet.net · Request any comp!', sub: 'discord.gg/Xv9HG8QkM9', url: 'https://discord.gg/Xv9HG8QkM9', favicon: 'discord.com' },
+      ]
+    },
+    {
+      id: 'app-section', title: 'App', columns: 1,
+      links: [
+        {
+          id: 'localprep', type: 'large',
+          title: 'LocalPrep', version: 'v0.1.0 · Windows 10 / 11',
+          tagline: 'Desktop tool for preparing local audio files. Convert formats & sample rates, edit metadata, reorder tracklists. Built for Spotify, Apple Music & Tidal.',
+          icon: 'icon.ico',
+          downloadUrl: 'https://github.com/yyusvf/LocalPrep/releases/latest/download/LocalPrep-Setup.exe',
+          githubUrl: 'https://github.com/yyusvf/LocalPrep',
+          badges: ['No cloud','No subscriptions','No telemetry'],
+          features: [
+            {title:'Sample Rate Conversion', desc:'Batch-convert to 44.1 kHz, 48 kHz, 96 kHz or any target. Overwrite or keep originals.'},
+            {title:'Format Conversion', desc:'MP3, FLAC, WAV, OGG, M4A, AAC, AIFF with configurable quality settings.'},
+            {title:'Metadata Editor', desc:'Edit ID3/Vorbis tags, embed cover art, batch rename with token patterns.'},
+            {title:'Tracklist Sequencer', desc:'Drag & drop songs into order across multiple discs. Auto-writes track numbers.'},
+            {title:'Audio Preview', desc:'Built-in player with volume control. Spacebar or right-click to play.'},
+            {title:'Undo System', desc:'Every conversion and rename is reversible via the History tab.'},
+          ],
+          extras: ['Drag & drop folders onto any tab','Windows Explorer right-click context menu — no admin needed','Sortable resizable columns — state persisted between sessions','Auto-updates via GitHub Releases','English & German interface'],
+          formats: ['.mp3','.flac','.wav','.ogg','.m4a','.aac','.aiff','.aif'],
+        }
       ]
     }
   ]
@@ -513,6 +551,7 @@ const DEFAULT_DATA = {
 
 // In-memory data, loaded from Supabase on startup
 let DATA = JSON.parse(JSON.stringify(DEFAULT_DATA));
+let _initialLoad = true;
 
 // ─── RENDERER ────────────────────────────────────────────────────────────────
 function render() {
@@ -559,28 +598,75 @@ function render() {
   // Link sections
   for (const sec of DATA.linkSections) {
     html += `<div class="section-header"><p class="section-title">${esc(sec.title)}</p></div>`;
-    const isGrid = sec.columns === 2;
-    // Separate last link if odd and grid
-    const links = sec.links;
-    if (isGrid) {
-      // Pair links, last one full width if odd
-      html += `<div class="link-grid">`;
-      for (let i = 0; i < links.length - (links.length % 2 === 1 ? 1 : 0); i++) {
-        html += renderLinkRow(links[i]);
+    const largeLinks = sec.links.filter(l => l.type === 'large');
+    const smallLinks = sec.links.filter(l => l.type !== 'large');
+
+    // Render large links (app cards)
+    for (const l of largeLinks) {
+      html += renderLargeLink(l);
+    }
+
+    // Render small links
+    if (smallLinks.length > 0) {
+      const isGrid = sec.columns === 2;
+      if (isGrid) {
+        const paired = smallLinks.slice(0, smallLinks.length - (smallLinks.length % 2 === 1 ? 1 : 0));
+        const odd = smallLinks.length % 2 === 1 ? smallLinks[smallLinks.length-1] : null;
+        html += `<div class="link-grid">`;
+        for (const l of paired) html += renderLinkRow(l);
+        html += `</div>`;
+        if (odd) html += `<div class="link-list" style="margin-top:10px">` + renderLinkRow(odd) + `</div>`;
+      } else {
+        html += `<div class="link-list">`;
+        for (const l of smallLinks) html += renderLinkRow(l);
+        html += `</div>`;
       }
-      html += `</div>`;
-      if (links.length % 2 === 1) {
-        html += `<div class="link-list">` + renderLinkRow(links[links.length-1]) + `</div>`;
-      }
-    } else {
-      html += `<div class="link-list">`;
-      for (const l of links) html += renderLinkRow(l);
-      html += `</div>`;
     }
   }
 
   root.innerHTML = html;
   setTimeout(initScrollBtns, 50);
+}
+
+const _largeLinkMap = {};
+
+function renderLargeLink(l) {
+  _largeLinkMap[l.id] = l;
+  return `<div class="app-card" onclick="openLargeModal('${l.id}')" style="cursor:pointer;transition:border-color 0.2s" onmouseover="this.style.borderColor='rgba(255,255,255,0.15)'" onmouseout="this.style.borderColor=''">
+    <div class="app-card-header">
+      <div class="app-icon"><img src="${esc(l.icon||'icon.ico')}" alt="${esc(l.title)}"></div>
+      <div class="app-info">
+        <p class="app-name">${esc(l.title)}</p>
+        <p class="app-tagline">${esc(l.tagline||'')}</p>
+      </div>
+    </div>
+    <div class="app-features">
+      ${(l.features||[]).slice(0,4).map(f=>`<span class="app-feature">${esc(f.title)}</span>`).join('')}
+    </div>
+    <div class="app-actions">
+      ${l.downloadUrl ? `<a href="${esc(l.downloadUrl)}" class="app-btn app-btn-primary" download onclick="event.stopPropagation()">↓ Download for Windows</a>` : ''}
+      <button class="app-btn app-btn-secondary" onclick="event.stopPropagation();openLargeModal('${l.id}')">Learn more →</button>
+      ${l.githubUrl ? `<a href="${esc(l.githubUrl)}" target="_blank" class="app-btn app-btn-secondary" onclick="event.stopPropagation()">GitHub</a>` : ''}
+    </div>
+  </div>`;
+}
+
+function openLargeModal(id) {
+  const l = _largeLinkMap[id];
+  if (!l) return;
+  document.getElementById('lp-m-icon').src = l.icon || 'icon.ico';
+  document.getElementById('lp-m-title').textContent = l.title || '';
+  document.getElementById('lp-m-version').textContent = l.version || '';
+  document.getElementById('lp-m-desc').textContent = l.tagline || '';
+  document.getElementById('lp-m-badges').innerHTML = (l.badges||[]).map(b=>`<span class="lp-badge">${esc(b)}</span>`).join('');
+  const dl = document.getElementById('lp-m-download');
+  dl.href = l.downloadUrl || '#'; dl.style.display = l.downloadUrl ? '' : 'none';
+  const gh = document.getElementById('lp-m-github');
+  gh.href = l.githubUrl || '#'; gh.style.display = l.githubUrl ? '' : 'none';
+  document.getElementById('lp-m-features').innerHTML = (l.features||[]).map(f=>`<div class="lp-feature"><p class="lp-feature-title">${esc(f.title)}</p><p class="lp-feature-desc">${esc(f.desc)}</p></div>`).join('');
+  document.getElementById('lp-m-extras').innerHTML = (l.extras||[]).map(e=>`<span class="lp-extra">${esc(e)}</span>`).join('');
+  document.getElementById('lp-m-formats').innerHTML = (l.formats||[]).map(f=>`<span class="lp-format">${esc(f)}</span>`).join('');
+  document.getElementById('lp-modal-overlay').classList.add('open');
 }
 
 function renderLinkRow(l) {
@@ -751,21 +837,56 @@ function buildPanel() {
         <p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px">Links</p>`;
 
     sec.links.forEach((l, li) => {
-      html += `<div class="ep-link">
-        <div class="ep-link-info">
-          <div class="ep-link-title">${esc(l.title)}</div>
-          <div class="ep-link-sub">${esc(l.sub)}</div>
-        </div>
-        <div class="ep-order">
-          <button onclick="moveItem(DATA.linkSections[${si}].links,${li},-1)" title="Up">↑</button>
-          <button onclick="moveItem(DATA.linkSections[${si}].links,${li},1)" title="Down">↓</button>
-        </div>
-        <button class="ep-link-edit" onclick="openLinkEdit(${si},${li})">Edit</button>
-        <button class="ep-link-edit" style="color:#ff6b6b" onclick="DATA.linkSections[${si}].links.splice(${li},1);renderAndBuild()">✕</button>
-      </div>`;
+      if (l.type === 'large') {
+        html += `<div class="ep-project" id="lsec-${si}-${li}">
+          <div class="ep-project-head" onclick="toggleSection('lsec-${si}-${li}')">
+            <img class="ep-project-thumb" src="${esc(l.icon||'')}" onerror="this.style.opacity=0.2">
+            <span class="ep-project-name">${esc(l.title)}</span>
+            <div class="ep-order">
+              <button onclick="event.stopPropagation();moveItem(DATA.linkSections[${si}].links,${li},-1)">↑</button>
+              <button onclick="event.stopPropagation();moveItem(DATA.linkSections[${si}].links,${li},1)">↓</button>
+            </div>
+          </div>
+          <div class="ep-project-body">
+            <div class="ep-field"><label>Title</label><input type="text" value="${esc(l.title)}" oninput="DATA.linkSections[${si}].links[${li}].title=this.value;render()"></div>
+            <div class="ep-field"><label>Version / subtitle</label><input type="text" value="${esc(l.version||'')}" oninput="DATA.linkSections[${si}].links[${li}].version=this.value;render()"></div>
+            <div class="ep-field"><label>Tagline</label><input type="text" value="${esc(l.tagline||'')}" oninput="DATA.linkSections[${si}].links[${li}].tagline=this.value;render()"></div>
+            <div class="ep-field"><label>Icon (filename or URL)</label><input type="text" value="${esc(l.icon||'')}" oninput="DATA.linkSections[${si}].links[${li}].icon=this.value;render()"></div>
+            <div class="ep-field"><label>Download URL</label><input type="text" value="${esc(l.downloadUrl||'')}" oninput="DATA.linkSections[${si}].links[${li}].downloadUrl=this.value;render()"></div>
+            <div class="ep-field"><label>GitHub URL</label><input type="text" value="${esc(l.githubUrl||'')}" oninput="DATA.linkSections[${si}].links[${li}].githubUrl=this.value;render()"></div>
+            <div class="ep-field"><label>Badges (comma separated)</label><input type="text" value="${esc((l.badges||[]).join(','))}" oninput="DATA.linkSections[${si}].links[${li}].badges=this.value.split(',').map(s=>s.trim()).filter(Boolean);render()"></div>
+            <div class="ep-field"><label>Formats (comma separated)</label><input type="text" value="${esc((l.formats||[]).join(','))}" oninput="DATA.linkSections[${si}].links[${li}].formats=this.value.split(',').map(s=>s.trim()).filter(Boolean);render()"></div>
+            <div class="ep-field"><label>Extras (one per line)</label>
+              <textarea style="width:100%;background:rgba(255,255,255,0.05);border:0.5px solid rgba(255,255,255,0.1);border-radius:6px;padding:8px 10px;font-size:12px;color:var(--text);font-family:var(--font);resize:vertical;min-height:80px" oninput="DATA.linkSections[${si}].links[${li}].extras=this.value.split('\\n').filter(Boolean);render()">${esc((l.extras||[]).join('\n'))}</textarea>
+            </div>
+            <p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px">Features</p>
+            ${(l.features||[]).map((f,fi)=>`<div style="background:rgba(255,255,255,0.03);border-radius:6px;padding:8px;margin-bottom:6px">
+              <div class="ep-field"><label>Title</label><input type="text" value="${esc(f.title)}" oninput="DATA.linkSections[${si}].links[${li}].features[${fi}].title=this.value;render()"></div>
+              <div class="ep-field"><label>Description</label><input type="text" value="${esc(f.desc)}" oninput="DATA.linkSections[${si}].links[${li}].features[${fi}].desc=this.value;render()"></div>
+              <button class="ep-del" onclick="DATA.linkSections[${si}].links[${li}].features.splice(${fi},1);renderAndBuild()">Remove feature</button>
+            </div>`).join('')}
+            <button class="ep-add" onclick="DATA.linkSections[${si}].links[${li}].features.push({title:'',desc:''});renderAndBuild()">+ Add feature</button>
+            <button class="ep-del" style="margin-top:8px" onclick="DATA.linkSections[${si}].links.splice(${li},1);renderAndBuild()">Remove app</button>
+          </div>
+        </div>`;
+      } else {
+        html += `<div class="ep-link">
+          <div class="ep-link-info">
+            <div class="ep-link-title">${esc(l.title)}</div>
+            <div class="ep-link-sub">${esc(l.sub||'')}</div>
+          </div>
+          <div class="ep-order">
+            <button onclick="moveItem(DATA.linkSections[${si}].links,${li},-1)" title="Up">↑</button>
+            <button onclick="moveItem(DATA.linkSections[${si}].links,${li},1)" title="Down">↓</button>
+          </div>
+          <button class="ep-link-edit" onclick="openLinkEdit(${si},${li})">Edit</button>
+          <button class="ep-link-edit" style="color:#ff6b6b" onclick="DATA.linkSections[${si}].links.splice(${li},1);renderAndBuild()">✕</button>
+        </div>`;
+      }
     });
 
-    html += `<button class="ep-add" onclick="addLink(${si})">+ Add link</button>
+    html += `<button class="ep-add" onclick="addLink(${si})">+ Add small link</button>
+        <button class="ep-add" style="margin-top:6px" onclick="addLargeLink(${si})">+ Add app card</button>
         <button class="ep-del" style="margin-top:8px" onclick="DATA.linkSections.splice(${si},1);renderAndBuild()">Remove section</button>
       </div>
     </div>`;
@@ -794,6 +915,11 @@ function addProject(ci) {
 
 function addCategory() {
   DATA.categories.push({ id: 'cat-' + Date.now(), title: 'New Category', size: 'large', projects: [] });
+  renderAndBuild();
+}
+
+function addLargeLink(si) {
+  DATA.linkSections[si].links.unshift({ id: 'app-' + Date.now(), type: 'large', title: 'New App', tagline: '', version: '', icon: '', downloadUrl: '', githubUrl: '', badges: [], features: [], extras: [], formats: [] });
   renderAndBuild();
 }
 
@@ -939,16 +1065,58 @@ async function loadFromSupabase() {
       }));
       DATA.linkSections = secs.map(s => ({
         id: s.id, title: s.title, columns: s.columns,
-        links: links.filter(l => l.section_id === s.id).map(l => ({
-          id: l.id, title: l.title, sub: l.sub, url: l.url, favicon: l.favicon
-        }))
+        links: links.filter(l => l.section_id === s.id).map(l => {
+          if (l.type === 'large' && l.meta) {
+            try { const m = JSON.parse(l.meta); return { id:l.id, type:'large', title:l.title, ...m }; } catch(e) {}
+          }
+          return { id: l.id, type: l.type||'small', title: l.title, sub: l.sub, url: l.url, favicon: l.favicon };
+        })
       }));
+      // Remove duplicate link sections (keep the one with more links)
+      const seen = new Map();
+      DATA.linkSections = DATA.linkSections.filter(s => {
+        if (!seen.has(s.id)) { seen.set(s.id, true); return true; }
+        return false;
+      });
+
+      // Remove empty sections that duplicate a DEFAULT section title
+      const defIds = new Set(DEFAULT_DATA.linkSections.map(s => s.id));
+      DATA.linkSections = DATA.linkSections.filter(s => {
+        if (!defIds.has(s.id) && s.links.length === 0) return false;
+        return true;
+      }); 
+
+      // Fix any large links that lost their meta
+      for (const defSec of DEFAULT_DATA.linkSections) {
+        const loadedSec = DATA.linkSections.find(s => s.id === defSec.id);
+        if (!loadedSec) continue;
+        for (const defLink of defSec.links) {
+          if (defLink.type !== 'large') continue;
+          const loadedLink = loadedSec.links.find(l => l.id === defLink.id);
+          if (!loadedLink || loadedLink.type !== 'large' || !loadedLink.tagline) {
+            // Replace with default data
+            if (loadedLink) {
+              Object.assign(loadedLink, defLink);
+            } else {
+              loadedSec.links.unshift(defLink);
+            }
+            await syncToSupabase();
+          }
+        }
+      }
     }
   } catch(e) {
     console.error('Supabase load error:', e);
   }
   showLoading(false);
   render();
+  _initialLoad = false;
+  // Trigger animations after content is rendered
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.page > *').forEach((el, i) => {
+      el.style.animation = `fadeUp 0.45s ${0.04 + i * 0.05}s ease both`;
+    });
+  });
 }
 
 async function syncToSupabase() {
@@ -973,10 +1141,11 @@ async function syncToSupabase() {
 
     // Upsert links
     const linkRows = DATA.linkSections.flatMap((s, si) =>
-      s.links.map((l, li) => ({
-        id: l.id, section_id: s.id, title: l.title, sub: l.sub,
-        url: l.url, favicon: l.favicon, order_index: li
-      }))
+      s.links.map((l, li) => {
+        const row = { id: l.id, section_id: s.id, title: l.title, sub: l.sub||'', url: l.url||'', favicon: l.favicon||'', order_index: li, type: l.type||'small' };
+        if (l.type === 'large') row.meta = JSON.stringify({ tagline:l.tagline, version:l.version, icon:l.icon, downloadUrl:l.downloadUrl, githubUrl:l.githubUrl, badges:l.badges, features:l.features, extras:l.extras, formats:l.formats });
+        return row;
+      })
     );
     await sbUpsert('links', linkRows);
 
@@ -1009,6 +1178,8 @@ async function syncToSupabase() {
 }
 
 function showLoading(on) {
+  // Suppress loading indicator completely on initial load
+  if (_initialLoad) return;
   let el = document.getElementById('loading-indicator');
   if (!el) {
     el = document.createElement('div');
@@ -1021,6 +1192,7 @@ function showLoading(on) {
 }
 
 function showSaveIndicator() {
+  if (_initialLoad) return;
   let el = document.getElementById('save-indicator');
   if (!el) {
     el = document.createElement('div');
