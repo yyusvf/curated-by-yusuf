@@ -484,84 +484,8 @@ a.discord-btn{text-decoration:none}
 
 <script>
 // ─── SITE DATA ───────────────────────────────────────────────────────────────
-const DEFAULT_DATA = {
-  categories: [
-    {
-      id: 'kanye-playlists', title: 'Playlists', size: 'large',
-      projects: [
-        { id: 'bully', title: 'BULLY', artist: 'Kanye West', editor: '', cover: 'bully.jpg', link: 'https://samply.app/p/L4WckCChOvu3YY64NZ1t?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: false },
-        { id: 'vultures', title: 'VULTURES MEGA MIX', artist: '¥$, Kanye West, Ty Dolla $ign', editor: '', cover: 'vultures_mega_mix.jpg', link: 'https://samply.app/p/CuPDiSkBKyfYBUl2NfzA?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: false },
-        { id: 'donda2', title: 'Donda 2', artist: 'Kanye West', editor: '', cover: 'donda_2.jpg', link: 'https://samply.app/p/XMI4plI5puFH1oJN1m9D?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: false },
-        { id: 'donda', title: 'Donda', artist: 'Kanye West', editor: '', cover: 'donda.jpg', link: 'https://samply.app/p/uUmagBlXgVlmfYxINdIy?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: false },
-      ]
-    },
-    {
-      id: 'featured-comps', title: 'Featured Comps', size: 'small',
-      projects: [
-        { id: 'war', title: 'WAR', artist: 'Kanye West, James Blake', editor: 'Akimbo', cover: 'war.jpg', link: 'https://samply.app/p/rCSIm1fhgxjZkoP5Zx3k?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: true },
-        { id: 'yandhi-v2', title: 'Yandhi (V2)', artist: 'Kanye West', editor: 'Yedits Presents', cover: 'yandhi_v2.jpg', link: 'https://samply.app/p/VHbtqjtdjsWwza5oYq5Y?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: false },
-        { id: 'yandhi', title: 'Yandhi', artist: 'Kanye West', editor: 'The NARCISSIST Team', cover: 'yandhi.jpg', link: 'https://samply.app/p/i0fS2i62y56mwu9lpmBd?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: true },
-        { id: 'turbo', title: 'TURBOGRAFX 16 - MITUS', artist: 'Kanye West', editor: 'somesoup & jozzuh', cover: 'turbografx16.jpg', link: 'https://samply.app/p/lQylmqXnKwrbKsyupm6d?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: false },
-        { id: 'love', title: 'Love Everyone', artist: 'Kanye West', editor: 'ben', cover: 'love_everyone.jpg', link: 'https://samply.app/p/9Y3Q9uXaUBVihIVy1eo4?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: false },
-        { id: 'gaj', title: 'Good Ass Job', artist: 'Kanye West', editor: 'The Pastelle Collective', cover: 'good_ass_job.jpg', link: 'https://samply.app/p/wsa0DBe1Yvpol91bHRsI?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: false },
-        { id: 'vultures-house', title: 'Vultures.house', artist: 'Kanye West', editor: 'NormalWorld', cover: 'https://mrqbtjbtidjuxsuolgue.supabase.co/storage/v1/object/public/covers/1778101805054.jpg', link: '', curatorsCut: false },
-        { id: 'exiled', title: 'Exiled.', artist: 'Kanye West', editor: 'Soup & Co.', cover: 'exiled.jpg', link: '', curatorsCut: false },
-      ]
-    },
-    {
-      id: 'carti', title: 'Playboi Carti', size: 'large',
-      projects: [
-        { id: 'babyboi', title: 'BABYBOI', artist: 'Playboi Carti', editor: '', cover: 'babyboi.jpg', link: 'https://samply.app/p/1VvD2hh0nil6fyADk9jG?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: false },
-        { id: 'music', title: 'MUSIC', artist: 'Playboi Carti', editor: '', cover: 'music.jpg', link: 'https://samply.app/p/aNaaCcfktJFsIdUGopu8?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: false },
-        { id: 'narcissist', title: 'NARCISSIST', artist: 'Playboi Carti', editor: '', cover: 'narcissist.jpg', link: 'https://samply.app/p/TAho0nRmBi6ssDmC6nOs?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2', curatorsCut: false },
-      ]
-    }
-  ],
-  linkSections: [
-    {
-      id: 'yedits', title: 'Yedits', columns: 1,
-      links: [
-        { id: 'yw', type:'small', title: 'Yedits Website', sub: 'yedits.xyz · WIP, coming soon', url: 'https://yedits.xyz/#/login', favicon: 'yedits.xyz' },
-        { id: 'yd', type:'small', title: 'Yedits Discord', sub: 'discord.gg/yedits', url: 'https://discord.gg/yedits', favicon: 'discord.com' },
-      ]
-    },
-    {
-      id: 'sophies', title: "Sophie's Curated Comps & Edits", columns: 2,
-      links: [
-        { id: 'tracker', type:'small', title: 'Tracker', sub: 'rentry.co/CET · no links, informational only', url: 'https://rentry.co/CET', favicon: 'rentry.co' },
-        { id: 'archive', type:'small', title: 'Samply Archive', sub: 'docs.google.com', url: 'https://docs.google.com/document/d/14MtpVxlB7ITRbjO2r43zOp8gWaO4jBWZt6qBSbc9KGM/edit?tab=t.0#heading=h.tg77o4eov0tm', favicon: 'docs.google.com' },
-        { id: 'cet', type:'small', title: 'cet.net · Request any comp!', sub: 'discord.gg/Xv9HG8QkM9', url: 'https://discord.gg/Xv9HG8QkM9', favicon: 'discord.com' },
-      ]
-    },
-    {
-      id: 'app-section', title: 'App', columns: 1,
-      links: [
-        {
-          id: 'localprep', type: 'large',
-          title: 'LocalPrep', version: 'v0.1.0 · Windows 10 / 11',
-          tagline: 'Desktop tool for preparing local audio files. Convert formats & sample rates, edit metadata, reorder tracklists. Built for Spotify, Apple Music & Tidal.',
-          icon: 'icon.ico',
-          downloadUrl: 'https://github.com/yyusvf/LocalPrep/releases/latest/download/LocalPrep-Setup.exe',
-          githubUrl: 'https://github.com/yyusvf/LocalPrep',
-          badges: ['No cloud','No subscriptions','No telemetry'],
-          features: [
-            {title:'Sample Rate Conversion', desc:'Batch-convert to 44.1 kHz, 48 kHz, 96 kHz or any target. Overwrite or keep originals.'},
-            {title:'Format Conversion', desc:'MP3, FLAC, WAV, OGG, M4A, AAC, AIFF with configurable quality settings.'},
-            {title:'Metadata Editor', desc:'Edit ID3/Vorbis tags, embed cover art, batch rename with token patterns.'},
-            {title:'Tracklist Sequencer', desc:'Drag & drop songs into order across multiple discs. Auto-writes track numbers.'},
-            {title:'Audio Preview', desc:'Built-in player with volume control. Spacebar or right-click to play.'},
-            {title:'Undo System', desc:'Every conversion and rename is reversible via the History tab.'},
-          ],
-          extras: ['Drag & drop folders onto any tab','Windows Explorer right-click context menu — no admin needed','Sortable resizable columns — state persisted between sessions','Auto-updates via GitHub Releases','English & German interface'],
-          formats: ['.mp3','.flac','.wav','.ogg','.m4a','.aac','.aiff','.aif'],
-        }
-      ]
-    }
-  ]
-};
-
-// In-memory data, loaded from Supabase on startup
-let DATA = JSON.parse(JSON.stringify(DEFAULT_DATA));
+// All data comes from Supabase — no defaults
+let DATA = { categories: [], linkSections: [] };
 let _initialLoad = true;
 
 // ─── RENDERER ────────────────────────────────────────────────────────────────
@@ -1090,72 +1014,38 @@ async function sbDelete(table, ids) {
 }
 
 async function loadFromSupabase() {
-  showLoading(true);
   try {
     const [cats, projs, secs, links] = await Promise.all([
       sbGet('categories'), sbGet('projects'), sbGet('link_sections'), sbGet('links')
     ]);
 
-    if (!cats.length && !secs.length) {
-      // Empty DB — seed with defaults
-      await syncToSupabase();
-    } else {
-      DATA.categories = cats.map(c => ({
-        id: c.id, title: c.title, size: c.size,
-        projects: projs.filter(p => p.category_id === c.id).map(p => ({
-          id: p.id, title: p.title, artist: p.artist, editor: p.editor,
-          cover: p.cover, link: p.link, curatorsCut: p.curators_cut
-        }))
-      }));
-      DATA.linkSections = secs.map(s => ({
-        id: s.id, title: s.title, columns: s.columns,
-        links: links.filter(l => l.section_id === s.id).map(l => {
-          if (l.type === 'large' && l.meta) {
-            try { const m = JSON.parse(l.meta); return { id:l.id, type:'large', title:l.title, ...m }; } catch(e) {}
-          }
-          return { id: l.id, type: l.type||'small', title: l.title, sub: l.sub, url: l.url, favicon: l.favicon, image: l.image||null };
-        })
-      }));
-      // Remove duplicate link sections (keep the one with more links)
-      const seen = new Map();
-      DATA.linkSections = DATA.linkSections.filter(s => {
-        if (!seen.has(s.id)) { seen.set(s.id, true); return true; }
-        return false;
-      });
+    DATA.categories = cats.map(c => ({
+      id: c.id, title: c.title, size: c.size,
+      projects: projs.filter(p => p.category_id === c.id).map(p => ({
+        id: p.id, title: p.title, artist: p.artist, editor: p.editor,
+        cover: p.cover, link: p.link, curatorsCut: p.curators_cut
+      }))
+    }));
 
-      // Remove empty sections that duplicate a DEFAULT section title
-      const defIds = new Set(DEFAULT_DATA.linkSections.map(s => s.id));
-      DATA.linkSections = DATA.linkSections.filter(s => {
-        if (!defIds.has(s.id) && s.links.length === 0) return false;
-        return true;
-      }); 
-
-      // Fix any large links that lost their meta
-      for (const defSec of DEFAULT_DATA.linkSections) {
-        const loadedSec = DATA.linkSections.find(s => s.id === defSec.id);
-        if (!loadedSec) continue;
-        for (const defLink of defSec.links) {
-          if (defLink.type !== 'large') continue;
-          const loadedLink = loadedSec.links.find(l => l.id === defLink.id);
-          if (!loadedLink || loadedLink.type !== 'large' || !loadedLink.tagline) {
-            // Replace with default data
-            if (loadedLink) {
-              Object.assign(loadedLink, defLink);
-            } else {
-              loadedSec.links.unshift(defLink);
-            }
-            await syncToSupabase();
-          }
+    DATA.linkSections = secs.map(s => ({
+      id: s.id, title: s.title, columns: s.columns,
+      links: links.filter(l => l.section_id === s.id).map(l => {
+        if (l.type === 'large' && l.meta) {
+          try {
+            const m = typeof l.meta === 'string' ? JSON.parse(l.meta) : l.meta;
+            return { id: l.id, type: 'large', title: l.title, ...m };
+          } catch(e) {}
         }
-      }
-    }
+        return { id: l.id, type: l.type||'small', title: l.title, sub: l.sub, url: l.url, favicon: l.favicon, image: l.image||null };
+      })
+    }));
+
   } catch(e) {
     console.error('Supabase load error:', e);
   }
-  showLoading(false);
+
   render();
   _initialLoad = false;
-  // Trigger animations after content is rendered
   requestAnimationFrame(() => {
     document.querySelectorAll('.page > *').forEach((el, i) => {
       el.style.animation = `fadeUp 0.45s ${0.04 + i * 0.05}s ease both`;
