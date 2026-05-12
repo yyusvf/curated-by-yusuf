@@ -687,6 +687,11 @@ function togglePanel() {
 }
 
 function buildPanel() {
+  // Remember which sections are currently expanded
+  const expanded = new Set(
+    [...document.querySelectorAll('.ep-section.expanded, .ep-project.expanded')]
+      .map(el => el.id)
+  );
   const body = document.getElementById('ep-body');
   let html = '';
 
@@ -833,6 +838,12 @@ function buildPanel() {
   html += `<button class="ep-add-section" onclick="addLinkSection()">+ Add link section</button>`;
 
   body.innerHTML = html;
+
+  // Restore expanded state
+  expanded.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.add('expanded');
+  });
 }
 
 function toggleSection(id) {
@@ -931,7 +942,6 @@ async function handleLinkImageUpload(event) {
 function renderAndBuild() {
   render();
   buildPanel();
-  syncToSupabase();
 }
 
 // ─── IMAGE UPLOAD ─────────────────────────────────────────────────────────────
@@ -952,7 +962,6 @@ async function handleCoverUpload(event, ci, pi) {
     if (preview) preview.src = url;
     if (input) input.value = url;
     render();
-    syncToSupabase();
     if (label) label.textContent = '✓ Uploaded';
     setTimeout(() => { if (label) label.textContent = 'Upload image'; }, 2000);
   } catch(e) {
@@ -1005,7 +1014,16 @@ async function sbGet(table) {
 
 async function sbUpsert(table, rows) {
   if (!rows.length) return;
-  await fetch(`${SB_URL}/rest/v1/${table}`, { method: 'POST', headers: SB_HEADERS, body: JSON.stringify(rows) });
+  const res = await fetch(`${SB_URL}/rest/v1/${table}`, {
+    method: 'POST',
+    headers: { ...SB_HEADERS, 'Prefer': 'resolution=merge-duplicates,return=minimal' },
+    body: JSON.stringify(rows)
+  });
+  if (!res.ok) {
+    const err = await res.text();
+    console.error(`sbUpsert(${table}) failed:`, res.status, err);
+    throw new Error(`${table}: ${err}`);
+  }
 }
 
 async function sbDelete(table, ids) {
@@ -1107,7 +1125,15 @@ async function syncToSupabase() {
 
     showSaveIndicator();
   } catch(e) {
-    console.error('Supabase sync error:', e);
+    console.error('Sync error:', e);
+    // Show error to user
+    let el = document.getElementById('save-indicator');
+    if (!el) { el = document.createElement('div'); el.id='save-indicator'; el.style.cssText='position:fixed;top:20px;left:50%;transform:translateX(-50%);border-radius:999px;padding:8px 18px;font-size:12px;font-weight:600;z-index:500;transition:opacity 0.3s'; document.body.appendChild(el); }
+    el.textContent = '✗ Sync failed — check console';
+    el.style.background = '#ff4444';
+    el.style.color = '#fff';
+    el.style.opacity = '1';
+    setTimeout(() => el.style.opacity = '0', 3000);
   }
 }
 
