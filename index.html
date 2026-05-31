@@ -141,6 +141,18 @@ a.discord-btn{text-decoration:none}
 .lp-format{padding:4px 10px;background:var(--surface2);border-radius:5px;font-size:11px;font-family:monospace;color:var(--muted)}
 .lp-badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
 .lp-badge{font-size:11px;color:rgba(120,220,120,0.9);background:rgba(100,220,100,0.08);border:0.5px solid rgba(100,220,100,0.2);border-radius:999px;padding:3px 10px}
+/* TRACKER CARD */
+.tracker-card{border-radius:14px;background:var(--surface);border:0.5px solid var(--border);overflow:hidden;cursor:pointer;text-decoration:none;display:block;transition:border-color 0.2s,box-shadow 0.2s}
+.tracker-card:hover{border-color:rgba(255,255,255,0.15);box-shadow:0 8px 40px rgba(0,0,0,0.3)}
+.tracker-card-top{padding:20px 20px 16px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.tracker-card-label{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted2);margin-bottom:6px}
+.tracker-card-title{font-size:17px;font-weight:600;color:var(--text);margin-bottom:5px}
+.tracker-card-desc{font-size:13px;color:var(--muted);line-height:1.55;max-width:460px}
+.tracker-card-btn{flex-shrink:0;display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:999px;background:var(--text);color:#0e0d0d;font-size:13px;font-weight:700;font-family:var(--font);white-space:nowrap;margin-top:4px}
+.tracker-card:hover .tracker-card-btn{opacity:0.85}
+.tracker-covers{display:flex;gap:6px;padding:0 20px 20px;overflow:hidden;position:relative}
+.tracker-covers::after{content:'';position:absolute;right:0;top:0;bottom:0;width:60px;background:linear-gradient(to right,transparent,var(--surface));pointer-events:none}
+.tracker-era-cover{width:62px;height:62px;border-radius:8px;object-fit:cover;flex-shrink:0;background:var(--surface2);box-shadow:0 2px 8px rgba(0,0,0,0.3)}
 .app-card{border-radius:14px;background:var(--surface);border:0.5px solid var(--border);overflow:hidden}
 .app-card-header{padding:20px 20px 0;display:flex;align-items:flex-start;gap:14px}
 .app-icon{width:52px;height:52px;border-radius:50%;flex-shrink:0;overflow:hidden}
@@ -498,6 +510,11 @@ function render() {
 
   // Categories
   for (const cat of DATA.categories) {
+    if (cat.size === 'tracker') {
+      html += `<div class="section-header"><p class="section-title">${esc(cat.title)}</p></div>`;
+      html += renderTrackerCard();
+      continue;
+    }
     html += `<div class="section-header"><p class="section-title">${esc(cat.title)}</p></div>`;
     const rowId = `row-${cat.id}`;
     const collapsible = cat.projects.length > 6 && cat.size === 'small';
@@ -533,8 +550,10 @@ function render() {
     </div>`;
   }
 
-  // Link sections
+  // Link sections (skip tracker if it still exists)
   for (const sec of DATA.linkSections) {
+    if (sec.links.some(l => l.type === 'tracker')) continue;
+
     html += `<div class="section-header"><p class="section-title">${esc(sec.title)}</p></div>`;
     const largeLinks = sec.links.filter(l => l.type === 'large');
     const smallLinks = sec.links.filter(l => l.type !== 'large');
@@ -564,6 +583,23 @@ function render() {
 
   root.innerHTML = html;
   setTimeout(initScrollBtns, 50);
+}
+
+function renderTrackerCard() {
+  const covers = ['yandhi_v1.jpg','yandhi_v1.jpg','yandhi.jpg','war.jpg','good_ass_job.jpg','donda.jpg','turbografx16.jpg','bully.jpg'];
+  return `<a href="comps.html" class="tracker-card">
+    <div class="tracker-card-top">
+      <div>
+        <p class="tracker-card-label">Sophie's Curated Comps &amp; Edits</p>
+        <p class="tracker-card-title">Kanye Comps</p>
+        <p class="tracker-card-desc">Community-curated edits and reworks organised by era — with tracklists, credits and artwork.</p>
+      </div>
+      <span class="tracker-card-btn">Browse →</span>
+    </div>
+    <div class="tracker-covers">
+      ${covers.map(c => `<img class="tracker-era-cover" src="${c}" alt="" onerror="this.style.opacity=0.15">`).join('')}
+    </div>
+  </a>`;
 }
 
 const _largeLinkMap = {};
@@ -696,6 +732,24 @@ function buildPanel() {
   // CATEGORIES
   html += `<p style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Project Categories</p>`;
   DATA.categories.forEach((cat, ci) => {
+    if (cat.size === 'tracker') {
+      html += `<div class="ep-section" id="cat-${ci}">
+        <div class="ep-section-head" onclick="toggleSection('cat-${ci}')">
+          <span class="ep-section-title">${esc(cat.title)}</span>
+          <span class="ep-section-type">tracker</span>
+          <div class="ep-order">
+            <button onclick="event.stopPropagation();moveItem(DATA.categories,${ci},-1)" title="Up">↑</button>
+            <button onclick="event.stopPropagation();moveItem(DATA.categories,${ci},1)" title="Down">↓</button>
+          </div>
+          <span class="ep-arrow">›</span>
+        </div>
+        <div class="ep-section-body">
+          <div class="ep-field"><label>Section Title</label><input type="text" value="${esc(cat.title)}" oninput="DATA.categories[${ci}].title=this.value;renderAndBuild()"></div>
+          <p style="font-size:12px;color:var(--muted)">Links to comps.html — manage content in the Comp Builder.</p>
+        </div>
+      </div>`;
+      return;
+    }
     html += `<div class="ep-section" id="cat-${ci}">
       <div class="ep-section-head" onclick="toggleSection('cat-${ci}')">
         <span class="ep-section-title">${esc(cat.title)}</span>
@@ -1033,7 +1087,7 @@ async function loadFromSupabase() {
 
     DATA.categories = cats.map(c => ({
       id: c.id, title: c.title, size: c.size,
-      projects: projs.filter(p => p.category_id === c.id).map(p => ({
+      projects: c.size === 'tracker' ? [] : projs.filter(p => p.category_id === c.id).map(p => ({
         id: p.id, title: p.title, artist: p.artist, editor: p.editor,
         cover: p.cover, link: p.link, curatorsCut: p.curators_cut
       }))
