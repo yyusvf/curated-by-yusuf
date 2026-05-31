@@ -46,7 +46,22 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
 .era-info{flex:1;min-width:0}
 .era-label{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted2);margin-bottom:6px}
 .era-name{font-size:22px;font-weight:700;letter-spacing:-0.4px;margin-bottom:10px}
-.era-desc{font-size:13px;color:var(--muted);line-height:1.7;max-width:620px}
+.era-desc-wrap{position:relative;max-width:620px}
+.era-desc{
+  font-size:13px;color:var(--muted);line-height:1.6;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+  transition:opacity 0.2s ease;
+}
+.era-desc-full{
+  position:absolute;top:0;left:0;right:0;
+  font-size:13px;color:var(--muted);line-height:1.6;
+  z-index:10;pointer-events:none;
+  opacity:0;transition:opacity 0.3s ease;
+}
+.era-header:hover .era-desc{opacity:0}
+.era-header:hover .era-desc-full{opacity:1}
+.era-header{overflow:visible}
+.era-header:hover .era-desc-full{opacity:1}
 
 /* ── COMP GRID ── */
 .comp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:18px}
@@ -412,7 +427,10 @@ ERAS.forEach(era => {
       <div class="era-info">
         <p class="era-label">Era · ${era.year}</p>
         <h2 class="era-name">${era.name}</h2>
-        <p class="era-desc">${era.description}</p>
+        <div class="era-desc-wrap">
+          <p class="era-desc">${era.description}</p>
+          <p class="era-desc-full">${era.description}</p>
+        </div>
       </div>
     </div>
     <div class="comp-grid" id="grid-${era.id}"></div>`;
