@@ -168,6 +168,11 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);display:flex
 </div>
 
 <script>
+const eraCover   = id             => `tracker/${id}/${id}.jpg`;
+const compCover  = (eraId, compId)=> `tracker/${eraId}/${compId}/${compId}.jpg`;
+const artworkSrc = (eraId, compId, filename) =>
+  `tracker/${eraId}/${compId}/${filename}`.split('/').map(encodeURIComponent).join('/');
+
 let DATA = { eras: [] };
 
 const BADGES = [
@@ -208,7 +213,7 @@ function moveEra(id, d) {
 function addComp(eraId) {
   const era = DATA.eras.find(e => e._id === eraId);
   if (!era) return;
-  era.comps.push({ _id:uid(), id:'', name:'', cover:'', editor:'', year:'', badges:[], samply:'', art:[], description:'', info:'', tracklist:[], credits:{ editors:[], raw:'' } });
+  era.comps.push({ _id:uid(), id:'', name:'', editor:'', year:'', badges:[], samply:'', art:[], description:'', info:'', tracklist:[], credits:{ editors:[], raw:'' } });
   renderAll();
   setTimeout(() => {
     const era_el = document.getElementById(`era-${eraId}`);
@@ -338,7 +343,7 @@ function renderAll() {
     el.id = `era-${era._id}`;
     el.innerHTML = `
       <div class="era-head" onclick="this.parentElement.classList.toggle('open')">
-        <img class="era-thumb" src="${era.cover||''}" onerror="this.style.opacity=0.15" alt="">
+        <img class="era-thumb" src="${era.id ? eraCover(era.id) : ''}" onerror="this.style.opacity=0.15" alt="">
         <span class="era-name-label">${era.name||'Untitled Era'}</span>
         <span class="era-year-label">${era.year||''}</span>
         <button onclick="event.stopPropagation();moveEra('${era._id}',-1)" class="btn-sm" style="padding:2px 7px">↑</button>
@@ -354,6 +359,7 @@ function renderAll() {
           <div class="field">
             <label>Era ID <span style="font-weight:400;text-transform:none;letter-spacing:0">(slug)</span></label>
             <input value="${esc(era.id)}" placeholder="yandhi-v1" oninput="setEra('${era._id}','id',this.value)">
+            <p class="field-hint" id="era-cover-hint-${era._id}" style="font-family:monospace;color:var(--muted2)">${era.id ? 'tracker/'+era.id+'/'+era.id+'.jpg' : '— erst Era-ID eingeben'}</p>
           </div>
         </div>
         <div class="row2">
@@ -361,10 +367,7 @@ function renderAll() {
             <label>Year</label>
             <input value="${esc(era.year)}" placeholder="2018" oninput="setEra('${era._id}','year',this.value)">
           </div>
-          <div class="field">
-            <label>Cover filename</label>
-            <input value="${esc(era.cover)}" placeholder="yandhi_v1.jpg" oninput="setEra('${era._id}','cover',this.value)">
-          </div>
+
         </div>
         <div class="field">
           <label>Description</label>
@@ -388,7 +391,7 @@ function renderAll() {
       cel.id = `comp-${comp._id}`;
       cel.innerHTML = `
         <div class="comp-head" onclick="this.parentElement.classList.toggle('open')">
-          <img class="comp-thumb-sm" src="${comp.cover||''}" onerror="this.style.opacity=0.15" alt="">
+          <img class="comp-thumb-sm" src="${era.id && comp.id ? compCover(era.id, comp.id) : ''}" onerror="this.style.opacity=0.15" alt="">
           <span class="comp-name-label">${comp.name||'Untitled Comp'}</span>
           <span class="comp-arrow">›</span>
         </div>
@@ -401,17 +404,12 @@ function renderAll() {
             <div class="field">
               <label>Comp ID <span style="font-weight:400;text-transform:none;letter-spacing:0">(slug)</span></label>
               <input value="${esc(comp.id)}" placeholder="yandhi-narcissist" oninput="setComp('${era._id}','${comp._id}','id',this.value)">
+              <p class="field-hint" id="cover-hint-${comp._id}" style="font-family:monospace;color:var(--muted2)">${era.id && comp.id ? 'tracker/'+era.id+'/'+comp.id+'/'+comp.id+'.jpg' : '— erst Era-ID und Comp-ID eingeben'}</p>
             </div>
           </div>
-          <div class="row2">
-            <div class="field">
-              <label>Cover filename</label>
-              <input value="${esc(comp.cover)}" placeholder="yandhi.jpg" oninput="setComp('${era._id}','${comp._id}','cover',this.value)">
-            </div>
-            <div class="field">
-              <label>Editor</label>
-              <input value="${esc(comp.editor)}" placeholder="The NARCISSIST Team" oninput="setComp('${era._id}','${comp._id}','editor',this.value)">
-            </div>
+          <div class="field">
+            <label>Editor</label>
+            <input value="${esc(comp.editor)}" placeholder="The NARCISSIST Team" oninput="setComp('${era._id}','${comp._id}','editor',this.value)">
           </div>
           <div class="row2">
             <div class="field">
@@ -476,12 +474,16 @@ function setEra(id, key, val) {
   const era = DATA.eras.find(e => e._id === id);
   if (!era) return;
   era[key] = val;
-  // update visible label without full re-render
   const head = document.querySelector(`#era-${id} .era-name-label`);
   if (key === 'name' && head) head.textContent = val || 'Untitled Era';
   const year = document.querySelector(`#era-${id} .era-year-label`);
   if (key === 'year' && year) year.textContent = val;
-  if (key === 'cover') { const img = document.querySelector(`#era-${id} .era-thumb`); if(img){img.src=val;img.style.opacity=1;} }
+  if (key === 'id') {
+    const hint = document.getElementById(`era-cover-hint-${id}`);
+    if (hint) hint.textContent = val ? `tracker/${val}/${val}.jpg` : '— erst Era-ID eingeben';
+    const img = document.querySelector(`#era-${id} .era-thumb`);
+    if (img && val) { img.src = eraCover(val); img.style.opacity = 1; }
+  }
 }
 
 function setComp(eraId, compId, key, val) {
@@ -490,7 +492,13 @@ function setComp(eraId, compId, key, val) {
   comp[key] = val;
   const label = document.querySelector(`#comp-${compId} .comp-name-label`);
   if (key === 'name' && label) label.textContent = val || 'Untitled Comp';
-  if (key === 'cover') { const img = document.querySelector(`#comp-${compId} .comp-thumb-sm`); if(img){img.src=val;img.style.opacity=1;} }
+  if (key === 'id' || key === 'cover') {
+    const era = DATA.eras.find(e => e._id === eraId);
+    const hint = document.getElementById(`cover-hint-${compId}`);
+    if (hint && era?.id && comp.id) hint.textContent = `tracker/${era.id}/${comp.id}/${comp.id}.jpg`;
+    const img = document.querySelector(`#comp-${compId} .comp-thumb-sm`);
+    if (img && era?.id && comp.id) { img.src = compCover(era.id, comp.id); img.style.opacity = 1; }
+  }
 }
 
 function setCredits(eraId, compId, val) {
@@ -509,12 +517,12 @@ function toggleBadge(eraId, compId, bid, checked) {
 function buildOutput() {
   return DATA.eras.map(era => ({
     id: era.id || era.name.toLowerCase().replace(/[^a-z0-9]+/g,'-'),
-    name: era.name, year: era.year, cover: era.cover, description: era.description,
+    name: era.name, year: era.year, description: era.description,
     comps: era.comps.map(comp => {
       const eraId = era.id || era.name.toLowerCase().replace(/[^a-z0-9]+/g,'-');
       const compId = comp.id || comp.name.toLowerCase().replace(/[^a-z0-9]+/g,'-');
       return {
-        id: compId, name: comp.name, cover: comp.cover, editor: comp.editor,
+        id: compId, name: comp.name, editor: comp.editor,
         year: comp.year, badges: comp.badges, samply: comp.samply,
         art: comp.art.map(f => `tracker/${eraId}/${compId}/${f}`),
         description: comp.description,
@@ -541,7 +549,7 @@ function importJSON(input) {
     try {
       const arr = JSON.parse(e.target.result);
       DATA.eras = arr.map(era => ({
-        _id:uid(), id:era.id, name:era.name, year:era.year, cover:era.cover, description:era.description,
+        _id:uid(), id:era.id, name:era.name, year:era.year, description:era.description,
         comps:(era.comps||[]).map(c => ({
           _id:uid(), id:c.id, name:c.name, cover:c.cover, editor:c.editor, year:c.year||'',
           badges:c.badges||[], samply:c.samply||'',

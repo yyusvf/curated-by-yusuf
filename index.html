@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Curated by Yusuf</title>
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="assets/favicon.png">
 <meta property="og:title" content="Curated by Yusuf">
 <meta property="og:description" content="The best Ye & community comps — ready to play on Samply.">
-<meta property="og:image" content="og-image.jpg">
+<meta property="og:image" content="assets/og-image.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Curated by Yusuf">
 <meta name="twitter:description" content="The best Ye & community comps — ready to play on Samply.">
-<meta name="twitter:image" content="og-image.jpg">
+<meta name="twitter:image" content="assets/og-image.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -36,6 +36,16 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .profile-bio{font-size:13px;color:var(--muted);line-height:1.5}
 .profile-socials{display:flex;gap:8px;flex-wrap:wrap;margin-top:2px}
 .profile-right{width:160px;flex-shrink:0;display:flex;flex-direction:column;gap:8px;padding-top:4px}
+/* RECENT COMPS FEED */
+.recent-feed{display:flex;flex-direction:column;gap:6px;width:160px;flex-shrink:0}
+.recent-feed-label{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:4px}
+.recent-comp-item{display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:9px;text-decoration:none;transition:background 0.15s;cursor:pointer;border:none;background:transparent;font-family:var(--font);text-align:left;width:100%}
+.recent-comp-item:hover{background:rgba(255,255,255,0.05)}
+.recent-comp-cover{width:36px;height:36px;border-radius:6px;object-fit:cover;flex-shrink:0;background:var(--surface2)}
+.recent-comp-info{min-width:0;flex:1}
+.recent-comp-name{font-size:11px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.recent-comp-era{font-size:10px;color:var(--muted);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.recent-comp-badge{width:5px;height:5px;border-radius:50%;background:#c8f542;flex-shrink:0;opacity:0.7}
 
 /* DISCORD/INSTAGRAM PILLS */
 .discord-wrap{position:relative;display:inline-flex}
@@ -52,14 +62,6 @@ a.discord-btn{text-decoration:none}
 @keyframes borderShift{0%{background-position:100%,0% 50%}100%{background-position:100%,300% 50%}}
 .what-btn:hover{color:#fff;box-shadow:0 0 16px rgba(139,92,246,0.45),0 0 32px rgba(96,165,250,0.2)}
 
-/* LASTFM */
-.lastfm-label{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.25)}
-.lastfm-track{display:flex;align-items:center;gap:8px}
-.lastfm-art{width:36px;height:36px;border-radius:4px;object-fit:cover;background:var(--surface2);flex-shrink:0}
-.lastfm-info{min-width:0}
-.lastfm-title{font-size:11px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.lastfm-artist{font-size:10px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:1px}
-.lastfm-now{display:inline-block;width:6px;height:6px;border-radius:50%;background:#d02323;flex-shrink:0;animation:pulse 1.5s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
 
 /* SAMPLY CTA */
@@ -142,17 +144,64 @@ a.discord-btn{text-decoration:none}
 .lp-badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
 .lp-badge{font-size:11px;color:rgba(120,220,120,0.9);background:rgba(100,220,100,0.08);border:0.5px solid rgba(100,220,100,0.2);border-radius:999px;padding:3px 10px}
 /* TRACKER CARD */
-.tracker-card{border-radius:14px;background:var(--surface);border:0.5px solid var(--border);overflow:hidden;cursor:pointer;text-decoration:none;display:block;transition:border-color 0.2s,box-shadow 0.2s}
-.tracker-card:hover{border-color:rgba(255,255,255,0.15);box-shadow:0 8px 40px rgba(0,0,0,0.3)}
-.tracker-card-top{padding:20px 20px 16px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
-.tracker-card-label{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted2);margin-bottom:6px}
-.tracker-card-title{font-size:17px;font-weight:600;color:var(--text);margin-bottom:5px}
-.tracker-card-desc{font-size:13px;color:var(--muted);line-height:1.55;max-width:460px}
-.tracker-card-btn{flex-shrink:0;display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:999px;background:var(--text);color:#0e0d0d;font-size:13px;font-weight:700;font-family:var(--font);white-space:nowrap;margin-top:4px}
+/* TRACKER CARD */
+.tracker-card{
+  border-radius:14px;overflow:hidden;cursor:pointer;
+  text-decoration:none;display:block;position:relative;
+  transition:transform 0.3s cubic-bezier(.16,1,.3,1),box-shadow 0.3s;
+  min-height:200px;
+}
+.tracker-card:hover{transform:translateY(-2px);box-shadow:0 16px 60px rgba(0,0,0,0.5)}
+.tracker-card-bg{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,#1a1010 0%,#0e0d0d 60%);
+  z-index:0;
+}
+.tracker-card-bg-blur{
+  position:absolute;inset:0;z-index:0;
+  background-size:cover;background-position:center;
+  filter:blur(60px) brightness(0.2) saturate(1.6);
+  transform:scale(1.1);
+}
+.tracker-card-inner{
+  position:relative;z-index:1;
+  display:flex;align-items:center;gap:0;
+  height:200px;overflow:hidden;
+}
+.tracker-card-covers{
+  display:flex;align-items:center;
+  flex-shrink:0;padding:28px 0 28px 26px;gap:8px;
+  position:relative;
+}
+.tracker-era-cover{
+  width:130px;height:130px;border-radius:10px;
+  object-fit:cover;background:rgba(255,255,255,0.06);
+  box-shadow:0 4px 20px rgba(0,0,0,0.5);
+  flex-shrink:0;transition:transform 0.3s,opacity 0.3s;
+}
+.tracker-era-cover:nth-child(2){transform:translateX(-18px) rotate(-4deg) scale(0.92);opacity:0.75;z-index:-1}
+.tracker-era-cover:nth-child(3){transform:translateX(-36px) rotate(-8deg) scale(0.84);opacity:0.5;z-index:-2}
+.tracker-card:hover .tracker-era-cover:nth-child(2){transform:translateX(-10px) rotate(-2deg) scale(0.94)}
+.tracker-card:hover .tracker-era-cover:nth-child(3){transform:translateX(-20px) rotate(-4deg) scale(0.87)}
+.tracker-card-text{
+  flex:1;padding:28px 28px 28px 8px;
+}
+.tracker-card-label{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:8px}
+.tracker-card-title{font-size:22px;font-weight:800;letter-spacing:-0.5px;color:var(--text);margin-bottom:6px;line-height:1}
+.tracker-card-desc{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.55;max-width:320px;margin-bottom:16px}
+.tracker-card-btn{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:9px 20px;border-radius:999px;
+  background:var(--text);color:#0e0d0d;
+  font-size:13px;font-weight:700;font-family:var(--font);
+  transition:opacity 0.2s;
+}
 .tracker-card:hover .tracker-card-btn{opacity:0.85}
-.tracker-covers{display:flex;gap:6px;padding:0 20px 20px;overflow:hidden;position:relative}
-.tracker-covers::after{content:'';position:absolute;right:0;top:0;bottom:0;width:60px;background:linear-gradient(to right,transparent,var(--surface));pointer-events:none}
-.tracker-era-cover{width:62px;height:62px;border-radius:8px;object-fit:cover;flex-shrink:0;background:var(--surface2);box-shadow:0 2px 8px rgba(0,0,0,0.3)}
+.tracker-card-stats{
+  display:flex;gap:16px;margin-top:14px;
+}
+.tracker-stat{font-size:11px;color:rgba(255,255,255,0.35)}
+.tracker-stat strong{color:rgba(255,255,255,0.7);font-weight:600}
 .app-card{border-radius:14px;background:var(--surface);border:0.5px solid var(--border);overflow:hidden}
 .app-card-header{padding:20px 20px 0;display:flex;align-items:flex-start;gap:14px}
 .app-icon{width:52px;height:52px;border-radius:50%;flex-shrink:0;overflow:hidden}
@@ -375,7 +424,7 @@ a.discord-btn{text-decoration:none}
   <!-- PROFILE (static) -->
   <div class="profile">
     <div class="profile-left">
-      <div class="avatar"><img src="yusuf.jpg" alt="Yusuf"></div>
+      <div class="avatar"><img src="assets/yusuf.jpg" alt="Yusuf"></div>
       <p class="profile-name">Curated by Yusuf</p>
       <p class="profile-bio">Collecting the best Ye &amp; community edits, playable directly on Samply.</p>
       <div class="profile-socials">
@@ -387,8 +436,8 @@ a.discord-btn{text-decoration:none}
       </div>
     </div>
     <div class="profile-right">
-      <p class="lastfm-label">Last played</p>
-      <div id="lastfm-tracks"></div>
+      <p class="recent-feed-label">Recently added</p>
+      <div id="recent-comps-feed"></div>
     </div>
   </div>
 
@@ -503,8 +552,15 @@ a.discord-btn{text-decoration:none}
 let DATA = { categories: [], linkSections: [] };
 let _initialLoad = true;
 
+function coverSrc(path) {
+  if (!path) return '';
+  if (path.startsWith('http') || path.startsWith('assets/') || path.startsWith('tracker/')) return path;
+  return 'assets/' + path;
+}
+
 // ─── RENDERER ────────────────────────────────────────────────────────────────
 function render() {
+  populateRecentFeed();
   const root = document.getElementById('dynamic-root');
   let html = '';
 
@@ -525,14 +581,14 @@ function render() {
     for (const p of cat.projects) {
       if (cat.size === 'large') {
         html += `<a href="${esc(p.link)}" class="pl-card" target="_blank">
-          <img class="pl-thumb" src="${esc(p.cover)}" alt="${esc(p.title)}">
+          <img class="pl-thumb" src="${coverSrc(p.cover)}" alt="${esc(p.title)}">
           <div class="pl-body"><p class="pl-title">${esc(p.title)}</p><p class="pl-artist">${esc(p.artist)}</p></div>
         </a>`;
       } else {
         html += `<div class="comp-card-wrap">
           <a href="${esc(p.link)}" class="comp-card" target="_blank">
             <div class="comp-thumb-wrap">
-              <img class="comp-thumb" src="${esc(p.cover)}" alt="${esc(p.title)}">
+              <img class="comp-thumb" src="${coverSrc(p.cover)}" alt="${esc(p.title)}">
               ${p.curatorsCut ? '<span class="curators-cut">Curator\'s Cut</span>' : ''}
             </div>
             <div class="comp-body">
@@ -586,18 +642,24 @@ function render() {
 }
 
 function renderTrackerCard() {
-  const covers = ['yandhi_v1.jpg','yandhi_v1.jpg','yandhi.jpg','war.jpg','good_ass_job.jpg','donda.jpg','turbografx16.jpg','bully.jpg'];
+  const covers = ['yandhi-v1','good-ass-job','tgfd'].map(id => `tracker/${id}/${id}.jpg`);
   return `<a href="comps.html" class="tracker-card">
-    <div class="tracker-card-top">
-      <div>
+    <div class="tracker-card-bg"></div>
+    <div class="tracker-card-bg-blur" style="background-image:url('${covers[0]}')"></div>
+    <div class="tracker-card-inner">
+      <div class="tracker-card-covers">
+        ${covers.map(c => `<img class="tracker-era-cover" src="${c}" alt="" onerror="this.style.opacity=0.08">`).join('')}
+      </div>
+      <div class="tracker-card-text">
         <p class="tracker-card-label">Sophie's Curated Comps &amp; Edits</p>
         <p class="tracker-card-title">Kanye Comps</p>
-        <p class="tracker-card-desc">Community-curated edits and reworks organised by era — with tracklists, credits and artwork.</p>
+        <p class="tracker-card-desc">Community-curated edits and reworks — tracklists, credits and artwork.</p>
+        <span class="tracker-card-btn">Browse →</span>
+        <div class="tracker-card-stats">
+          <span class="tracker-stat"><strong>42</strong> Eras</span>
+          <span class="tracker-stat"><strong>158</strong> Comps</span>
+        </div>
       </div>
-      <span class="tracker-card-btn">Browse →</span>
-    </div>
-    <div class="tracker-covers">
-      ${covers.map(c => `<img class="tracker-era-cover" src="${c}" alt="" onerror="this.style.opacity=0.15">`).join('')}
     </div>
   </a>`;
 }
@@ -608,7 +670,7 @@ function renderLargeLink(l) {
   _largeLinkMap[l.id] = l;
   return `<div class="app-card" onclick="openLargeModal('${l.id}')" style="cursor:pointer;transition:border-color 0.2s" onmouseover="this.style.borderColor='rgba(255,255,255,0.15)'" onmouseout="this.style.borderColor=''">
     <div class="app-card-header">
-      <div class="app-icon"><img src="${esc(l.icon||'icon.ico')}" alt="${esc(l.title)}"></div>
+      <div class="app-icon"><img src="${coverSrc(l.icon||'icon.ico')}" alt="${esc(l.title)}"></div>
       <div class="app-info">
         <p class="app-name">${esc(l.title)}</p>
         <p class="app-tagline">${esc(l.tagline||'')}</p>
@@ -628,7 +690,7 @@ function renderLargeLink(l) {
 function openLargeModal(id) {
   const l = _largeLinkMap[id];
   if (!l) return;
-  document.getElementById('lp-m-icon').src = l.icon || 'icon.ico';
+  document.getElementById('lp-m-icon').src = coverSrc(l.icon || 'icon.ico');
   document.getElementById('lp-m-title').textContent = l.title || '';
   document.getElementById('lp-m-version').textContent = l.version || '';
   document.getElementById('lp-m-desc').textContent = l.tagline || '';
@@ -645,7 +707,7 @@ function openLargeModal(id) {
 
 function renderLinkRow(l) {
   const iconSrc = l.image
-    ? esc(l.image)
+    ? coverSrc(l.image)
     : `https://www.google.com/s2/favicons?domain=${esc(l.favicon)}&sz=64`;
   return `<a href="${esc(l.url)}" class="link-row" target="_blank">
     <div class="link-icon"><img src="${iconSrc}" alt="" style="${l.image ? 'border-radius:6px' : ''}"></div>
@@ -773,7 +835,7 @@ function buildPanel() {
     cat.projects.forEach((p, pi) => {
       html += `<div class="ep-project" id="proj-${ci}-${pi}">
         <div class="ep-project-head" onclick="toggleSection('proj-${ci}-${pi}')">
-          <img class="ep-project-thumb" src="${esc(p.cover)}" onerror="this.style.opacity=0.3">
+          <img class="ep-project-thumb" src="${coverSrc(p.cover)}" onerror="this.style.opacity=0.3">
           <span class="ep-project-name">${esc(p.title)}</span>
           <div class="ep-order">
             <button onclick="event.stopPropagation();moveItem(DATA.categories[${ci}].projects,${pi},-1)" title="Up">↑</button>
@@ -787,7 +849,7 @@ function buildPanel() {
           <div class="ep-field">
             <label>Cover</label>
             <div style="display:flex;gap:8px;align-items:center;margin-bottom:6px">
-              <img src="${esc(p.cover)}" style="width:48px;height:48px;border-radius:6px;object-fit:cover;background:var(--surface2)" onerror="this.style.opacity=0.2" id="cover-preview-${ci}-${pi}">
+              <img src="${coverSrc(p.cover)}" style="width:48px;height:48px;border-radius:6px;object-fit:cover;background:var(--surface2)" onerror="this.style.opacity=0.2" id="cover-preview-${ci}-${pi}">
               <label style="flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:8px;background:rgba(255,255,255,0.04);border:0.5px dashed rgba(255,255,255,0.15);border-radius:6px;cursor:pointer;font-size:12px;color:var(--muted);text-transform:none;letter-spacing:0">
                 <span id="cover-upload-label-${ci}-${pi}">Upload image</span>
                 <input type="file" accept="image/*" style="display:none" onchange="handleCoverUpload(event,${ci},${pi})">
@@ -1221,26 +1283,27 @@ function copyDiscord() {
   setTimeout(() => t.classList.remove('show'), 1800);
 }
 
-// Last.fm
-(async function() {
-  try {
-    const r = await fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=Synox&api_key=0e500743d88e3e05c4e57a8e40f2a6c3&format=json&limit=4');
-    const d = await r.json();
-    const tracks = d.recenttracks.track.slice(0, 4);
-    document.getElementById('lastfm-tracks').innerHTML = tracks.map(t => {
-      const np = t['@attr']?.nowplaying;
-      const art = t.image?.[1]?.['#text'] || '';
-      return `<div class="lastfm-track">
-        ${art ? `<img class="lastfm-art" src="${art}" alt="">` : '<div class="lastfm-art"></div>'}
-        <div class="lastfm-info">
-          <div class="lastfm-title">${np ? '<span class="lastfm-now"></span> ' : ''}${t.name}</div>
-          <div class="lastfm-artist">${t.artist['#text']}</div>
-        </div>
-      </div>`;
-    }).join('');
-  } catch(e) {}
-})();
 
+function populateRecentFeed() {
+  const feed = document.getElementById('recent-comps-feed');
+  if (!feed) return;
+  const picks = [
+    { era: 'yandhi-v2',  eraName: 'Yandhi [V2]',  comp: 'yp-yandhi',        compName: 'Yedits Presents: Yandhi' },
+    { era: 'yandhi-v1',  eraName: 'Yandhi [V1]',  comp: 'yandhi-narcissist', compName: 'Yandhi' },
+    { era: 'bully',      eraName: 'BULLY',         comp: 'bully-flashnardo',  compName: 'BULLY' },
+    { era: 'good-ass-job', eraName: 'Good Ass Job', comp: 'gaj-pastelle',     compName: 'Good Ass Job' },
+  ];
+  feed.innerHTML = picks.map(p => {
+    const cover = `tracker/${p.era}/${p.comp}/${p.comp}.jpg`;
+    return `<button class="recent-comp-item" onclick="location.href='comps.html'">
+      <img class="recent-comp-cover" src="${cover}" alt="" onerror="this.style.opacity=0.15">
+      <div class="recent-comp-info">
+        <p class="recent-comp-name">${p.compName}</p>
+        <p class="recent-comp-era">${p.eraName}</p>
+      </div>
+    </button>`;
+  }).join('');
+}
 // Load from Supabase on startup
 loadFromSupabase();
 </script>
