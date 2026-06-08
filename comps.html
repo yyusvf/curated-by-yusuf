@@ -373,10 +373,29 @@ const artworkSrc = (eraId, compId, filename) =>
 
 
 
-// ─── SUPABASE ─────────────────────────────────────────────────────────────────
+// ─── SUPABASE ────────────────────────────────────────────────────────────────
 const SB_URL = 'https://mrqbtjbtidjuxsuolgue.supabase.co';
 const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1ycWJ0amJ0aWRqdXhzdW9sZ3VlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwODgwOTAsImV4cCI6MjA5MzY2NDA5MH0.S6OWEYRY9y51l-DjqiU2h4IXbzfaPPQxb0hoaqfx2XE';
-const SB_HEADERS = { 'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}`, 'Content-Type': 'application/json' };
+const SB_HEADERS = { 'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}`, 'Content-Type': 'application/json', 'Prefer': 'resolution=merge-duplicates' };
+
+async function sbGet(path) {
+  const r = await fetch(`${SB_URL}/rest/v1/${path}`, { headers: SB_HEADERS });
+  return r.json();
+}
+
+async function sbUpsert(table, rows) {
+  if (!rows.length) return;
+  const res = await fetch(`${SB_URL}/rest/v1/${table}`, {
+    method: 'POST',
+    headers: { ...SB_HEADERS, 'Prefer': 'resolution=merge-duplicates,return=minimal' },
+    body: JSON.stringify(rows)
+  });
+  if (!res.ok) {
+    const err = await res.text();
+    console.error(`sbUpsert(${table}) failed:`, res.status, err);
+    throw new Error(`${table}: ${err}`);
+  }
+}
 
 // ─── EDIT MODE ────────────────────────────────────────────────────────────────
 let editUnlocked = false;
@@ -385,9 +404,8 @@ let _initialLoad = true;
 
 async function loadHidden() {
   try {
-    const r = await fetch(`${SB_URL}/rest/v1/settings?key=eq.hidden_eras&select=value`, { headers: SB_HEADERS });
-    const data = await r.json();
-    _hidden = new Set(data[0]?.value || []);
+    const rows = await sbGet('settings?key=eq.hidden_eras&select=value');
+    _hidden = new Set(rows[0]?.value || []);
   } catch(e) {
     console.error('loadHidden error:', e);
   }
@@ -396,39 +414,33 @@ async function loadHidden() {
 }
 
 async function syncHidden() {
-  const btn = document.querySelector('.ep-save');
-  if (btn) { btn.textContent = '…'; btn.disabled = true; }
   try {
-    const r = await fetch(`${SB_URL}/rest/v1/settings?key=eq.hidden_eras`, {
-      method: 'PATCH',
-      headers: { ...SB_HEADERS, Prefer: 'return=minimal' },
-      body: JSON.stringify({ value: [..._hidden] })
-    });
-    if (!r.ok) throw new Error(await r.text());
-    showSaveIndicator('Saved ✓');
+    await sbUpsert('settings', [{ key: 'hidden_eras', value: [..._hidden] }]);
+    showSaveIndicator();
   } catch(e) {
     console.error('Sync error:', e);
-    showSaveIndicator('✗ Sync failed');
-  } finally {
-    if (btn) { btn.textContent = 'Sync ↑'; btn.disabled = false; }
+    let el = document.getElementById('save-indicator');
+    if (!el) { el = document.createElement('div'); el.id='save-indicator'; el.style.cssText='position:fixed;top:20px;left:50%;transform:translateX(-50%);border-radius:999px;padding:8px 18px;font-size:12px;font-weight:600;z-index:500;transition:opacity 0.3s;font-family:var(--font)'; document.body.appendChild(el); }
+    el.textContent = '✗ Sync failed';
+    el.style.background = '#ff4444';
+    el.style.color = '#fff';
+    el.style.opacity = '1';
+    setTimeout(() => el.style.opacity = '0', 3000);
   }
 }
 
-function showSaveIndicator(msg = 'Saved ✓') {
+function showSaveIndicator() {
+  if (_initialLoad) return;
   let el = document.getElementById('save-indicator');
   if (!el) {
     el = document.createElement('div');
     el.id = 'save-indicator';
-    el.style.cssText = 'position:fixed;top:20px;left:50%;transform:translateX(-50%);border-radius:999px;padding:8px 18px;font-size:12px;font-weight:600;z-index:500;transition:opacity 0.3s;font-family:var(--font);pointer-events:none';
+    el.style.cssText = 'position:fixed;top:20px;left:50%;transform:translateX(-50%);background:var(--accent);border-radius:999px;padding:8px 18px;font-size:12px;color:#0a0a0a;font-weight:600;z-index:500;transition:opacity 0.3s;font-family:var(--font)';
     document.body.appendChild(el);
   }
-  const ok = msg.includes('✓');
-  el.style.background = ok ? 'var(--accent)' : '#ff6b6b';
-  el.style.color = ok ? '#0a0a0a' : '#fff';
-  el.textContent = msg;
+  el.textContent = 'Saved ✓';
   el.style.opacity = '1';
-  clearTimeout(el._t);
-  el._t = setTimeout(() => el.style.opacity = '0', 2000);
+  setTimeout(() => el.style.opacity = '0', 1500);
 }
 
 function onEditTrigger() {
@@ -468,7 +480,6 @@ function togglePanel() {
 }
 
 function buildEraPanel() {
-  
   const body = document.getElementById('ep-body');
   body.innerHTML = '<p style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted2);margin-bottom:10px">Eras</p>';
   ERAS.forEach(era => {
@@ -476,10 +487,10 @@ function buildEraPanel() {
     const sec = document.createElement('div');
     sec.className = 'ep-section';
     sec.innerHTML = `
-      <div class="ep-section-head" onclick="this.parentElement.classList.toggle('open');this.querySelector('.ep-arrow').style.transform=this.parentElement.classList.contains('open')?'rotate(90deg)':''">
+      <div class="ep-section-head" onclick="this.parentElement.classList.toggle('open')">
         <span class="ep-section-title">${era.name}</span>
         <span class="ep-section-type">${era.year}</span>
-        <span class="ep-arrow" style="font-size:12px;color:var(--muted);transition:transform 0.2s">›</span>
+        <span class="ep-arrow">›</span>
       </div>
       <div class="ep-section-body">
         <button class="ep-vis-btn ${isHidden ? 'hidden' : ''}" id="vis-btn-${era.id}" onclick="toggleEraHidden('${era.id}')">
@@ -500,7 +511,6 @@ function toggleEraHidden(eraId) {
 }
 
 function applyHidden() {
-  
   ERAS.forEach(era => {
     const sec = document.getElementById(`era-sec-${era.id}`);
     if (sec) sec.classList.toggle('era-hidden', _hidden.has(era.id));
@@ -2967,6 +2977,8 @@ document.addEventListener('keydown', e => {
     else if (e.key === 'Escape') closeGallery();
   } else if (e.key === 'Escape') closeModal();
 });
+
+loadHidden();
 </script>
 </body>
 </html>
