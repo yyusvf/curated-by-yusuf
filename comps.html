@@ -114,6 +114,8 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
 .edit-panel.open{transform:translateX(0)}
 .ep-head{padding:20px;border-bottom:0.5px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
 .ep-head h2{font-size:15px;font-weight:600}
+.ep-save{background:var(--accent);color:#0a0a0a;border:none;border-radius:8px;padding:8px 16px;font-size:13px;font-weight:600;cursor:pointer;font-family:var(--font)}
+.ep-save:hover{opacity:0.85}
 .ep-body{flex:1;overflow-y:auto;padding:16px}
 .ep-body::-webkit-scrollbar{width:4px}
 .ep-body::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.1);border-radius:2px}
@@ -323,7 +325,10 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
 <div class="edit-panel" id="edit-panel">
   <div class="ep-head">
     <h2>Comps Tracker</h2>
-    <button class="pw-close" onclick="togglePanel()">✕</button>
+    <div style="display:flex;gap:8px;align-items:center">
+      <button class="ep-save" onclick="syncHidden()">Sync ↑</button>
+      <button class="pw-close" onclick="togglePanel()">✕</button>
+    </div>
   </div>
   <div class="ep-body" id="ep-body"></div>
 </div>
@@ -371,38 +376,54 @@ const artworkSrc = (eraId, compId, filename) =>
 
 
 
+// ─── SUPABASE ─────────────────────────────────────────────────────────────────
+const SB_URL = 'https://mrqbtjbtidjuxsuolgue.supabase.co';
+const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1ycWJ0amJ0aWRqdXhzdW9sZ3VlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwODgwOTAsImV4cCI6MjA5MzY2NDA5MH0.S6OWEYRY9y51l-DjqiU2h4IXbzfaPPQxb0hoaqfx2XE';
+const SB_HEADERS = { 'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}`, 'Content-Type': 'application/json' };
+
 // ─── EDIT MODE ────────────────────────────────────────────────────────────────
-const HIDDEN_KEY = 'comps-hidden-eras';
 let editUnlocked = false;
 let _hidden = new Set();
+let _initialLoad = true;
 
 async function loadHidden() {
   try {
-    const res = await fetch(`${SUPABASE_URL}/rest/v1/settings?key=eq.hidden_eras&select=value`, {
-      headers: { apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}` }
-    });
-    const data = await res.json();
+    const r = await fetch(`${SB_URL}/rest/v1/settings?key=eq.hidden_eras&select=value`, { headers: SB_HEADERS });
+    const data = await r.json();
     _hidden = new Set(data[0]?.value || []);
-  } catch {
-    // fallback to localStorage
-    try { _hidden = new Set(JSON.parse(localStorage.getItem(HIDDEN_KEY) || '[]')); } catch {}
+  } catch(e) {
+    console.error('loadHidden error:', e);
   }
+  _initialLoad = false;
   applyHidden();
 }
 
-async function saveHidden() {
+async function syncHidden() {
   try {
-    await fetch(`${SUPABASE_URL}/rest/v1/settings?key=eq.hidden_eras`, {
+    const r = await fetch(`${SB_URL}/rest/v1/settings?key=eq.hidden_eras`, {
       method: 'PATCH',
-      headers: {
-        apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}`,
-        'Content-Type': 'application/json', Prefer: 'return=minimal'
-      },
+      headers: { ...SB_HEADERS, Prefer: 'return=minimal' },
       body: JSON.stringify({ value: [..._hidden] })
     });
-  } catch {
-    localStorage.setItem(HIDDEN_KEY, JSON.stringify([..._hidden]));
+    if (!r.ok) throw new Error(await r.text());
+    showSaveIndicator();
+  } catch(e) {
+    console.error('Sync error:', e);
   }
+}
+
+function showSaveIndicator() {
+  if (_initialLoad) return;
+  let el = document.getElementById('save-indicator');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'save-indicator';
+    el.style.cssText = 'position:fixed;top:20px;left:50%;transform:translateX(-50%);background:var(--accent);border-radius:999px;padding:8px 18px;font-size:12px;color:#0a0a0a;font-weight:600;z-index:500;transition:opacity 0.3s;font-family:var(--font)';
+    document.body.appendChild(el);
+  }
+  el.textContent = 'Saved ✓';
+  el.style.opacity = '1';
+  setTimeout(() => el.style.opacity = '0', 1500);
 }
 
 function onEditTrigger() {
@@ -465,11 +486,9 @@ function buildEraPanel() {
   });
 }
 
-async function toggleEraHidden(eraId) {
-  
+function toggleEraHidden(eraId) {
   if (_hidden.has(eraId)) _hidden.delete(eraId);
   else _hidden.add(eraId);
-  await saveHidden();
   applyHidden();
   buildEraPanel();
 }
