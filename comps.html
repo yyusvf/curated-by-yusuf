@@ -325,10 +325,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
 <div class="edit-panel" id="edit-panel">
   <div class="ep-head">
     <h2>Comps Tracker</h2>
-    <div style="display:flex;gap:8px;align-items:center">
-      <button class="ep-save" onclick="syncHidden()">Sync ↑</button>
-      <button class="pw-close" onclick="togglePanel()">✕</button>
-    </div>
+    <button class="pw-close" onclick="togglePanel()">✕</button>
   </div>
   <div class="ep-body" id="ep-body"></div>
 </div>
@@ -399,6 +396,8 @@ async function loadHidden() {
 }
 
 async function syncHidden() {
+  const btn = document.querySelector('.ep-save');
+  if (btn) { btn.textContent = '…'; btn.disabled = true; }
   try {
     const r = await fetch(`${SB_URL}/rest/v1/settings?key=eq.hidden_eras`, {
       method: 'PATCH',
@@ -406,24 +405,30 @@ async function syncHidden() {
       body: JSON.stringify({ value: [..._hidden] })
     });
     if (!r.ok) throw new Error(await r.text());
-    showSaveIndicator();
+    showSaveIndicator('Saved ✓');
   } catch(e) {
     console.error('Sync error:', e);
+    showSaveIndicator('✗ Sync failed');
+  } finally {
+    if (btn) { btn.textContent = 'Sync ↑'; btn.disabled = false; }
   }
 }
 
-function showSaveIndicator() {
-  if (_initialLoad) return;
+function showSaveIndicator(msg = 'Saved ✓') {
   let el = document.getElementById('save-indicator');
   if (!el) {
     el = document.createElement('div');
     el.id = 'save-indicator';
-    el.style.cssText = 'position:fixed;top:20px;left:50%;transform:translateX(-50%);background:var(--accent);border-radius:999px;padding:8px 18px;font-size:12px;color:#0a0a0a;font-weight:600;z-index:500;transition:opacity 0.3s;font-family:var(--font)';
+    el.style.cssText = 'position:fixed;top:20px;left:50%;transform:translateX(-50%);border-radius:999px;padding:8px 18px;font-size:12px;font-weight:600;z-index:500;transition:opacity 0.3s;font-family:var(--font);pointer-events:none';
     document.body.appendChild(el);
   }
-  el.textContent = 'Saved ✓';
+  const ok = msg.includes('✓');
+  el.style.background = ok ? 'var(--accent)' : '#ff6b6b';
+  el.style.color = ok ? '#0a0a0a' : '#fff';
+  el.textContent = msg;
   el.style.opacity = '1';
-  setTimeout(() => el.style.opacity = '0', 1500);
+  clearTimeout(el._t);
+  el._t = setTimeout(() => el.style.opacity = '0', 2000);
 }
 
 function onEditTrigger() {
@@ -491,6 +496,7 @@ function toggleEraHidden(eraId) {
   else _hidden.add(eraId);
   applyHidden();
   buildEraPanel();
+  syncHidden();
 }
 
 function applyHidden() {
