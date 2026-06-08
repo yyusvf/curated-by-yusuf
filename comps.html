@@ -14,7 +14,8 @@
   --text:#f0efef;--muted:rgba(255,255,255,0.42);--muted2:rgba(255,255,255,0.22);
   --accent:#c8f542;--font:-apple-system,BlinkMacSystemFont,'Inter',sans-serif;
 }
-body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh;-webkit-font-smoothing:antialiased;padding-bottom:80px}
+html{overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh;-webkit-font-smoothing:antialiased;padding-bottom:80px;overflow-x:hidden}
 
 /* ── TOPBAR ── */
 .topbar{display:flex;align-items:center;gap:16px;padding:0 32px;height:52px;background:rgba(14,13,13,0.92);border-bottom:0.5px solid var(--border);position:sticky;top:0;z-index:50;backdrop-filter:blur(12px)}
@@ -64,18 +65,23 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
 .era-header:hover .era-desc-full{opacity:1}
 
 /* ── COMP GRID ── */
-.comp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:18px}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:18px;align-items:start}
 
-.comp-card{cursor:pointer;transition:transform 0.25s cubic-bezier(.16,1,.3,1)}
+.comp-card{cursor:pointer;transition:transform 0.25s cubic-bezier(.16,1,.3,1);min-width:0}
 .comp-card:hover{transform:translateY(-3px)}
+.comp-card-cover-wrap{width:100%;aspect-ratio:1/1;border-radius:10px;overflow:hidden;background:var(--surface2);box-shadow:0 4px 16px rgba(0,0,0,0.35);transition:box-shadow 0.25s;flex-shrink:0}
+.comp-card:hover .comp-card-cover-wrap{box-shadow:0 10px 32px rgba(0,0,0,0.55)}
 .comp-card-cover{
   width:100%;aspect-ratio:1/1;border-radius:10px;
   object-fit:cover;display:block;
   background:var(--surface2);
   box-shadow:0 4px 16px rgba(0,0,0,0.35);
   transition:box-shadow 0.25s;
+  min-height:0;
 }
-.comp-card:hover .comp-card-cover{box-shadow:0 10px 32px rgba(0,0,0,0.55)}
+.comp-card:hover .comp-card-cover-wrap{width:100%;aspect-ratio:1/1;border-radius:10px;overflow:hidden;background:var(--surface2);box-shadow:0 4px 16px rgba(0,0,0,0.35);transition:box-shadow 0.25s;flex-shrink:0}
+.comp-card:hover .comp-card-cover-wrap{box-shadow:0 10px 32px rgba(0,0,0,0.55)}
+.comp-card-cover{box-shadow:0 10px 32px rgba(0,0,0,0.55)}
 .comp-card-name{font-size:13px;font-weight:600;margin-top:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .comp-card-editor{font-size:11px;color:var(--muted);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .comp-card-badges{display:flex;gap:4px;margin-top:6px;flex-wrap:wrap}
@@ -278,14 +284,42 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
 .lb-close{position:fixed;top:18px;right:22px;font-size:22px;color:var(--muted);cursor:pointer;background:none;border:none;font-family:var(--font)}
 
 @media(max-width:720px){
-  .page{padding:32px 16px 0}
-  .era-header{flex-direction:column;gap:14px}
-  .comp-grid{grid-template-columns:repeat(2,1fr);gap:14px}
-  .cm-hero-block{flex-direction:column;align-items:flex-start;padding:0 20px 20px}
-  .cm-cover-large{width:100px;height:100px}
-  .cm-name{font-size:18px}
-  .cm-split{flex-direction:column}
-  .cm-right{width:100%;border-left:none;border-top:0.5px solid rgba(255,255,255,0.06)}
+  .page{padding:24px 14px 0}
+  .era-header{flex-direction:column;gap:12px}
+  .era-cover{width:80px;height:80px}
+  .comp-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+
+  .overlay{padding:0;overflow:hidden}
+  .cmodal{width:100%;max-width:100%;max-height:85vh;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+  .cm-bg-blur{filter:blur(40px) brightness(0.27) saturate(1.4)}
+  .cm-hero-block{padding:14px;gap:12px;align-items:center;flex-shrink:0;box-sizing:border-box;width:100%;overflow:hidden}
+  .cm-cover-large{width:52px;height:52px;border-radius:7px;flex-shrink:0;box-shadow:0 4px 12px rgba(0,0,0,0.5)}
+  .cm-hero-info{flex:1;min-width:0;overflow:hidden}
+  .cm-name{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:2px}
+  .cm-editor{font-size:11px;margin-bottom:6px}
+  .cm-badges{flex-wrap:wrap;gap:3px}
+  .badge{font-size:9px;padding:2px 6px}
+  .cm-play{padding:7px 14px;font-size:11px}
+  .cm-split{flex-direction:column;flex:1;overflow-y:auto;overflow-x:hidden;width:100%;box-sizing:border-box;-webkit-overflow-scrolling:touch}
+  .cm-left{width:100%;padding:12px 14px;box-sizing:border-box;overflow:visible}
+  .cm-right{width:100%;border-left:none;border-top:0.5px solid rgba(255,255,255,0.06);padding:12px 14px;box-sizing:border-box;overflow:visible}
+  .cm-desc,.credits-block{word-wrap:break-word;overflow-wrap:break-word;max-width:100%}
+  .cm-section-title{margin-top:14px;font-size:9px}
+  .trow{padding:4px 0;min-width:0}
+  .tinfo{min-width:0;overflow:hidden}
+  .ttitle{font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tfeat{font-size:10px;white-space:normal;word-break:break-word;max-width:100%}
+  .teditors{font-size:9px;white-space:normal;word-break:break-word;max-width:100%}
+  .cm-detail-row{padding:5px 0}
+  .cm-detail-key{font-size:9px}
+  .cm-detail-val{font-size:11px}
+  .cm-close{top:10px;right:10px;width:26px;height:26px;font-size:11px}
+  .gallery-overlay{padding:0}
+  .gallery-img{max-width:100vw;max-height:70vh;border-radius:0}
+  .gallery-btn{width:40px;height:40px}
+  .gallery-prev{left:8px}
+  .gallery-next{right:8px}
+  .gallery-counter{bottom:16px}
 }
 </style>
 </head>
@@ -2851,7 +2885,7 @@ ERAS.forEach(era => {
     const card = document.createElement('div');
     card.className = 'comp-card';
     card.innerHTML = `
-      <img class="comp-card-cover" src="${compCover(era.id, comp.id)}" alt="${comp.name}" onerror="this.style.opacity=0.15">
+      <div class="comp-card-cover-wrap"><img class="comp-card-cover" src="${compCover(era.id, comp.id)}" alt="${comp.name}" onerror="this.style.opacity=0.15"></div>
       <p class="comp-card-name">${comp.name}</p>
       <p class="comp-card-editor">${comp.editor}</p>
       <div class="comp-card-badges">${renderBadges(comp.badges)}</div>`;
