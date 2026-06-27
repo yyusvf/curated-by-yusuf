@@ -1,1 +1,3 @@
 tracker/
+upload-r2.js
+tracker
