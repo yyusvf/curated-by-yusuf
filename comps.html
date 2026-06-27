@@ -400,8 +400,12 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
 
 <script>
 // ─── PATH HELPERS ────────────────────────────────────────────────────────────
-const eraCover   = id             => `tracker/${id}/${id}.jpg`;
-const compCover  = (eraId, compId)=> `tracker/${eraId}/${compId}/${compId}.jpg`;
+const eraCover   = (id, ext='jpg') => `tracker/${id}/${id}.${ext}`;
+const compCover  = (eraId, comp) => {
+  const id  = typeof comp === 'string' ? comp : comp.id;
+  const file= typeof comp === 'object' && comp.cover ? comp.cover : id + '.jpg';
+  return `tracker/${eraId}/${id}/${file}`.split('/').map(encodeURIComponent).join('/');
+};
 const artworkSrc = (eraId, compId, filename) =>
   `tracker/${eraId}/${compId}/${filename}`.split('/').map(encodeURIComponent).join('/');
 
@@ -598,7 +602,7 @@ function renderEras() {
       const card = document.createElement('div');
       card.className = 'comp-card';
       card.innerHTML = `
-        <div class="comp-card-cover-wrap"><img class="comp-card-cover" src="${compCover(era.id, comp.id)}" alt="${comp.name}" onerror="this.style.opacity=0.15"></div>
+        <div class="comp-card-cover-wrap"><img class="comp-card-cover" src="${compCover(era.id, comp)}" alt="${comp.name}" onerror="this.style.opacity=0.15"></div>
         <p class="comp-card-name">${comp.name}</p>
         <p class="comp-card-editor">${comp.editor}</p>
         <div class="comp-card-badges">${renderBadges(comp.badges)}</div>`;
@@ -627,18 +631,18 @@ function openComp(eraId, compId) {
   if (!comp) return;
 
   // Blurred background
-  document.getElementById('cm-bg-blur').style.backgroundImage = `url('${compCover(era.id, comp.id)}')`;
+  document.getElementById('cm-bg-blur').style.backgroundImage = `url('${compCover(era.id, comp)}')`;
 
   // Topbar
   
 
   // Hero
   const galleryImages = [
-    compCover(era.id, comp.id),
+    compCover(era.id, comp),
     ...(comp.art || []).map(f => artworkSrc(era.id, comp.id, f))
   ];
   const coverEl = document.getElementById('cm-cover-large');
-  coverEl.src = compCover(era.id, comp.id);
+  coverEl.src = compCover(era.id, comp);
   coverEl.style.cursor = 'pointer';
   coverEl.onclick = () => openGallery(galleryImages, 0);
   document.getElementById('cm-name').textContent = comp.name;

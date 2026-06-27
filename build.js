@@ -77,7 +77,7 @@ function guessFromFilename(f) {
 
 // ─── SCAN COMP FOLDER ────────────────────────────────────────────────────────
 function scanComp(compPath) {
-  const result = { tracklist: [], art: [], samply: null };
+  const result = { tracklist: [], art: [], samply: null, cover: null };
   if (!fs.existsSync(compPath)) return result;
 
   const entries = fs.readdirSync(compPath);
@@ -100,6 +100,18 @@ function scanComp(compPath) {
       .sort()
       .map(f => `art/${f}`);
   }
+
+  // Cover - any image with same name as comp
+  let cover = null;
+  for (const f of entries) {
+    const ext = path.extname(f).toLowerCase();
+    const base = path.basename(f, ext);
+    if (IMG_EXTS.has(ext) && fs.statSync(path.join(compPath, f)).isFile()) {
+      // Extract compId from the path to compare
+      cover = f; // Will be validated by caller
+    }
+  }
+  result.cover = cover; // Save for caller to check against compId
 
   // Audio → Tracklist
   const audioFiles = entries
@@ -158,6 +170,18 @@ const built = data.map(era => ({
     // Samply: JSON hat Vorrang, sonst .url Datei
     const samply = comp.samply || scanned.samply || '';
 
+    // Cover: find image file matching comp id (any extension)
+    let cover = comp.id + '.jpg'; // default
+    if (fs.existsSync(compPath)) {
+      const entries = fs.readdirSync(compPath);
+      const coverFile = entries.find(f => {
+        const ext = path.extname(f).toLowerCase();
+        const base = path.basename(f, ext);
+        return base === comp.id && IMG_EXTS.has(ext) && fs.statSync(path.join(compPath, f)).isFile();
+      });
+      if (coverFile) cover = coverFile;
+    }
+
     if (tracklist.length) totTracks += tracklist.length;
     if (art.length) totArt += art.length;
     if (samply) totSamply++;
@@ -169,7 +193,7 @@ const built = data.map(era => ({
     if (scanned.samply) markers.push('🔗');
     if (markers.length) console.log(`   ${comp.id} ${markers.join(' ')}`);
 
-    return { ...comp, tracklist, art, samply };
+    return { ...comp, tracklist, art, samply, cover };
   })
 }));
 
