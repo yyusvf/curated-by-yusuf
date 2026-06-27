@@ -2859,72 +2859,13 @@ function renderBadges(list=[]) {
   }).join('');
 }
 
-// ─── SUPABASE LOADER ─────────────────────────────────────────────────────────
-async function loadFromSupabase() {
-  try {
-    const [erasData, compsData, tracksData, artworksData] = await Promise.all([
-      sbGet('eras?select=*&order=order_index'),
-      sbGet('comps?select=*&order=era_id,order_index'),
-      sbGet('tracks?select=*&order=comp_id,n'),
-      sbGet('artworks?select=*&order=comp_id,order_index'),
-    ]);
-
-    if (!erasData || !erasData.length) return null;
-
-    // Group tracks by comp_id
-    const tracksByComp = {};
-    (tracksData || []).forEach(t => {
-      if (!tracksByComp[t.comp_id]) tracksByComp[t.comp_id] = [];
-      tracksByComp[t.comp_id].push({ n: t.n, title: t.title, feat: t.feat, editors: t.editors });
-    });
-
-    // Group artworks by comp_id
-    const artworksByComp = {};
-    (artworksData || []).forEach(a => {
-      if (!artworksByComp[a.comp_id]) artworksByComp[a.comp_id] = [];
-      artworksByComp[a.comp_id].push(a.filename);
-    });
-
-    // Group comps by era_id
-    const compsByEra = {};
-    (compsData || []).forEach(c => {
-      if (!compsByEra[c.era_id]) compsByEra[c.era_id] = [];
-      compsByEra[c.era_id].push({
-        id: c.id,
-        name: c.name,
-        editor: c.editor || '',
-        year: c.year || '',
-        samply: c.samply || '',
-        badges: Array.isArray(c.badges) ? c.badges : (c.badges ? [c.badges] : []),
-        description: c.description || '',
-        tracklist: tracksByComp[c.id] || [],
-        art: artworksByComp[c.id] || [],
-      });
-    });
-
-    return erasData.map(e => ({
-      id: e.id,
-      name: e.name,
-      year: e.year || '',
-      description: e.description || '',
-      hidden: e.hidden || false,
-      comps: compsByEra[e.id] || [],
-    }));
-  } catch(err) {
-    console.warn('Supabase load failed, using hardcoded data:', err);
-    return null;
-  }
-}
-
 // ─── RENDER ERAS ─────────────────────────────────────────────────────────────
-function renderEras() {
-  const erasEl = document.getElementById('eras');
-  erasEl.innerHTML = '';
-  ERAS.forEach(era => {
-    const sec = document.createElement('div');
-    sec.className = 'era-section';
-    sec.id = `era-sec-${era.id}`;
-    sec.innerHTML = `
+const erasEl = document.getElementById('eras');
+ERAS.forEach(era => {
+  const sec = document.createElement('div');
+  sec.className = 'era-section';
+  sec.id = `era-sec-${era.id}`;
+  sec.innerHTML = `
     <div class="era-header">
       <img class="era-cover" src="${eraCover(era.id)}" alt="${era.name}" onerror="this.style.opacity=0.2">
       <div class="era-info">
@@ -2937,35 +2878,21 @@ function renderEras() {
       </div>
     </div>
     <div class="comp-grid" id="grid-${era.id}"></div>`;
-    erasEl.appendChild(sec);
+  erasEl.appendChild(sec);
 
-    const grid = document.getElementById(`grid-${era.id}`);
-    era.comps.forEach(comp => {
-      const card = document.createElement('div');
-      card.className = 'comp-card';
-      card.innerHTML = `
+  const grid = document.getElementById(`grid-${era.id}`);
+  era.comps.forEach(comp => {
+    const card = document.createElement('div');
+    card.className = 'comp-card';
+    card.innerHTML = `
       <div class="comp-card-cover-wrap"><img class="comp-card-cover" src="${compCover(era.id, comp.id)}" alt="${comp.name}" onerror="this.style.opacity=0.15"></div>
       <p class="comp-card-name">${comp.name}</p>
       <p class="comp-card-editor">${comp.editor}</p>
       <div class="comp-card-badges">${renderBadges(comp.badges)}</div>`;
-      card.onclick = () => openComp(era.id, comp.id);
-      grid.appendChild(card);
-    });
+    card.onclick = () => openComp(era.id, comp.id);
+    grid.appendChild(card);
   });
-}
-
-// ─── INIT ─────────────────────────────────────────────────────────────────────
-(async () => {
-  const sbData = await loadFromSupabase();
-  if (sbData && sbData.length) {
-    ERAS = sbData;
-    console.log(`✅ Loaded from Supabase: ${ERAS.length} eras`);
-  } else {
-    console.log('⚠️ Using hardcoded data');
-  }
-  renderEras();
-  loadHidden();
-})();
+});
 
 // ─── MODAL ───────────────────────────────────────────────────────────────────
 function openComp(eraId, compId) {
@@ -3084,6 +3011,8 @@ document.addEventListener('keydown', e => {
     else if (e.key === 'Escape') closeGallery();
   } else if (e.key === 'Escape') closeModal();
 });
+
+loadHidden();
 </script>
 </body>
 </html>
