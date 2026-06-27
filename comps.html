@@ -400,14 +400,15 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
 
 <script>
 // ─── PATH HELPERS ────────────────────────────────────────────────────────────
-const eraCover   = (id, ext='jpg') => `tracker/${id}/${id}.${ext}`;
+const R2 = 'https://pub-36a7e8a33ae24b2fa57770d9344cbd18.r2.dev';
+const eraCover   = (id, ext='jpg') => `${R2}/tracker/${id}/${id}.${ext}`;
 const compCover  = (eraId, comp) => {
   const id  = typeof comp === 'string' ? comp : comp.id;
   const file= typeof comp === 'object' && comp.cover ? comp.cover : id + '.jpg';
-  return `tracker/${eraId}/${id}/${file}`.split('/').map(encodeURIComponent).join('/');
+  return `${R2}/tracker/${eraId}/${id}/${file}`.split('/').map((p,i) => i < 3 ? p : encodeURIComponent(p)).join('/');
 };
 const artworkSrc = (eraId, compId, filename) =>
-  `tracker/${eraId}/${compId}/${filename}`.split('/').map(encodeURIComponent).join('/');
+  `${R2}/tracker/${eraId}/${compId}/${filename}`.split('/').map((p,i) => i < 3 ? p : encodeURIComponent(p)).join('/');
 
 
 

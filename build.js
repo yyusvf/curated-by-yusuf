@@ -200,3 +200,4 @@ const built = data.map(era => ({
 fs.writeFileSync(outPath, JSON.stringify(built, null, 2));
 console.log(`\n✅  ${data.length} Eras · ${totComps} Comps · ${totTracks} Tracks · ${totArt} Artworks · ${totSamply} Samply Links`);
 console.log(`💾  ${outPath}\n`);
+console.log('🌐  Bilder: https://pub-36a7e8a33ae24b2fa57770d9344cbd18.r2.dev/tracker/...');
