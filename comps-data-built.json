@@ -820,7 +820,7 @@
           "highlight",
           "vanilla"
         ],
-        "samply": "",
+        "samply": "https://samply.app/p/xadsj2ggUwde44MF04Di?si=IBw0KQOsNoSqcH8kAkeFu14g7a12",
         "art": [],
         "description": "Simple remaster of the released album, along with a few extras.",
         "info": null,
@@ -1145,7 +1145,7 @@
         "badges": [
           "unique"
         ],
-        "samply": "",
+        "samply": "https://samply.app/p/Xbu5c5GBzfByo2DB10PV?si=IBw0KQOsNoSqcH8kAkeFu14g7a12",
         "art": [
           "art/master class halftone.png",
           "art/masterclass1.png",
@@ -1792,11 +1792,78 @@
         "badges": [
           "highlight"
         ],
-        "samply": "",
+        "samply": "https://samply.app/p/MCX7ctQ2GFs66sRXHrhZ?si=IBw0KQOsNoSqcH8kAkeFu14g7a12",
         "art": [],
         "description": "A short but very concise reimagining of what an era-accurate version of an album/mixtape released by the Child Rebel Soldier supergroup would sound like. Contains tweaked versions of released CRS songs as well as recreations of snippets, reworks of beats from older eras, and entirely new instrumentals based on new samples.",
         "info": null,
-        "tracklist": [],
+        "tracklist": [
+          {
+            "n": 1,
+            "title": "Child Rebel Soldier",
+            "feat": null,
+            "editors": "Child Rebel Soldier"
+          },
+          {
+            "n": 10,
+            "title": "Us Placers",
+            "feat": null,
+            "editors": "Child Rebel Soldier"
+          },
+          {
+            "n": 11,
+            "title": "MINION MARCH",
+            "feat": null,
+            "editors": "Child Rebel Soldier"
+          },
+          {
+            "n": 2,
+            "title": "Don't Stop!",
+            "feat": null,
+            "editors": "Child Rebel Soldier"
+          },
+          {
+            "n": 3,
+            "title": "Martyrs",
+            "feat": null,
+            "editors": "Child Rebel Soldier"
+          },
+          {
+            "n": 4,
+            "title": "Money Sick",
+            "feat": null,
+            "editors": "Child Rebel Soldier"
+          },
+          {
+            "n": 5,
+            "title": "Until I Burst",
+            "feat": null,
+            "editors": "Child Rebel Soldier"
+          },
+          {
+            "n": 6,
+            "title": "Back By Popular Demand",
+            "feat": null,
+            "editors": "Child Rebel Soldier"
+          },
+          {
+            "n": 7,
+            "title": "Diamonds & Dollars",
+            "feat": null,
+            "editors": "Child Rebel Soldier"
+          },
+          {
+            "n": 8,
+            "title": "Everybody Nose (Remix)",
+            "feat": null,
+            "editors": "Child Rebel Soldier"
+          },
+          {
+            "n": 9,
+            "title": "Passenger",
+            "feat": null,
+            "editors": "Child Rebel Soldier"
+          }
+        ],
         "credits": {
           "editors": []
         },
@@ -3127,15 +3194,82 @@
         "editor": "88888u",
         "year": "",
         "badges": [],
-        "samply": "",
+        "samply": "https://samply.app/p/gR22fwVudtNUKf59fujh?si=IBw0KQOsNoSqcH8kAkeFu14g7a12",
         "art": [],
         "description": "Very classic and high quality LP5 comp based on the Donda's Boy rumor, with every song drawn out with intros, outros and features to all be 10 minutes long. Has an hour long Runaway bonus. Most notably used to be featured on the sidebar of the r/Kanye subreddit.",
         "info": null,
-        "tracklist": [],
+        "tracklist": [
+          {
+            "n": 1,
+            "title": "Dark Fantasy",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 10,
+            "title": "Lost in the World",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 1,
+            "title": "Runaway (60 Min.)",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 2,
+            "title": "Gorgeous",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 3,
+            "title": "POWER",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 4,
+            "title": "All of the Lights",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 5,
+            "title": "Monster",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 6,
+            "title": "Devil in a New Dress",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 7,
+            "title": "Runaway",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 8,
+            "title": "Hell of a Life",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 9,
+            "title": "Blame Game",
+            "feat": null,
+            "editors": "Kanye West"
+          }
+        ],
         "credits": {
           "editors": []
         },
-        "cover": "gaj-88888u.jpg"
+        "cover": "gaj-88888u.png"
       },
       {
         "id": "gktf-toasty",
@@ -4866,7 +5000,7 @@
         "badges": [
           "highlight"
         ],
-        "samply": "",
+        "samply": "https://samply.app/p/zIZdmSpelgfZ5BNxcjv5?si=IBw0KQOsNoSqcH8kAkeFu14g7a12",
         "art": [],
         "description": "Double-disc comp with each disc reworking a few songs from CWv1 and CWv2 respectively. This entry regards the CWv1 disc exclusively. The disc fully fleshes out the few songs we know from the era through new prod as well as new features.",
         "info": null,
@@ -4967,7 +5101,7 @@
         "editor": "pablo999",
         "year": "",
         "badges": [],
-        "samply": "",
+        "samply": "https://samply.app/p/VS7clgkhGwZfH6IbVGAQ?si=IBw0KQOsNoSqcH8kAkeFu14g7a12",
         "art": [],
         "description": "A more extensive compilation of 2014 CW tracks with various QoL changes and new features/verses to flesh them out into a real G.O.O.D. Music project from the time period.",
         "info": null,
@@ -5505,7 +5639,7 @@
           "unique",
           "remix"
         ],
-        "samply": "",
+        "samply": "https://samply.app/p/5Hjqbopx09DosuLRTVsV?si=IBw0KQOsNoSqcH8kAkeFu14g7a12",
         "art": [
           "art/Untitled179_20250601000840.png",
           "art/Untitled179_20250601001405.png"
@@ -5642,7 +5776,7 @@
           "highlight",
           "overhaul"
         ],
-        "samply": "",
+        "samply": "https://samply.app/p/4F9Tp67C0aEjEKpfSxpx?si=IBw0KQOsNoSqcH8kAkeFu14g7a12",
         "art": [],
         "description": "A spiritual V3 to his YII comp and a V2 to his MGIA comp. A diverse and expansive rework of OG LP7 material in general, taking advantage of SHMG's vague perception to nail in the classic interpretation of the album being a combination of everything Y2, SHMG itself and SWISH has to offer.",
         "info": null,
@@ -5767,7 +5901,7 @@
         "editor": "Miracles Team",
         "year": "",
         "badges": [],
-        "samply": "",
+        "samply": "https://samply.app/p/KtAJKIczYNbebLHYw3sv?si=IBw0KQOsNoSqcH8kAkeFu14g7a12",
         "art": [],
         "description": "The sophomore and latest project by Miracles Team / Magik & Co. The first comp to reinterpret SHMG into a more accurate view of a pop, trap-leaning album with some synthy and acoustic hints due to Paul McCartney's influence. Focuses on reproducing several elements and remastering vocals across many tracks.",
         "info": null,
@@ -5922,7 +6056,7 @@
         "editor": "pxblo",
         "year": "",
         "badges": [],
-        "samply": "",
+        "samply": "https://samply.app/p/yHx4MJO1dbQt37Jmdn52?si=IBw0KQOsNoSqcH8kAkeFu14g7a12",
         "art": [],
         "description": "One of if not the most classic OG LP7 reworks. A short, only 9-track long comp that applies various changes and overhauls to a very classic song selection that leans heavily into the aggressive, dark, abrasive sound that SHMG was originally thought to have.",
         "info": null,
@@ -5996,7 +6130,7 @@
           "highlight",
           "vanilla"
         ],
-        "samply": "",
+        "samply": "https://samply.app/p/ZmsOcVVqE0dgQvyp1r8L?si=IBw0KQOsNoSqcH8kAkeFu14g7a12",
         "art": [],
         "description": "A SimpleJosh-style vanilla polish and remaster of various SHMG era leaks to be as listenable and enjoyable as possible with very few new added production. By far the best way so far to experience what OG LP7 is at its core.",
         "info": null,
@@ -6109,7 +6243,7 @@
         "editor": "Matsu",
         "year": "",
         "badges": [],
-        "samply": "",
+        "samply": "https://samply.app/p/Ia4N2DGs9N6ntj3yUT0N?si=IBw0KQOsNoSqcH8kAkeFu14g7a12",
         "art": [],
         "description": "Focuses on combining and slightly polishing various leaks specifically unique to SHMG, aiming to make an experience that, despite feeling rough, reflects and truly shows the real colors of SHMG based exactly on the leaks made during the time period.",
         "info": null,
@@ -7101,11 +7235,114 @@
         "editor": "JonJeffJonJon",
         "year": "",
         "badges": [],
-        "samply": "",
+        "samply": "https://samply.app/p/IHVk6Jw1tdwVPqmFVV9v?si=IBw0KQOsNoSqcH8kAkeFu14g7a12",
         "art": [],
         "description": "First real attempt at transforming the TLOP era, with an all-new tracklist combining both released songs with OG LP7 songs and adds production, features, beatswitches, and other new elements on almost all the tracks to create a unique, guitar-influenced hip-hop experience.",
         "info": null,
-        "tracklist": [],
+        "tracklist": [
+          {
+            "n": 1,
+            "title": "Introduction",
+            "feat": null,
+            "editors": "Kanye West & JonJeffJonJon"
+          },
+          {
+            "n": 2,
+            "title": "Hood Famous",
+            "feat": "Harley Banks",
+            "editors": "Kanye West & JonJeffJonJon"
+          },
+          {
+            "n": 3,
+            "title": "God Level",
+            "feat": null,
+            "editors": "Kanye West & JonJeffJonJon"
+          },
+          {
+            "n": 4,
+            "title": "WTFRN",
+            "feat": "Close Salami",
+            "editors": "Kanye West & JonJeffJonJon"
+          },
+          {
+            "n": 5,
+            "title": "Liberated",
+            "feat": "Default_Miserable",
+            "editors": "Kanye West & JonJeffJonJon"
+          },
+          {
+            "n": 6,
+            "title": "30 Hours",
+            "feat": "SLPYCNYN",
+            "editors": "Kanye West & JonJeffJonJon"
+          },
+          {
+            "n": 7,
+            "title": "Low Lights (Interlude)",
+            "feat": null,
+            "editors": "Kanye West & JonJeffJonJon"
+          },
+          {
+            "n": 8,
+            "title": "Highlights",
+            "feat": "poofartpoo",
+            "editors": "Kanye West & JonJeffJonJon"
+          },
+          {
+            "n": 9,
+            "title": "Southside Serenade",
+            "feat": null,
+            "editors": "Kanye West & JonJeffJonJon"
+          },
+          {
+            "n": 10,
+            "title": "All Day",
+            "feat": "Close Salami",
+            "editors": "Kanye West & JonJeffJonJon"
+          },
+          {
+            "n": 11,
+            "title": "I Feel Like That",
+            "feat": null,
+            "editors": "Kanye West & JonJeffJonJon"
+          },
+          {
+            "n": 12,
+            "title": "Frank's Track",
+            "feat": null,
+            "editors": "Kanye West & JonJeffJonJon"
+          },
+          {
+            "n": 13,
+            "title": "Wolves",
+            "feat": "SLPYCNYN",
+            "editors": "Kanye West & JonJeffJonJon"
+          },
+          {
+            "n": 14,
+            "title": "333",
+            "feat": "RoseTheBarista",
+            "editors": "Kanye West & JonJeffJonJon"
+          },
+          {
+            "n": 15,
+            "title": "After You",
+            "feat": "seal",
+            "editors": "Kanye West & JonJeffJonJon"
+          },
+          {
+            "n": 16,
+            "title": "Ultralight Beam",
+            "feat": null,
+            "editors": "Kanye West & JonJeffJonJon"
+          },
+          {
+            "n": 17,
+            "title": "Only One",
+            "feat": "SLPYCNYN & Madi Summington",
+            "editors": "Kanye West & JonJeffJonJon"
+          }
+        ],
         "credits": {
           "editors": []
         },
@@ -7421,15 +7658,118 @@
         "badges": [
           "extension"
         ],
-        "samply": "",
+        "samply": "https://samply.app/p/hzFV21ehPSZmLfCedcAh?si=IBw0KQOsNoSqcH8kAkeFu14g7a12",
         "art": [],
         "description": "One of the earliest fanmade comps to surface on the internet. An extended comp that expands on released songs with sample intros/outros, added features and other new instrumental segments. Notable for adding and incorporating a much more diverse selection of content.",
         "info": null,
-        "tracklist": [],
+        "tracklist": [
+          {
+            "n": 1,
+            "title": "Ultralight Beam",
+            "feat": null,
+            "editors": "Kanye West, Chance the Rapper, Kelly Price, The-Dream, Kirk Franklin"
+          },
+          {
+            "n": 2,
+            "title": "Father Stretch My Hands Pt. 1",
+            "feat": null,
+            "editors": "Kanye West, Kid Cudi, Kelly Price"
+          },
+          {
+            "n": 3,
+            "title": "Pt. 2",
+            "feat": null,
+            "editors": "Kanye West, Desiigner, T-Pain, Meek Mill, Montana of 300"
+          },
+          {
+            "n": 4,
+            "title": "Famous",
+            "feat": null,
+            "editors": "Kanye West, Rihanna, Swizz Beatz, Young Thug"
+          },
+          {
+            "n": 5,
+            "title": "Feedback",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 6,
+            "title": "Low Lights",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 7,
+            "title": "Highlights",
+            "feat": null,
+            "editors": "Kanye West, Young Thug, The-Dream, El Debarge"
+          },
+          {
+            "n": 8,
+            "title": "Freestyle 4",
+            "feat": null,
+            "editors": "Kanye West, Tyler, the Creator, Desiigner, A$AP Rocky"
+          },
+          {
+            "n": 9,
+            "title": "I Love Kanye",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 10,
+            "title": "Waves",
+            "feat": null,
+            "editors": "Kanye West, Chris Brown, Kid Cudi, Chance the Rapper"
+          },
+          {
+            "n": 11,
+            "title": "FML",
+            "feat": null,
+            "editors": "Kanye West, The Weeknd, Travis Scott, Bon Iver"
+          },
+          {
+            "n": 12,
+            "title": "Real Friends",
+            "feat": null,
+            "editors": "Kanye West, Ty Dolla $ign, Big K.R.I.T."
+          },
+          {
+            "n": 13,
+            "title": "Wolves",
+            "feat": null,
+            "editors": "Kanye West, Vic Mensa, Sia, Caroline Shaw, Kehlani, Frank Ocean"
+          },
+          {
+            "n": 14,
+            "title": "30 Hours",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 15,
+            "title": "No More Parties in LA",
+            "feat": null,
+            "editors": "Kanye West, Kendrick Lamar, Freddie Gibbs, Yasiin Bey"
+          },
+          {
+            "n": 16,
+            "title": "Fade",
+            "feat": null,
+            "editors": "Kanye West, Ty Dolla $ign, Post Malone"
+          },
+          {
+            "n": 17,
+            "title": "Saint Pablo",
+            "feat": null,
+            "editors": "Kanye West, Sampha"
+          }
+        ],
         "credits": {
           "editors": []
         },
-        "cover": "tlop-extended-blockashotya.jpg"
+        "cover": "tlop-extended-blockashotya.png"
       },
       {
         "id": "death-of-pablo-pacol",
@@ -10231,7 +10571,7 @@
           "highlight",
           "vanilla"
         ],
-        "samply": "",
+        "samply": "https://samply.app/p/7MWoWaCMQdmdMadG4SbT?si=IBw0KQOsNoSqcH8kAkeFu14g7a12",
         "art": [],
         "description": "Comp containing a balance of complete and purist edits of each song. Has transitions and a clear consistent theme. One of the most downloaded comps ever and and a good way to listen to a finished and accurate Yandhi.",
         "info": null,
@@ -10241,6 +10581,18 @@
             "title": "CHAKRAS",
             "feat": null,
             "editors": null
+          },
+          {
+            "n": 1,
+            "title": "Chakras",
+            "feat": null,
+            "editors": "Kanye West, The-Dream, Ant Clemons"
+          },
+          {
+            "n": 2,
+            "title": "Calm (Interlude)",
+            "feat": null,
+            "editors": "Kanye West, Ty Dolla $ign, Ant Clemons"
           },
           {
             "n": 2,
@@ -10255,10 +10607,22 @@
             "editors": null
           },
           {
+            "n": 3,
+            "title": "The Storm",
+            "feat": null,
+            "editors": "Kanye West, Ty Dolla $ign, Ant Clemons, Kid Cudi, XXXTENTACION"
+          },
+          {
             "n": 4,
             "title": "NEW BODY",
             "feat": null,
             "editors": null
+          },
+          {
+            "n": 4,
+            "title": "Spread Your Wings",
+            "feat": null,
+            "editors": "Kanye West"
           },
           {
             "n": 5,
@@ -10267,10 +10631,28 @@
             "editors": null
           },
           {
+            "n": 5,
+            "title": "New Body",
+            "feat": null,
+            "editors": "Kanye West, Nicki Minaj, Ty Dolla $ign"
+          },
+          {
             "n": 6,
             "title": "ALIEN",
             "feat": null,
             "editors": null
+          },
+          {
+            "n": 6,
+            "title": "Hurricane",
+            "feat": null,
+            "editors": "Kanye West, Ant Clemons"
+          },
+          {
+            "n": 7,
+            "title": "Alien (Interlude)",
+            "feat": null,
+            "editors": "Kanye West"
           },
           {
             "n": 7,
@@ -10280,9 +10662,21 @@
           },
           {
             "n": 8,
+            "title": "Alien",
+            "feat": null,
+            "editors": "Kanye West, Kid Cudi, Young Thug, Quavo, Ant Clemons"
+          },
+          {
+            "n": 8,
             "title": "THE GARDEN",
             "feat": null,
             "editors": null
+          },
+          {
+            "n": 9,
+            "title": "Home",
+            "feat": null,
+            "editors": "Kanye West, Ant Clemons"
           },
           {
             "n": 9,
@@ -10292,21 +10686,75 @@
           },
           {
             "n": 10,
+            "title": "City In The Sky",
+            "feat": null,
+            "editors": "Kanye West, Desiigner, 070 Shake, Ty Dolla $ign, Kid Cudi, Jeremih, The-Dream"
+          },
+          {
+            "n": 10,
             "title": "LAST NAME",
             "feat": null,
             "editors": null
           },
           {
             "n": 11,
+            "title": "Brothers",
+            "feat": null,
+            "editors": "Kanye West, Charlie Wilson"
+          },
+          {
+            "n": 11,
             "title": "LAW OF ATTRACTION",
             "feat": null,
             "editors": null
+          },
+          {
+            "n": 12,
+            "title": "Cash To Burn",
+            "feat": null,
+            "editors": "Kanye West, Kenny G, Ant Clemons"
+          },
+          {
+            "n": 13,
+            "title": "We Got Love",
+            "feat": null,
+            "editors": "Kanye West, Teyana Taylor, Ms. Lauryn Hill"
+          },
+          {
+            "n": 14,
+            "title": "All Dreams Real",
+            "feat": null,
+            "editors": "Kanye West, Ant Clemons"
+          },
+          {
+            "n": 15,
+            "title": "The Garden",
+            "feat": null,
+            "editors": "Kanye West, Teyana Taylor, Ty Dolla $ign, Ant Clemons"
+          },
+          {
+            "n": 16,
+            "title": "Last Name",
+            "feat": null,
+            "editors": "Kanye West, Ant Clemons"
+          },
+          {
+            "n": 17,
+            "title": "Law Of Attraction",
+            "feat": null,
+            "editors": "Kanye West, Pusha T, No Malice, Ant Clemons, Sunday Service Choir"
+          },
+          {
+            "n": 18,
+            "title": "End Of It",
+            "feat": null,
+            "editors": "Kanye West"
           }
         ],
         "credits": {
           "editors": []
         },
-        "cover": "yandhi-revised.jpg"
+        "cover": "yandhi-revised.jpeg"
       },
       {
         "id": "spacex",
@@ -11029,11 +11477,135 @@
           "highlight",
           "overhaul"
         ],
-        "samply": "",
-        "art": [],
+        "samply": "https://samply.app/p/5clJSDjJJRlzUUJWVGO7?si=IBw0KQOsNoSqcH8kAkeFu14g7a12",
+        "art": [
+          "art/BONUS TRACKS COVER ART.jpg",
+          "art/Back Art.jpg"
+        ],
         "description": "Aims to create what a finished GC album would have sounded like if it was released in 2020, albeit with some of Lionel's trap-influenced touches. Every song has been reworked from their original versions. Released with stems.",
         "info": null,
-        "tracklist": [],
+        "tracklist": [
+          {
+            "n": 1,
+            "title": "God's Country",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 2,
+            "title": "I Know God Breathed On This",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 3,
+            "title": "Tulsa",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 4,
+            "title": "I Feel Terrific!",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 5,
+            "title": "Eternal Life",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 6,
+            "title": "Alien",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 7,
+            "title": "Our King",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 8,
+            "title": "Wash Us In The Blood",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 9,
+            "title": "America",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 10,
+            "title": "Wake The Dead",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 11,
+            "title": "Skurrrrurrrrr",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 12,
+            "title": "In God's Country",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 13,
+            "title": "Keep My Spirit Alive",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 14,
+            "title": "Everything",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 15,
+            "title": "Fighting Fires",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 1,
+            "title": "Pray4Me",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 2,
+            "title": "God's Test",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 3,
+            "title": "Let The Spirit Go Wild",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 4,
+            "title": "Palm Springs",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 5,
+            "title": "Awakening",
+            "feat": null,
+            "editors": "Kanye West"
+          }
+        ],
         "credits": {
           "editors": []
         },
@@ -13731,11 +14303,66 @@
         "editor": "Akimbo",
         "year": "",
         "badges": [],
-        "samply": "",
+        "samply": "https://samply.app/p/GxC1AqlxjNWKxTwtY1rm?si=IBw0KQOsNoSqcH8kAkeFu14g7a12",
         "art": [],
         "description": "Recent comp of this former grail era based on the October 2022 copy, focusing on making it sound mostly finished in a realistic manner with demumbles, cutdowns, restructures, mixing and a bit of added production.",
         "info": null,
-        "tracklist": [],
+        "tracklist": [
+          {
+            "n": 1,
+            "title": "Never Coming Back",
+            "feat": null,
+            "editors": "Kanye West & James Blake"
+          },
+          {
+            "n": 2,
+            "title": "What I Would Have Said At Virgil's Funeral",
+            "feat": null,
+            "editors": "Kanye West & James Blake"
+          },
+          {
+            "n": 3,
+            "title": "Talking",
+            "feat": null,
+            "editors": "Kanye West & James Blake"
+          },
+          {
+            "n": 4,
+            "title": "Hold Up, Get Up",
+            "feat": null,
+            "editors": "Kanye West & James Blake"
+          },
+          {
+            "n": 5,
+            "title": "Quiet",
+            "feat": null,
+            "editors": "Kanye West & James Blake"
+          },
+          {
+            "n": 6,
+            "title": "Bobby Digital",
+            "feat": null,
+            "editors": "Kanye West & James Blake"
+          },
+          {
+            "n": 7,
+            "title": "Fall In love",
+            "feat": null,
+            "editors": "Kanye West & James Blake"
+          },
+          {
+            "n": 8,
+            "title": "Through The High Wire",
+            "feat": null,
+            "editors": "Kanye West & James Blake"
+          },
+          {
+            "n": 9,
+            "title": "This One Here",
+            "feat": null,
+            "editors": "Kanye West & James Blake"
+          }
+        ],
         "credits": {
           "editors": []
         },
@@ -16107,15 +16734,130 @@
         "badges": [
           "highlight"
         ],
-        "samply": "",
+        "samply": "https://samply.app/player/0r7qWx7kmdJaQarRBtRM?si=3HFDQzO3GraPCaSrPkE4RVxzQUD2",
         "art": [],
         "description": "",
         "info": null,
-        "tracklist": [],
+        "tracklist": [
+          {
+            "n": 20,
+            "title": "40 NIGHTS",
+            "feat": null,
+            "editors": "Kanye West, Ye"
+          },
+          {
+            "n": 15,
+            "title": "ALL THE LOVE",
+            "feat": null,
+            "editors": "Kanye West, Ye"
+          },
+          {
+            "n": 9,
+            "title": "BEAUTY AND THE BEAST",
+            "feat": null,
+            "editors": "Kanye West, Ye"
+          },
+          {
+            "n": 21,
+            "title": "BULLETPROOF",
+            "feat": null,
+            "editors": "Kanye West, Ye"
+          },
+          {
+            "n": 13,
+            "title": "BULLY",
+            "feat": null,
+            "editors": "Kanye West, Ye"
+          },
+          {
+            "n": 12,
+            "title": "CIRCLES",
+            "feat": null,
+            "editors": "Kanye West, Ye"
+          },
+          {
+            "n": 3,
+            "title": "FATHER",
+            "feat": null,
+            "editors": "Kanye West, Ye"
+          },
+          {
+            "n": 16,
+            "title": "HIGHS AND LOWS (INTERLUDE)",
+            "feat": null,
+            "editors": "Kanye West, Ye"
+          },
+          {
+            "n": 17,
+            "title": "HIGHS AND LOWS",
+            "feat": null,
+            "editors": "Kanye West, Ye"
+          },
+          {
+            "n": 14,
+            "title": "I CAN'T WAIT",
+            "feat": null,
+            "editors": "Kanye West, Ye"
+          },
+          {
+            "n": 11,
+            "title": "LAST BREATH",
+            "feat": null,
+            "editors": "Kanye West, Ye"
+          },
+          {
+            "n": 6,
+            "title": "MAMA'S FAVORITE",
+            "feat": null,
+            "editors": "Kanye West, Ye"
+          },
+          {
+            "n": 8,
+            "title": "PREACHER MAN",
+            "feat": null,
+            "editors": "Kanye West, Ye"
+          },
+          {
+            "n": 4,
+            "title": "PUNCH DRUNK",
+            "feat": null,
+            "editors": "Kanye West, Ye"
+          },
+          {
+            "n": 7,
+            "title": "SISTERS AND BROTHERS",
+            "feat": null,
+            "editors": "Kanye West, Ye"
+          },
+          {
+            "n": 1,
+            "title": "THE KING",
+            "feat": null,
+            "editors": "Kanye West, Ye"
+          },
+          {
+            "n": 2,
+            "title": "THIS A MUST",
+            "feat": null,
+            "editors": "Kanye West, Ye"
+          },
+          {
+            "n": 19,
+            "title": "THIS ONE HERE",
+            "feat": null,
+            "editors": "Kanye West, Ye"
+          },
+          {
+            "n": 10,
+            "title": "WHITE LINES",
+            "feat": null,
+            "editors": "Kanye West, Ye"
+          }
+        ],
         "credits": {
           "editors": []
         },
-        "cover": "bully-je.jpg"
+        "cover": "bully-je.png"
       }
     ]
   },
