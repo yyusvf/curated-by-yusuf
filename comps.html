@@ -688,7 +688,6 @@ function openComp(eraId, compId) {
     <div>
       <div class="cm-detail-row"><p class="cm-detail-key">Editor</p><p class="cm-detail-val">${comp.editor}</p></div>
       <div class="cm-detail-row"><p class="cm-detail-key">Era</p><p class="cm-detail-val">${era.name}</p></div>
-      <div class="cm-detail-row"><p class="cm-detail-key">Year</p><p class="cm-detail-val">${comp.year || era.year}</p></div>
       ${comp.tracklist?.length ? `<div class="cm-detail-row"><p class="cm-detail-key">Tracks</p><p class="cm-detail-val">${comp.tracklist.length}</p></div>` : ''}
     </div>
 
