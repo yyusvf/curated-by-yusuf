@@ -36,16 +36,6 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .profile-bio{font-size:13px;color:var(--muted);line-height:1.5}
 .profile-socials{display:flex;gap:8px;flex-wrap:wrap;margin-top:2px}
 .profile-right{width:160px;flex-shrink:0;display:flex;flex-direction:column;gap:8px;padding-top:4px}
-/* RECENT COMPS FEED */
-.recent-feed{display:flex;flex-direction:column;gap:6px;width:160px;flex-shrink:0}
-.recent-feed-label{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:4px}
-.recent-comp-item{display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:9px;text-decoration:none;transition:background 0.15s;cursor:pointer;border:none;background:transparent;font-family:var(--font);text-align:left;width:100%}
-.recent-comp-item:hover{background:rgba(255,255,255,0.05)}
-.recent-comp-cover{width:36px;height:36px;border-radius:6px;object-fit:cover;flex-shrink:0;background:var(--surface2)}
-.recent-comp-info{min-width:0;flex:1}
-.recent-comp-name{font-size:11px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.recent-comp-era{font-size:10px;color:var(--muted);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.recent-comp-badge{width:5px;height:5px;border-radius:50%;background:#c8f542;flex-shrink:0;opacity:0.7}
 
 /* DISCORD/INSTAGRAM PILLS */
 .discord-wrap{position:relative;display:inline-flex}
@@ -71,6 +61,29 @@ a.discord-btn{text-decoration:none}
 .samply-cta-text strong{display:block;font-size:13px;font-weight:500;color:var(--text)}
 .samply-cta-text span{font-size:11px;color:var(--muted)}
 .samply-cta-btn{font-size:12px;font-weight:500;color:#fff;background:rgba(255,255,255,0.12);border:none;padding:6px 14px;border-radius:999px;white-space:nowrap;flex-shrink:0}
+
+/* TRANSFER GUIDE MODAL */
+.tg-step{display:flex;gap:12px;margin-bottom:14px}
+.tg-step:last-child{margin-bottom:0}
+.tg-num{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--accent);color:#0a0a0a;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.tg-step-body{flex:1}
+.tg-step-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:3px}
+.tg-step-desc{font-size:12px;color:rgba(255,255,255,0.6);line-height:1.6}
+.tg-platform-label{display:flex;align-items:center;gap:8px;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin:22px 0 12px}
+.tg-platform-label::after{content:'';flex:1;height:0.5px;background:rgba(255,255,255,0.08)}
+.tg-note{font-size:12px;color:rgba(255,255,255,0.6);line-height:1.6;background:rgba(200,245,66,0.06);border:0.5px solid rgba(200,245,66,0.18);border-radius:10px;padding:11px 14px;margin-bottom:16px}
+.tg-dl{display:flex;gap:12px;background:rgba(255,255,255,0.04);border:0.5px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px;margin-bottom:18px}
+.tg-acc{border:0.5px solid rgba(255,255,255,0.08);border-radius:10px;margin-bottom:8px;overflow:hidden;background:rgba(255,255,255,0.02)}
+.tg-acc summary{list-style:none;cursor:pointer;padding:13px 15px;display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;color:var(--text);user-select:none}
+.tg-acc summary::-webkit-details-marker{display:none}
+.tg-acc summary:hover{background:rgba(255,255,255,0.03)}
+.tg-acc-icon{width:20px;height:20px;border-radius:5px;object-fit:cover;flex-shrink:0}
+.tg-acc-arrow{margin-left:auto;color:var(--muted);font-size:13px;transition:transform 0.2s}
+.tg-acc[open] .tg-acc-arrow{transform:rotate(90deg)}
+.tg-acc-body{padding:6px 15px 16px}
+.tg-substep{font-size:12px;color:rgba(255,255,255,0.6);line-height:1.6;margin-bottom:8px}
+.tg-substep:last-child{margin-bottom:0}
+.tg-subhead{font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin:14px 0 8px}
 
 /* SECTION HEADER */
 .section-header{display:flex;align-items:baseline;justify-content:space-between;margin:36px 0 16px}
@@ -445,14 +458,10 @@ a.discord-btn{text-decoration:none}
         <button class="what-btn" onclick="document.getElementById('what-modal').classList.add('open')">What is this?</button>
       </div>
     </div>
-    <div class="profile-right">
-      <p class="recent-feed-label">Recently added</p>
-      <div id="recent-comps-feed"></div>
-    </div>
   </div>
 
   <!-- SAMPLY CTA -->
-  <a href="https://samply.app/install" class="samply-cta" target="_blank">
+  <a href="https://samply.app/install" class="samply-cta" target="_blank" style="margin-bottom:10px">
     <img src="https://www.google.com/s2/favicons?domain=samply.app&sz=64" alt="Samply">
     <div class="samply-cta-text">
       <strong>Best experienced on Samply</strong>
@@ -460,6 +469,19 @@ a.discord-btn{text-decoration:none}
     </div>
     <span class="samply-cta-btn">Get App</span>
   </a>
+
+  <!-- TRANSFER GUIDE CTA -->
+  <div class="samply-cta" style="cursor:pointer" onclick="document.getElementById('transfer-modal').classList.add('open')">
+    <div style="display:flex;gap:4px;flex-shrink:0">
+      <img src="https://www.google.com/s2/favicons?domain=spotify.com&sz=64" style="width:26px;height:26px;border-radius:6px" alt="Spotify">
+      <img src="https://www.google.com/s2/favicons?domain=music.apple.com&sz=64" style="width:26px;height:26px;border-radius:6px" alt="Apple Music">
+    </div>
+    <div class="samply-cta-text">
+      <strong>Want them on Spotify or Apple Music?</strong>
+      <span>Download from Samply, then import — here's how</span>
+    </div>
+    <span class="samply-cta-btn">How to</span>
+  </div>
 
   <!-- DYNAMIC CONTENT -->
   <div id="dynamic-root"></div>
@@ -475,6 +497,79 @@ a.discord-btn{text-decoration:none}
     <p>Most of what you see here comes from the Yedits community, a group of fans who take unreleased, unfinished, or poorly mixed Kanye music and finish it themselves.</p>
     <p>Everything is playable directly via Samply, a free music app available on iOS, Mac, and as a web app on Windows. All editors are fully credited.</p>
     <p>Join the Yedits Discord or check out the trackers linked below for more.</p>
+  </div>
+</div>
+
+<!-- TRANSFER GUIDE MODAL -->
+<div class="modal-overlay" id="transfer-modal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal" style="max-width:520px;max-height:85vh;overflow-y:auto">
+    <button class="modal-close" onclick="document.getElementById('transfer-modal').classList.remove('open')">✕</button>
+    <p class="modal-title">Get the comps on your music player</p>
+    <p style="margin-bottom:14px">Everything on Samply can be downloaded as normal audio files and imported into any music app. Download first, then open the section for your player.</p>
+
+    <p class="tg-note">💡 Easiest on a PC — once the songs are in your library, they sync to your phone automatically while Spotify (or Apple Music) is open on both devices on the same network.</p>
+
+    <div class="tg-dl">
+      <span class="tg-num">1</span>
+      <div class="tg-step-body">
+        <p class="tg-step-title">Download from Samply</p>
+        <p class="tg-step-desc">Open the comp in Samply and use the download option to save the audio files to your device — the Files app on iPhone/iPad, or your Downloads folder on a computer.</p>
+      </div>
+    </div>
+
+    <details class="tg-acc">
+      <summary><img class="tg-acc-icon" src="https://www.google.com/s2/favicons?domain=spotify.com&sz=64" alt="Spotify"> Spotify — Desktop <span class="tg-acc-arrow">›</span></summary>
+      <div class="tg-acc-body">
+        <p class="tg-substep">1. Click your <strong>profile picture</strong> at the top and select <strong>Settings</strong>.</p>
+        <p class="tg-substep">2. Scroll to <strong>Library</strong> and switch <strong>Show Local Files</strong> on.</p>
+        <p class="tg-substep">3. Under <strong>Show songs from</strong>, turn on the folders you want — or click <strong>Add a source</strong> to select the folder with your downloads.</p>
+        <p class="tg-substep">4. Go to <strong>Your Library → Collection</strong>. Your music now appears under <strong>Local Files</strong>.</p>
+      </div>
+    </details>
+
+    <details class="tg-acc">
+      <summary><img class="tg-acc-icon" src="https://www.google.com/s2/favicons?domain=spotify.com&sz=64" alt="Spotify"> Spotify — Mobile <span class="tg-acc-arrow">›</span></summary>
+      <div class="tg-acc-body">
+        <p class="tg-substep">1. Tap your <strong>profile picture</strong> at the top.</p>
+        <p class="tg-substep">2. Tap <strong>Settings and privacy → Settings</strong>.</p>
+        <p class="tg-substep">3. Tap <strong>Apps and devices</strong>.</p>
+        <p class="tg-substep">4. Switch <strong>Local audio files</strong> on.</p>
+        <p class="tg-substep">5. Go to <strong>Your Library → Collection</strong>. Your music now appears under <strong>Local Files</strong>.</p>
+        <p class="tg-subhead">Adding files on iPhone</p>
+        <p class="tg-substep">In the <strong>Files</strong> app, open the folder of your browser / storage app, select the file and choose <strong>Copy</strong> or <strong>Move</strong>.</p>
+        <p class="tg-substep">Tap <strong>Browse → On My iPhone</strong>, open the <strong>Spotify</strong> folder, then choose <strong>Paste</strong> / Move item here.</p>
+      </div>
+    </details>
+
+    <details class="tg-acc">
+      <summary><img class="tg-acc-icon" src="https://www.google.com/s2/favicons?domain=music.apple.com&sz=64" alt="Apple Music"> Apple Music — with subscription <span class="tg-acc-arrow">›</span></summary>
+      <div class="tg-acc-body">
+        <p class="tg-subhead" style="margin-top:0">Step 1 · Add files to your desktop library</p>
+        <p class="tg-substep">Open the <strong>Music</strong> (or iTunes) app on your computer.</p>
+        <p class="tg-substep">Drag your local audio files into the window, or use <strong>File → Import</strong>.</p>
+        <p class="tg-substep">Optional: right-click a track and choose <strong>Get Info</strong> to edit Artist, Album or Artwork so your library stays tidy.</p>
+        <p class="tg-subhead">Step 2 · Turn on Sync Library</p>
+        <p class="tg-substep">Make sure <strong>Sync Library</strong> (iCloud Music Library) is on in your desktop app settings.</p>
+        <p class="tg-substep">Turn on <strong>Sync Library</strong> on your iPhone/iPad too, under <strong>Settings → Music</strong>.</p>
+        <p class="tg-substep">Your songs upload to the cloud and appear on your other devices within a few minutes.</p>
+      </div>
+    </details>
+
+    <details class="tg-acc">
+      <summary><img class="tg-acc-icon" src="https://www.google.com/s2/favicons?domain=music.apple.com&sz=64" alt="Apple Music"> Apple Music — without subscription <span class="tg-acc-arrow">›</span></summary>
+      <div class="tg-acc-body">
+        <p class="tg-substep">1. <strong>Add the music to your computer</strong> — import your MP3s into the Music app (Mac) or the Apple Music / iTunes app (Windows) as usual.</p>
+        <p class="tg-substep">2. <strong>Connect your device</strong> via USB. On macOS, open <strong>Finder</strong> and click your iPhone under "Locations". On Windows, open the <strong>Apple Devices</strong> app (or iTunes) and select your device.</p>
+        <p class="tg-substep">3. <strong>Start a manual sync</strong> — open the <strong>Music</strong> tab, tick <strong>"Sync music onto [your device]"</strong>, choose your whole library or selected playlists / artists / albums, then click <strong>Apply</strong> / Sync.</p>
+      </div>
+    </details>
+
+    <details class="tg-acc">
+      <summary><span style="width:20px;height:20px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:14px">🎵</span> Any other player <span class="tg-acc-arrow">›</span></summary>
+      <div class="tg-acc-body">
+        <p class="tg-substep">The downloads are standard MP3 files — import them into VLC, foobar2000, the Files app, or any app that plays local audio.</p>
+      </div>
+    </details>
   </div>
 </div>
 
@@ -570,7 +665,6 @@ function coverSrc(path) {
 
 // ─── RENDERER ────────────────────────────────────────────────────────────────
 function render() {
-  populateRecentFeed();
   const root = document.getElementById('dynamic-root');
   let html = '';
 
@@ -1291,28 +1385,6 @@ function copyDiscord() {
   const t = document.getElementById('toast');
   t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 1800);
-}
-
-
-function populateRecentFeed() {
-  const feed = document.getElementById('recent-comps-feed');
-  if (!feed) return;
-  const picks = [
-    { era: 'yandhi-v2',  eraName: 'Yandhi [V2]',  comp: 'yp-yandhi',        compName: 'Yedits Presents: Yandhi' },
-    { era: 'yandhi-v1',  eraName: 'Yandhi [V1]',  comp: 'yandhi-narcissist', compName: 'Yandhi' },
-    { era: 'bully',      eraName: 'BULLY',         comp: 'bully-flashnardo',  compName: 'BULLY' },
-    { era: 'good-ass-job', eraName: 'Good Ass Job', comp: 'gaj-pastelle',     compName: 'Good Ass Job' },
-  ];
-  feed.innerHTML = picks.map(p => {
-    const cover = `tracker/${p.era}/${p.comp}/${p.comp}.jpg`;
-    return `<button class="recent-comp-item" onclick="location.href='comps.html'">
-      <img class="recent-comp-cover" src="${cover}" alt="" onerror="this.style.opacity=0.15">
-      <div class="recent-comp-info">
-        <p class="recent-comp-name">${p.compName}</p>
-        <p class="recent-comp-era">${p.eraName}</p>
-      </div>
-    </button>`;
-  }).join('');
 }
 // Load from Supabase on startup
 loadFromSupabase();
