@@ -124,7 +124,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "world-record-holders.jpg"
+        "cover": "world-record-holders.jpg",
+        "creditsText": "New State Of Mind (Intro)\nWorld Record Holders\n10 in a Benz\nGo Getters (Freestyle)\nBaby's Coming\n187th\nNothin's Gonna Stop Me\nFight With The Best\nAll I Need\nDem Guys\nYa Feel\nUh Oh!\nNo Luv\nMind Your Business\nLet Em In\nHis Name Means Love (Outro)\nGhetto Señorita (Bonus Track)"
       }
     ]
   },
@@ -296,7 +297,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "tcd-rm-fosterlynch.jpg"
+        "cover": "tcd-rm-fosterlynch.jpg",
+        "creditsText": null
       },
       {
         "id": "freshman-year-rm",
@@ -513,7 +515,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "freshman-year-rm.jpg"
+        "cover": "freshman-year-rm.jpg",
+        "creditsText": null
       },
       {
         "id": "dream-killers",
@@ -662,7 +665,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "dream-killers.jpg"
+        "cover": "dream-killers.jpg",
+        "creditsText": "Intro\nWhole Life\nThe Good, The Bad and The Ugly\nDream Killers\nBreathe In Breathe Out\nI Need To Know\nGotta Pose\nNever Letting Go\nAbout An Angel\nArguing\nLiving A Movie\nHome (Windy)\nWow\nKeep The Receipt\nImprovise\nMy Way\nDrop Dead Gorgeous\nFalls Down (feat. Lauryn Hill)\nFamily Business\nHalf Price\nJesus Walks\nNever Let Me Down (feat. JAY-Z, J. Ivy)"
       }
     ]
   },
@@ -809,7 +813,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "good-bad-ugly.jpg"
+        "cover": "good-bad-ugly.jpg",
+        "creditsText": null
       },
       {
         "id": "lr-rm-fosterlynch",
@@ -967,7 +972,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "lr-rm-fosterlynch.jpg"
+        "cover": "lr-rm-fosterlynch.jpg",
+        "creditsText": null
       }
     ]
   },
@@ -1024,7 +1030,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "lo-rbeatz.jpg"
+        "cover": "lo-rbeatz.jpg",
+        "creditsText": null
       },
       {
         "id": "lo-orpheus",
@@ -1127,7 +1134,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "lo-orpheus.jpg"
+        "cover": "lo-orpheus.jpg",
+        "creditsText": null
       }
     ]
   },
@@ -1261,7 +1269,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "master-class.jpg"
+        "cover": "master-class.jpg",
+        "creditsText": "1. Promised Land (ft. Malik Yusef, Adam Levine) [edit by biobthe1 and v96]\r\n2. GO! (ft. John Mayer, Joy Denalane) [edit by biobthe1 creeptheme and yungtron]\r\n3. Anything (ft. Patti Labelle, Mary Mary, Consequence) [edit by biobthe1]\r\n4. Touch It [edit by v96 and biobthe1]\r\n5. Classic (ft. KRSOne, Nas, Rakim) [edit by biobthe1]\r\n6. Pusha Man (ft. Keyshia Cole, Rhymefest, Bump J) [edit by biobthe1]\r\n7. Child Rebel Soldier & Teriyaki Boyz - I Still Love H.E.R. [edit by biobthe1 and cool_gamez]\r\n8. The Corner (ft. Mos Def, Common) [edit by biobthe1]\r\n9. Piano Skit (ft. Malik Yusef) [edit by biobthe1]\r\n10. Passenger (ft. GLC, Common) [edit by biobthe1]\r\n11. Building (ft. Jay-Z) [edit by biobthe1]\r\n12. Impossible (ft. Keyshia Cole, Twista, BJ The Chicago Kid) [edit by biobthe1]\r\n13. Heaven (ft. John Legend, Pusha T) [edit by biobthe1]\r\n\r\n14. The People (ft. Common, Dwele) [edit by biobthe1]\r\n15. Child Rebel Soldier - Young Folks [edit by biobthe1]\r\n16. If I Shoot You (ft. Beanie Sigel, DJ Absolut, Consequence) [edit by biobthe1]\r\n17. Flute Flow [edit by biobthe1]"
       },
       {
         "id": "senior-year",
@@ -1346,7 +1355,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "senior-year.jpg"
+        "cover": "senior-year.jpg",
+        "creditsText": null
       },
       {
         "id": "graduation-reworked",
@@ -1447,7 +1457,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "graduation-reworked.jpg"
+        "cover": "graduation-reworked.jpg",
+        "creditsText": null
       },
       {
         "id": "graduation-rising-stars",
@@ -1592,7 +1603,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "graduation-rising-stars.jpg"
+        "cover": "graduation-rising-stars.jpg",
+        "creditsText": null
       }
     ]
   },
@@ -1691,7 +1703,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "808s-rework-akimbo.jpg"
+        "cover": "808s-rework-akimbo.jpg",
+        "creditsText": null
       },
       {
         "id": "heartbreak-v2",
@@ -1774,7 +1787,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "heartbreak-v2.jpg"
+        "cover": "heartbreak-v2.jpg",
+        "creditsText": null
       }
     ]
   },
@@ -1867,7 +1881,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "crs-simplejosh.jpg"
+        "cover": "crs-simplejosh.jpg",
+        "creditsText": null
       }
     ]
   },
@@ -1984,7 +1999,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "gaj-pastelle.jpg"
+        "cover": "gaj-pastelle.jpg",
+        "creditsText": "THE PASTELLE COLLECTIVE PRESENTS: GOOD ASS JOB\n\n1. Hard Horn Nightmare - SolidusJack, Ivory, Lionel Scott, Bloo, mixed by Akimbo \n2. Sweat On My Face (feat. Mos Def & Talib Kweli) - Lionel Scott, Ivory, mixed by Akimbo \n3. Thats My Bitch (feat. Jay Z, Electrik Red, Charlie Wilson & Bon Iver) - SolidusJack, Louie, Lionel, mixed by Akimbo  \n4. Downtown (feat. Jeezy) - Lionel Scott, Ivory, Louiebags, Ay-suh, SolidusJack, Bloo, mixed by Akimbo\n5. Throw My Money Everywhere - SolidusJack, Ivory, Lionel Scott, Bloo, mixed by Akimbo\n6. Flashing Lights 2 (feat. Charlie Wilson) - Lionel Scott, Ivory, Bloo, Akimbo, AI refs by ChildishBamboozle and Lionel Scott, Charlie Wilson AI model by 5b and Louiebags, mixed by Akimbo\n7. Not The Same (feat. Rick Ross) - Lionel Scott, mixed by Akimbo\n8. Mamas Boyfriend - Lionel Scott, Ivory, mixed by Akimbo\n9. No More Parties In LA (feat. Lupe Fiasco & Pharrell Williams) - Lionel Scott, mixed by Akimbo\n10. Shoot Up (feat. Bon Iver) - Lionel Scott, AI punch in refs by ChildishBamboozle, 2010 Kanye AI model by 5b, mixed by Akimbo\n11. Eyes Closed (feat. John Legend) - SolidusJack, Ivory, Bloo, Lionel Scott, mixed by Akimbo\n12. Armina (feat. Kid Cudi) - Lionel Scott, Ivory, Bloo, mixed by Akimbo\n13. You Know, You Know (feat. Lil Wayne & Drake) - Lionel Scott, Ivory, AI hook ref by Lionel Scott, mixed by Akimbo\n14. Whoopty Doo (feat. Cyhi The Prynce & Big Sean) - Lionel Scott, Ivory, mixed by Akimbo\n15. Never See Me Again - Lionel Scott, Bloo, AI Punch in refs bhy ChildishBamboozle, mixed by Akimbo\n\n\n\nSpecial thanks to - \n \n5b for helping get the majority of extracts for the comp and spending literally tens of hours on making AI models and getting listenable extracts out of 10 year old 128kpbs MP3 files \nJozzuh for having the original idea to make NMPILA a Child Rebel Soldier Song\nJimbo for making the LP gifs and giving feedback\nGerald for making the Trailer\nAkimbo for doing all the mixes\nChildishBamboozle for doing almost all the AI refs and making the comp art\n\nshout out taco bell too"
       },
       {
         "id": "gaj-dawgy",
@@ -2103,7 +2119,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "gaj-dawgy.jpg"
+        "cover": "gaj-dawgy.jpg",
+        "creditsText": "DAWGY STYLE: GOOD ASS JOB (2008)\n\n1. DownTown (feat. Jeff Bhasker) - tys0n, onyx, metalfaceterrorist\n- Feedback: NobodyIsNari & bloo & hc (mixing feedback) & gothfukker (Single Cover #1)\n- Mixed by: tys0n\n2. Crazy Life (feat. Consequence & John Legend) - tys0n & onyx\n- Feedback: JonJeffJonJon & ali & santino\n- Mixed by: tys0n\n3. Ain't No Tellin' (feat. GLC & Tony Williams) - Ivory, tys0n & ay-suh\n- Feedback: onyx\n- Mixed by: tys0n\n4. Hornz (feat. Child Rebel Soldier & Common) - onyx & tyson\n- Feedback: JonJeffJonJon & berais & ux (Single Cover #2)\n- Mixed by: tys0n\n5. That's My Bitch (feat. Elly Jackson, Connie Mitchell, Elektric Red, Charlie Wilson & Bon Iver) - santino, onyx & tys0n\n- Feedback: JonJeffJonJon & berais & gothfukker & nicole\n- Mixed by: tys0n\n6. Hood Bitch (feat. Jeezy) - onyx & ben \n- Feedback: tys0n, JonJeffJonJon & bloo (Extracts)\n- Mixed by: SarahWiWi\n7. Dance At Night (feat. Charlie Wilson & Rick Ross) - onyx & ben\n- Mixed by: SarahWiWi\n- Feedback: tys0n\n8. Make That Money (feat. JAY-Z) - berais/ben & onyx\n- Mixed by: SarahWiWi\n- Feedback: JonJeffJonJon & tys0n\n9. Throw Money Everywhere (feat. Jeezy & Rihanna) - onyx & JonJeffJonJon\n- Feedback: chrispo, SarahWiWi, JonJeffJonJon & Graybones & biobthe1\n- Mixed by: SarahWiWi\n10. I'll Be Alright (feat. Drake) - onyx & tys0n\n- Feedback: JonJeffJonJon & NobodyIsNari & jozzuh (Idea)\n- Mixed by: SarahWiWi\n11. Lonely (feat. T-Pain & Lily Allen) - Kamiien, onyx, tys0n, bloo, icpd & jsl & guydub\n- Feedback: JonJeffJonJon & GrayBones\n- Mixed by: tys0n\n12. Supernova (feat. Mr. Hudson) - tys0n & JonJeffJonJon\n- Feedback: onyx\n- Mixed by: tys0n\n13. SingSing (feat. Kid Cudi) - onyx, bloo, JonJeffJonJon & tys0n, berais\n- Feedback: Akimbo & berais & NobodyIsNari & ahmed 2.0\n- Mixed by: tys0n\n\nBonus:\n14. Flashing Lights 2 (feat. Charlie Wilson) - tys0n, poofartpoo & onyx\n- Feedback: ben & ali & JonJeffJonJon & Graybones & nicole\n- Mixed by: tys0n\n15. Mamas Boyfriend - Ivory & tys0n & SarahWiWi\n- Feedback: NobodyIsNari & onyx\n- Mixed by: SarahWiWi\n16. Day By Day (feat. Big Sean) - NobodyIsNari, tys0n, onyx & ahmed 2.0\n- Mixed by: gothfukker\n\nSpecial Thanks to:\n- mimi, luwi, electrodc, berais, Graybones, chrispo & paci for additional feedback on stuff thats not listed\n- NobodyIsNari for a bunch of unused artwork and support & ux + gothfukker for their last-minute covers\n- tys0n for being a chud and mixing decently well\n- Best Buy & the US Army for blessing him with a pc\n- Linux\n- SarahWiWi helping with the final mixes on the last tracks\n- JonJeffJonJon for helping with the TL\n- Epic Games for keeping the Fortnite servers running\n- gothfukker for being the absolute king of Geometry Dash and always asking the most braindead questions 🔥\n- W Speed ❤️‍🩹"
       },
       {
         "id": "wssf-santino",
@@ -2206,7 +2223,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "wssf-santino.jpg"
+        "cover": "wssf-santino.jpg",
+        "creditsText": "The 4 Seasons: W.S.S.F\r\nWinter:\r\n1. Christmas in Harlem\r\n2. Sky\r\n3. Midnight\r\nSpring:\r\n4. Firestone\r\n5. Run This Town\r\n6: Empire State of Mind\r\nSummer:\r\n7. Flashing Lights 2\r\n8. A Star is Born\r\n9. Sky Might Fall\r\nFall:\r\n10. Room to Breathe\r\n11. Love Me (Satisfaction)\r\n12. Supernova\r\n\r\nCredits:\r\n- fire & Geno for helping out with the Empire State of Mind edit\r\n- icpd, Parker & the pastelle collective for helping out with the fl2 chorus"
       },
       {
         "id": "madvillainz",
@@ -2299,7 +2317,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "madvillainz.jpg"
+        "cover": "madvillainz.jpg",
+        "creditsText": "thanks for tuning in as always \n\nevery song was edited mixed and mastered by me except Chain Heavy that was mixed by Bobert.\n\nmini credits and special thanks:\n\nspecial thanks to chrispo for being the unexpected goat of the comp telling me what to fix from the v1 copy\n\nthanks to: ahmed, brain, ben, taco, howemeister, soup, bobert, hntr2 and carter for the feedback\n\nand of course thanks to akis for the cover\n\nalso the run this town extract made by onyx\n\noh and the lord lord lord extract is by Nari but he doesn't know i stole it lol\n\nDETAILED TRACKLIST:\n\n1. GET THE FETA!: Rework of the intro from BORN LIKE THIS\n\n2. AVALANCHE: Song originated on \"Madvillainy 2\" sessions\n\n3. BALLSKIN: Rework of the song from BORN LIKE THIS\n\n4. HOLDIN ME BACK (feat. Nas): Rework of the Record4Hype interlude, the Nas feat is based on an unheard freestyle session that DOOM had with him on the BORN LIKE THIS era, very graily in the DOOM comm\n\n5. GAZZILLION EAR: Rework of the BORN LIKE THIS song\n\n6. CAN'T GET AWAY: Unheard GAJ songname turned into an interlude using a sample with the same name\n\n7. CHAIN HEAVY: Rework of the Good Fridays track\n\n8. SINGLE FOWL RHYME: Rework of a Madlib  Beat found on the HHN sessions dropped as \"Timeless Treasure\"\n\n9. VICTORY LAPS (feat. Ghostface Killah): DOOM x Ghostface Killah song that had an official MADVILLAINZ remix\n\n10. MIDNIGHT: Original track based two GAJ songs, an unheard one that uses this name and Only For The Night, this one uses the Luther Vandross version\n\n11. TELL EM WHAT TO DO: Original track using the \"Ain't No Telling\" sample\n\n12. WE.WANT.MONEY: Original track based on the sample Madlib used for Mama's Boy, the name comes from a mix of the Record4Hype Zip password and THE.GREEN.WHORE.NET from BORN LIKE THIS"
       },
       {
         "id": "gaj-ali-ahmed",
@@ -2364,7 +2383,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "gaj-ali-ahmed.png"
+        "cover": "gaj-ali-ahmed.png",
+        "creditsText": "ali x ahmed 2.0: Good Ass Job\n______________________________________________________________________________\n\nFull credits:-\n\tali: Main art, production, structuring, verse picks and pre-mix\n\tahmed 2.0: Additional production, polishing and mixing\n\tYedits Staff Team: Feedback\n\tYedits: Emotional support\n\nTrack credits:-\n    Ain’t No Tellin’:-\n      ali: Main production, base, structuring\n      ahmed 2.0: Additional production, polishing / changing, mixing\n\n    Throw My Money Everywhere:-\n      onyx: Synth work\n      ali: Main production, base, structuring\n      ahmed 2.0: Additional structuring, polishing / changing, mixing\n\n    All The Time:-\n      ali: Main production, base, structuring\n      ahmed 2.0: Additional production, polishing / changing, mixing\n\n    Hard Horn Nightmare:-\n      ali: Main production, base, structuring\n      ahmed 2.0: Additional production, polishing / changing, mixing\n\n    Run This Town:-\n      dog: Sample chop\n      ali: Main production, base, structuring\n      ahmed 2.0: Additional production, verse picks, polishing / changing, mixing\n\n    Not The Same:-\n      frickinfire: Help with structuring and \"We are not the same\" sample\n      chrispo: Verse idea\n      ali: Main production, base, verse picks, structuring\n      ahmed 2.0: Additional production, polishing / changing, mixing\n\n    Show Me A Good Time:-\n      ali: Base, structuring\n      ahmed 2.0: Additional structuring, production, polishing / changing, mixing\n\n    Whoopty Doo:-\n      ali: Main production, base, structuring\n      ahmed 2.0: Additional structuring, production, polishing / changing, mixing\n        \nSamples:-\n\tRun This Town -> Say You Will\n    All The Time -> Robocop\n    Throw My Money Everywhere -> Paranoid\n    Show Me A Good Time -> Street Lights, Coldest Winter\n    Not The Same -> You Know, You Know\n\nThis is my first actual released compilation, and I hope you'll all enjoy it! <3"
       },
       {
         "id": "gaj-juytuy",
@@ -2471,7 +2491,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "gaj-juytuy.jpg"
+        "cover": "gaj-juytuy.jpg",
+        "creditsText": "THANKS TO THE FOLLOWING PEOPLE:\nUPTEMPO - MAKING THE HARD HORN NIGHTMARE COVER, AND GIVING ME FEEDBACK\nITALICA - FEEDBACK\nCOMMA - SO MUCH FEEDBACK FOR THE COMP\nPRESTON(PRESTEY) - SAME AS COMMA, GIVING ME A LOT OF FEEDBACK FOR THE COMP\nICPD (NATHANBUSSIN) - SEE ME AGAIN AI"
       },
       {
         "id": "g00d-ass-job-icycity",
@@ -2566,7 +2587,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "g00d-ass-job-icycity.png"
+        "cover": "g00d-ass-job-icycity.png",
+        "creditsText": null
       },
       {
         "id": "gaj-jeen",
@@ -2669,7 +2691,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "gaj-jeen.jpg"
+        "cover": "gaj-jeen.jpg",
+        "creditsText": "JEEN - GOOD ASS JOB (Credits)\n\nMixed by ahmed2.0.\nArtwork by NobodyIsNari.\n\nTracklist:\n1. Ain't No Tellin'\n\tDemumble inspiration: Simplejosh\n2. Find Your Love\n\tVerse selection: poofartpoo\n3. Dance At Night\n4. That's My Bitch\n5. Throw Money Everywhere\n6. Crazy Life\n\tVerse selection: poofartpoo\n7. Down Town\n\tStems used: DAWGY STYLE\n8. Ayyy Girl\n\tProduction: poofartpoo\n    Additional production: ahmed2.0.\n9. We Like To Party\n\tSynthwork: IcyCity\n    Verse selection: poofartpoo & IcyCity\n10. Mama's Boy\n\tProduction: poofartpoo\n11. Diamonds & Dollars\n\tVerse selection: chrispo\n12. Hornz\n\tVerse selection: poofartpoo\n13. All The Time\n\tVerse selection: poofartpoo\n    Synthwork: IcyCity\n14. See Me Now\n\tAdditional production: IcyCity"
       },
       {
         "id": "gaj-simplejosh",
@@ -2785,7 +2808,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "gaj-simplejosh.png"
+        "cover": "gaj-simplejosh.png",
+        "creditsText": "-rearranged tracklist\r\n\r\n1. - added 2nd verse from \"beat goes on\", all credit to pastelle\r\n- added jeezy adlibs first verse, additional piano 2nd verse\r\n\r\n3. - added bon iver to hook\r\n- added kanye autotune outro with fx\r\n\r\n4. - added strings + synths\r\n\r\n5. - added get under my skin vocal to outro\r\n\r\n6. - new edit\r\n\r\n7. - new edit\r\n\r\n8. - added the champ is here intro\r\n\r\n10. - new sample intro\r\n\r\n15. - added hi hats to 2nd half\r\n\r\ncut monster"
       },
       {
         "id": "gaj-akimbo",
@@ -2876,7 +2900,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "gaj-akimbo.jpg"
+        "cover": "gaj-akimbo.jpg",
+        "creditsText": null
       }
     ]
   },
@@ -2934,7 +2959,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "mbdtfs-quentin.png"
+        "cover": "mbdtfs-quentin.png",
+        "creditsText": null
       },
       {
         "id": "mbdtf-deluxe-coolgamez",
@@ -2993,7 +3019,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "mbdtf-deluxe-coolgamez.jpeg"
+        "cover": "mbdtf-deluxe-coolgamez.jpeg",
+        "creditsText": "1. Live Fast, Die Young (ft. Pusha T, Connie Mitchell, The WRLDFMS Tony Williams & John Legend) - edit by cool_gamez & ApeHard, mix by ON SIGHT\n2. Sweat On My Face (ft. Mos Def) - edit by cool_gamez, mix by Paci\n3. Chain Heavy (ft. Talib Kweli, Consequence & M.I.A.) - edit by cool_gamez\n4. Mama’s Boy - edit by cool_gamez, mix by ON SIGHT\n5. Pure (ft. Mr. Hudson) - edit by cool_gamez\n6. Holding Me Back (ft. Clipse) - edit by cool_gamez & MILK!, mix by ON SIGHT\n7. Eyes Closed (ft. John Legend & Bon Iver) - edit by cool_gamez, mix by ON SIGHT\n\n“I would like to thank everyone who was involved with creating this project, whether it was feedback, mixing or editing, for dedicating some of their precious time for the comp. I also want to thank the listeners for choosing to listen the edits that I have made. And of course, I want to thank Kanye West for creating the incredible album My Beautiful Dark Twisted Fantasy, since the comp wouldn’t have existed without these pieces of music. \nI hope you enjoyed my first proper comp. The project took exactly 4 months from start to finish. I am very proud of the outcome, even if the edits are definitely not up to par with MBDTF. However stay tuned for more edits and comps to come, I’m working on a solo 2011/2012 comp and a 2009 Good Ass Job comp. I love you all! :D” - cool_gamez"
       },
       {
         "id": "mbdtf-mikedean-harley",
@@ -3085,7 +3112,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "mbdtf-mikedean-harley.jpg"
+        "cover": "mbdtf-mikedean-harley.jpg",
+        "creditsText": null
       },
       {
         "id": "gaj-zhangyong-bobert",
@@ -3186,7 +3214,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "gaj-zhangyong-bobert.png"
+        "cover": "gaj-zhangyong-bobert.png",
+        "creditsText": null
       },
       {
         "id": "gaj-88888u",
@@ -3269,7 +3298,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "gaj-88888u.png"
+        "cover": "gaj-88888u.png",
+        "creditsText": null
       },
       {
         "id": "gktf-toasty",
@@ -3354,7 +3384,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "gktf-toasty.jpg"
+        "cover": "gktf-toasty.jpg",
+        "creditsText": null
       }
     ]
   },
@@ -3453,7 +3484,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "return-of-the-throne.jpg"
+        "cover": "return-of-the-throne.jpg",
+        "creditsText": "Changelog / Credits for Return of The Throne by Reborn Sinner because I think they're neat\n\n1. Holy Grail (edit by Reborn Sinner, Batrick Pateman & Teon335)\nThe-Dream version, added Ye verse from New Slaves verse\n2. Not The Same (edit by Reborn Sinner)\nAdded Jay-Z verse from Heaven, Edited structure\n3. Fuckwitmeyouknowigotit (edit by Reborn Sinner)\nAdded Kanye verse from Amen\n4. Greek Medusa (edit by Reborn Sinner)\nAdded Ye & Jay-Z verses from Cold & Picasso Baby respectively\n5. Crown (edit by Reborn Sinner)\nAdded Ye & Travis verses from Blessings & Dinosaurus respectively as well as slight add. prod\n6. Somewhere In America (edit by Reborn Sinner)\nAdded Ye verse from Clique\n7. Oceans (edit by Reborn Sinner)\nAdded Ye verse from Diamonds (Remix)\n8. Mannequin (edit by Reborn Sinner & V96)\nV96 recreation of the beat, John Legend vocals both from detagged Mannequin snip & Tonight (Best You Ever Had), Ye verse from Christian Dior Denim Flow, Jay-Z verse from Nicekls & Dimes\n9. Heaven (edit by Reborn Sinner)\nAdded Ye verse from New God Flow, as well as beat switch on his part\n10. Soundproof (edit by Reborn Sinner)\nEmotions: Added Jay-Z & Ye verses from Picasso Baby & Blood On The Leaves respectively\nPadded Walls: Added Jay-Z verse from Nickel & Dimes, structured\n11. No White Jesus (edit by Reborn Sinner)\nAdded Ye verse from White Dress, Jay-Z verse from Pound Cake\n12. Through The Roof (edit by Reborn Sinner)\nAdded Ye verse from Birthday Song, Jay-Z verse from Bitch Don't Kill My Vibe (Remix)"
       },
       {
         "id": "wtt-deluxe-rm",
@@ -3569,7 +3601,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "wtt-deluxe-rm.jpg"
+        "cover": "wtt-deluxe-rm.jpg",
+        "creditsText": null
       },
       {
         "id": "black-excellence-victor",
@@ -3640,7 +3673,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "black-excellence-victor.jpg"
+        "cover": "black-excellence-victor.jpg",
+        "creditsText": null
       }
     ]
   },
@@ -3732,7 +3766,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "golden-head-nari.png"
+        "cover": "golden-head-nari.png",
+        "creditsText": null
       },
       {
         "id": "tgfd-simplejosh",
@@ -3878,7 +3913,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "tgfd-simplejosh.jpg"
+        "cover": "tgfd-simplejosh.jpg",
+        "creditsText": "1. I Am Not Home - Extra production by JonJeffJonJon\r\n2. Yeezus\r\n3. Send It Up\r\n4. Can't Get Over Me\r\n5. Talk To Me\r\n6. LOUDER!\r\n7. Good Things Don't Last - Extra production by Bound 12, acapella provided by Ringbert\r\n8. Perfect Bitch - Extra production by JonJeffJonJon, Default_Miserable\r\n9. Blood On The Leaves - Extra production by ComptonRapper\r\n10. On Sight\r\n11. GOD!\r\n12. Guilt Trip\r\n13. New Slaves\r\n14. Black Skinhead\r\n15. Emotionless - Extra production by JonJeffJonJon, Default_Miserable\r\n16. No No No No\r\n17. Hollywood\r\n18. Awesome\r\n19. One I Love\r\n20. Nobody To Love\r\n\r\nThank you to seal for 2nd opinions\r\nThank you to rose for helping transcribe lyrics"
       },
       {
         "id": "tgfd-jozzuh",
@@ -4007,7 +4043,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "tgfd-jozzuh.jpg"
+        "cover": "tgfd-jozzuh.jpg",
+        "creditsText": "THANK GOD FOR DRUGS\n\n- tagged with a fake space so it does not clash with SimpleJosh TGFD on itunes :o\n\nEditor List:\n\nJozzuh, Akimbo, UNDERDAWG, Rectanx, Solidus Jack, SimpleJosh, Bloo, Casual, DMS, Nyla_Starkiler\n\n\nSpecial thanks to:\n\nJeen, Uhhjulian, Uncover Cop, PooFartPoo, Toilet, and Oreo for feedback :D\n\nTRACKLIST\n\n1. I Am Not Home (edit. Jozzuh & Akimbo)\n\n2. On Sight (edit. UNDERDAWG)\n\n3. Black Skinhead (edit. Rectanx & Solidus Jack)\n\n4. Send It Up (edit. Jozzuh, Akimbo & UNDERDAWG)\n\n5. Hold My Liquor (edit. Solidus Jack, Akimbo, SimpleJosh & UNDERDAWG)\n\n6. Talk To Me (edit. Akimbo, UNDERDAWG & Solidus Jack) - mastered by Rectanx\n\n7. Can't Get Over me (edit. SimpleJosh)\n\n8. New Slaves (edt. Bloo, Akimbo, Solidus Jack & Jozzuh)\n\n9. No More Games (edit. UNDERDAWG, Akimbo, Rectanx, Casual & Solidus Jack)\n\n10. Blood On The Leaves (edit. UNDERDAWG, Akimbo & DMS)\n\n11. Guilt Trip (edit. Rectanx & Akimbo)\n\n12. Why Feel Bad (edit. SimpleJosh & Jozzuh)\n\n13. I Am A God (edit. Rectanx & UNDERDAWG)\n\n14. Emotions (edit. Jozzuh, UNDERDAWG & Akimbo)\n\n15. No No No No (edit. Jozzuh, SimpleJosh & Akimbo)\n\n16. One I Love (edit. Kanye West)\n\n17. Awesome (edit. Akimbo, Casual & Nyla_Starkiler)\n\n18. Nobody To Love (edit. SimpleJosh, Rectanx, Akimbo, UNDERDAWG & DMS)"
       },
       {
         "id": "bap-solidusjack",
@@ -4117,7 +4154,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "bap-solidusjack.png"
+        "cover": "bap-solidusjack.png",
+        "creditsText": null
       },
       {
         "id": "tgfd-akimbo-cut",
@@ -4230,7 +4268,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "tgfd-akimbo-cut.jpg"
+        "cover": "tgfd-akimbo-cut.jpg",
+        "creditsText": null
       },
       {
         "id": "lost-yeezus-revised",
@@ -4381,7 +4420,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "lost-yeezus-revised.jpg"
+        "cover": "lost-yeezus-revised.jpg",
+        "creditsText": null
       },
       {
         "id": "lost-yeezus-v2-simplejosh",
@@ -4470,7 +4510,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "lost-yeezus-v2-simplejosh.jpg"
+        "cover": "lost-yeezus-v2-simplejosh.jpg",
+        "creditsText": null
       }
     ]
   },
@@ -4561,7 +4602,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "god-wants-you-windybro.png"
+        "cover": "god-wants-you-windybro.png",
+        "creditsText": "GOD WANTS YOU\r\nWindyBro\r\n\r\n1. ON SIGHT\r\n- Twin Peaks: Fire Walk With Me (1993)\r\n- Michael Jackson - Thriller (Music Video)\r\n2. BLKKK SKKKN HEAD\r\n- Beta Erko - Damn Bubbles That Hz\r\n- The Beatnigs - (Re-Classification) Control\r\n- Twin Peaks - Season 2, Episode 22\r\n3. GOD\r\n- Twin Peaks: International Pilot (1990)\r\n- Westwind -  #05 Patriotisme\r\n- Ghostigital - Not Clean\r\n- Haus Arafna - You Don't Believe Me [The Dream You Can Follow]\r\n- OLIVIA - Celestial Delinquent\r\n- The Beatnigs - C.I.A.\r\n4. ©O1DW1N†3® (NEW SLAVES)\r\n- Inland Empire: Behind The Scenes (2006)\r\n5. SEND IT UP\r\n- Beastie Boys - Intergalatic\r\n- Wild At Heart (1990)\r\n6. HOLD MY LIQOUR\r\n- Twin Peaks - Episode 29: Beyond Life And Death\r\n- The Cardigans - Starter\r\n7. ST★RF★CK★R\r\n- Yellow Tears - Did This Really Happen?\r\n- Medzcool - Sounds Of Asthma: Wheezing Sounds\r\n- Angelo Badalmenti - Laura Palmer's Theme (Instrumental)\r\n- BLKKK SKKKN HEAD (Music Video)\r\n- Blue Velvet (1986)\r\n8. BLOODONTHELEAVES\r\n- Synascape - So What\r\n- Chrysalide – Rest In Silence My Friend\r\n9. THE ONE THAT GOT AWAY\r\n- Kanye West & JAY-Z - Why I Love You\r\n- Twin Peaks - Episode 9: May The Giant Be With You\r\n- Pusha T - Blocka\r\n10. BOUND.2\r\n- Wild At Heart (1990)"
       },
       {
         "id": "yeezus-remastered-icyedits",
@@ -4638,7 +4680,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "yeezus-remastered-icyedits.jpg"
+        "cover": "yeezus-remastered-icyedits.jpg",
+        "creditsText": null
       },
       {
         "id": "not-for-sale-gothfukker",
@@ -4721,7 +4764,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "not-for-sale-gothfukker.png"
+        "cover": "not-for-sale-gothfukker.png",
+        "creditsText": null
       },
       {
         "id": "yeezus-extended-soundwave",
@@ -4828,7 +4872,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "yeezus-extended-soundwave.jpg"
+        "cover": "yeezus-extended-soundwave.jpg",
+        "creditsText": "(2013) - Yeezus (Extended)\r\nChanges\r\n1. I Am Not Home\r\nShortened it.\r\n2. Black Skinhead\r\nUsed the edit made by SimpleJosh and swapped out the end of the outro for released.\r\n3. I Am A God\r\nAdded the drums from MODERN JAM and added the bollywood sample.\r\n4. New Slaves\r\nExtended the intro using the the IntroXXXWar sample.\r\n5. Hold My Liquor\r\nAdded the full Bon Iver verse & the longer guitar from the April 30th version to the edit of HML from BSB Dante's Yeezus OG comp.\r\n6. No No No No\r\nRemoved the opens and added the outro from V1 to V2.\r\n7. I'm In It\r\nMade a blend of different Talk To Me/I'm In It versions.\r\n8. Blood On The Leaves\r\nBlend of SimpleJosh, Yedits & BSB Dante BOTL.\r\n9. Guilt Trip\r\nFrom BSB Dante's Yeezus OG comp.\r\n10. Send It Up\r\nAdded more the sample to the outro.\r\n11. Nobody To Love\r\nMade a blend of different Nobody To Love/Bound 2 versions."
       },
       {
         "id": "mourn-for-the-weak",
@@ -4890,7 +4935,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "mourn-for-the-weak.jpg"
+        "cover": "mourn-for-the-weak.jpg",
+        "creditsText": null
       },
       {
         "id": "yessiah-obelisc",
@@ -4982,7 +5028,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "yessiah-obelisc.png"
+        "cover": "yessiah-obelisc.png",
+        "creditsText": "A remix comp by Obelisc (OBLX)\n\nYessiah is not a normal Yedit, it is a reimagining of Yeezus thru the eyes of Obelisc. All starting from I'M IN IT. This is tape is be a showcase of Obelisc's ability to mix, master, and make something immaculate.\n\nOBELISC HAS NO RESPONSIBILITY TO ANYONE WHO DECIDES TO ROB A GAP STORE.\n\nTracklist:\nON SIGHT\nBLACK SKINHEAD\nI AM A GOD\nNew Slaves\nHOLD MY LIQOUR\nI'M IN IT\nBlood on the Leaves\nGuilt Trip\nSent it up \nBound 1+2\nAwesome (Bonus)\n\n\nEdit (10.10.2024): hello all, so heres some bad news, for the past couple of weeks since my comp has been out, I have been trying to get this listed on the Yedits tracker (https://docs.google.com/spreadsheets/d/1UyNRgP4q_UANPRboTq9uyGdW74qx601Vs92avYrMHjs/edit?gid=434089702#gid=434089702) and Sophie's Tracker (https://docs.google.com/spreadsheets/d/1jIuHLBSDSWACWKEwa8QxxGEdFQHddL2SvVWhW52nx1U/edit?gid=1932246858#gid=1932246858). I put this here as a way to make my ultimatum, by the time the premiere has ended, if not one of them have yessiah, I will delete all the stems for it. Until someone tries to download it and archives it like a historian.\n\nEdit (10.12.2024):Yeah so neither had put the comp in, so I havd deleted the stem folder. I will never rerelease those back. Neither will I release any stems for any future projects (ye related or other)"
       }
     ]
   },
@@ -5093,7 +5140,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "cruel-winter-ahmed-v1.jpg"
+        "cover": "cruel-winter-ahmed-v1.jpg",
+        "creditsText": null
       },
       {
         "id": "cruel-winter-2014-pablo",
@@ -5170,7 +5218,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "cruel-winter-2014-pablo.jpg"
+        "cover": "cruel-winter-2014-pablo.jpg",
+        "creditsText": null
       }
     ]
   },
@@ -5333,7 +5382,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "sensational-solidusjack.png"
+        "cover": "sensational-solidusjack.png",
+        "creditsText": "1. However You Want It\r\n2. Never Tried This\r\n3. Holy Water\r\n4. Been Trill\r\n5. Enya\r\n6. You Ain't No Model\r\n7. Hold Me Close\r\n8. Jukebox Joints\r\n9. Finesse\r\n10. M.P.A.\r\n11. Timeless\r\n12. All Your Fault\r\n13. Piss On Your Grave\r\n14. God Level\r\n15. I Feel Like That\r\n16. Awesome"
       },
       {
         "id": "yeezus-ii-luwi",
@@ -5418,7 +5468,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "yeezus-ii-luwi.jpg"
+        "cover": "yeezus-ii-luwi.jpg",
+        "creditsText": null
       },
       {
         "id": "yeezus-ii-windybro",
@@ -5531,7 +5582,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "yeezus-ii-windybro.jpg"
+        "cover": "yeezus-ii-windybro.jpg",
+        "creditsText": null
       },
       {
         "id": "yeezus-2-hc",
@@ -5620,7 +5672,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "yeezus-2-hc.jpg"
+        "cover": "yeezus-2-hc.jpg",
+        "creditsText": "ty everyone for the support, wouldn't have happened without it! :)\n\nshoutout to louiebag for making the trailer\nshoutout to retroshaffer for help with the tracklist\nshoutout to akimbo for supporting the comp\n\ncompiled list of the main changes done to each track\n\nAbout Time:\n- Added Darren King drums\n- Rechopped sample\n- Mixed vocals\n\nWhen I See It:\n- Release instrumental\n- Finished Kanye vox\n- Mike Dean outro\n- The Weeknd intro / bridge\n- Drake verse\n\nBack Up Off The Ledge:\n- Added drums / bass\n- Bpm aligned\n\nGut Feeling:\n- New drums\n- Added verse from Start It Up by Lloyd Banks\n- Used vocals from 11.13.13 version as chorus\n\nHowever You Want It:\n- Made before it leaked, based off snip\n- Bpm aligned to 108\n- New drums\n- Beatswitch\n\nSpecial:\n- Demumbled\n- Added extra prod\n- Added guitar solo / chopped outro\n\nHummer:\n- Added verse from Blessings by Big Sean\n- Used MovaKween vocals from Downward\n\nGod Level:\n- More listenable mumble\n- Added Sam Dew bridge / bg vocals\n- Added bass from other version\n- Kept outro and bridge from the original leak\n\nCan't Get Over Me:\n- Demumbled\n- More finished Kanye hook (tried to mix it similar to tony williams)\n- The-Dream outro\n\nFall Into You:\n- Rechopped sample\n- Added verse from I Won by Future\n- Used vocals from 11.13.13 version as chorus\n\nNever Wanted To Be:\n- Bpm aligned\n- Added drums / bass\n- Beatswitch\n- Slightly demumbled / rearranged\n\nHoly Water:\n- New Drums\n- Beatswitch\n- A LOT of new prod."
       }
     ]
   },
@@ -5765,7 +5818,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "chiraq-nari.jpg"
+        "cover": "chiraq-nari.jpg",
+        "creditsText": null
       },
       {
         "id": "shmg-windybro",
@@ -5893,7 +5947,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "shmg-windybro.png"
+        "cover": "shmg-windybro.png",
+        "creditsText": null
       },
       {
         "id": "shmg-angels-miracles",
@@ -6048,7 +6103,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "shmg-angels-miracles.png"
+        "cover": "shmg-angels-miracles.png",
+        "creditsText": null
       },
       {
         "id": "shmg-v2-pxblo",
@@ -6119,7 +6175,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "shmg-v2-pxblo.png"
+        "cover": "shmg-v2-pxblo.png",
+        "creditsText": null
       },
       {
         "id": "shmg-v3-simplejosh",
@@ -6235,7 +6292,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "shmg-v3-simplejosh.png"
+        "cover": "shmg-v3-simplejosh.png",
+        "creditsText": null
       },
       {
         "id": "shmg-matsu",
@@ -6318,7 +6376,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "shmg-matsu.png"
+        "cover": "shmg-matsu.png",
+        "creditsText": null
       }
     ]
   },
@@ -6428,7 +6487,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "swish-luwi-lilac.png"
+        "cover": "swish-luwi-lilac.png",
+        "creditsText": null
       },
       {
         "id": "waves-solidusjack",
@@ -6578,7 +6638,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "waves-solidusjack.png"
+        "cover": "waves-solidusjack.png",
+        "creditsText": null
       },
       {
         "id": "swish-poofartpoo",
@@ -6655,7 +6716,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "swish-poofartpoo.png"
+        "cover": "swish-poofartpoo.png",
+        "creditsText": null
       },
       {
         "id": "swish-bingboop",
@@ -6770,7 +6832,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "swish-bingboop.jpg"
+        "cover": "swish-bingboop.jpg",
+        "creditsText": null
       },
       {
         "id": "swish-akimbo",
@@ -6873,7 +6936,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "swish-akimbo.png"
+        "cover": "swish-akimbo.png",
+        "creditsText": null
       }
     ]
   },
@@ -6964,7 +7028,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "808s-orchestration-takatyphoon.png"
+        "cover": "808s-orchestration-takatyphoon.png",
+        "creditsText": null
       },
       {
         "id": "808s-hb-simplejosh",
@@ -7079,7 +7144,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "808s-hb-simplejosh.jpg"
+        "cover": "808s-hb-simplejosh.jpg",
+        "creditsText": null
       }
     ]
   },
@@ -7227,7 +7293,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "mgia-windybro.png"
+        "cover": "mgia-windybro.png",
+        "creditsText": "1. SPREAD MY WINGS (Edit By WindyBro)\n2. WAVES (Edit By WindyBro)\n3. HOOD FAMOUS (Most Of Edit By SolidusJack, Intro And Outro By WindyBro)\n4. GO PRO (Inst By SolidusJack Edit By WindyBro)\n5. THE MALL (Edit By WindyBro)\n6. LIBERATED (Pt. 1 Edit By WindyBro, Pt. 2 Edit By SolidusJack)\n7. FUCK RT NOW (Edit By WindyBro)\n8. FEEDBACK (Edit By WindyBro)\n9. MULA (Edit By WindyBro)\n10. FACTS (Edit By WindyBro)\n11. FADE AWAY (Edit By WindyBro)\n12. 30 HOURS (Edit By WindyBro, Alt Guitar By Boon)\n13. FML (Edit By WindyBro)\n14. REAL FRIENDS (Edit By WindyBro)\n15. MY GOD IS AWESOME (Edit By SolidusJack, Alt Ver By WindyBro)\n16. NO MORE PARTIES IN L.A. (Edits By SolidusJack And Matsu, Intro And Outro By WindyBro)\n17. ULTRALIGHT BEAMS (Edit By WindyBro)\n18. PRAYER (Edit By WindyBro)\n19. I FEEL LIKE THAT (Edit By WindyBro)\n20. SAINT PABLO (Edit By WindyBro)"
       },
       {
         "id": "ultralight-beam-jjjj",
@@ -7346,7 +7413,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "ultralight-beam-jjjj.jpg"
+        "cover": "ultralight-beam-jjjj.jpg",
+        "creditsText": null
       },
       {
         "id": "tlop-radikal-redux",
@@ -7485,7 +7553,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "tlop-radikal-redux.jpg"
+        "cover": "tlop-radikal-redux.jpg",
+        "creditsText": "Change Log Abbreviated - Version 1.00\r\n\r\nThe popular fanmade edit \"The Life of Paul\" by Dorian Ye was the main influence for this project\r\n19 of the original TLOP tracks included have drawn elements direct from that edit\r\n\"All Day\" has been added to the lineup, with \"Frank's Track\" becoming part of \"Wolves\" where it deserves to be\r\nAnother popular fanmade edit \"TLOP Extended\" by BlockaShotya has some components used here as well\r\n\r\nThanks to both these individuals for their contributions, be sure to check out their edits\r\n\r\nArtwork created by Reddit u/spksies\r\n\r\nThe purpose of the following edit was to achieve a more complete sounding TLOP while remaining as authentic as possible\r\nIf something felt even the slightest out of place, it was left off\r\nRuntime was not a concern so long as the final mix sounds authentic in quality\r\n\r\nUltralight Beam\r\n- Dorian Ye's \"Ultralight Prayer\" intro\r\n- added feature verses by Pardison Fontaine & Kota the Friend, both coming from HQ freestyles\r\n- Dorian Ye's outro\r\n\r\nFather Stretch My Hands, Pt. 1\r\n- Dorian Ye's intro (tweaked to still include the keyboard from the official version)\r\n- added feature verse by Kendrick Lamar (bruh, one of his hardest guest verses possibly ever? Goddamn)\r\n- added Kid Cudi solo bridge just before final chorus\r\n- BlockaShotya's outro (tweaked to still include the official ending, albeit minimally)\r\n- considered adding PnB Rock verse, ultimately didn't (it's not very good - low quality and cringy lines)\r\n\r\nPt. 2\r\n- Dorian Ye's extended Desiigner verse\r\n- BlockaShotya's Meek Mill, T-Pain & Montana of 300 verses\r\n- added transition between Desiigner and Meek Mill verses\r\n- polished *static* cut audible in T-Pain verse\r\n- Dorian Ye's outro (tweaked to still include the official ending, albeit minimally)\r\n\r\nFamous\r\n- Dorian Ye's intro\r\n- tweaked chorus to be all Rihanna after Kanye's second verse\r\n- added feature verse by Rick Ross\r\n- removed cringy lines of Rick Ross rapping about being naked, comparing himself to The Rock, etc...\r\n\r\n\t\t\"I'm half naked in the GQ magazine\r\n\t\tTours looking like it's Wrestlemania\r\n\t\tI'm The Rock setting fires to the stadium\r\n\t\tBurn it down then I'm off to another beat\r\n\t\tMight get engaged to a freak just for a couple weeks\"\r\n\r\n- added transition between Rick Ross and Young Thug verses\r\n- BlockaShotya's Young Thug verse\r\n- Dorian Ye's outro\r\n- considered adding IDK verse, ultimately didn't (it's not very good - low quality)\r\n\r\nFeedback\r\n- Dorian Ye's mix\r\n- adjusted soft first note on intro, not so abrupt\r\n\r\nAll Day\r\n- Dorian Ye's intro (piano) (tweaked to still include the official intro)\r\n- polished *static* cut audible at the end of Kendrick's verse\r\n\r\nLow Lights\r\n- added Ludlow's mix featuring Chance's little brother Taylor Bennett\r\n- added feature verse by Alicia Keys\r\n\r\nHighlights\r\n- Dorian Ye's intro\r\n- polished *static* cut audible during the intro\r\n- reverted second half of song back to official version after Barbra Streisand interlude\r\n- removed demo verses where Kanye is mostly mumbling and repeating himself\r\n\r\nFreestyle 4\r\n- Dorian Ye's intro\r\n- added A$AP Ferg adlibs over beat after Desiigner verse\r\n- removed A$AP Ferg verse (it's not very good - low quality)\r\n- added feature verses by Big Sean, Tyler, The Creator and A$AP Rocky, all coming from HQ freestyles\r\n- BlockaShotya's outro\r\n\r\nI Love Kanye\r\n- Dorian Ye's mix (tweaked to still include the official acapella outro)\r\n\r\nWaves\r\n- BlockaShotya's intro\r\n- Dorian Ye's mix\r\n- Dorian Ye's outro\r\n\r\nFML\r\n- Dorian Ye's intro\r\n- added Bon Iver interlude\r\n- polished *static* cut audible at the start of Travis Scott chorus\r\n- Dorian Ye's outro\r\n\r\nReal Friends\r\n- Dorian Ye's intro\r\n- added feature verse by DMX, coming from HQ freestyle\r\n- removed a line where DMX says he hates you :(\r\n\r\n\t\t\"Thank you. I hate you\"\r\n\r\n- BlockaShotya's Big K.R.I.T. verse\r\n- adjusted transition between Big K.R.I.T. and Kanye verses\r\n\r\nWolves\r\n- BlockaShotya's intro\r\n- Dorian Ye's mix\r\n- BlockaShotya's outro (includes Frank's Track by Frank Ocean)\r\n\r\nSiiiiiiiiilver Surffffeeeeer Intermission\r\n- added FaceTime sounds\r\n\r\n30 Hours\r\n- Dorian Ye's intro\r\n- added feature verses by Big K.R.I.T. & Juice WRLD, both coming from HQ freestyles\r\n- adjusted arrangement of Juice WRLD verses minimally\r\n- tweaked to still include the sampled interlude from the official version\r\n- Dorian Ye's outro\r\n\r\nNo More Parties in LA\r\n- Dorian Ye's intro\r\n- added feature verse by Freddie Gibbs, coming from his own version of the song\r\n- added the voice mail by Yasiin to Kanye while Yasiin was locked down in South Africa\r\n- tweaked the voice mail to flow smoother, removing *static* and pauses in audio\r\n\r\nFacts (Dorian Ye Version)\r\n- Dorian Ye's mix\r\n\r\nFade\r\n- Dorian Ye's mix\r\n\r\nSaint Pablo\r\n- Dorian Ye's mix (tweaked the ending to fade out)\r\n\r\n\r\nAny unofficial lyrics have been researched and in some places newly transcribed entirely\r\n- the lyrics, wherever unclear or incoherent, have been slightly adjusted\r\n\r\nThank you for listening/reading and hope you enjoyed\r\nKeep it free\r\nKeep it alive"
       },
       {
         "id": "life-of-paul-dorianye",
@@ -7648,7 +7717,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "life-of-paul-dorianye.png"
+        "cover": "life-of-paul-dorianye.png",
+        "creditsText": null
       },
       {
         "id": "tlop-extended-blockashotya",
@@ -7769,7 +7839,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "tlop-extended-blockashotya.png"
+        "cover": "tlop-extended-blockashotya.png",
+        "creditsText": null
       },
       {
         "id": "death-of-pablo-pacol",
@@ -7825,7 +7896,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "death-of-pablo-pacol.jpg"
+        "cover": "death-of-pablo-pacol.jpg",
+        "creditsText": null
       }
     ]
   },
@@ -7942,7 +8014,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "cruel-winter-ahmed-v2.jpg"
+        "cover": "cruel-winter-ahmed-v2.jpg",
+        "creditsText": "SIDE A: THE PAIN\n1. Cruel Winter\n- ahmed 2.0, themusicnerdguy & andrewfella\n2. Need More \n- ahmed 2.0 & andrewfella\n3. Can't Look In My Eyes \n- ahmed 2.0, fuckwad, sumsoop & luwi\n4. Pain.1\n- ahmed 2.0 & fuckwad\n5. All The Time\n- ahmed 2.0 & metalfaceterrorist\n6. Never Lose\n- ahmed 2.0, mimi, m3lt & fuckwad\n7. Enjoy The Pain\n- ahmed 2.0\n\nSIDE B: THE MIND\n8. Champions.1\n- ahmed 2.0, x3mili & rectanx\n9. Hold Tight\n- ahmed 2.0, yuri, ben & fuckwad\n10. Panda.1\n- ahmed 2.0, Days Dissolve, andrewfella & lilac\n11. In Common (Remix)\n- ahmed 2.0\n12. The Mind Is Powerful\n- ahmed 2.0 & chrispo\n13. Face Down\nahmed 2.0, isabtoddler & m3lt\n14. All I Know\n- ahmed 2.0\n\n\n\nMajor thanks to x3mili for most of the extracts & camila for feedback!!!!!!!!!!!!!!!!!"
       },
       {
         "id": "cruel-winter-2017-simplejosh",
@@ -8013,7 +8086,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "cruel-winter-2017-simplejosh.png"
+        "cover": "cruel-winter-2017-simplejosh.png",
+        "creditsText": null
       }
     ]
   },
@@ -8089,7 +8163,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "tg16-mitus.png"
+        "cover": "tg16-mitus.png",
+        "creditsText": "1. Damn, Come On // Goodnight Gotham\r\njozzuh, soup & metalfaceterrorist - mixed by metalfaceterrorist\r\n\r\n2. Bad Night\r\nsarahwiwi, jozzuh & soup - mixed by metalfaceterrorist\r\n\r\n3. Mitus Touch\r\nmetalfaceterrorist, jozzuh, sarahwiwi & soup - mixed by metalfaceterrorist\r\n\r\n4. Jealous\r\nmetalfaceterrorist, soup & jozzuh - mixed by metalfaceterrorist\r\n\r\n5. All I Know\r\njozzuh, metalfaceterrorist & soup - mixed by metalfaceterrorist\r\n\r\n6. That's On You\r\nsoup, metalfaceterrorist & jozzuh - mixed by metalfaceterrorist\r\n\r\n\r\n7. Forever\r\nmetalfaceterrorist, soup & jozzuh - mixed by metalfaceterrorist\r\n\r\n\r\n8. Gods Of The City\r\njozzuh, soup - mixed by bobert\r\n\r\n\r\nHUGE thank you to sohpie for all of the keyon info and general help around the comp without hr this comp wouldnt have been so cool and might have not finished\r\nalso a HUGE thank you for sarahwiwi for her help on bad night and mitus touch and bobert for his help on gotc ❤️"
       },
       {
         "id": "ultra-minerva",
@@ -8228,7 +8303,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "ultra-minerva.png"
+        "cover": "ultra-minerva.png",
+        "creditsText": null
       },
       {
         "id": "pc-engine-v2-minerva",
@@ -8379,7 +8455,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "pc-engine-v2-minerva.png"
+        "cover": "pc-engine-v2-minerva.png",
+        "creditsText": null
       },
       {
         "id": "tg16-poofartpoo",
@@ -8486,7 +8563,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "tg16-poofartpoo.png"
+        "cover": "tg16-poofartpoo.png",
+        "creditsText": null
       },
       {
         "id": "tg16-indigo-remastered-gv",
@@ -8601,7 +8679,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "tg16-indigo-remastered-gv.png"
+        "cover": "tg16-indigo-remastered-gv.png",
+        "creditsText": "1. ALL EYES ON YE (feat. Kid Cudi)\n2. INDIGO INTERLUDE\n3. FACE DOWN (feat. Quavo & Lil Yachty)\n4. FEEL ME (feat. Tyga & Big Sean)\n5. HOLD TIGHT (feat. Migos & Young Thug)\n6. JEALOUS (feat. Justin Bieber & Post Malone)\n7. MEDICATED\n8. CHAMPIONS (feat. Gucci Mane, Big Sean, 2 Chainz, Travis Scott, Yo Gotti, Quavo & Desiigner)\n9. EURO (feat. A$AP Rocky)\n10. NO REASON (feat. Post Malone & Justin Bieber)\n11. RAP TARANTINO (feat. Young Thug)\n12. ABOVE THE INFLUENCE (feat. Tyga)\n13. ONLY YE (feat. Tyga)\n14. SUPER STARRED (feat. Osbe Chill)\n15. UCLA\n16. INSTALOVE (feat. Post Malone)\n\nALL FEATURES ARE HIDDEN IN TAGGING\n\nALL EDITS BY SIMPLEJOSH, REMASTERED BY GV"
       },
       {
         "id": "tg16-indigo-simplejosh",
@@ -8714,7 +8793,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "tg16-indigo-simplejosh.jpg"
+        "cover": "tg16-indigo-simplejosh.jpg",
+        "creditsText": "TURBOGRAFX 16: INDIGO SOUND\r\n1  ALL EYES ON YE FT KID CUDI\r\n2  INDIGO INTERLUDE\r\n3  FACE DOWN FT QUAVO & LIL YACHTY\r\n4  FEEL ME FT TYGA & BIG SEAN\r\n5  HOLD TIGHT FT YOUNG THUG & MIGOS\r\n6  JEALOUS FT POST MALONE & JUSTIN BIEBER\r\n7  MEDICATED\r\n8  CHAMPIONS FT GUCCI MANE, BIG SEAN, 2 CHAINZ, TRAVIS SCOTT, YO GOTTI, QUAVO, DESIIGNER\r\n9  EURO FT A$AP ROCKY\r\n10 NO REASON FT POST MALONE & JUSTIN BIEBER\r\n11 RAP TARANTINO FT YOUNG THUG\r\n12 ABOVE THE INFLUENCE FT TYGA\r\n13 ONLY YE FT TYGA\r\n14 SUPER STARRED FT OSBE CHILL\r\n15 UCLA\r\n16 INSTALOVE FT POST MALONE\r\n\r\nSAMPLES:\r\n All Eyes On Ye: https://www.youtube.com/watch?v=ZcwCuxbooEY and https://www.youtube.com/watch?v=2_3fPM7y8nY\r\n\r\nIndigo Interlude: https://www.youtube.com/watch?v=fKhrZ1h1vmE (Not a video game sample)\r\n\r\nFace Down: https://www.youtube.com/watch?v=40KNxlO3Spg\r\n\r\nFeel Me: https://www.youtube.com/watch?v=6yIDVDz6HDc\r\n\r\nHold Tight: Took me forever to find this but https://youtu.be/OfGx_EJiGak?si=uD0NvfoLPhJ5pGcP&t=1110 (timestamp) and https://www.youtube.com/watch?v=q-V8htEtAYI\r\n\r\nJealous: https://youtu.be/lX03j6Vd844 and https://youtu.be/y9Ln-qyvX_I?si=c-gvuyHDPxjs3UPZ and https://www.youtube.com/watch?v=HzHU38aZ7ok (Not a video game sample)\r\n\r\nMedicated: https://www.youtube.com/watch?v=DR_yTQ0SYVA (Not a video game sample)\r\n\r\nChampions: https://youtu.be/dua-BDE5fiw?si=pjJO-yUVjj0erj0p and https://www.youtube.com/watch?v=Ucu9fgpSvUA (Not a video game sample)\r\n\r\nEuro 2: https://www.youtube.com/watch?v=Eggb31_s5uc and https://www.youtube.com/watch?v=oyAP6PpAzK8\r\n\r\nNo Reason: https://youtu.be/qH-rPt1ftSo?si=UQGKTLchISPpxG-q (Not a video game sample) and https://www.youtube.com/watch?v=IRx9gnY0Mp0\r\n\r\nRap Tarantino: https://preservetube.com/watch?v=9L7mZH2u3Qc\r\n\r\nAbove The Influence: https://www.youtube.com/watch?v=FDG5GjQly8I\r\n\r\nOnly Ye: https://youtu.be/gwDTHkpX5Eg\r\n\r\nSuper Starred: https://youtu.be/k-Qut2E7AmA\r\n\r\nUCLA: https://www.youtube.com/watch?v=XNPT03KkZq\r\n\r\nInstalove: https://www.youtube.com/watch?v=_-joHbJfedE\r\n\r\n\r\n:SPECIAL THANKS TO SLEEPY FOR SECOND OPINIONS:"
       }
     ]
   },
@@ -8783,7 +8863,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "for-all-the-wolves-adn80.png"
+        "cover": "for-all-the-wolves-adn80.png",
+        "creditsText": null
       }
     ]
   },
@@ -8873,7 +8954,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "le-ben.png"
+        "cover": "le-ben.png",
+        "creditsText": "I Know, I Know - Ben\nYikes - Ben & Bloo\nMake It Out - Ben & Krisbunny\nThe Music Is Above You - ben\nFreeee - ben, ahmed 2.0 & berais\nSimple Things - Ben, Andrewfella & Icpd\nEverything - Ben\nTake Me To The Light - Ben & Days Dissolve\nNever Would Have Made It - Ben & Bloo\nThese Days - Ben\n\nthanks to gv, davi, bianca, gimpson, lilac, taco for feedback along the way u guys really helped :fbhug:\n\nthanks to ux for the cover its fukin phenomenal dudeeeee\n\nhope u like the comp ahhhh"
       },
       {
         "id": "le-spirits-defaultmiserable",
@@ -8964,7 +9046,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "le-spirits-defaultmiserable.jpg"
+        "cover": "le-spirits-defaultmiserable.jpg",
+        "creditsText": null
       },
       {
         "id": "le-simplejosh",
@@ -9041,7 +9124,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "le-simplejosh.png"
+        "cover": "le-simplejosh.png",
+        "creditsText": "I FEEL FREE\r\n-added Ty in place of Cudi\r\n-added one more I don't feel pain anymore before you should quit your job to this, like in demo\r\n-added restructured Chance verse in place of Cudi\r\n-added Kanye I feel adlibs leading into chorus (Credit to default_miserable)\r\n-added cutdown Kanye verse using both demoes\r\n-added extended outro from demo\r\n-added vocal fx\r\n\r\nEXTACY\r\n-uses full Jeff Bhasker inst\r\n-3 Kanye verses with fx, first 2 from demo, last from release\r\n-added Ty adlibs to match verses\r\n-added short interlude before 3rd verse\r\n-added pitched down outro vocals\r\n\r\nSKELETONS\r\n-uses compton mix as base\r\n-added Travis final verse in place of Kanye\r\n-layered Kanye on some of the Travis lines + fx\r\n\r\nBAD PEOPLE\r\n-added lots of background Kanye vocals with different fx for atmosphere\r\n-different structure using Rubin version\r\n-fixed clipping\r\n-added sample transition\r\nCOPS SHOT THE KID\r\n-structured for solo Kanye\r\n\r\nQUEEN BITCH\r\n-uses shorter demo version of Pusha verse with fx + adlibs\r\n-added Kanye adlibs at end of Pusha verse\r\n-added cutdown long Kanye verse using session\r\n-added various fx + adlibs\r\n\r\nMETTA WORLD PEACE\r\n-uses instrumental from Tony snippet with added elements from fine line\r\n-Francis first verse\r\n-different Kanye take chorus structure with various adlibs + fx\r\n-added Chance short vocals to bridge\r\n-added Kanye short vocals to bridge\r\n-outro from Tony snippet\r\n-added fine line Kanye vocals to outro\r\n\r\nEVERYTHING\r\n-all credit to Lionel for base stems\r\n-adds extra Kanye + The Dream singing vocals and adlibs from demo (intro, dark boy dont you cry, etc)\r\n-less choppy hook structure\r\n-added singing transition into verse so less abrupt, fixed flow of start of Kanye verse\r\n-fixed up drum isolation\r\n-cut a minute off of outro\r\n\r\nWOULDN'T LEAVE\r\n-cut down first verse from 5.17 + ending from og 2nd verse take to tie it back\r\n-louder bg vocal stack on jeremih\r\n-5.17 2nd verse take mixed with 5.25, slightly diff lines\r\n-cut ty dolla bridge added back from 5.25 version\r\n-extended ending to add 3rd verse, cut down from 5.25\r\n-short outro vocals\r\n-longer melody outro\r\n\r\nBROTHERS\r\n-added intro beat from demo\r\n-added transition using cut Kanye singing intro\r\n-added bass to first hook for smoother drop"
       },
       {
         "id": "le-caroline",
@@ -9100,7 +9184,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "le-caroline.png"
+        "cover": "le-caroline.png",
+        "creditsText": "CREDITS:\n\n1. Simple Things - edit & mixing by me\n2. Yikes - edit & mixing by me\n3. Lift Yourself - edit & mixing by me\n4. Skeletons - mix, edit, and structure by Akimbo\n5. Wouldn't Leave - structure by ay-suh, added prod. by bloo, & mixing by me\n6. Let You Go - edit by ay-suh & mixing by me\n7. Violent Crimes - edit & mixing by me\n\nCovers by cowboykermit & the music nerd guy"
       },
       {
         "id": "le-louiebag",
@@ -9159,7 +9244,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "le-louiebag.png"
+        "cover": "le-louiebag.png",
+        "creditsText": "Louiebag - Love Everyone\r\n\r\nA 7-track rework/remake comp that focuses on imagining what a semi-complete and semi-accurate version of Love Everyone might’ve sounded like before the TMZ rant. Mixed and mastered by me and Akimbo\r\n\r\n\r\nTRACKLIST/Credits:\r\n\r\n1. Freeee (feat. Ty Dolla $ign & Chance The Rapper) - Louiebag, Ahmed, Akimbo\r\n2. Cops Shot The Kid *(feat. Andre 3000 & Nas) - Louiebag, Akimbo\r\n3. XTCY (feat. Ty Dolla $ign) - Louiebag, M3lt, Lionel Scott, Akimbo\r\n4. Lift Yourself (feat. Pusha T) - Louiebag, Akimbo\r\n5. Skeletons (feat. Travis Scott & The Weeknd) - Louiebag, Windybro, Akimbo\r\n6. I Feel Like That (feat. Ty Dolla $ign, Tony Williams, & Frank Ocean) - Louiebag, Windybro, hc, Akimbo\r\n7. Simple Things (feat. Nas) - Louiebag, Akimbo"
       },
       {
         "id": "yp-le",
@@ -9302,7 +9388,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "yp-le.png"
+        "cover": "yp-le.png",
+        "creditsText": null
       }
     ]
   },
@@ -9417,7 +9504,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "omari-lionelscott.jpg"
+        "cover": "omari-lionelscott.jpg",
+        "creditsText": null
       },
       {
         "id": "graveyard-bigbrother",
@@ -9513,7 +9601,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "graveyard-bigbrother.jpg"
+        "cover": "graveyard-bigbrother.jpg",
+        "creditsText": null
       },
       {
         "id": "be-here-now-chrispo",
@@ -9590,7 +9679,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "be-here-now-chrispo.png"
+        "cover": "be-here-now-chrispo.png",
+        "creditsText": "--Be Here Now--\r\nLove Everyone era comp with a focus on samples! Please enjoy.\r\n\r\nCredits:\r\nMixing done by chrispo unless otherwise stated:\r\n\r\nNot Us - chrispo\r\nYikes - chrispo\r\nBad People - chrispo, ye vox from TMNG\r\nLift Yourself - chrispo, mixed by ahmed\r\nTreat You Good - chrispo, nas vox from TMNG\r\nBurn - chrispo, add. TMNG\r\n4th Dimension - chrispo\r\nSkeletons - chrispo, ye vox from TMNG\r\nAnything - chrispo\r\nBrothers - chrispo, chanoguide, mixed by ahmed\r\n\r\n\r\nSpecial thanks to x3milli, WindyBro, bloo, berais, soup, alzheimer, slpy, electrodc, wyomingfr, mimi & ay-suh for feedback throughout!"
       },
       {
         "id": "love-akimbo",
@@ -9691,7 +9781,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "love-akimbo.png"
+        "cover": "love-akimbo.png",
+        "creditsText": null
       },
       {
         "id": "ye-jjjj",
@@ -9750,7 +9841,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "ye-jjjj.png"
+        "cover": "ye-jjjj.png",
+        "creditsText": null
       },
       {
         "id": "ye-mikedean-harley",
@@ -9809,7 +9901,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "ye-mikedean-harley.jpg"
+        "cover": "ye-mikedean-harley.jpg",
+        "creditsText": null
       },
       {
         "id": "all-that-matters-matsu",
@@ -9946,7 +10039,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "all-that-matters-matsu.jpg"
+        "cover": "all-that-matters-matsu.jpg",
+        "creditsText": null
       }
     ]
   },
@@ -10021,7 +10115,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "ksg2-razacosmica.jpg"
+        "cover": "ksg2-razacosmica.jpg",
+        "creditsText": null
       },
       {
         "id": "sunken-place-bsbdante-ksg",
@@ -10118,7 +10213,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "sunken-place-bsbdante-ksg.jpg"
+        "cover": "sunken-place-bsbdante-ksg.jpg",
+        "creditsText": null
       }
     ]
   },
@@ -10219,7 +10315,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "jwd-acid-collective.png"
+        "cover": "jwd-acid-collective.png",
+        "creditsText": "1. Clouted Up (ft. Ant Clemons)\r\n2. Amusement Park (ft. Cyhi)\r\n3. Black Men Don't Cheat (ft. Young Thug & Megan Thee Stallion)\r\n4. Mister (ft. James Fauntleroy)\r\n5. MJ\r\n6. Find A Way\r\n7. Anxiety (ft. 070 Shake)\r\n8. Don't Let Me Drown (ft. Ant Clemons)\r\n9. Garden (ft. Daniel Ceaser, Ty Dolla $ign, The-Dream & Ant Clemons)\r\n10. If We Go Crazy (Interlude) (ft. Francis & The Lights)\r\n11. Never Would've Made It (ft. Ant Clemons & 070 Shake)\r\n12. Take Me To The Light (ft. Bon Iver & Francis & The Lights) \r\n\r\nCREDITS\r\n\r\nCLOUTED UP - CHANOGUIDE, DYL🅰️N, X3MILI\r\nAMUSEMENT PARK - YUNGTRON, CHANOGUIDE, X3MILI\r\nMISTER - CHANOGUIDE\r\nBLACK MEN DONT CHEAT - CHANOGUIDE, FUCKCEE, ANDREWFELLA, X3MILI, THE MUSIC NERD GUY, DYL🅰️N\r\nMJ - YUNGTRON, CHANOGUIDE, DYL🅰️N, X3MILI\r\nFIND A WAY - CHANOGUIDE\r\nANXIETY - CHANOGUIDE, X3MILI\r\nDONT LET ME DROWN - CHANOGUIDE \r\nIF WE GO CRAZY - CHANOGUIDE, CHANOGUIDES HIGHSCHOOL PIANO TEACHER, DYL🅰️N\r\nNEVER WOULDVE MADE IT - CHANOGUIDE, X3MILI, ANDREWFELLA\r\nGARDEN - YUNGTRON, CHANOGUIDE, MY HIGHSCHOOL PIANO TEACHER\r\nTAKE ME TO THE LIGHT - YUNGTRON, CHANOGUIDE\r\n\r\nspecial thanks to yungtron and dylan, this comp would be NOWHERE without them..\r\nanother special thanks to tmng chrispo, and soup feedback SO appreciated\r\n\r\ni love you guys!!!! thank you for listening!!"
       },
       {
         "id": "gaj18-neonabom",
@@ -10302,7 +10399,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "gaj18-neonabom.png"
+        "cover": "gaj18-neonabom.png",
+        "creditsText": "Clouted Up\r\nBetter Move\r\nWake Up\r\nBlack Men Dont Cheat\r\nTake Me To The Light\r\nHow To Go Crazy \r\nGarden\r\nAnxiety"
       }
     ]
   },
@@ -10438,7 +10536,8 @@
             "jimboiscool — for an insane amount of feedback and help"
           ]
         },
-        "cover": "yandhi-narcissist.jpg"
+        "cover": "yandhi-narcissist.jpg",
+        "creditsText": "Yandhi - The NARCISSIST Team\n\nEDITORS: Akimbo, louiebag, Lionel Scott, bloo, hc, poofartpoo, rectanx, Jeen, 5b\nAlso big thanks to jimboiscool for an insane amount of feedback and help, dude deserves his own credit fr\n\nChakras (feat. Ant Clemons & Sunday Service Choir) [Louiebag, Akimbo, Lionel_Scott & hc]\nThe Storm (feat. Kid Cudi, XXXTENTACION, Ty Dolla $ign & Ant Clemons) [Louiebag, rectanx & Akimbo]\nHurricane (feat. Ant Clemons & Big Sean) [Bloo, Akimbo, Louiebag & Lionel_Scott]\nSpread Your Wings [Bloo, Lionel_Scott & Akimbo]\nNew Body (feat. Nicki Minaj & Ty Dolla $ign) [Louiebag, Bloo & Akimbo]\nEgo Death (feat. Ty Dolla $ign & FKA twigs) [Jeen, Louiebag, hc, Bloo & Akimbo]\nAlien (feat. Jaden Smith, 2 Chainz, Kid Cudi, & Quavo) [Akimbo, Louiebag, Lionel_Scott & Bloo]\nFollow The Light (feat. Ant Clemons) [Lionel_Scott, Louiebag & Akimbo]\nCity In The Sky (feat. Ty Dolla $ign, Ant Clemons, 070 Shake, The-Dream, Desiigner & Kid Cudi) [Akimbo, Lionel_Scott & 5b]\nThe Garden (feat. Ty Dolla $ign, Ant Clemons, Daniel Caesar, The-Dream, Teyana Taylor & DMX) [Louiebag, hc & Akimbo]\nBrothers (feat. Ant Clemons & Charlie Wilson) [Louiebag, Bloo & Akimbo]\nCash To Burn (feat. Ant Clemons) [Louiebag, Akimbo & Bloo]\nWe Got Love (feat. Teyana Taylor & Ms. Lauryn Hill) [Louiebag & Akimbo]\nAll Dreams Real (feat. Ant Clemons) [Bloo, hc & Akimbo]\nLast Name (feat. Ant Clemons & E.VAX) [Bloo, Akimbo & 5b]\nLaw Of Attraction (feat. Ant Clemons, CyHi, Sunday Service Choir & Kenny G) [Akimbo & Louiebag]"
       },
       {
         "id": "grandhi-v2",
@@ -10560,7 +10659,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "grandhi-v2.png"
+        "cover": "grandhi-v2.png",
+        "creditsText": "THE CHAKRA: ahmed, jelqmaster & yzyholics, add. m3lt\r\nTHE STORM: ahmed & Yuri, add. yzyholics & chang\r\nWE FREE: ahmed & m3lt, add. m3rcur1y\r\nSPREAD YOUR WINGS: ahmed & Days Dissolve, add. yzyholics\r\nCASH TO BURN: themusicnerdguy, add. ahmed\r\nAC4: ahmed\r\nNEW BODY: ahmed, RockemSockemRamen & chang, add. yzyholics\r\nHURRICANE: ahmed & yzyholics\r\nSOULEROS: ahmed & jelqmaster, add. chang\r\nGODZILLA: yzyholics, Yuri, m3lt & m3rcur1y, add. ahmed & yungtron\r\nALIEN: ahmed & yzyholics, add. Akimbo & chrispo\r\nBROTHERS: ahmed, add. yzyholics\r\nTHE CITY IN THE SKY: ahmed, add. yzyholics\r\nWE GOT LOVE: ahmed & yungtron\r\nLAW OF ATTRACTION: ahmed, Days Dissolve & m3lt, add. yzyholics\r\nLAST NAME: ahmed, m3lt & yzyholics"
       },
       {
         "id": "yandhi-revised",
@@ -10694,7 +10794,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "yandhi-revised.jpeg"
+        "cover": "yandhi-revised.jpeg",
+        "creditsText": null
       },
       {
         "id": "spacex",
@@ -10777,7 +10878,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "spacex.png"
+        "cover": "spacex.png",
+        "creditsText": null
       }
     ]
   },
@@ -10907,7 +11009,8 @@
             "Organised & run by Jeen · Co-organisers: hc, JonJeffJonJon & NobodyIsNari · Mixed by hc"
           ]
         },
-        "cover": "yp-yandhi.jpg"
+        "cover": "yp-yandhi.jpg",
+        "creditsText": null
       },
       {
         "id": "healing",
@@ -10981,7 +11084,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "healing.png"
+        "cover": "healing.png",
+        "creditsText": null
       }
     ]
   },
@@ -11116,7 +11220,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "yp-jik.png"
+        "cover": "yp-jik.png",
+        "creditsText": "1. Up From The Ashes - Matthias\r\n2. Follow God - Alfie, JonJeffJonJon & Matthias\r\n3. Selah - jeen-yuhs & poofartpoo\r\n4. In The Morning - JonJeffJonJon\r\n5. Sunday - JonJeffJonJon, Matthias, ringbert, Rose & SLPYCNYN\r\n6. LA Monster - Default_Miserable, JonJeffJonJon & Matthias\r\n7. Through The Valley - Harley Banks & Matthias\r\n8. Wake The Dead - ringbert\r\n9. Everything We Need - Chase, JonJeffJonJon & Matthias\r\n10. Sky City / Garden - Rose\r\n11. Water - SLPYCNYN & TommyWiseau\r\n12. Alien - Matthias\r\n13. Hands On - poofartpoo & SLPYCNYN\r\n14. On God - uhhjulian\r\n15. Sierra Canyon - pxblo\r\n16. God Is - Matthias & SLPYCNYN\r\n17. Use This Gospel - poofartpoo\r\n18. Baptized - TommyWiseau & uhhjulian"
       },
       {
         "id": "palm-springs-teamspirit",
@@ -11175,7 +11280,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "palm-springs-teamspirit.png"
+        "cover": "palm-springs-teamspirit.png",
+        "creditsText": null
       },
       {
         "id": "jik-ep-bianca-minerva",
@@ -11216,7 +11322,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "jik-ep-bianca-minerva.png"
+        "cover": "jik-ep-bianca-minerva.png",
+        "creditsText": null
       },
       {
         "id": "jik-rework-akimbo",
@@ -11311,7 +11418,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "jik-rework-akimbo.jpg"
+        "cover": "jik-rework-akimbo.jpg",
+        "creditsText": null
       }
     ]
   },
@@ -11398,7 +11506,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "jik-dre-burner.jpg"
+        "cover": "jik-dre-burner.jpg",
+        "creditsText": "Upsampled by ._burner from Yedits.\n\nhttps://discord.com/channels/771910176038322206/1188888941630324837/1291414576319037542\n\nSpotify playlist for local files\n\nhttps://open.spotify.com/playlist/6a75OqmEqEtDXuJio0Ue38"
       }
     ]
   },
@@ -11549,7 +11658,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "gc-v2-lionelscott.jpg"
+        "cover": "gc-v2-lionelscott.jpg",
+        "creditsText": null
       },
       {
         "id": "gc-narcissist",
@@ -11706,7 +11816,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "gc-narcissist.jpg"
+        "cover": "gc-narcissist.jpg",
+        "creditsText": null
       },
       {
         "id": "gc-v3-simplejosh",
@@ -11846,7 +11957,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "gc-v3-simplejosh.png"
+        "cover": "gc-v3-simplejosh.png",
+        "creditsText": "fighting fires organ stem - bingboop\r\n\r\ntulsa synth, hi hat stems - jeen"
       },
       {
         "id": "gc-daystar",
@@ -11953,7 +12065,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "gc-daystar.jpg"
+        "cover": "gc-daystar.jpg",
+        "creditsText": null
       }
     ]
   },
@@ -12088,7 +12201,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "dwc-akimbo.png"
+        "cover": "dwc-akimbo.png",
+        "creditsText": null
       },
       {
         "id": "dwc-daystar",
@@ -12213,7 +12327,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "dwc-daystar.jpeg"
+        "cover": "dwc-daystar.jpeg",
+        "creditsText": null
       },
       {
         "id": "dwc-chloeblossom",
@@ -12332,7 +12447,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "dwc-chloeblossom.png"
+        "cover": "dwc-chloeblossom.png",
+        "creditsText": "TL:\r\n\r\nDONDA\r\nWith Child\r\nPraise God\r\nOff The Grid\r\nGod's Country\r\nTell The Vision\r\nWash Us In The Blood\r\nAlien\r\nFuture Sounds\r\nSkuuurrruurrr\r\nIn God's Country\r\nBreathe\r\nBelieve What I Say\r\nKeep My Spirit Alive\r\n24\r\nMade It\r\nLife Of The Party\r\n\r\nCredits:\r\nArcxne - feedback\r\nm3lt - feedback on Breathe\r\nEndribaku - Some of the production on BWIS\r\nr.tarantino on weights.gg - For Kanye voice model"
       },
       {
         "id": "dwc-centraldogma",
@@ -12487,7 +12603,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "dwc-centraldogma.png"
+        "cover": "dwc-centraldogma.png",
+        "creditsText": null
       }
     ]
   },
@@ -12580,7 +12697,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "soth-tommywiseau.png"
+        "cover": "soth-tommywiseau.png",
+        "creditsText": null
       },
       {
         "id": "orphan-v2-akimbo",
@@ -12695,7 +12813,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "orphan-v2-akimbo.jpg"
+        "cover": "orphan-v2-akimbo.jpg",
+        "creditsText": null
       },
       {
         "id": "donda-flipside-luwi",
@@ -12766,7 +12885,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "donda-flipside-luwi.png"
+        "cover": "donda-flipside-luwi.png",
+        "creditsText": null
       },
       {
         "id": "seraphim-ivory",
@@ -12855,7 +12975,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "seraphim-ivory.png"
+        "cover": "seraphim-ivory.png",
+        "creditsText": "1. HII WYD\r\n2. Junya\r\n3. Hovercraft\r\n4. Hurricane\r\n5. NASDAQ\r\n6. Heaven And Hell\r\n7. God Got Me\r\n8. Sunrays\r\n9. City Of Lost Angels\r\n10. Sheep\r\n11. The Seraphim \r\n12. Run It Up"
       }
     ]
   },
@@ -13024,7 +13145,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "spirit-of-donda-ahmed.png"
+        "cover": "spirit-of-donda-ahmed.png",
+        "creditsText": null
       },
       {
         "id": "donda-ojivolta-simplejosh",
@@ -13145,7 +13267,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "donda-ojivolta-simplejosh.png"
+        "cover": "donda-ojivolta-simplejosh.png",
+        "creditsText": "been working on this comp for a bit. donda 2021 comp which i feel uses the most unique ideas from the era. based around the dark kinda warped ojivolta sound. also mostly based around the idea that kanye wanted to make donda a singing focused album around the gallery era.\r\nthe edits dont change too much but i focused more on attention to detail changes and improving the mixing.\r\n\r\ntracklist:\r\n1. Donda's Glory (june version with the liny verse, just added the extra kanye singing in the empty spots between donda speaking)\r\n2. Off The Grid (december ojivolta version with drums, simple version of the song just carti and kanye hook, flows into next track)\r\n   He Gave It All (january ojivolta version shortened, higher quality choir, meant to be a kind of interlude for off the grid to flow into)\r\n3. I Know God Breathed On This (january/release instrumental, main changes are just better mix and different outro with the \"it wont be long\" sample. crazy concept cuz the start of the comp are the dark sad sounding songs before god comes down and makes the comp happy and this comes after he gave it all which has the lyric he wont be long :exploding_head: :exploding_head: :exploding_head: :exploding_head: :exploding_head: mind blowing concept)\r\n4. Heaven and Hell (just release version. love this version and i think it fits perfectly with the sound)\r\n5. Never Abandon Your Family (i think this song fits the warped sound i wanted best. i like the mumble take so i added guitar distortion to it and put it under the finished vocal when the guitar comes in. also has the glitchy donda vocal part panning from the first listening party that sounds crazy)\r\n6. 24 (june version/january version with drums, added the kanye verse with some extra warped pitched effects. this song also fits really well with the sound i was going for with the weird \"be right\" chops and the reversed drum outro. also serves as a transition into the dem jointz songs since the verse has punch ins from him)\r\n7. New Again (june version/synth based instrumental with the hiiii wyd verse. also has the hiiii wyd snare and clap and an extra vocal from the hiiii wyd intro before the 2nd verse from release new again. kinda serves as a transition from the darker songs to the more hopeful sounding ones)\r\n8. Jail (uses the earlier ojivolta instrumental from the version with the superhot fire sample i like the background melody behind the guitar a lot more. just sounds a lot more full and weird, also combines the release guitar with the demo one cuz i like the rough strumming. + has instagram bitch with cellulite line)\r\n9. Run It Up (thought this one was really important for the singing album concept cyhi talked about. i tried to recreate the higher quality sample interpolation from the drumless version instead of just using the lower quality sample + added the bg vocals and used the general structure of the drumless one. added the june drums but more on beat + may verse and ending extra singing. also overall much better mixing)\r\n10. Praise God (december version with drums, pusha t trades with kanye for the first hook instead of travis. added the extra travis adlibs under kanyes hook from the first listening party. added lil baby verse)\r\n11. Remote Control (thought this one was also likely part of the singing album concept. uses june instrumental with todd bg vocals. also has young thug verse with the adlibs and original line from the second listening party. uses mumble take cuz its better)\r\n12. Let Go (june version with better mixed ty dolla vocals. not too much done to it, i also thought it was likely party of the singing album concept)\r\n13. Daylight (bla bla bla singing album, uses pitched up version from las vegas listening party, generally just better mixing + more kanye bg vocals in outro + uses more of the sample. thought it worked well as a transition into come to life)\r\n14. Come To Life (kanye sing. just release come to life not tryna ruin it for no reason)\r\n15. Life Of The Party (drake verse version. thought it fit well as an outro as it has the dark ojivolta synth instrumental + the chopped in dmx vocals that fit the warped sound perfectly. i think the dmx vocals are a great ending. overall better mixing + has the autotuned ending vocals from released version)\r\n\r\nUPDATE:\r\n3. I Know God Breathed On This (new mix, added demo bg vocals)\r\n8. Jail (new mix)\r\n10. Made it (newly added edit, mixed kanye vocals + extra vocals from freestyle, transition into choir inst, lancey outro vocals, carti adlibs on ye verse and praise god transition not on initial edit release)\r\n12. Remote Control (new mix, \"he got this\" vocals on bridge, some subtle new vocal effects)\r\n13. Pure souls (newly added edit, soul de la vocals + lp1 verse structured, built around sheep piano, new 808s, new ojivolta distorted bass and chords based on sheep freestyle)\r\n17. Life Of The Party (new mix)"
       },
       {
         "id": "donda-uhhjulian",
@@ -13300,7 +13423,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "donda-uhhjulian.png"
+        "cover": "donda-uhhjulian.png",
+        "creditsText": null
       },
       {
         "id": "donda-miracles",
@@ -13473,7 +13597,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "donda-miracles.png"
+        "cover": "donda-miracles.png",
+        "creditsText": null
       }
     ]
   },
@@ -13654,7 +13779,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "d2-beach-house-louiebag.jpg"
+        "cover": "d2-beach-house-louiebag.jpg",
+        "creditsText": "Louiebag Presents: Donda 2 (Beach House Edition) [Deluxe]\n\nBeach House Donda 2 is back and better than ever. This new version has 22 tracks (8 entirely new tracks), and all previous tracks from v1 have been completely overhauled with new sounds, mixes, and everything else. All Mixed and mastered by Akimbo\n\nLove and Support to all these wonderful people who helped a ton with this project:\n\n- Ahmed\n- Akimbo\n- Bloo\n- Herq\n- Lionel Scott\n- Soldius Jack\n- Tommy\n- 5b\n\nWorked on From November 2023 - January 2024\n\n\nTRACKLIST (with names of who contributed)\n\nToo Easy - louie, Akimbo\nNever Forgive Yourself - Louie, Lionel Scott, Akimbo\nBroken Road / Get Lost - Louie, Akimbo\nSecurity - Louie, Akimbo\nEazy - Louie, Lionel Scott, Akimbo\nPablo - Louie, Akimbo\nHappy - Louie, Soldius Jack, Akimbo\nFlowers - Louie, Soldius Jack, Akimbo\nMaintenance - Louie, Lionel Scott, Akimbo\nKeep It Burning - Louie, 5b, Akimbo\nMr. Miyagi - Louie, Bloo, 5b, Akimbo\nStop Looking For This - Louie, Soldius Jack, Akimbo\nTrue Love - Louie, Akimbo\n5:30 - Louie, Lionel Scott, Akimbo\nSelfish - Louie, Tommy, Akimbo\nLouie bags - Louie, Akimbo\nSci-Fi - Louie, Akimbo\nLord Lift Me Up - Louie, Bloo, Akimbo\nCity of Gods - Louie, Bloo, Akimbo\nWe Did It Kid - Louie, Akimbo\nFirst Time in a Long Time - Louie, Ahmed, Akimbo\nThings Change - Louie, 5b, Herq, Akimbo"
       },
       {
         "id": "chicago-ahmed",
@@ -13783,7 +13909,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "chicago-ahmed.jpg"
+        "cover": "chicago-ahmed.jpg",
+        "creditsText": "TRUE LOVE\n- ahmed 2.0, Zack, sumsoup & Soup\nBROKEN ROAD\n- ahmed 2.0, TommyWiseau, x3mili & King Bob\nLOVE ME\n- ahmed 2.0, Days Dissolve & ben\nFLOWERS\n- ahmed 2.0, hc & uhhhjulian\nSECURITY\n- ahmed 2.0, jambajuice, ben, Bobert & TommyWiseau\nWORST MISTAKE\n- ahmed 2.0\nPABLO\n- ahmed 2.0, dyl🅰️n & yigit\nLOUIE BAGS\n- ahmed 2.0, jambajuice, yigit, ben & sumsoup\nHAPPY\n- ahmed 2.0, porneliushubert, King Bob & bloo\nSCI-FI\n- ahmed 2.0 & hatw\nSELFISH\n- ahmed 2.0, bianca.wav, ben & louiebag\nMAINTENANCE\n- ahmed 2.0, sumsoup & ay-suh\nSYMPHONIC BLUES SUITE\n- ahmed 2.0, chanoguide & ben\n530\n- ahmed 2.0, ali & metalfaceterrorist\nFIRST TIME IN A LONG TIME\n- ahmed 2.0, andrewfella & louiebag\nWE DID IT KID\n- ahmed 2.0, djtech42 & MJ"
       },
       {
         "id": "d2-yigit",
@@ -13911,7 +14038,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "d2-yigit.png"
+        "cover": "d2-yigit.png",
+        "creditsText": "YIGIT! & CO - DONDA 2 (REWORK) CREDITS\n\n1. TOO EASY\nKanye West & STALONE\n\nEditor: Yigit!\nProduced: Beach House, Dem Jointz, Kanye West & Yigit!\n\n⸻\n\n2. NEVER FORGIVE YOURSELF\nKanye West & Shenseea\n\nEditor: Yigit! & DamnDaniel\nProduced: Boi-1da, BoogzDaBeast, DamnDaniel, Dem Jointz, TrePounds & Yigit!\nSamples: Hidden Place by Björk\n\n⸻\n\n3. PABLO\nKanye West, Travis Scott, Future, Fat Money & Baby Keem\n\nEditor: Yigit! & DamnDaniel\nProduced: ATL Jacob, DamnDaniel, FNZ, John Cunningham, MIKE DEAN, Ojivolta, ryderoncrack, & Yigit!\nSamples: Machine Gun by Portishead & Warship My Wreck by Marilyn Manson\nGuitar played and recorded by DamnDaniel\nBackground Vocals: Shenseea\n\n⸻\n\n4. SECURITY\nKanye West & Baby Keem\n\nEditor: Yigit!\nProduced: Digital Nas, Kanye West & Yigit!\n\n⸻\n\n5. STOP LOOKING FOR THIS\nKanye West, VIC MENSA & Gud\n\nEditor: Yigit!, DamnDaniel, DarkTwist IAG, dash005, hntr & juakooo\nProduced: 88 Keys, Chase Davis, DamnDaniel, DarkTwist IAG, dash005, Gud, hntr, John Cunningham, juakooo, Ojivolta & Yigit!\nSamples: Going Under, Bring Me To Life by Evanescence\nBackground Vocals: Yung Lean, Amy Lee & ??? (from V12)\n\n⸻\n\n6. BROKEN ROAD\nKanye West, Don Toliver & Shenseea\n\nEditor: Yigit!, dash005, juakooo, & Pornelius Hubert\nProduced: dash005, juakooo, Kanye West, MIKE DEAN, Oscar Scheller, Pornelius Hubert, Theophilius London, & Yigit!\nSamples: Reach Out by Ticklet Pink\n\n⸻\n\n7. TRUE LOVE\nKanye West, XXXTENACION & Don Toliver\n\nEditor: Yigit! & Ahmed 2.0\nProduced: Beach House, John Cunningham, MIKE DEAN, Ojivolta, Twisco & Yigit!\nSamples: Paranoid Android by Radiohead & 5 Years by Björk\n\nUses Same Drum Loop as Ahmed‘s True Love Edit\n\n⸻\n\n8. 530\nKanye West & Shenseea\n\nEditor: Yigit!\nProduced: BoogzDaBeast, EVAX, FNZ, Kanye West & Yigit!\nSamples: Bachelorette by Björk\n\nDemumble Inspired by hc‘s 530 Edit\n\n⸻\n\n9. SCI-FI\nKanye West, Sean Leon & Yung Lean\n\nEditor: Yigit!\nProduced: Aaron Paris, CVRE, Kanye West, Leonardo Dessi, LUCA “905LUCA” POLIZZI, Ojivolta, Sean Leon & Yigit!\n\nDemumble Inspired by Tommy’s Sci-Fi Edit\n\n⸻\n\n10. LOUIE BAGS\nKanye West & Jack Harlow\n\nEditor: Yigit!, DamnDaniel & louiebag\nProducer: ATL Jacob, DamnDaniel, Digital Nas, Gavin Hadley, John Cunningham, JW Lucas, Kanye West, Kid Krono louiebag, Ojivolta & Yigit!\nSamples: Rudeboy By Rihanna, Army Of Me by Björk & Ghet-To Funk by DURALCHA\nBackground Vocals: XXXTENTACION\n\nUses some prod from louiebag‘s BH Louie Bags Edit\n\n⸻\n\n11. SELFISH\nKanye West, XXXTENTACION, will.i.am & Don Toliver\n\nEditor: Yigit!, Ahmed 2.0 & DamnDaniel\nProducer: Ahmed 2.0, DamnDaniel, John Cunningham, MIKE DEAN, Ojivolta, will.i.am & Yigit!\nSamples: Cocoon by Björk & Coldest Winter by Kanye West\n\n⸻\n\n12. SUZY\nKanye West\n\nEditor: Yigit! & chropic, DamnDaniel, Donquav Durkio\nProduced: DavidCicaloMuse, Donquav Durkio, Marilyn Manson, Ojivolta & Yigit!\nSamples: You & I by Washed Out\n\nUses chropic‘s Suzy Freestyle Remastered Vocals\nThanks to Daniel for saving the Suzy vocals\n\n⸻\n\n13. MAINTENANCE\nKanye West & Future\n\nEditor: Yigit!\nProducer: Beach House, Ojivolta, Wheezy, will.i.am & Yigit!\nBackground Vocals: Yung Lean & Ty Dolla $ign\n\nDemumble Inspired from Akimbo & WHF (Jeen & poofartpoo) Maintenance Edit\n\nTy Dolla $ign Vocals from the song „2022“ \nInspired by Donquav Durkio‘s Maintenance Edit\n\n⸻\n\n14. FLOWERS\nKanye West\n\nEditor: Yigit!\nProducer: Digital Nas, Kanye West, Ojivolta, Twilight Tone Zone, will.i.am & Yigit!\nSamples: Rock Your Body by Black Eyed Pears & Don‘t Stop The Music by Rihanna\n\nOutro inspired by hc‘s Flowers Edit\n\n⸻\n\n15. LIFT ME UP\nKanye West\n\nEditor: Yigit!\nProducer: BoogzDaBeast, Kanye West & Yigit!\n\n⸻\n\n16. FIRST TIME IN A LONG TIME\nKanye West, Soulja Boy & Gunna\n\nEditor: Yigit! & DamnDaniel\nProducer: Kanye West, MIKE DEAN, Ojivolta, Twisco & Yigit!\nSamples: Let It Rain by Eric Clapton\n\n⸻\n\n17. WE DID IT KID\nKanye West, Migos, Baby Keem & Sunday Service Choir\n\nEditor: Yigit! & djtech42\nProducer: AyoAA, Beach House, BoogzDaBeast, Digital Nas, djtech42, FNZ, Jahaan Sweet, Kanye West, Ojivolta, Scott Bridgeway, Tom Levesque, will.i.am & Yigit!\n\nUses djtech‘s Drum Loop from his WDIK Edit\n\n⸻\n\n18. CITY OF GODS (BONUS)\nKanye West, Alicia Keys & Fivio Foreign\n\nEditor: Yigit!\nProducer: AyoAA, Dem Jointz, Hemz, Kanye West, MIKE DEAN, Mav Beats, Ojivolta, Tweek Tune, The Chainsmokers &\nYigit!\nSamples: If You Didn’t Know Bitch by Kingpin Skinny Pimp\n\n⸻\n\n\nI'm finally done with D2. \n\nI wanna thank everyone who helped me with this comp. \n\nBig Shoutout to Ahmed 2.0, Astra, Bigman, Chief Keef, cometolife777, Crahout, DarkTwist IAG, dash005, dev, Donquav Durkio, glow1237, ITALICA, juakooo, kyle477, marin, marin e, mr., Nacio, ux, Regular JJ, Santino, sanz, soup, Swizzie Queen, tempetasha, Yeezy1237, Young Thug and my best friend aka my brother aka my habub DamnDaniel."
       },
       {
         "id": "d2-simplejosh",
@@ -14020,7 +14148,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "d2-simplejosh.jpg"
+        "cover": "d2-simplejosh.jpg",
+        "creditsText": "true love: good fridays version with slightly mixed hook\r\nnever forgive yourself: uses some of the freestyle vocals to add variety + replace punch ins, different hook, cleaner drums\r\nyeah i know: added synth bass, fixed clicking, lots of vocal effects\r\nthey so mad: uses freestyle vocals for a 2nd verse and short 3rd/outro verse\r\nwe did it kid: complete rework, takeoff/rich the kid as intro, kanye hook inspired by dem version, 808 pattern inspired by ayoaa version, melody based on oji alt melody, full quavo/offset verse, added prod, finished kanye, restructured kanye verse + added high energy freestyle vocals to extend verse\r\ncity of gods: og sample with alicia mixed in, new mix + louder drums, og aint no king of new york line, restructed kanye verse + vocal placement\r\nfirst time in a long time: added drums based on og versions, fixed sleeping on couch line, cut some mumble from first verse, no mumble let it rain bridge w/ added soulja adlibs\r\nthings change: just oji version as interlude\r\ntoo easy: finished vocals, different instrumental structure, too easy intro w/ effects, mixed, i aint need you to love me hook\r\nsci fi: demo instrumental, added i better not kanye adlib from release version, og she said she said that she bi line, added sci fi line after baby bye bye part, added from the situation before i lose the will line from demo, added extended outro after piano part, synth outro from stem player version w/ distorted ending to lead into security\r\nsecurity: added drums to verse + mixed, fixed clicks\r\nhappy: future verse uncensored, kanye verse restructure\r\nstop looking for this: complete rework, louder gud vocals and better mix on yung lean section, added prod based on oji version, short kanye bridge from freestyle cut down, distorted beat switch w/ kanye verse, vic mensa pitched vocals with added oji type vocoder, adlibs + effects throughout\r\nmaintenance: added drums + synth pluck, extended, finished vocals, added oji type vocoder layer with finished vocals, added 2nd finished verse using session (inspired by bh donda 2 edit), extra bg future vocals and yung lean \r\nbroken road: restructured don toliver vocals, kanye verse restructured from get lost, added effects throughout\r\n530: added drums in first half, 2nd half verse restructure"
       }
     ]
   },
@@ -14155,7 +14284,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "war-daysdissolve.png"
+        "cover": "war-daysdissolve.png",
+        "creditsText": null
       },
       {
         "id": "war-simplejosh",
@@ -14234,7 +14364,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "war-simplejosh.png"
+        "cover": "war-simplejosh.png",
+        "creditsText": null
       },
       {
         "id": "war",
@@ -14305,7 +14436,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "war.jpg"
+        "cover": "war.jpg",
+        "creditsText": null
       },
       {
         "id": "echoes-v2-bigbrother",
@@ -14411,7 +14543,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "echoes-v2-bigbrother.png"
+        "cover": "echoes-v2-bigbrother.png",
+        "creditsText": null
       }
     ]
   },
@@ -14546,7 +14679,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "exiled-soup.jpg"
+        "cover": "exiled-soup.jpg",
+        "creditsText": "Exiled. - Soup & Co\n\nDisc 1 Tracklist + Credits: \n\n1. So Soon\nChang0099, Ben, SomeSoup, Bloo, Mix by Ben\n\n2. Unlock (feat. Travis Scott & James Blake)\nSoup, Ahmed 2.0, Ben, SomeSoup, hc, Mix by Ahmed 2.0\n\n3. High Vibrations (feat. Westside Gunn)\nSoup, Chang0099, Ben, King Bob, Mix by Ben\n\n4. Lifesize (feat. Don Toliver)\nSoup, Chang0099, Ben, King Bob, Mix by Ben\n\n5. Pray\nSoup, Grant, Pupo Milan, Ahmed 2.0, Mix by Ahmed 2.0\n\n6. Bobby Digital \nSoup, Chang0099, MetalFaceTerrorist, Andrewfella, Days Dissolve, hc, Louiebag, Mix by MetalFaceTerrorist\n\n7. River (feat. Young Thug & Charlie Wilson)\nSoup, Dylan, SomeSoup, Mix by Ben\n\n8. I Let Go (feat. Ty Dolla $ign)\nSoup, Days Dissolve, Grant, Chropic, Ben, Mix by Ben\n\nFuck Flowers (feat. Lil Uzi Vert) [Bonus]\nSoup, Days Dissolve, SomeSoup, Ahmed 2.0, Resi, Mix by Ahmed 2.0\n\nStreaming Link - https://untitled.stream/library/project/SOlHJV0eDkLJ40RlEgH9Q\n\n\n\nDisc 2 Tracklist + Credits:\n\n1. Censori Overload (feat. Consequence)\nSoup, Days Dissolve, Reborn Sinner, Chrispo, Mix by Ben\n\n2. Ennio (feat. A$AP Rocky & Pusha T)\nSoup, Ben, KS, Reborn Sinner, Bloo, Mix by Ben\n\n3. Let Me Chill Out (Feat. Rich The Kid, Takeoff & NBA Youngboy)\nSoup, Dylan, Ahmed 2.0, Mix by Ben\n\n4. Love Love Love (feat. The Game)\nSoup, M3lt, Kamiien, WAVES, Reborn Sinner, Ben, Mix by Ben\n\n5. Take Off Your Dress (feat. Denzel Curry)\nSoup, Zack, KS, Ahmed 2.0, Kamiien, Ben, Mix by Ben\n\n6. Nights On The Moon (feat. Kid Cudi, Travis Scott & SZA)\nSoup, KS, Dylan, Jozzuh, TMNG, Ben, MysteryMandie, Resi, Mix by Ben\n\nStreaming Link - https://untitled.stream/library/project/NOmXtbxZhCp2To8RSe5Jk"
       },
       {
         "id": "yen-louiebag",
@@ -14635,7 +14769,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "yen-louiebag.png"
+        "cover": "yen-louiebag.png",
+        "creditsText": null
       },
       {
         "id": "y3-ben",
@@ -14726,7 +14861,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "y3-ben.jpg"
+        "cover": "y3-ben.jpg",
+        "creditsText": "THANKS TO\n\nandrewfella, ahmed, berais, bianca, m3lt, sarah, soup and icpd for all contributing production or other additions to the edits\n\ncarter, gv, taco, tooru, nareth and marin for all providing feedback throughout the comps development or assisting with tracklisting \n\nandrewfella, days dissolve and louiebag for previously making yebu comps which heavily inspired this one\n\nahmed especially for mixing and mastering\n\nalso major thanks to berais and soup for contributing art towards the comp\n\nhope you enjoyed the comp!\n\n1. So Soon - ben & bianca.wav\n2. Unlock - ben & berais\n3. Wolverine - ben\n4. Love Love Love - ben & resiwesi\n5. Happy - ben & ahmed 2.0\n6. Paperwork - ben, sarahwiwi & zack\n7. Losing Control - ben, ahmed 2.0, andrewfella & soup\n8. Take Off Your Dress - ben & ahmed 2.0\n9. Bobby Digital - ben, ahmed 2.0, iker, icpd & berais \n10. Take It All Back - ben & m3lt\n11. River - ben & ahmed 2.0\n12. Problematic - ben\n\nBONUSES\n\n13. Street Lights - ben\n14. Not Inclusive - ben"
       },
       {
         "id": "y3-v2-angelo",
@@ -14821,7 +14957,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "y3-v2-angelo.png"
+        "cover": "y3-v2-angelo.png",
+        "creditsText": null
       },
       {
         "id": "yesuke-bigbrother",
@@ -14934,7 +15071,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "yesuke-bigbrother.jpg"
+        "cover": "yesuke-bigbrother.jpg",
+        "creditsText": null
       }
     ]
   },
@@ -15051,7 +15189,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "bbpb-m3lt.jpg"
+        "cover": "bbpb-m3lt.jpg",
+        "creditsText": "DIS BITCH DAT HOE (feat. Juicy J & Denzel Curry) - m3lt, ahmed2.0_ & ben, add. shootin\nTIME MOVING SLOW - m3lt\nFIELD TRIP (feat. Don Toliver & Playboi Carti) - m3lt, Soup & ahmed2.0_, add. TJM\nFRIED (feat. JPEGMAFIA) - m3lt, wyomingfr, ben, metalfaceterrorist & yzygap, add. louiebag\nSMOKING ON JUNT (feat. Playboi Carti, Quavo, Travis Scott & Ant Clemons) - m3lt, add. ahmed2.0_ & RockemSockemRamen\nPROMOTION (feat. Future) - m3lt\nVIBING (feat. Young Thug) - m3lt\nLIFESTYLE (feat. Lil Wayne) - m3lt\nSO CALLED FRIENDS (feat. Freddie Gibbs) - m3lt\nBEG FORGIVENESS (feat. Rooga & Valentina) - m3lt & Bobert\nSO GOOD - m3lt & crahout, add. slothsavedearth\nFUTURE $OUND$ (feat. Travis Scott, Future & SZA) - m3lt, x3mili & hatw, add. bianca.wav & cool_gamez\n\nFORTUNE & FAME - m3lt\n\nScraps:\nBEG FORGIVENESS PT 2 (Demo) - m3lt\nCAR & DRANK INTERLUDE - m3lt\nDIS BITCH DAT HOE (Single Version) (feat. Juicy J & Denzel Curry) - m3lt & ahmed 2.0, add. shootin\nMAYBE - m3lt, add. yeezybr\nNEXT TIME - m3lt\nPURPLE THANG INTERLUDE - m3lt\nZERO (feat. JPEGMAFIA) - m3lt & Berais\n\nCover art by akis\nShoutout flippy for helping w the tl\nThanks to everyone who gave me feedback or helped on this comp you all goated af :heart:"
       },
       {
         "id": "bbpb-akimbo-louiebag",
@@ -15176,7 +15315,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "bbpb-akimbo-louiebag.jpg"
+        "cover": "bbpb-akimbo-louiebag.jpg",
+        "creditsText": null
       }
     ]
   },
@@ -15301,7 +15441,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "repent-simplejosh.png"
+        "cover": "repent-simplejosh.png",
+        "creditsText": "v1.2\r\nnew alt cover\r\n\r\nimproved framing on main cover\r\n\r\nbeliever slowed slightly\r\n\r\nnew fame is a hell of a drug mix\r\n\r\nriver added short instrumental break in verse\r\n\r\nnew edit: \r\ntime\r\n\r\ndifferent tracklisting in middle of comp\r\n\r\n2 new demos: \r\nif you want me, come and get me\r\ndo it - og mix"
       },
       {
         "id": "vultures-bloo",
@@ -15416,7 +15557,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "vultures-bloo.png"
+        "cover": "vultures-bloo.png",
+        "creditsText": "tracklist and contributors\r\n\r\n1. SLIDE \r\n(ty lionel for the james blake feat)\r\n2. TIME MOVING SLOW \r\n(ty Dylan for the Sophie sample)\r\n3. PROMOTION \r\n4. HOODRAT  \r\n(ty akimbo for the tunned kanye vocal stem)\r\n5. FUK SUMN \r\n(ty to louiebag for his stems as a base and lilac for her organ stems)\r\n6. BURN \r\n(ty slpy for the idea for the beat)\r\n7. LIFESTYLE \r\n(ty 5b for the GREAT help on this extract)\r\n8. TAKE OFF YOUR DRESS \r\n(ty ye for releasing his ig)\r\n9. PAY PER VIEW \r\n(ty slpy for the sample remake and verse idea)\r\n10. KEYS TO MY LIFE \r\n11. BEG FORGIVENESS \r\n(ty louiebag for the base stems and 5b for the great ye extract)\r\n12. BACK TO ME \r\n(ty lionel for the piano)\r\n13. DON'T DIE \r\n14. PROBLEMATIC \r\n15. RIVER\r\n(ty shadow for the idea for the outros vibe)\r\n16. STARS \r\n(ty slpy for helping with the idea of the inst)\r\n\r\n\r\nBIG THANK YOU TO HC WHO HELPED WITH FEEDBACK AND GAVE IMPUT TO THE MIXING OF ALL SONGS, COULDNT HAVE DONE, ESPECIALLY THESE MIXES, WITHOUT YOU!\r\n\r\nAND ANOTHER BIG THANK YOU TO EVERYBODY WHO HELPED ALONG THE WAY :\r\n\r\n5b (ty for all the extracts <3)\r\nAhmed\r\nchrispo\r\nmothlike\r\nShadow1235\r\nSoup\r\nTMNG\r\nTheDude\r\nYuri\r\nay-suh\r\nbem\r\nCowboyKermit\r\nAkimbo\r\nHMF\r\nJimboiscool (ty for the gifs bud)\r\nlilac\r\nlouiebag\r\nluwi\r\nmilán\r\nnormalworld\r\nslpy\r\nThe Lawkeeper\r\nTommy The Defender\r\nmagik"
       },
       {
         "id": "lifestyle",
@@ -15511,7 +15653,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "lifestyle.png"
+        "cover": "lifestyle.png",
+        "creditsText": null
       },
       {
         "id": "the-vultures-project",
@@ -15776,7 +15919,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "the-vultures-project.png"
+        "cover": "the-vultures-project.png",
+        "creditsText": null
       },
       {
         "id": "ys-akimbo",
@@ -15901,7 +16045,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "ys-akimbo.png"
+        "cover": "ys-akimbo.png",
+        "creditsText": null
       }
     ]
   },
@@ -16043,7 +16188,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "v1-dropout-edition.jpg"
+        "cover": "v1-dropout-edition.jpg",
+        "creditsText": null
       },
       {
         "id": "vultures-1-akimbo",
@@ -16156,7 +16302,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "vultures-1-akimbo.jpg"
+        "cover": "vultures-1-akimbo.jpg",
+        "creditsText": null
       }
     ]
   },
@@ -16273,7 +16420,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "v2-hc.png"
+        "cover": "v2-hc.png",
+        "creditsText": "Special thanks to akimbo, bloo, jimbo, lav, luwi, and milán for helping with feedback near the end, y'all helped make this comp reach its full potential and I can't thank you enough for taking time to listen and give feedback.\r\n\r\nAlso thank you to bloo & jeen for contributing production to TIME MOVING SLOW & MAYBE respectively, both of y'all cooked and those edits wouldn't have been the same without you're creative input.\r\n\r\nAlso also thanks to everyone who motivated me to finish this project. This comp would've probably died if there wasn't a random person asking me when this would come out every couple days.\r\n\r\nThank you for listening,\r\n- hc"
       },
       {
         "id": "v2-ahmed",
@@ -16404,7 +16552,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "v2-ahmed.png"
+        "cover": "v2-ahmed.png",
+        "creditsText": null
       },
       {
         "id": "v2-team-nitrus",
@@ -16536,7 +16685,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "v2-team-nitrus.jpeg"
+        "cover": "v2-team-nitrus.jpeg",
+        "creditsText": "Now its time to order a loan card!\n\nVULTURES: LET THE SPIRITS COLLIDE \n\n1. SLIDING\nWiz, Crahout\n\n2. TIME MOVING SLOW\nkrisbunny, Wiz\n\n3. PROMOTION (Feat. Future)\nWiz, Crahout, 333, Heri\n\n4. FLOWERS\nCrahout, 333, krisbunny, Yamen, Nacio\n\n5. STAR TIME (Feat. G-Eazy, IDK & The-Dream)\nWiz, crahout, Nacio, Yamen\n\n6. PAY PER VIEW (Feat. Project Pat, Young Moose & Juicy J)\nWiz\n\n7. FIELD TRIP (Feat. Don Toliver, Playboi Carti & Lil Durk)\nWiz, crahout\n\n8. DEAD (Feat. Future & Lil Durk)\nWiz, krisbunny, King Bob\n\n9. TAKE OFF YOUR DRESS\nWiz\n\n10. GUN TO MY HEAD (Feat. Kid Cudi)\nKrisbunny, Nacio\n\n11. LIFESTYLE (Feat. Lil Wayne)\nWiz, crahout, Nacio\n\n12. SO CALLED FRIENDS (Feat. Freddie Gibbs)\nWiz\n\n13. RIVER (Feat. Young Thug & Charlie Wilson)\nWiz, 333, gothfukker\n\n14. MATTHEW (Feat. North West & Charlie Wilson)\nWiz, Sarah, gothfukker\n\n15. CITY IN THE SKY (Feat. 070 Shake, Desiigner, Kid Cudi & The-Dream)\nWiz, crahout, Nacio\n\n16. MY SOUL (Feat. Big TC)\nWiz, Nacio\n\nLP file:\nYamen\n\nTracklist help:\nSam, David_The_Turtle\n\n\nArtist (Also credited in the arts file):\nakis, calle, rupert, that1person, uptempo\n\n\nFeedback:\nItalica, rupert, altdooby, fancy g, MILK\nAlso thank you to everyone who attended the private LPs for last second feedback ❤️"
       },
       {
         "id": "v2-louiebag",
@@ -16655,7 +16805,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "v2-louiebag.jpg"
+        "cover": "v2-louiebag.jpg",
+        "creditsText": null
       }
     ]
   },
@@ -16796,7 +16947,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "bully-je.png"
+        "cover": "bully-je.png",
+        "creditsText": null
       }
     ]
   },
@@ -16913,7 +17065,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "gitd-orpheus.jpg"
+        "cover": "gitd-orpheus.jpg",
+        "creditsText": "tracks 5, 11, 12, 15, and 17 missing and/or mislabeled\r\n\r\ncan't tell me nothing & spaceship both tagged as track 8\r\n\r\nFlashing lights & good life both tagged as track 9"
       },
       {
         "id": "wtt-tour-orpheus",
@@ -17193,7 +17346,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "wtt-tour-orpheus.png"
+        "cover": "wtt-tour-orpheus.png",
+        "creditsText": "1. Intro - Leak\r\n2. H·A·M - BSB Dante - The Throne (upsampled by Sophie)\r\n3. Who Gon Stop Me - BSB Dante (add. Sophie) - The Throne (upsampled by Sophie)\r\n4. Otis - fosterlynch - Watch The Throne (Remastered)\r\n5. Welcome To The Jungle - fosterlynch - Watch The Throne (Remastered)\r\n6. Gotta Have It - fosterlynch - Watch The Throne (Remastered)\r\n7. Murder To Excellence - fosterlynch - Watch The Throne (Remastered)\r\n8. Backseat Freestyle - fuckwad\r\n9. Eyez Closed - Release\r\n10. Holy Grail - KILLRITE - Watch The Throne II\r\n11. Crown - Reborn Sinner - Watch The Throne II\r\n12. Sky - cool_gamez & Reborn Sinner - Watch The Throne II\r\n13. All The Time - ahmed2.0_ & metalfaceterrorist - Cruel Winter\r\n14. Whole Lifetime - biob & vynyllia\r\n15. Can't Look In My Eyes - ahmed2.0_ - Cruel Winter\r\n16. Illest Motherfucker Alive - fosterlynch - Watch The Throne (Remastered)\r\n17. Run This Town - Release\r\n18. Monster - Harley Banks - My Beautiful Dark Twisted Fantasy (Mike Dean Live Inspired)\r\n19. POWER - 5b - G.O.O.D. Fridays (Upsampled)\r\n20. Made In America - fosterlynch - Watch The Throne (Remastered)\r\n21. New Day - fosterlynch - Watch The Throne (Remastered)\r\n22. Oceans - Release\r\n23. Smuckers - The Biggest Stepper (upsampled by Sophie)\r\n24. New York, New York - Orpheus - Watch The Throne Tour\r\n25. Empire State of Mind - Release\r\n26. We Are Young - cool_gamez - Watch The Throne II\r\n27. Living So Italian - fire\r\n28. Not The Same - Akimbo & Lionel Scott - Good Ass Job\r\n29. If U Want To - Reborn Sinner & victor - Child Rebel Soldier\r\n30. The Joy - fosterlynch - Watch The Throne (Remastered)\r\n31. So Appalled - Harley Banks - My Beautiful Dark Twisted Fantasy (Mike Dean Live Inspired)\r\n32. That's My Bitch - fosterlynch - Watch The Throne (Remastered)\r\n33. Why I Love You - fosterlynch - Watch The Throne (Remastered)\r\n34. Guilt Trip - cool_gamez & Jozzuh & Co. (add. Sophie) - Watch The Throne II (main edit); Thank God For Drugs (pusha outro)\r\n35. Anthem - cool_gamez - Watch The Throne II\r\n36. Christmas In Harlem - 5b - G.O.O.D. Fridays (Upsampled)\r\n37. Clique - Release\r\n38. Running Through My Dreams - Lionel Scott - Good Ass Job (Bonus)\r\n39. Primetime - BSB Dante (add. Sophie) - The Throne (upsampled by Sophie)\r\n40. No Church In The Wild - BSB Dante - The Throne (upsampled by Sophie)\r\n41. Lift Off - BSB Dante - The Throne (upsampled by Sophie)\r\n42. Minas In Paris - IcyEdits & NobodyIsYuri - WATCH THE FANTASY\r\n43. Encore - Solidus Jack\r\n\r\nART\r\n\r\nArt by aaronic\r\n\r\nLINKS TO COMPS USED\r\n\r\n- BSB Dante's The Throne: https://mega.nz/file/WC5mjYTI#Nak92T6wKh2EOdDfbGnsVSRhJsZIBLYMQQJdz-CcDEM\r\n- u/fosterlynch's Watch The Throne (Remastered): https://mega.nz/folder/4Y0kFYTR#cvl_P18OTBRUnBYLwrORRw\r\n- ahmed2.0_'s Cruel Winter: https://mega.nz/folder/vtABlKaC#FbeN0_EE-1UT7Hp_rBnhKQ\r\n- Harley Banks' My Beautiful Dark Twisted Fantasy (Mike Dean Live Inspired): https://mega.nz/file/Wa40RAZQ#9pQI66s0u0XnA7-uTCJqbooFg6RtKO4d1wlxDTZ3G34\r\n- 5b's G.O.O.D. Fridays (Upsampled): https://pixeldrain.com/u/igrwsnMV\r\n- Orpheus' Watch The Throne Tour: https://mega.nz/folder/o08V3Yia#oPTu4qNQgpDd04NjlYAKcg\r\n- The Pastelle Collective's Good Ass Job: https://mega.nz/folder/8eRB1Tob#MxJrpNSXY6v33AY6WsJ4zw\r\n- Reborn Sinner & victor's Child Rebel Soldier: https://mega.nz/folder/E7FzwbKY#5wnWq35wlJhk67uR85KsiA\r\n- Jozzuh & Co.'s Thank God For Drugs: https://mega.nz/folder/yD5WwQbb#N0Ia65CYfDoPF-wHwpCY8A"
       },
       {
         "id": "yeezus-tour-bsbdante",
@@ -17428,7 +17582,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "yeezus-tour-bsbdante.jpg"
+        "cover": "yeezus-tour-bsbdante.jpg",
+        "creditsText": null
       },
       {
         "id": "saint-pablo-tour-orpheus",
@@ -17651,7 +17806,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "saint-pablo-tour-orpheus.png"
+        "cover": "saint-pablo-tour-orpheus.png",
+        "creditsText": "Changes & Credits\r\n\r\nFSMH: Saint Pablo Tour Opening & Instrumental, Mixed with P2\r\nFamous: Standard Famous Mixed with JonJeffJonJon's Famous half in\r\nPop Style: Added Synths and Bass\r\nThat Part: Edited only Ye Parts on the track\r\nFacts: Charlie Heat, Metro Boomin, Southside Production into a single track\r\nMercy: Tour Version, Just Ye Verse\r\nDon't Like: Tour Version\r\nAll Day: Show Version, Added CROWD Vocals\r\nBlack Skinhead: V2 Tour Version with Guitar Backing\r\nCan't Tell Me Nothing: Tour Version\r\nPower: Tour Version\r\nInterlude: SPT Interlude CDQ Leaked By Saya\r\n30 Hours: Standard Version but half-way replaced with DJDKS outro\r\nFreestyle 4: Standard Version & WE FUCK outro\r\nNo More Parties In LA: Standard but Extended Outro\r\nJesus Walks: Standard\r\nFlashing Lights: BSB Dante's Version\r\nLowlights: Standard Version\r\nHighlights: Demo Version, Added Production, Madonna spliced in\r\nFeedback: Added 808s and Bass, Alternative intro drop\r\nWolves: Demo Version, Added Vocals from Louis Voutton Show on Outro, Added Franks Track\r\nHeartless: BSB Dante Yeezus Tour\r\nRunaway: LQ Vocals intro on CDQ Instrumental, Wireless Festival Vocals, Clearest LQ SPT Outro\r\nOnly One: Instrumental Mix from Saint Pablo Tour, CDQ Live Version, Caroline Shaw Outro\r\nI Love Kanye: Standard\r\nWaves: Standard but Kid Cudi Vocals on outro (Beautiful Morning)\r\nFML: Oreoeater Version\r\nAll Of The Lights: My BEEN TRILL remake & All Of The Lights Interlude as outro\r\nGood Life: My WTT Edit\r\nStronger: Slowed Intro & Tour Edit\r\nFade: Standard\r\nSaint Pablo: Added extra Sampha Verse & Extra Production on his verse\r\nUltralight Beam: BSB Dante Version"
       }
     ]
   },
@@ -17780,7 +17936,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "2049-toasty.jpg"
+        "cover": "2049-toasty.jpg",
+        "creditsText": null
       },
       {
         "id": "clamye-zanthin",
@@ -17863,7 +18020,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "clamye-zanthin.jpg"
+        "cover": "clamye-zanthin.jpg",
+        "creditsText": null
       },
       {
         "id": "dondatv-pxblo",
@@ -17924,7 +18082,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "dondatv-pxblo.jpg"
+        "cover": "dondatv-pxblo.jpg",
+        "creditsText": null
       },
       {
         "id": "dope-and-dreams-pupomilan",
@@ -17987,7 +18146,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "dope-and-dreams-pupomilan.jpg"
+        "cover": "dope-and-dreams-pupomilan.jpg",
+        "creditsText": null
       },
       {
         "id": "grseldy-edan",
@@ -18094,7 +18254,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "grseldy-edan.jpg"
+        "cover": "grseldy-edan.jpg",
+        "creditsText": null
       },
       {
         "id": "tpab-spectre",
@@ -18213,7 +18374,8 @@
         "credits": {
           "editors": []
         },
-        "cover": "tpab-spectre.png"
+        "cover": "tpab-spectre.png",
+        "creditsText": null
       }
     ]
   }
