@@ -1307,11 +1307,11 @@ async function syncToSupabase() {
 
     // Upsert links
     const linkRows = DATA.linkSections.flatMap((s, si) =>
-      s.links.map((l, li) => {
-        const row = { id: l.id, section_id: s.id, title: l.title, sub: l.sub||'', url: l.url||'', favicon: l.favicon||'', image: l.image||null, order_index: li, type: l.type||'small' };
-        if (l.type === 'large') row.meta = JSON.stringify({ tagline:l.tagline, version:l.version, icon:l.icon, downloadUrl:l.downloadUrl, githubUrl:l.githubUrl, badges:l.badges, features:l.features, extras:l.extras, formats:l.formats });
-        return row;
-      })
+      s.links.map((l, li) => ({
+        id: l.id, section_id: s.id, title: l.title, sub: l.sub||'', url: l.url||'',
+        favicon: l.favicon||'', image: l.image||null, order_index: li, type: l.type||'small',
+        meta: l.type === 'large' ? JSON.stringify({ tagline:l.tagline, version:l.version, icon:l.icon, downloadUrl:l.downloadUrl, githubUrl:l.githubUrl, badges:l.badges, features:l.features, extras:l.extras, formats:l.formats }) : null
+      }))
     );
     await sbUpsert('links', linkRows);
 

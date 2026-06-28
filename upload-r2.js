@@ -18,6 +18,7 @@ const ACCESS_KEY  = '681064fae98e11262f3900de31b5de4c';
 const SECRET_KEY  = 'c5db8e4311b3412db4e65796a16127bcc0408f4d8e7bd1d5f32e36bafe2b5f5e';
 const BUCKET      = 'curated-by-yusuf';
 const TRACKER_DIR = process.argv[2] || path.join(process.cwd(), 'tracker');
+const FORCE       = process.env.FORCE_UPLOAD === '1' || process.argv.includes('--force');
 
 const IMG_EXTS = new Set(['.jpg','.jpeg','.png','.webp','.gif','.avif']);
 
@@ -81,8 +82,8 @@ async function main() {
     const progress = `[${i+1}/${files.length}]`;
 
     try {
-      // Skip if already uploaded
-      if (await exists(key)) {
+      // Skip if already uploaded (unless --force)
+      if (!FORCE && await exists(key)) {
         process.stdout.write(`⏭️   ${progress} ${key}\n`);
         skipped++;
         continue;

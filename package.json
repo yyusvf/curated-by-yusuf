@@ -1,0 +1,24 @@
+{
+  "name": "curated-by-yusuf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yyusvf/curated-by-yusuf.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/yyusvf/curated-by-yusuf/issues"
+  },
+  "homepage": "https://github.com/yyusvf/curated-by-yusuf#readme",
+  "dependencies": {
+    "sharp": "^0.35.2"
+  }
+}
