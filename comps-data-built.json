@@ -3896,52 +3896,58 @@
         "info": null,
         "tracklist": [
           {
+            "n": 1,
+            "title": "I Am Not Home",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
             "n": 2,
             "title": "On Sight",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 3,
             "title": "Black Skinhead",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 4,
             "title": "Send It Up",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 5,
             "title": "Hold My Liquor",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 6,
             "title": "Talk To Me",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 7,
-            "title": "Can_t Get Over Me",
+            "title": "Can't Get Over Me",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 8,
             "title": "New Slaves",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 9,
             "title": "No More Games",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 10,
@@ -3953,53 +3959,47 @@
             "n": 11,
             "title": "Guilt Trip",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 12,
             "title": "Why Feel Bad",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 13,
             "title": "I Am A God",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 14,
             "title": "Emotions",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 15,
             "title": "No No No No",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
+          },
+          {
+            "n": 16,
+            "title": "One I Love",
+            "feat": null,
+            "editors": "Kanye West"
           },
           {
             "n": 17,
             "title": "Awesome",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 18,
             "title": "Nobody To Love",
-            "feat": null,
-            "editors": null
-          },
-          {
-            "n": null,
-            "title": "I Am Not Home",
-            "feat": null,
-            "editors": null
-          },
-          {
-            "n": null,
-            "title": "One I Love",
             "feat": null,
             "editors": "Kanye West"
           }
@@ -4655,67 +4655,67 @@
             "n": 1,
             "title": "On Sight",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 2,
             "title": "Black Skinhead",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West Feat. Miley Cyrus and Travis Scott"
           },
           {
             "n": 3,
             "title": "I Am A God",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West Feat. God and Bon Iver"
           },
           {
             "n": 4,
             "title": "New Slaves",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West Feat. Frank Ocean"
           },
           {
             "n": 5,
             "title": "Hold My Liquor",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West Feat. Chief Keef and Bon Iver"
           },
           {
             "n": 6,
-            "title": "One I Love & Awesome",
+            "title": "Kim Kardashian",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 7,
             "title": "I'm In It",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West Feat. Assassin, Travis Scott and Bon Iver"
           },
           {
             "n": 8,
             "title": "Blood On The Leaves",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West Feat. Nina Simone"
           },
           {
             "n": 9,
             "title": "Guilt Trip",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West Feat. Kid Cudi"
           },
           {
             "n": 10,
             "title": "Send It Up",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West Feat. King Louie and XV"
           },
           {
             "n": 11,
             "title": "Bound 2",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West Feat. Charlie Wilson and Rick Ross"
           }
         ],
         "credits": {
@@ -4765,6 +4765,24 @@
             "editors": "Kanye West"
           },
           {
+            "n": 6,
+            "title": "Can't Get Over Me",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 7,
+            "title": "Hold My Liquor",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
+            "n": 8,
+            "title": "No No No No",
+            "feat": null,
+            "editors": "Kanye West"
+          },
+          {
             "n": 9,
             "title": "I'm In It",
             "feat": null,
@@ -4803,24 +4821,6 @@
           {
             "n": 15,
             "title": "Nobody To Love",
-            "feat": null,
-            "editors": "Kanye West"
-          },
-          {
-            "n": null,
-            "title": "Can't Get Over Me",
-            "feat": null,
-            "editors": null
-          },
-          {
-            "n": null,
-            "title": "Hold My Liquor",
-            "feat": null,
-            "editors": null
-          },
-          {
-            "n": null,
-            "title": "No No No No",
             "feat": null,
             "editors": "Kanye West"
           }
@@ -4914,69 +4914,69 @@
         "tracklist": [
           {
             "n": 1,
-            "title": "on sight 🅴",
+            "title": "ON SIGHT",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
-            "n": null,
-            "title": "BLACKSKINHEAD OBLX (Master)",
+            "n": 2,
+            "title": "BLACK SKINHEAD",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
-            "n": null,
-            "title": "BLACKSKINHEAD OBLX (Master)",
+            "n": 3,
+            "title": "I AM A GOD",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
-            "n": null,
-            "title": "BLACKSKINHEAD OBLX (Master)",
+            "n": 4,
+            "title": "NEW SLAVES",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
-            "n": null,
-            "title": "HOLD MY LIQUOR OBLX (Master)",
+            "n": 5,
+            "title": "HOLD MY LIQOUR",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
-            "n": null,
-            "title": "HOLD MY LIQUOR OBLX (Master)",
+            "n": 6,
+            "title": "I'M IN IT",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
-            "n": null,
-            "title": "HOLD MY LIQUOR OBLX (Master)",
+            "n": 7,
+            "title": "BLOOD ON THE LEAVES",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
-            "n": null,
-            "title": "HOLD MY LIQUOR OBLX (Master)",
+            "n": 8,
+            "title": "GUILT TRIP",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
-            "n": null,
-            "title": "HOLD MY LIQUOR OBLX (Master)",
+            "n": 9,
+            "title": "SEND IT UP  ^ ^ ^ ^",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
-            "n": null,
-            "title": "HOLD MY LIQUOR OBLX (Master)",
+            "n": 10,
+            "title": "BOUND 1+2",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
-            "n": null,
-            "title": "HOLD MY LIQUOR OBLX (Master)",
+            "n": 11,
+            "title": "AWESOME",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           }
         ],
         "credits": {
@@ -5445,7 +5445,7 @@
           },
           {
             "n": 3,
-            "title": "See How These Ni###s Is",
+            "title": "See How These Ni**as Is",
             "feat": null,
             "editors": null
           },
@@ -5785,36 +5785,66 @@
             "n": 1,
             "title": "Prayer (Intro)",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 2,
             "title": "All Day",
             "feat": "Allan Kingdom, Theophilus London & Paul McCartney",
-            "editors": null
+            "editors": "Kanye West"
+          },
+          {
+            "n": 3,
+            "title": "Star Time",
+            "feat": "The-Dream & Pusha T",
+            "editors": "Kanye West"
           },
           {
             "n": 4,
             "title": "The Mall",
             "feat": "Post Malone",
-            "editors": null
+            "editors": "Kanye West"
+          },
+          {
+            "n": 5,
+            "title": "Fade",
+            "feat": "Ty Dolla $ign, Lil Uzi Vert & James Blake",
+            "editors": "Kanye West"
+          },
+          {
+            "n": 6,
+            "title": "Mula",
+            "feat": "The Game",
+            "editors": "Kanye West"
           },
           {
             "n": 7,
-            "title": "GOD LEVEL",
-            "feat": null,
-            "editors": null
+            "title": "God Level",
+            "feat": "Sam Dew",
+            "editors": "Kanye West"
           },
           {
             "n": 8,
-            "title": "DO YOU REALLY EVER LOVE",
+            "title": "Do You Really Ever Love (Interlude)",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 9,
             "title": "Never Let Me Go",
             "feat": "KIRBY & Travis Scott",
+            "editors": "Kanye West"
+          },
+          {
+            "n": 10,
+            "title": "Man Up",
+            "feat": "Young Thug",
+            "editors": "Kanye West"
+          },
+          {
+            "n": 11,
+            "title": "Jukebox Jointz",
+            "feat": "A$AP Rocky",
             "editors": "Kanye West"
           },
           {
@@ -5824,70 +5854,40 @@
             "editors": "Kanye West"
           },
           {
+            "n": 13,
+            "title": "Fall Out Of Heaven",
+            "feat": "The-Dream & Bon Iver",
+            "editors": "Kanye West"
+          },
+          {
+            "n": 14,
+            "title": "FML",
+            "feat": "Travis Scott",
+            "editors": "Kanye West"
+          },
+          {
             "n": 15,
-            "title": "WOLVES",
-            "feat": null,
-            "editors": null
+            "title": "Wolves",
+            "feat": "Andrea Martin, Caroline Shaw, VIC MENSA & Frank Ocean",
+            "editors": "Kanye West"
+          },
+          {
+            "n": 16,
+            "title": "When I See It",
+            "feat": "The Weeknd",
+            "editors": "Kanye West"
+          },
+          {
+            "n": 17,
+            "title": "Only One",
+            "feat": "Paul McCartney & Ty Dolla $ign",
+            "editors": "Kanye West"
           },
           {
             "n": 18,
-            "title": "I FEEL LIKE THAT",
-            "feat": null,
-            "editors": null
-          },
-          {
-            "n": null,
-            "title": "Star Time",
-            "feat": "The-Dream & Pusha T",
-            "editors": null
-          },
-          {
-            "n": null,
-            "title": "Fade",
-            "feat": "Ty Dolla $ign, Lil Uzi Vert & James Blake",
-            "editors": null
-          },
-          {
-            "n": null,
-            "title": "Mula",
-            "feat": "The Game",
-            "editors": null
-          },
-          {
-            "n": null,
-            "title": "Man Up",
-            "feat": "Young Thug",
-            "editors": null
-          },
-          {
-            "n": null,
-            "title": "Jukebox Jointz",
-            "feat": "A$AP Rocky",
-            "editors": null
-          },
-          {
-            "n": null,
-            "title": "Fall Out Of Heaven",
-            "feat": "The-Dream & Bon Iver",
-            "editors": null
-          },
-          {
-            "n": null,
-            "title": "FML",
-            "feat": "Travis Scott",
-            "editors": null
-          },
-          {
-            "n": null,
-            "title": "When I See It",
-            "feat": "The Weeknd",
-            "editors": null
-          },
-          {
-            "n": null,
-            "title": "Only One",
-            "feat": "Paul McCartney & Ty Dolla $ign",
-            "editors": null
+            "title": "I Feel Like That",
+            "feat": "Ty Dolla $ign & Frank Ocean",
+            "editors": "Kanye West"
           }
         ],
         "credits": {
@@ -6789,31 +6789,31 @@
             "n": 1,
             "title": "Father Stretch My Hands",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 2,
             "title": "Nina Chop",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 3,
             "title": "Enya",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 4,
             "title": "Deja Vu",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 5,
             "title": "Highlights",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 6,
@@ -6825,49 +6825,49 @@
             "n": 7,
             "title": "Bad Night",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 8,
             "title": "Pressure (Can U Be)",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 9,
             "title": "Fade",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 10,
             "title": "RND",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 11,
             "title": "FML",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 12,
             "title": "30 Hours",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 13,
             "title": "Real Friends",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 14,
             "title": "Wolves",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           }
         ],
         "credits": {
@@ -7170,6 +7170,12 @@
             "editors": null
           },
           {
+            "n": 12,
+            "title": "30 HOURS",
+            "feat": null,
+            "editors": null
+          },
+          {
             "n": 13,
             "title": "FML",
             "feat": null,
@@ -7200,6 +7206,12 @@
             "editors": null
           },
           {
+            "n": 18,
+            "title": "PRAYER",
+            "feat": null,
+            "editors": null
+          },
+          {
             "n": 19,
             "title": "I FEEL LIKE THAT",
             "feat": null,
@@ -7208,18 +7220,6 @@
           {
             "n": 20,
             "title": "SAINT PABLO",
-            "feat": null,
-            "editors": null
-          },
-          {
-            "n": null,
-            "title": "30 HOURS",
-            "feat": null,
-            "editors": null
-          },
-          {
-            "n": null,
-            "title": "PRAYER",
             "feat": null,
             "editors": null
           }
@@ -8039,7 +8039,7 @@
         "tracklist": [
           {
             "n": 1,
-            "title": "Damn, Come On . Goodnight Gotham",
+            "title": "Damn, Come On // Goodnight Gotham",
             "feat": null,
             "editors": "Kanye West"
           },
@@ -8618,61 +8618,61 @@
             "n": 1,
             "title": "ALL EYES ON YE",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 2,
             "title": "INDIGO INTERLUDE",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 3,
             "title": "FACE DOWN",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 4,
             "title": "FEEL ME",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 5,
             "title": "HOLD TIGHT",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 6,
             "title": "JEALOUS",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 7,
             "title": "MEDICATED",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 8,
             "title": "CHAMPIONS",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 9,
             "title": "EURO",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 10,
             "title": "NO REASON",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 11,
@@ -8684,31 +8684,31 @@
             "n": 12,
             "title": "ABOVE THE INFLUENCE",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 13,
             "title": "ONLY YE",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 14,
             "title": "SUPER STARRED",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 15,
             "title": "UCLA",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 16,
             "title": "INSTALOVE",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           }
         ],
         "credits": {
@@ -11252,25 +11252,25 @@
             "n": null,
             "title": "elah",
             "feat": null,
-            "editors": null
+            "editors": "anye West"
           },
           {
             "n": null,
             "title": "losed On Sunday",
             "feat": null,
-            "editors": null
+            "editors": "anye West"
           },
           {
             "n": null,
             "title": "A Monster",
             "feat": null,
-            "editors": null
+            "editors": "anye West"
           },
           {
             "n": null,
             "title": "ands On",
             "feat": null,
-            "editors": null
+            "editors": "anye West"
           }
         ],
         "credits": {
@@ -12040,109 +12040,109 @@
             "n": 1,
             "title": "Blood Of The Lamb",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 2,
-            "title": "This Is The Glory (feat. Snoop Dogg & Dr. Dre)",
-            "feat": null,
-            "editors": null
+            "title": "This Is The Glory",
+            "feat": "Snoop Dogg & Dr. Dre",
+            "editors": "Kanye West"
           },
           {
             "n": 3,
-            "title": "Nah Nah Nah (feat. Dababy & 2 Chainz)",
-            "feat": null,
-            "editors": null
+            "title": "Nah Nah Nah",
+            "feat": "Dababy & 2 Chainz",
+            "editors": "Kanye West"
           },
           {
             "n": 4,
-            "title": "Tell The Vision (feat. 2 Chainz, Conway The Machine & Pop Smoke)",
-            "feat": null,
-            "editors": null
+            "title": "Tell The Vision",
+            "feat": "2 Chainz, Conway The Machine & Pop Smoke",
+            "editors": "Kanye West"
           },
           {
             "n": 5,
-            "title": "Praise God (feat. Travis Scott, Baby Keem, & Pusha T)",
-            "feat": null,
-            "editors": null
+            "title": "Praise God",
+            "feat": "Travis Scott, Baby Keem, & Pusha T",
+            "editors": "Kanye West"
           },
           {
             "n": 6,
-            "title": "Believe What I Say (Feat. Buju Banton, Saint JHN, & STALONE)",
-            "feat": null,
-            "editors": null
+            "title": "Believe What I Say",
+            "feat": "Buju Banton, Saint JHN, & STALONE",
+            "editors": "Kanye West"
           },
           {
             "n": 7,
-            "title": "Gods Country (feat. Travis Scott)",
-            "feat": null,
-            "editors": null
+            "title": "Gods Country",
+            "feat": "Travis Scott",
+            "editors": "Kanye West"
           },
           {
             "n": 8,
-            "title": "Wash Us In The Blood (feat. Travis Scott)",
-            "feat": null,
+            "title": "Wash Us In The Blood",
+            "feat": "Travis Scott",
             "editors": "Kanye West"
           },
           {
             "n": 9,
-            "title": "Alien (feat. Ant Clemons, Kid Cudi, 2 Chainz, Quavo, Pusha T & Jaden Smith)",
-            "feat": null,
-            "editors": null
+            "title": "Alien",
+            "feat": "Ant Clemons, Kid Cudi, 2 Chainz, Quavo, Pusha T & Jaden Smith",
+            "editors": "Kanye West"
           },
           {
             "n": 10,
             "title": "Breathe",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 11,
-            "title": "Future Sounds (feat. Travis Scott & Victory)",
-            "feat": null,
-            "editors": null
+            "title": "Future Sounds",
+            "feat": "Travis Scott & Victory",
+            "editors": "Kanye West"
           },
           {
             "n": 12,
-            "title": "Keep My Spirit Alive (feat. KayCyy, Westside Gunn, & Conway The Machine)",
-            "feat": null,
-            "editors": null
+            "title": "Keep My Spirit Alive",
+            "feat": "KayCyy, Westside Gunn, & Conway The Machine",
+            "editors": "Kanye West"
           },
           {
             "n": 13,
-            "title": "Welcome To My Life (feat. Ty Dolla $ign)",
-            "feat": null,
-            "editors": null
+            "title": "Welcome To My Life",
+            "feat": "Ty Dolla $ign",
+            "editors": "Kanye West"
           },
           {
             "n": 14,
-            "title": "In God's Country (feat. Justin Bieber, KayCyy, Pharrell, Common, & Todd Rundgren)",
-            "feat": null,
-            "editors": null
+            "title": "In God's Country",
+            "feat": "Justin Bieber, KayCyy, Pharrell, Common, & Todd Rundgren",
+            "editors": "Kanye West"
           },
           {
             "n": 15,
             "title": "Life Of The Party",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 16,
-            "title": "He Gave It All (feat. KayCyy)",
-            "feat": null,
-            "editors": null
+            "title": "He Gave It All",
+            "feat": "KayCyy",
+            "editors": "Kanye West"
           },
           {
             "n": 17,
-            "title": "Made It (feat. Playboi Carti)",
-            "feat": null,
-            "editors": null
+            "title": "Made It",
+            "feat": "Playboi Carti",
+            "editors": "Kanye West"
           },
           {
             "n": 18,
-            "title": "24 (feat. KayCyy & Saint JHN)",
-            "feat": null,
-            "editors": null
+            "title": "24",
+            "feat": "KayCyy & Saint JHN",
+            "editors": "Kanye West"
           }
         ],
         "credits": {
@@ -14508,21 +14508,15 @@
         "tracklist": [
           {
             "n": 1,
-            "title": "Censori Overload",
+            "title": "So Soon",
             "feat": null,
-            "editors": "Kanye West, Consequence"
+            "editors": "Kanye West"
           },
           {
             "n": 1,
             "title": "So Soon",
             "feat": null,
             "editors": "Kanye West"
-          },
-          {
-            "n": 2,
-            "title": "Ennio",
-            "feat": null,
-            "editors": "Kanye West,  A$AP Rocky, Pusha T"
           },
           {
             "n": 2,
@@ -14537,22 +14531,10 @@
             "editors": "Kanye West, Westside Gunn"
           },
           {
-            "n": 3,
-            "title": "Let Me Chill Out",
-            "feat": null,
-            "editors": "Kanye West, Rich The Kid, Takeoff, NBA Youngboy"
-          },
-          {
             "n": 4,
             "title": "Lifesize",
             "feat": null,
             "editors": "Kanye West, Don Toliver"
-          },
-          {
-            "n": 4,
-            "title": "Love Love Love",
-            "feat": null,
-            "editors": "Kanye West, The Game"
           },
           {
             "n": 5,
@@ -14561,22 +14543,10 @@
             "editors": "Kanye West"
           },
           {
-            "n": 5,
-            "title": "Take Off Your Dress",
-            "feat": null,
-            "editors": "Kanye West, Denzel Curry"
-          },
-          {
             "n": 6,
             "title": "Bobby Digital",
             "feat": null,
             "editors": "Kanye West"
-          },
-          {
-            "n": 6,
-            "title": "Nights On The Moon",
-            "feat": null,
-            "editors": "Kanye West, Kid Cudi, Travis Scott, SZA"
           },
           {
             "n": 7,
@@ -14591,16 +14561,46 @@
             "editors": "Kanye West, Ty Dolla $ign"
           },
           {
-            "n": null,
+            "n": 9,
             "title": "Fuck Flowers [Bonus]",
             "feat": null,
             "editors": "Kanye West, Lil Uzi Vert"
           },
           {
-            "n": null,
-            "title": "So Soon Alt",
+            "n": 1,
+            "title": "Censori Overload",
             "feat": null,
-            "editors": "Kanye West"
+            "editors": "Kanye West, Consequence"
+          },
+          {
+            "n": 2,
+            "title": "Ennio",
+            "feat": null,
+            "editors": "Kanye West,  A$AP Rocky, Pusha T"
+          },
+          {
+            "n": 3,
+            "title": "Let Me Chill Out",
+            "feat": null,
+            "editors": "Kanye West, Rich The Kid, Takeoff, NBA Youngboy"
+          },
+          {
+            "n": 4,
+            "title": "Love Love Love",
+            "feat": null,
+            "editors": "Kanye West, The Game"
+          },
+          {
+            "n": 5,
+            "title": "Take Off Your Dress",
+            "feat": null,
+            "editors": "Kanye West, Denzel Curry"
+          },
+          {
+            "n": 6,
+            "title": "Nights On The Moon",
+            "feat": null,
+            "editors": "Kanye West, Kid Cudi, Travis Scott, SZA"
           }
         ],
         "credits": {
@@ -15380,7 +15380,7 @@
             "n": 1,
             "title": "SLIDE",
             "feat": null,
-            "editors": null
+            "editors": "¥$ & James Blake"
           },
           {
             "n": 2,
@@ -15404,7 +15404,7 @@
             "n": 5,
             "title": "FUK SUMN",
             "feat": null,
-            "editors": null
+            "editors": "¥$, Playboi Carti, Juicy J & Travis Scott"
           },
           {
             "n": 6,
@@ -15416,7 +15416,7 @@
             "n": 7,
             "title": "LIFESTYLE",
             "feat": null,
-            "editors": null
+            "editors": "¥$ & Lil Wayne"
           },
           {
             "n": 8,
@@ -15428,25 +15428,25 @@
             "n": 9,
             "title": "PAY PER VIEW",
             "feat": null,
-            "editors": null
+            "editors": "¥$ & Project Pat"
           },
           {
             "n": 10,
             "title": "KEYS TO MY LIFE",
             "feat": null,
-            "editors": null
+            "editors": "¥$ & India Love"
           },
           {
             "n": 11,
             "title": "BEG FORGIVENESS",
             "feat": null,
-            "editors": null
+            "editors": "¥$ & Rooga"
           },
           {
             "n": 12,
             "title": "BACK TO ME",
             "feat": null,
-            "editors": null
+            "editors": "¥$ & Freddie Gibbs"
           },
           {
             "n": 13,
@@ -15464,7 +15464,7 @@
             "n": 15,
             "title": "RIVER",
             "feat": null,
-            "editors": null
+            "editors": "¥$, Young Thug & Charlie Wilson"
           },
           {
             "n": 16,
@@ -15850,10 +15850,64 @@
         "info": null,
         "tracklist": [
           {
+            "n": 1,
+            "title": "SLIDE",
+            "feat": null,
+            "editors": "�$, Kanye West, Ty Dolla $ign"
+          },
+          {
+            "n": 2,
+            "title": "TIME MOVING SLOW",
+            "feat": null,
+            "editors": "�$, Kanye West, Ty Dolla $ign"
+          },
+          {
+            "n": 3,
+            "title": "FUK SUMN",
+            "feat": null,
+            "editors": "�$, Kanye West, Ty Dolla $ign"
+          },
+          {
+            "n": 4,
+            "title": "PAID",
+            "feat": null,
+            "editors": "�$, Kanye West, Ty Dolla $ign"
+          },
+          {
+            "n": 5,
+            "title": "PROMOTION",
+            "feat": null,
+            "editors": "�$, Kanye West, Ty Dolla $ign"
+          },
+          {
+            "n": 6,
+            "title": "LIFESTYLE",
+            "feat": null,
+            "editors": "�$, Kanye West, Ty Dolla $ign"
+          },
+          {
             "n": 7,
             "title": "DRUNK",
             "feat": null,
-            "editors": null
+            "editors": "¥$, Kanye West, Ty Dolla $ign"
+          },
+          {
+            "n": 8,
+            "title": "TAKE OFF YOUR DRESS",
+            "feat": null,
+            "editors": "�$, Kanye West, Ty Dolla $ign"
+          },
+          {
+            "n": 9,
+            "title": "BURN",
+            "feat": null,
+            "editors": "�$, Kanye West, Ty Dolla $ign"
+          },
+          {
+            "n": 10,
+            "title": "DO IT",
+            "feat": null,
+            "editors": "�$, Kanye West, Ty Dolla $ign"
           },
           {
             "n": 11,
@@ -15862,98 +15916,44 @@
             "editors": "�$, Kanye West, Ty Dolla $ign"
           },
           {
-            "n": null,
-            "title": "SLIDE",
-            "feat": null,
-            "editors": "�$, Kanye West, Ty Dolla $ign"
-          },
-          {
-            "n": null,
-            "title": "DO IT",
-            "feat": null,
-            "editors": "�$, Kanye West, Ty Dolla $ign"
-          },
-          {
-            "n": null,
+            "n": 12,
             "title": "CARNIVAL",
             "feat": null,
             "editors": "�$, Kanye West, Ty Dolla $ign"
           },
           {
-            "n": null,
+            "n": 13,
             "title": "BEG FORGIVENESS",
             "feat": null,
             "editors": "�$, Kanye West, Ty Dolla $ign"
           },
           {
-            "n": null,
+            "n": 14,
             "title": "TIMBO FREESTYLE",
             "feat": null,
             "editors": "�$, Kanye West, Ty Dolla $ign"
           },
           {
-            "n": null,
+            "n": 15,
             "title": "DEAD",
             "feat": null,
             "editors": "�$, Kanye West, Ty Dolla $ign"
           },
           {
-            "n": null,
+            "n": 16,
             "title": "FOREVER ROLLIN",
             "feat": null,
             "editors": "�$, Kanye West, Ty Dolla $ign"
           },
           {
-            "n": null,
+            "n": 17,
             "title": "GUN TO MY HEAD",
             "feat": null,
             "editors": "�$, Kanye West, Ty Dolla $ign"
           },
           {
-            "n": null,
+            "n": 18,
             "title": "RIVER",
-            "feat": null,
-            "editors": "�$, Kanye West, Ty Dolla $ign"
-          },
-          {
-            "n": null,
-            "title": "TIME MOVING SLOW",
-            "feat": null,
-            "editors": "�$, Kanye West, Ty Dolla $ign"
-          },
-          {
-            "n": null,
-            "title": "FUK SUMN",
-            "feat": null,
-            "editors": "�$, Kanye West, Ty Dolla $ign"
-          },
-          {
-            "n": null,
-            "title": "PAID",
-            "feat": null,
-            "editors": "�$, Kanye West, Ty Dolla $ign"
-          },
-          {
-            "n": null,
-            "title": "PROMOTION",
-            "feat": null,
-            "editors": "�$, Kanye West, Ty Dolla $ign"
-          },
-          {
-            "n": null,
-            "title": "LIFESTYLE",
-            "feat": null,
-            "editors": "�$, Kanye West, Ty Dolla $ign"
-          },
-          {
-            "n": null,
-            "title": "TAKE OFF YOUR DRESS",
-            "feat": null,
-            "editors": "�$, Kanye West, Ty Dolla $ign"
-          },
-          {
-            "n": null,
-            "title": "BURN",
             "feat": null,
             "editors": "�$, Kanye West, Ty Dolla $ign"
           }
@@ -16120,97 +16120,97 @@
             "n": 1,
             "title": "IN THE STARS",
             "feat": null,
-            "editors": null
+            "editors": "¥$, Kanye West, Ty Dolla $ign"
+          },
+          {
+            "n": 2,
+            "title": "TIMBO FREESTYLE",
+            "feat": null,
+            "editors": "¥$, Kanye West, Ty Dolla $ign"
           },
           {
             "n": 3,
             "title": "PAID",
             "feat": null,
-            "editors": null
+            "editors": "¥$, Kanye West, Ty Dolla $ign"
           },
           {
             "n": 4,
-            "title": "TALKING ONCE AGAIN",
+            "title": "TALKING / ONCE AGAIN",
             "feat": null,
-            "editors": null
+            "editors": "¥$, Kanye West, Ty Dolla $ign"
           },
           {
             "n": 5,
             "title": "BACK TO ME",
             "feat": null,
-            "editors": null
+            "editors": "¥$, Kanye West, Ty Dolla $ign"
           },
           {
             "n": 6,
             "title": "HOODRAT",
             "feat": null,
-            "editors": null
+            "editors": "¥$, Kanye West, Ty Dolla $ign"
           },
           {
             "n": 7,
             "title": "DO IT",
             "feat": null,
-            "editors": null
+            "editors": "¥$, Kanye West, Ty Dolla $ign"
           },
           {
             "n": 8,
             "title": "PAPERWORK",
             "feat": null,
-            "editors": null
+            "editors": "¥$, Kanye West, Ty Dolla $ign"
           },
           {
             "n": 9,
             "title": "BURN",
             "feat": null,
-            "editors": null
+            "editors": "¥$, Kanye West, Ty Dolla $ign"
           },
           {
             "n": 10,
             "title": "FUK SUMN",
             "feat": null,
-            "editors": null
+            "editors": "¥$, Kanye West, Ty Dolla $ign"
           },
           {
             "n": 11,
             "title": "VULTURES",
             "feat": null,
-            "editors": null
+            "editors": "¥$, Kanye West, Ty Dolla $ign"
           },
           {
             "n": 12,
             "title": "CARNIVAL",
             "feat": null,
-            "editors": null
+            "editors": "¥$, Kanye West, Ty Dolla $ign"
           },
           {
             "n": 13,
             "title": "BEG FORGIVENESS",
             "feat": null,
-            "editors": null
+            "editors": "¥$, Kanye West, Ty Dolla $ign"
           },
           {
             "n": 14,
             "title": "SO GOOD",
             "feat": null,
-            "editors": null
+            "editors": "¥$, Kanye West, Ty Dolla $ign"
           },
           {
             "n": 15,
             "title": "PROBLEMATIC",
             "feat": null,
-            "editors": null
+            "editors": "¥$, Kanye West, Ty Dolla $ign"
           },
           {
             "n": 16,
             "title": "STILL THE KING",
             "feat": null,
-            "editors": null
-          },
-          {
-            "n": null,
-            "title": "TIMBO FREESTYLE",
-            "feat": null,
-            "editors": null
+            "editors": "¥$, Kanye West, Ty Dolla $ign"
           }
         ],
         "credits": {
@@ -17738,7 +17738,7 @@
             "n": 1,
             "title": "INTRO (CHARLIE HEAT VERSION)",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 2,
@@ -17750,7 +17750,7 @@
             "n": 3,
             "title": "HOLD MY LIQUOR",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 4,
@@ -17762,19 +17762,19 @@
             "n": 5,
             "title": "JESUS WALKS",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 6,
             "title": "WOLVES PT.1",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 7,
             "title": "WOLVES PT.2",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 8,
@@ -17798,19 +17798,19 @@
             "n": 11,
             "title": "AOTL",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 12,
             "title": "BLACK SKINHEAD",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 13,
             "title": "FSMH",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 14,
@@ -17822,7 +17822,7 @@
             "n": 15,
             "title": "RUNAWAY",
             "feat": null,
-            "editors": null
+            "editors": "Kanye West"
           },
           {
             "n": 16,
