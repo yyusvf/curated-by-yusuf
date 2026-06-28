@@ -119,6 +119,7 @@ function scanComp(compPath) {
              && fs.statSync(path.join(compPath, f)).isFile())
     .sort();
 
+  const trackRows = [];
   audioFiles.forEach(f => {
     const tags = readID3(path.join(compPath, f));
     let n, title, feat, editors;
@@ -131,8 +132,18 @@ function scanComp(compPath) {
       n = g.n; title = g.title; feat = g.feat;
     }
     if (tags['TPE1']) editors = tags['TPE1'];
-    if (title) result.tracklist.push({ n: n||null, title, feat: feat||null, editors: editors||null });
+    const disc = tags['TPOS'] ? parseInt(tags['TPOS'].split('/')[0]) : null;
+    if (title) trackRows.push({ n: n||null, title, feat: feat||null, editors: editors||null, _disc: disc, _file: f });
   });
+  // Sort by disc (TPOS) then track (TRCK)
+  trackRows.sort((a, b) => {
+    const da = a._disc ?? 1, db = b._disc ?? 1;
+    if (da !== db) return da - db;
+    const na = a.n ?? Infinity, nb = b.n ?? Infinity;
+    if (na !== nb) return na - nb;
+    return a._file.localeCompare(b._file);
+  });
+  result.tracklist = trackRows.map(({ _disc, _file, ...t }) => t);
 
   return result;
 }

@@ -306,7 +306,7 @@
         "badges": [
           "highlight"
         ],
-        "samply": "",
+        "samply": "https://samply.app/p/i8vTRVEeP8Ssm7m2UHk8?si=IBw0KQOsNoSqcH8kAkeFu14g7a12",
         "art": [],
         "description": "A huge collection of remasters of various pre-TCD and TCD era Kanye songs from the official mixtapes at the time, along with some exclusive tracks found on the Freshmen Adjustment fan-made series. The comp has nearly every single Kanye song from before he dropped TCD.",
         "info": "Intro\nDoing Fine\nA Million\nGossip Files\nSelf Conscious (Yeah)\nWack Niggaz [ft. Talib Kweli]\nGet By (Remix) [ft. Mos Def, Jay-Z, Busta & Talib Kweli]\nThe Roc in Here\nThe Good, the Bad, the Ugly [ft. Consequence]\nKeep the Receipt [ft. Ol' Dirty Bastard]\nI Need to Know\nDrop Dead Gorgeous [ft. Murphy Lee]\nMy Girlfriend\n'03 Electric Relaxation [ft. Consequence]\nOut of Your Mind\nWould You Like to Ride [ft. Malik Yusef & Common]\nBetter Than Yours [ft. Common]\nLivin' in a Movie\nWow [ft. GLC]\nTake It as a Loss [ft. Consequence]\nApologize\nHalf Price\nNo More for Me [ft. Mark Spitz]\nWack Niggaz Pt. 2 [ft. Common, Consequence & Talib Kweli]\nWe Can't Tell\nLast Night\n'03 Til Infinity [ft. Consequence]\nI Met Oprah\nHey Mama\nHome (Windy) [ft. John Legend]\nMy Way [ft. Irene Reid]\nThrough the Wire (Freeystyle Remix)\nAll Falls Down [ft. Lauryn Hill]",
@@ -6964,7 +6964,7 @@
         "credits": {
           "editors": []
         },
-        "cover": "808s-orchestration-takatyphoon.jpg"
+        "cover": "808s-orchestration-takatyphoon.png"
       },
       {
         "id": "808s-hb-simplejosh",
@@ -8379,7 +8379,7 @@
         "credits": {
           "editors": []
         },
-        "cover": "pc-engine-v2-minerva.jpg"
+        "cover": "pc-engine-v2-minerva.png"
       },
       {
         "id": "tg16-poofartpoo",
@@ -9159,7 +9159,7 @@
         "credits": {
           "editors": []
         },
-        "cover": "le-louiebag.jpg"
+        "cover": "le-louiebag.png"
       },
       {
         "id": "yp-le",
@@ -12162,8 +12162,7 @@
           "art/AltCover_2.webp",
           "art/AltCover_DanLevi2.jpeg",
           "art/AltCover_DanLevi3.jpeg",
-          "art/Alt_Cover3.jpeg",
-          "art/Cover_DanLevi.jpeg"
+          "art/Alt_Cover3.jpeg"
         ],
         "description": "DWC rework focused on finishing many aspects of the era such as the OG versions of release Donda tracks, confirmed evolutions of Yandhi tracks and a few obscure picks, all to create an insane release-worthy project. One of the most long-awaited comps of all time.",
         "info": null,
@@ -12274,7 +12273,7 @@
         "credits": {
           "editors": []
         },
-        "cover": "dwc-daystar.jpg"
+        "cover": "dwc-daystar.jpeg"
       },
       {
         "id": "dwc-chloeblossom",
