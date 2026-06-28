@@ -14,7 +14,7 @@
 <meta name="twitter:title" content="Ye Curated">
 <meta name="twitter:description" content="The best Ye & community comps — ready to play on Samply.">
 <meta name="twitter:image" content="assets/og-image.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/fonts/inter.css">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -27,15 +27,13 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");background-size:200px;pointer-events:none;z-index:0}
 .page{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:0 24px}
 
-/* PROFILE */
-.profile{display:flex;align-items:flex-start;gap:20px;padding:52px 0 44px}
-.profile-left{display:flex;flex-direction:column;gap:10px;flex:1;min-width:0}
-.avatar{width:72px;height:72px;border-radius:50%;overflow:hidden;border:2px solid var(--border);flex-shrink:0}
-.avatar img{width:100%;height:100%;object-fit:cover}
-.profile-name{font-size:18px;font-weight:600;letter-spacing:-0.3px}
-.profile-bio{font-size:13px;color:var(--muted);line-height:1.5}
-.profile-socials{display:flex;gap:8px;flex-wrap:wrap;margin-top:2px}
-.profile-right{width:160px;flex-shrink:0;display:flex;flex-direction:column;gap:8px;padding-top:4px}
+/* HERO */
+.hero{position:relative;width:100%;height:520px;overflow:hidden;background:#0a0a0a}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:center 25%;display:block}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,10,0.15) 0%,rgba(10,10,10,0.45) 45%,rgba(10,10,10,0.92) 80%,rgba(10,10,10,1) 100%)}
+.hero-content{position:absolute;bottom:0;left:0;right:0;max-width:960px;margin:0 auto;padding:0 24px 40px}
+.hero-title{font-size:40px;font-weight:700;letter-spacing:-1.2px;margin-bottom:8px;line-height:1.1}
+.hero-bio{font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:18px;line-height:1.5}
 
 /* DISCORD/INSTAGRAM PILLS */
 .discord-wrap{position:relative;display:inline-flex}
@@ -378,9 +376,10 @@ a.discord-btn{text-decoration:none}
 
 /* MOBILE */
 @media(max-width:768px){
+  .hero{height:420px}
+  .hero-title{font-size:28px;letter-spacing:-0.6px}
+  .hero-content{padding:0 16px 32px}
   .page{padding:0 16px}
-  .profile{flex-direction:row;align-items:flex-start;padding:40px 0 32px}
-  .profile-right{width:130px;flex-shrink:0}
   .scroll-wrap{overflow:visible}
   .scroll-row{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;overflow-x:visible;padding:0;}
   .pl-card{width:100%;flex-shrink:unset}
@@ -442,23 +441,24 @@ a.discord-btn{text-decoration:none}
 </head>
 <body>
 
-<div class="page" id="page-root">
-
-  <!-- PROFILE (static) -->
-  <div class="profile">
-    <div class="profile-left">
-      <div class="avatar"><img src="assets/yusuf.jpg" alt="Yusuf"></div>
-      <p class="profile-name">Ye Curated</p>
-      <p class="profile-bio">Collecting the best Ye &amp; community edits, playable directly on Samply.</p>
-      <div class="profile-socials">
-        <div class="discord-wrap">
-          <button class="discord-btn" onclick="copyDiscord()">Discord</button>
-          <div class="discord-dropdown">yusvf</div>
-        </div>
-        <button class="what-btn" onclick="document.getElementById('what-modal').classList.add('open')">What is this?</button>
+<!-- HERO -->
+<div class="hero">
+  <img src="assets/hero.jpg" alt="Ye Curated">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">Ye Curated</h1>
+    <p class="hero-bio">Collecting the best Ye &amp; community edits, playable directly on Samply.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <div class="discord-wrap">
+        <button class="discord-btn" onclick="copyDiscord()">Discord</button>
+        <div class="discord-dropdown">yusvf</div>
       </div>
+      <button class="what-btn" onclick="document.getElementById('what-modal').classList.add('open')">What is this?</button>
     </div>
   </div>
+</div>
+
+<div class="page" id="page-root">
 
   <!-- SAMPLY CTA -->
   <a href="https://samply.app/install" class="samply-cta" target="_blank" style="margin-bottom:10px">
@@ -1389,5 +1389,9 @@ function copyDiscord() {
 // Load from Supabase on startup
 loadFromSupabase();
 </script>
+<footer style="text-align:center;padding:32px 0 24px;font-size:12px;color:rgba(255,255,255,0.25)">
+  <a href="tos.html" style="color:rgba(255,255,255,0.25);text-decoration:none;margin:0 10px">Terms & DMCA</a>
+  <a href="datenschutz.html" style="color:rgba(255,255,255,0.25);text-decoration:none;margin:0 10px">Privacy Policy</a>
+</footer>
 </body>
 </html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms & DMCA — Ye Curated</title>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/fonts/inter.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0a0a0b;--surface:#141416;--border:rgba(255,255,255,0.08);--text:#e8e8e8;--muted:rgba(255,255,255,0.4);--accent:#c8f135}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:14px;line-height:1.7;min-height:100vh}
+.wrap{max-width:680px;margin:0 auto;padding:48px 24px 80px}
+.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px}
+.topbar a{color:var(--muted);text-decoration:none;font-size:13px;display:inline-flex;align-items:center;gap:6px}
+.topbar a:hover{color:var(--text)}
+.topbar svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.lang-toggle{display:flex;gap:2px;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:3px}
+.lang-btn{background:none;border:none;color:var(--muted);font-size:12px;font-weight:500;font-family:inherit;padding:4px 10px;border-radius:5px;cursor:pointer;transition:all 0.15s}
+.lang-btn.active{background:rgba(255,255,255,0.08);color:var(--text)}
+h1{font-size:24px;font-weight:700;margin-bottom:6px}
+.subtitle{color:var(--muted);font-size:13px;margin-bottom:48px}
+h2{font-size:16px;font-weight:700;margin:44px 0 6px;color:var(--text)}
+h3{font-size:13px;font-weight:600;margin:20px 0 6px;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.05em}
+p{color:var(--muted);margin-bottom:10px}
+hr{border:none;border-top:1px solid var(--border);margin:44px 0}
+[data-de]{display:none}
+body.de [data-en]{display:none}
+body.de [data-de]{display:block}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <a href="index.html">
+      <svg viewBox="0 0 16 16"><polyline points="10,3 5,8 10,13"/></svg>
+      <span data-en>Back</span><span data-de>Zurück</span>
+    </a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('de')">DE</button>
+    </div>
+  </div>
+
+  <!-- ENGLISH -->
+  <div data-en>
+    <h1>Terms of Service</h1>
+    <p>By accessing or using this service, you agree to be bound by these Terms of Service.</p>
+
+    <h3>1. Usage Constraints</h3>
+    <p>This service is provided for personal archiving and listening. You agree not to abuse the API, attempt to bypass hotlink protections maliciously, or use automated scraping tools that degrade the performance of the system.</p>
+
+    <h3>2. Content Responsibility</h3>
+    <p>All files are uploaded by individual users and hosted on third-party services (such as Catbox and Pixeldrain). We do not directly host the files on our servers. You are solely responsible for the files you upload and share.</p>
+
+    <h3>3. Service Availability</h3>
+    <p>We do not guarantee 100% uptime. The service and its integrations depend on third-party file hosts which may experience downtime or delete files per their own retention policies.</p>
+
+    <hr>
+
+    <h1>DMCA &amp; Abuse Policy</h1>
+    <p>We take copyright infringement and abuse seriously.</p>
+
+    <h3>Reporting Content</h3>
+    <p>If you believe that your copyrighted work has been copied in a way that constitutes copyright infringement, please use the Report button (the flag icon) located next to any file or comp in the library.</p>
+    <p>Submitting a report via the built-in system alerts the administrator immediately and logs the exact file and its external hosting link.</p>
+
+    <h3>Takedown Process</h3>
+    <p>Upon receiving a valid report, the administrator will review the request and, if necessary, remove the link from the directory and report the file to the upstream host for permanent deletion.</p>
+  </div>
+
+  <!-- GERMAN -->
+  <div data-de>
+    <h1>Nutzungsbedingungen</h1>
+    <p>Durch den Zugriff auf diesen Dienst oder dessen Nutzung stimmst du diesen Nutzungsbedingungen zu.</p>
+
+    <h3>1. Nutzungseinschränkungen</h3>
+    <p>Dieser Dienst wird für persönliches Archivieren und Hören bereitgestellt. Du stimmst zu, die API nicht zu missbrauchen, Hotlink-Schutzmaßnahmen nicht böswillig zu umgehen oder automatisierte Scraping-Tools zu verwenden, die die Systemleistung beeinträchtigen.</p>
+
+    <h3>2. Inhaltliche Verantwortung</h3>
+    <p>Alle Dateien werden von einzelnen Nutzern hochgeladen und auf Drittanbieter-Diensten (z. B. Catbox und Pixeldrain) gehostet. Wir hosten die Dateien nicht direkt auf unseren Servern. Du trägst die alleinige Verantwortung für die Dateien, die du hochlädst und teilst.</p>
+
+    <h3>3. Verfügbarkeit des Dienstes</h3>
+    <p>Wir garantieren keine 100%ige Verfügbarkeit. Der Dienst und seine Integrationen sind auf Drittanbieter-Dateihosts angewiesen, die Ausfallzeiten haben oder Dateien gemäß ihren eigenen Aufbewahrungsrichtlinien löschen können.</p>
+
+    <hr>
+
+    <h1>DMCA &amp; Missbrauchsrichtlinie</h1>
+    <p>Wir nehmen Urheberrechtsverletzungen und Missbrauch ernst.</p>
+
+    <h3>Inhalte melden</h3>
+    <p>Wenn du der Meinung bist, dass dein urheberrechtlich geschütztes Werk auf eine Weise kopiert wurde, die eine Urheberrechtsverletzung darstellt, nutze bitte den Melden-Button (das Flaggen-Symbol) neben der entsprechenden Datei oder Comp in der Bibliothek.</p>
+    <p>Eine Meldung über das integrierte System benachrichtigt den Administrator sofort und protokolliert die genaue Datei sowie den externen Hosting-Link.</p>
+
+    <h3>Takedown-Prozess</h3>
+    <p>Nach Eingang einer berechtigten Meldung prüft der Administrator die Anfrage und entfernt bei Bedarf den Link aus dem Verzeichnis und meldet die Datei dem ursprünglichen Host zur dauerhaften Löschung.</p>
+  </div>
+</div>
+<script>
+function setLang(l) {
+  document.body.classList.toggle('de', l === 'de');
+  document.querySelectorAll('.lang-btn').forEach((b,i) => b.classList.toggle('active', (i===0) === (l==='en')));
+}
+</script>
+</body>
+</html>
