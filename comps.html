@@ -732,16 +732,16 @@ function openComp(eraId, compId) {
       ${comp.tracklist?.length ? `<div class="cm-detail-row"><p class="cm-detail-key">Tracks</p><p class="cm-detail-val">${comp.tracklist.length}</p></div>` : ''}
     </div>
 
-    ${comp.credits ? `
-    <p class="cm-section-title">Credits</p>
+    ${comp.credits?.editors?.length ? `
+    <p class="cm-section-title">Editors</p>
     <div class="credits-block">
-      <strong>Editors</strong><br>${comp.credits.editors.join(', ')}
-      ${comp.credits.thanks ? `<br><br>${comp.credits.thanks}` : ''}
+      ${comp.credits.editors.map(e => `<span>${e.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}</span>`).join('<br>')}
+      ${comp.credits.thanks ? `<br><br><em style="color:rgba(255,255,255,0.3)">${comp.credits.thanks.replace(/&/g,'&amp;')}</em>` : ''}
     </div>` : ''}
 
-    ${comp.creditsText ? `
-    <p class="cm-section-title" style="margin-top:${comp.credits ? '20px' : '0'}">Notes & Credits</p>
-    <pre class="credits-text">${comp.creditsText.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}</pre>` : ''}`;
+    ${comp.notes ? `
+    <p class="cm-section-title" style="margin-top:${comp.credits?.editors?.length ? '20px' : '0'}">Notes</p>
+    <pre class="credits-text">${comp.notes.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}</pre>` : ''}`;
 
   document.getElementById('overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
