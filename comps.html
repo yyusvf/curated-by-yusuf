@@ -18,12 +18,44 @@ html{overflow-x:hidden}
 body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh;-webkit-font-smoothing:antialiased;padding-bottom:80px;overflow-x:hidden}
 
 /* ── TOPBAR ── */
-.topbar{display:flex;align-items:center;gap:16px;padding:0 32px;height:52px;background:rgba(14,13,13,0.92);border-bottom:0.5px solid var(--border);position:sticky;top:0;z-index:50;backdrop-filter:blur(12px)}
-.topbar-back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);text-decoration:none;transition:color 0.2s}
+.topbar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 24px;height:52px;background:rgba(14,13,13,0.92);border-bottom:0.5px solid var(--border);position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);gap:12px}
+.topbar-back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);text-decoration:none;transition:color 0.2s;justify-self:start}
 .topbar-back:hover{color:var(--text)}
 .topbar-back svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.topbar-title{font-size:14px;font-weight:600}
-.topbar-sub{font-size:12px;color:var(--muted);margin-left:auto}
+.topbar-title{display:none}
+.topbar-sub{display:none}
+
+/* ── SEARCH ── */
+.search-wrap{position:relative;width:100%;max-width:380px;justify-self:center}
+.search-input{background:rgba(255,255,255,0.07);border:0.5px solid rgba(255,255,255,0.1);border-radius:999px;padding:8px 32px 8px 34px;font-size:13px;color:var(--text);font-family:var(--font);outline:none;width:100%;transition:border-color 0.2s,background 0.2s,box-shadow 0.2s}
+.search-input:focus{border-color:rgba(255,255,255,0.22);background:rgba(255,255,255,0.1);box-shadow:0 0 0 3px rgba(255,255,255,0.05)}
+.search-input::placeholder{color:var(--muted)}
+.search-icon{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:14px;height:14px;pointer-events:none;opacity:0.38}
+.search-clear{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,0.15);border:none;color:rgba(255,255,255,0.7);font-size:10px;cursor:pointer;padding:0;line-height:1;display:none;font-family:var(--font);align-items:center;justify-content:center}
+.search-clear.show{display:flex}
+
+/* ── SEARCH RESULTS ── */
+.search-results{display:none;padding:24px 32px 0}
+.search-results.active{display:block}
+.search-count{font-size:12px;color:var(--muted);margin-bottom:20px}
+.search-hit{display:flex;align-items:center;gap:14px;padding:10px 14px;border-radius:10px;background:var(--surface);border:0.5px solid var(--border);cursor:pointer;transition:border-color 0.15s,transform 0.15s;margin-bottom:8px}
+.search-hit:hover{border-color:var(--border-h);transform:translateY(-1px)}
+.search-hit-cover{width:44px;height:44px;border-radius:7px;object-fit:cover;flex-shrink:0;background:var(--surface2)}
+.search-hit-body{flex:1;min-width:0}
+.search-hit-name{font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.search-hit-sub{font-size:11px;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.search-hit-tag{font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px;flex-shrink:0}
+.tag-comp{background:rgba(200,245,66,0.1);color:var(--accent);border:0.5px solid rgba(200,245,66,0.2)}
+.tag-era{background:rgba(96,165,250,0.1);color:#60a5fa;border:0.5px solid rgba(96,165,250,0.2)}
+.tag-track{background:rgba(167,139,250,0.1);color:#a78bfa;border:0.5px solid rgba(167,139,250,0.2)}
+.tag-editor{background:rgba(52,211,153,0.1);color:#34d399;border:0.5px solid rgba(52,211,153,0.2)}
+.search-empty{text-align:center;padding:48px 0;color:var(--muted);font-size:14px}
+
+@media(max-width:720px){
+  .topbar{padding:0 14px;gap:8px}
+  .search-wrap{max-width:none}
+  .search-results{padding:16px 14px 0}
+}
 
 /* ── PAGE ── */
 .page{max-width:1000px;margin:0 auto;padding:48px 32px 0}
@@ -331,8 +363,14 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:1
     Curated by Yusuf
   </a>
   <span class="topbar-title">Kanye Comps</span>
-  <span class="topbar-sub">Sophie's Curated Comps &amp; Edits Tracker</span>
+  <div class="search-wrap">
+    <svg class="search-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="6.5" cy="6.5" r="4"/><line x1="10" y1="10" x2="14" y2="14"/></svg>
+    <input class="search-input" id="search-input" type="text" placeholder="Search eras, comps, editors, tracks…" oninput="onSearch(this.value)" onkeydown="if(event.key==='Escape'){clearSearch()}">
+    <button class="search-clear" id="search-clear" onclick="clearSearch()">✕</button>
+  </div>
 </div>
+
+<div class="search-results" id="search-results"></div>
 
 <div class="page">
   <h1 class="page-heading">Kanye Comps</h1>
@@ -732,6 +770,104 @@ function setGalleryImg(animate) {
 
 // Also keep openLightbox as alias for art thumbs in case
 function openLightbox(src) { openGallery([src], 0); }
+
+// ─── SEARCH ──────────────────────────────────────────────────────────────────
+function onSearch(q) {
+  const clear = document.getElementById('search-clear');
+  const resultsEl = document.getElementById('search-results');
+  const page = document.querySelector('.page');
+  q = q.trim();
+
+  clear.classList.toggle('show', q.length > 0);
+
+  if (!q) {
+    resultsEl.classList.remove('active');
+    resultsEl.innerHTML = '';
+    page.style.display = '';
+    return;
+  }
+
+  page.style.display = 'none';
+  resultsEl.classList.add('active');
+
+  const ql = q.toLowerCase();
+  const hits = [];
+
+  for (const era of ERAS) {
+    if (_hidden.has(era.id)) continue;
+
+    // Era match
+    if (era.name.toLowerCase().includes(ql)) {
+      hits.push({ type: 'era', era, comp: null, track: null,
+        label: era.name, sub: `${era.comps.length} comps · ${era.year}`,
+        cover: eraCover(era.id) });
+    }
+
+    for (const comp of era.comps) {
+      const compMatches = comp.name.toLowerCase().includes(ql);
+      const editorMatches = (comp.editor||'').toLowerCase().includes(ql);
+      const trackHits = (comp.tracklist||[]).filter(t =>
+        t.title.toLowerCase().includes(ql) ||
+        (t.feat||'').toLowerCase().includes(ql) ||
+        (t.editors||'').toLowerCase().includes(ql)
+      );
+
+      if (compMatches) {
+        hits.push({ type: 'comp', era, comp, track: null,
+          label: comp.name, sub: `${era.name} · ${comp.editor}`,
+          cover: compCover(era.id, comp) });
+      } else if (editorMatches) {
+        hits.push({ type: 'editor', era, comp, track: null,
+          label: comp.editor, sub: `${comp.name} · ${era.name}`,
+          cover: compCover(era.id, comp) });
+      }
+
+      for (const t of trackHits) {
+        hits.push({ type: 'track', era, comp, track: t,
+          label: t.title, sub: `${comp.name} · ${era.name}${t.feat ? ' · feat. '+t.feat : ''}`,
+          cover: compCover(era.id, comp) });
+      }
+    }
+  }
+
+  if (!hits.length) {
+    resultsEl.innerHTML = `<div class="search-empty">No results for "<strong>${q}</strong>"</div>`;
+    return;
+  }
+
+  const TAG = { comp: ['tag-comp','Comp'], era: ['tag-era','Era'], track: ['tag-track','Track'], editor: ['tag-editor','Editor'] };
+  resultsEl.innerHTML = `<p class="search-count">${hits.length} result${hits.length!==1?'s':''} for "<strong>${q}</strong>"</p>` +
+    hits.map((h,i) => {
+      const [tagCls, tagLabel] = TAG[h.type];
+      return `<div class="search-hit" data-hit="${i}">
+        <img class="search-hit-cover" src="${h.cover}" alt="" onerror="this.style.opacity=0.15">
+        <div class="search-hit-body">
+          <p class="search-hit-name">${h.label}</p>
+          <p class="search-hit-sub">${h.sub}</p>
+        </div>
+        <span class="search-hit-tag ${tagCls}">${tagLabel}</span>
+      </div>`;
+    }).join('');
+
+  resultsEl.querySelectorAll('.search-hit').forEach((el, i) => {
+    el.onclick = () => {
+      const h = hits[i];
+      if (h.type === 'era') {
+        clearSearch();
+        document.getElementById(`era-sec-${h.era.id}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        openComp(h.era.id, h.comp.id);
+      }
+    };
+  });
+}
+
+function clearSearch() {
+  const input = document.getElementById('search-input');
+  input.value = '';
+  onSearch('');
+  input.focus();
+}
 
 document.addEventListener('keydown', e => {
   const g = document.getElementById('gallery');
