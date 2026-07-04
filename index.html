@@ -617,6 +617,7 @@ a.discord-btn{text-decoration:none}
   <div class="ep-head">
     <h2>Edit Mode</h2>
     <button class="ep-save" onclick="syncToSupabase().then(()=>buildPanel())">Sync ↑</button>
+    <button class="ep-save" style="background:rgba(255,255,255,0.06);color:var(--muted)" onclick="logout()" title="Log out">Log out</button>
   </div>
   <div class="ep-body" id="ep-body"></div>
 </div>
@@ -865,16 +866,23 @@ function onEditTrigger() {
   }
 }
 
-function checkPw() {
-  const val = document.getElementById('pw-input').value;
-  // Simple check — change this string to your password
-  if (val === 'yusvf2024') {
+async function checkPw() {
+  const input = document.getElementById('pw-input');
+  const err = document.getElementById('pw-err');
+  const btn = document.querySelector('#pw-modal .pw-submit');
+  err.style.display = 'none';
+  if (btn) { btn.disabled = true; btn.textContent = 'Logging in…'; }
+  try {
+    await sbLogin(input.value);
     editUnlocked = true;
     document.getElementById('pw-modal').classList.remove('open');
-    document.getElementById('pw-input').value = '';
+    input.value = '';
     togglePanel();
-  } else {
-    document.getElementById('pw-err').style.display = 'block';
+  } catch (e) {
+    err.textContent = 'Wrong password';
+    err.style.display = 'block';
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = 'Unlock'; }
   }
 }
 
@@ -1223,6 +1231,49 @@ const SB_URL = 'https://mrqbtjbtidjuxsuolgue.supabase.co';
 const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1ycWJ0amJ0aWRqdXhzdW9sZ3VlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwODgwOTAsImV4cCI6MjA5MzY2NDA5MH0.S6OWEYRY9y51l-DjqiU2h4IXbzfaPPQxb0hoaqfx2XE';
 const SB_HEADERS = { 'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}`, 'Content-Type': 'application/json', 'Prefer': 'resolution=merge-duplicates' };
 
+// ─── AUTH (only the admin account can write; public reads use the anon key) ────
+const ADMIN_EMAIL = 'yusuf.esad.mumcu@gmail.com';
+let SB_SESSION = null;
+try { SB_SESSION = JSON.parse(localStorage.getItem('sb_session') || 'null'); } catch(e) {}
+editUnlocked = !!SB_SESSION;  // stay logged in across reloads
+
+function saveSession(s) {
+  SB_SESSION = s;
+  if (s) localStorage.setItem('sb_session', JSON.stringify(s));
+  else localStorage.removeItem('sb_session');
+}
+async function sbLogin(password) {
+  const r = await fetch(`${SB_URL}/auth/v1/token?grant_type=password`, {
+    method: 'POST', headers: { 'apikey': SB_KEY, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: ADMIN_EMAIL, password })
+  });
+  const d = await r.json();
+  if (!r.ok || !d.access_token) throw new Error(d.error_description || d.msg || 'Login failed');
+  saveSession({ access_token: d.access_token, refresh_token: d.refresh_token, expires_at: Date.now() + (d.expires_in || 3600) * 1000 });
+}
+async function sbRefresh() {
+  if (!SB_SESSION?.refresh_token) return false;
+  const r = await fetch(`${SB_URL}/auth/v1/token?grant_type=refresh_token`, {
+    method: 'POST', headers: { 'apikey': SB_KEY, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ refresh_token: SB_SESSION.refresh_token })
+  });
+  const d = await r.json();
+  if (!r.ok || !d.access_token) { saveSession(null); return false; }
+  saveSession({ access_token: d.access_token, refresh_token: d.refresh_token, expires_at: Date.now() + (d.expires_in || 3600) * 1000 });
+  return true;
+}
+async function sbToken() {
+  if (!SB_SESSION) return null;
+  if (Date.now() > SB_SESSION.expires_at - 60000) { if (!await sbRefresh()) return null; }
+  return SB_SESSION.access_token;
+}
+async function writeHeaders() {
+  const t = await sbToken();
+  if (!t) { editUnlocked = false; throw new Error('Session expired — please log in again.'); }
+  return { 'apikey': SB_KEY, 'Authorization': `Bearer ${t}`, 'Content-Type': 'application/json' };
+}
+function logout() { saveSession(null); editUnlocked = false; const p = document.getElementById('edit-panel'); if (p) p.classList.remove('open'); document.getElementById('edit-trigger')?.classList.remove('active'); }
+
 async function sbGet(table) {
   const r = await fetch(`${SB_URL}/rest/v1/${table}?select=*&order=order_index`, { headers: SB_HEADERS });
   return r.json();
@@ -1232,7 +1283,7 @@ async function sbUpsert(table, rows) {
   if (!rows.length) return;
   const res = await fetch(`${SB_URL}/rest/v1/${table}`, {
     method: 'POST',
-    headers: { ...SB_HEADERS, 'Prefer': 'resolution=merge-duplicates,return=minimal' },
+    headers: { ...(await writeHeaders()), 'Prefer': 'resolution=merge-duplicates,return=minimal' },
     body: JSON.stringify(rows)
   });
   if (!res.ok) {
@@ -1244,7 +1295,7 @@ async function sbUpsert(table, rows) {
 
 async function sbDelete(table, ids) {
   if (!ids.length) return;
-  await fetch(`${SB_URL}/rest/v1/${table}?id=in.(${ids.join(',')})`, { method: 'DELETE', headers: SB_HEADERS });
+  await fetch(`${SB_URL}/rest/v1/${table}?id=in.(${ids.join(',')})`, { method: 'DELETE', headers: await writeHeaders() });
 }
 
 async function loadFromSupabase() {
