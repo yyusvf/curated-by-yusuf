@@ -712,6 +712,7 @@ function render() {
 
   // Link sections (skip tracker if it still exists)
   for (const sec of DATA.linkSections) {
+    if (sec.hidden) continue;
     if (sec.links.some(l => l.type === 'tracker')) continue;
 
     html += `<div class="section-header"><p class="section-title">${esc(sec.title)}</p></div>`;
@@ -981,7 +982,7 @@ function buildPanel() {
   DATA.linkSections.forEach((sec, si) => {
     html += `<div class="ep-section" id="sec-${si}">
       <div class="ep-section-head" onclick="toggleSection('sec-${si}')">
-        <span class="ep-section-title">${esc(sec.title)}</span>
+        <span class="ep-section-title">${esc(sec.title)}${sec.hidden?' <span style="color:#ffb43c;font-size:10px;font-weight:600">• hidden</span>':''}</span>
         <div class="ep-order">
           <button onclick="event.stopPropagation();moveItem(DATA.linkSections,${si},-1)" title="Up">↑</button>
           <button onclick="event.stopPropagation();moveItem(DATA.linkSections,${si},1)" title="Down">↓</button>
@@ -990,6 +991,7 @@ function buildPanel() {
       </div>
       <div class="ep-section-body">
         <div class="ep-field"><label>Section Name</label><input type="text" value="${esc(sec.title)}" oninput="DATA.linkSections[${si}].title=this.value;renderAndBuild()"></div>
+        <button class="ep-toggle-btn ${sec.hidden?'active':''}" style="width:100%;margin-bottom:12px;padding:9px;${sec.hidden?'background:rgba(255,180,60,0.15);color:#ffb43c;border-color:rgba(255,180,60,0.35)':''}" onclick="DATA.linkSections[${si}].hidden=!DATA.linkSections[${si}].hidden;renderAndBuild()">${sec.hidden?'🙈 Hidden from site — click to show':'👁 Visible on site — click to hide'}</button>
         <label style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px">Columns per row</label>
         <div class="ep-toggle">
           <button class="ep-toggle-btn ${sec.columns===1?'active':''}" onclick="DATA.linkSections[${si}].columns=1;renderAndBuild()">1 column</button>
@@ -1260,7 +1262,7 @@ async function loadFromSupabase() {
     }));
 
     DATA.linkSections = secs.map(s => ({
-      id: s.id, title: s.title, columns: s.columns,
+      id: s.id, title: s.title, columns: s.columns, hidden: !!s.hidden,
       links: links.filter(l => l.section_id === s.id).map(l => {
         if (l.type === 'large' && l.meta) {
           try {
@@ -1302,7 +1304,7 @@ async function syncToSupabase() {
     await sbUpsert('projects', projRows);
 
     // Upsert link sections
-    const secRows = DATA.linkSections.map((s, i) => ({ id: s.id, title: s.title, columns: s.columns, order_index: i }));
+    const secRows = DATA.linkSections.map((s, i) => ({ id: s.id, title: s.title, columns: s.columns, hidden: !!s.hidden, order_index: i }));
     await sbUpsert('link_sections', secRows);
 
     // Upsert links
