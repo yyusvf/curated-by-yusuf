@@ -671,6 +671,7 @@ function render() {
 
   // Categories
   for (const cat of DATA.categories) {
+    if (cat.hidden) continue;
     if (cat.size === 'tracker') {
       html += `<div class="section-header"><p class="section-title">${esc(cat.title)}</p></div>`;
       html += renderTrackerCard();
@@ -910,7 +911,7 @@ function buildPanel() {
     if (cat.size === 'tracker') {
       html += `<div class="ep-section" id="cat-${ci}">
         <div class="ep-section-head" onclick="toggleSection('cat-${ci}')">
-          <span class="ep-section-title">${esc(cat.title)}</span>
+          <span class="ep-section-title">${esc(cat.title)}${cat.hidden?' <span style="color:#ffb43c;font-size:10px;font-weight:600">• hidden</span>':''}</span>
           <span class="ep-section-type">tracker</span>
           <div class="ep-order">
             <button onclick="event.stopPropagation();moveItem(DATA.categories,${ci},-1)" title="Up">↑</button>
@@ -920,6 +921,7 @@ function buildPanel() {
         </div>
         <div class="ep-section-body">
           <div class="ep-field"><label>Section Title</label><input type="text" value="${esc(cat.title)}" oninput="DATA.categories[${ci}].title=this.value;renderAndBuild()"></div>
+          <button class="ep-toggle-btn ${cat.hidden?'active':''}" style="width:100%;margin-bottom:12px;padding:9px;${cat.hidden?'background:rgba(255,180,60,0.15);color:#ffb43c;border-color:rgba(255,180,60,0.35)':''}" onclick="DATA.categories[${ci}].hidden=!DATA.categories[${ci}].hidden;renderAndBuild()">${cat.hidden?'🙈 Hidden from site — click to show':'👁 Visible on site — click to hide'}</button>
           <p style="font-size:12px;color:var(--muted)">Links to comps.html — manage content in the Comp Builder.</p>
         </div>
       </div>`;
@@ -1305,7 +1307,7 @@ async function loadFromSupabase() {
     ]);
 
     DATA.categories = cats.map(c => ({
-      id: c.id, title: c.title, size: c.size,
+      id: c.id, title: c.title, size: c.size, hidden: !!c.hidden,
       projects: c.size === 'tracker' ? [] : projs.filter(p => p.category_id === c.id).map(p => ({
         id: p.id, title: p.title, artist: p.artist, editor: p.editor,
         cover: p.cover, link: p.link, curatorsCut: p.curators_cut
@@ -1341,7 +1343,7 @@ async function loadFromSupabase() {
 async function syncToSupabase() {
   try {
     // Upsert categories
-    const catRows = DATA.categories.map((c, i) => ({ id: c.id, title: c.title, size: c.size, order_index: i }));
+    const catRows = DATA.categories.map((c, i) => ({ id: c.id, title: c.title, size: c.size, hidden: !!c.hidden, order_index: i }));
     await sbUpsert('categories', catRows);
 
     // Upsert projects
